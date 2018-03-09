@@ -29,6 +29,7 @@ class NewTripViewController: UIViewController {
     //If calculate button is pressed then initiate action
     @IBAction func calculateButtonPressed(_ sender: UIButton) {
         
+        //Validating user input before button action
         //Get time values and change format of dates
         let current_date = Date()
         let departure_date = departureDatePicker.date
@@ -52,7 +53,7 @@ class NewTripViewController: UIViewController {
             return
         }
         
-        //TODO: Implement calculate button function
+        //TODO: Implement calculate button action
     }
 }
 
