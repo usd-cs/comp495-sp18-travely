@@ -18,20 +18,6 @@
 		BB39EF8820563BA20054FACC /* MyTripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB39EF8720563BA20054FACC /* MyTripsViewController.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXFileReference section */
-		63781949204B37B700734092 /* travely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = travely.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6378194C204B37B700734092 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6378194E204B37B700734092 /* NewTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTripViewController.swift; sourceTree = "<group>"; };
-		63781951204B37B700734092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		63781953204B37B700734092 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		63781956204B37B700734092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		63781958204B37B700734092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BB39EF8120563B6A0054FACC /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
-		BB39EF8320563B7C0054FACC /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		BB39EF8520563B880054FACC /* CostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostViewController.swift; sourceTree = "<group>"; };
-		BB39EF8720563BA20054FACC /* MyTripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsViewController.swift; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
 /* Begin PBXFrameworksBuildPhase section */
 		63781946204B37B700734092 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
