@@ -153,6 +153,7 @@
 				6378194F204B37B700734092 /* NewTripViewController.swift in Sources */,
 				BB39EF8220563B6A0054FACC /* ActivitiesViewController.swift in Sources */,
 				BB39EF8420563B7C0054FACC /* AboutViewController.swift in Sources */,
+				6378194F204B37B700734092 /* NewTripViewController.swift in Sources */,
 				6378194D204B37B700734092 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

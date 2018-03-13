@@ -74,6 +74,7 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         super.viewDidLoad()
         originPlacePicked = ""
         destinationPlacePicked = ""
+
         // Do any additional setup after loading the view, typically from a nib.
         
     }
@@ -104,7 +105,7 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
             print("Invalid Oigin or Destination: not Selected")
             return
         }
-        
+
         //Check that departure date is not less than the current date
         guard departure_date_str >= current_date_str else {
             print("Invalid Dates: departure time less than current date")
@@ -132,5 +133,6 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
             resultsViewController.destinaionLocation = destinationPlacePicked
         }
     }
+
 }
 
