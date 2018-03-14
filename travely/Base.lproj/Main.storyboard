@@ -152,10 +152,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="New Trip" id="aGa-nF-sHN"/>
                     <connections>
-                        <outlet property="departureDatePicker" destination="6zZ-sl-hzp" id="oAm-b3-NIm"/>
+                        <outlet property="departureDatePicker" destination="ZpF-Zl-X0v" id="hUW-Vo-QDp"/>
                         <outlet property="destinationPicker" destination="wde-T4-Ike" id="Dkl-1W-LEm"/>
                         <outlet property="originPicker" destination="dSv-AP-9YZ" id="wTq-g1-CN4"/>
-                        <outlet property="returnDatePicker" destination="ZpF-Zl-X0v" id="PRA-Jn-atz"/>
+                        <outlet property="returnDatePicker" destination="6zZ-sl-hzp" id="45l-sI-1md"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
