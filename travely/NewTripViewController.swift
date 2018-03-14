@@ -156,6 +156,12 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
             
         }
         
+        //Check that the user didn't select the same destination and origin
+        guard originPlacePicked != destinationPlacePicked else {
+            print("Invalid Origin or Destination: Same Destination and Origin")
+            return
+        }
+    
         //Check that departure date is not less than the current date
         guard departure_date_str >= current_date_str else {
             print("Invalid Dates: departure time less than current date")
