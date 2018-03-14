@@ -85,43 +85,6 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         
     }
     
-    //If calculate button is pressed then initiate action
-    @IBAction func calculateButtonPressed(_ sender: UIButton) {
-        
-        //Validating user input before button action
-        //Get time values and change format of dates
-        let current_date = Date()
-        let departure_date = departureDatePicker.date
-        let return_date = returnDatePicker.date
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy/MM/dd"
-        let departure_date_str: String = formatter.string(from: departure_date)
-        let return_date_str: String = formatter.string(from: return_date)
-        let current_date_str: String = formatter.string(from: current_date)
-        
-        //check that user picked a county
-        guard originPlacePicked.count > 1, destinationPlacePicked.count > 1 else{
-            print("Invalid Oigin or Destination: not Selected")
-            return
-        }
-
-        //Check that departure date is not less than the current date
-        guard departure_date_str >= current_date_str else {
-            print("Invalid Dates: departure time less than current date")
-            return
-        }
-        
-        //Check that departure date is not greater than return date
-        guard departure_date_str <= return_date_str else {
-            print("Invalid Dates: departure time is greater than return date")
-            return
-        }
-        
-        //TODO: Implement calculate button action
-    }
-    
-    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
@@ -132,6 +95,44 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
             resultsViewController.originLocation = originPlacePicked
             resultsViewController.destinaionLocation = destinationPlacePicked
         }
+    }
+    
+    //Add conditions to check before a segue is performed
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        //If calculate button was pressed
+        if identifier == "CalculatePressedNewTripToActivities" {
+            
+            //Validating user input before button action
+            //Get time values and change format of dates
+            let current_date = Date()
+            let departure_date = departureDatePicker.date
+            let return_date = returnDatePicker.date
+            
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy/MM/dd"
+            let departure_date_str: String = formatter.string(from: departure_date)
+            let return_date_str: String = formatter.string(from: return_date)
+            let current_date_str: String = formatter.string(from: current_date)
+            
+            //check that user picked a county
+            guard originPlacePicked.count > 1, destinationPlacePicked.count > 1 else {
+                print("Invalid Oigin or Destination: not Selected")
+                return false
+            }
+            
+            //Check that departure date is not less than the current date
+            guard departure_date_str >= current_date_str else {
+                print("Invalid Dates: departure time less than current date")
+                return false
+            }
+            
+            //Check that departure date is not greater than return date
+            guard departure_date_str <= return_date_str else {
+                print("Invalid Dates: departure time is greater than return date")
+                return false
+            }
+        }
+        return true
     }
 
 }
