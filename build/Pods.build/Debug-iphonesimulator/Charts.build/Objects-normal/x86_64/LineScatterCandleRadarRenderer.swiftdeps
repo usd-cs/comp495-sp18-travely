@@ -1,0 +1,225 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "LineScatterCandleRadarRenderer"
+provides-nominal:
+- "6Charts30LineScatterCandleRadarRendererC"
+provides-member:
+- ["6Charts30LineScatterCandleRadarRendererC", ""]
+provides-dynamic-lookup:
+- "drawHighlightLines"
+depends-top-level:
+- "Animator"
+- "BarLineScatterCandleBubbleRenderer"
+- "CGContext"
+- "CGPoint"
+- "ILineScatterCandleRadarChartDataSet"
+- "LineScatterCandleRadarRenderer"
+- "ViewPortHandler"
+depends-member:
+- ["6Charts34BarLineScatterCandleBubbleRendererC", "Animator"]
+- ["6Charts34BarLineScatterCandleBubbleRendererC", "CGContext"]
+- ["6Charts34BarLineScatterCandleBubbleRendererC", "CGPoint"]
+- ["6Charts34BarLineScatterCandleBubbleRendererC", "ILineScatterCandleRadarChartDataSet"]
+- ["6Charts34BarLineScatterCandleBubbleRendererC", "ViewPortHandler"]
+- ["6Charts34BarLineScatterCandleBubbleRendererC", "drawHighlightLines"]
+- ["6Charts34BarLineScatterCandleBubbleRendererC", "init"]
+- !private ["6Charts34BarLineScatterCandleBubbleRendererC", "viewPortHandler"]
+- ["6Charts34BarLineScatterCandleBubbleRendererC", ""]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["So9CGContextC", "addLine"]
+- !private ["So9CGContextC", "beginPath"]
+- !private ["So9CGContextC", "move"]
+- !private ["So9CGContextC", "strokePath"]
+- !private ["SC7CGPointV", "init"]
+- !private ["SC7CGPointV", "x"]
+- !private ["SC7CGPointV", "y"]
+- !private ["s7CVarArgP", "CGPoint"]
+- !private ["s7CVarArgP", "contentBottom"]
+- !private ["s7CVarArgP", "contentLeft"]
+- !private ["s7CVarArgP", "contentRight"]
+- !private ["s7CVarArgP", "contentTop"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "viewPortHandler"]
+- ["s7CVarArgP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "CGPoint"]
+- !private ["s28CustomDebugStringConvertibleP", "contentBottom"]
+- !private ["s28CustomDebugStringConvertibleP", "contentLeft"]
+- !private ["s28CustomDebugStringConvertibleP", "contentRight"]
+- !private ["s28CustomDebugStringConvertibleP", "contentTop"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "viewPortHandler"]
+- !private ["s28CustomDebugStringConvertibleP", "x"]
+- !private ["s28CustomDebugStringConvertibleP", "y"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "x"]
+- !private ["s29CustomPlaygroundQuickLookableP", "y"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "x"]
+- !private ["s17CustomReflectableP", "y"]
+- !private ["s23CustomStringConvertibleP", "CGPoint"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "contentBottom"]
+- !private ["s23CustomStringConvertibleP", "contentLeft"]
+- !private ["s23CustomStringConvertibleP", "contentRight"]
+- !private ["s23CustomStringConvertibleP", "contentTop"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "viewPortHandler"]
+- ["s23CustomStringConvertibleP", ""]
+- ["6Charts12DataRendererC", "Animator"]
+- ["6Charts12DataRendererC", "CGContext"]
+- ["6Charts12DataRendererC", "CGPoint"]
+- ["6Charts12DataRendererC", "ILineScatterCandleRadarChartDataSet"]
+- ["6Charts12DataRendererC", "ViewPortHandler"]
+- ["6Charts12DataRendererC", "drawHighlightLines"]
+- ["6Charts12DataRendererC", "init"]
+- !private ["6Charts12DataRendererC", "viewPortHandler"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "x"]
+- !private ["s9DecodableP", "y"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "x"]
+- !private ["s9EncodableP", "y"]
+- !private ["s9EquatableP", "CGPoint"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "addLine"]
+- !private ["s9EquatableP", "beginPath"]
+- !private ["s9EquatableP", "contentBottom"]
+- !private ["s9EquatableP", "contentLeft"]
+- !private ["s9EquatableP", "contentRight"]
+- !private ["s9EquatableP", "contentTop"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "move"]
+- !private ["s9EquatableP", "strokePath"]
+- !private ["s9EquatableP", "viewPortHandler"]
+- !private ["s9EquatableP", "x"]
+- !private ["s9EquatableP", "y"]
+- ["s9EquatableP", ""]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "CGPoint"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "addLine"]
+- !private ["s8HashableP", "beginPath"]
+- !private ["s8HashableP", "contentBottom"]
+- !private ["s8HashableP", "contentLeft"]
+- !private ["s8HashableP", "contentRight"]
+- !private ["s8HashableP", "contentTop"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "move"]
+- !private ["s8HashableP", "strokePath"]
+- !private ["s8HashableP", "viewPortHandler"]
+- ["s8HashableP", ""]
+- !private ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "isHorizontalHighlightIndicatorEnabled"]
+- !private ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "isVerticalHighlightIndicatorEnabled"]
+- !private ["6Charts13IChartDataSetP", "isHorizontalHighlightIndicatorEnabled"]
+- !private ["6Charts13IChartDataSetP", "isVerticalHighlightIndicatorEnabled"]
+- !private ["6Charts35ILineScatterCandleRadarChartDataSetP", "isHorizontalHighlightIndicatorEnabled"]
+- !private ["6Charts35ILineScatterCandleRadarChartDataSetP", "isVerticalHighlightIndicatorEnabled"]
+- ["6Charts30LineScatterCandleRadarRendererC", "Animator"]
+- ["6Charts30LineScatterCandleRadarRendererC", "CGContext"]
+- ["6Charts30LineScatterCandleRadarRendererC", "CGPoint"]
+- ["6Charts30LineScatterCandleRadarRendererC", "ILineScatterCandleRadarChartDataSet"]
+- ["6Charts30LineScatterCandleRadarRendererC", "ViewPortHandler"]
+- ["6Charts30LineScatterCandleRadarRendererC", "deinit"]
+- ["6Charts30LineScatterCandleRadarRendererC", "drawHighlightLines"]
+- ["6Charts30LineScatterCandleRadarRendererC", "init"]
+- !private ["6Charts30LineScatterCandleRadarRendererC", "viewPortHandler"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- ["So8NSObjectC", "Animator"]
+- ["So8NSObjectC", "CGContext"]
+- ["So8NSObjectC", "CGPoint"]
+- ["So8NSObjectC", "ILineScatterCandleRadarChartDataSet"]
+- ["So8NSObjectC", "ViewPortHandler"]
+- !private ["So8NSObjectC", "contentBottom"]
+- !private ["So8NSObjectC", "contentLeft"]
+- !private ["So8NSObjectC", "contentRight"]
+- !private ["So8NSObjectC", "contentTop"]
+- ["So8NSObjectC", "drawHighlightLines"]
+- !private ["So8NSObjectC", "viewPortHandler"]
+- !private ["So16NSObjectProtocolP", "CGPoint"]
+- !private ["So16NSObjectProtocolP", "contentBottom"]
+- !private ["So16NSObjectProtocolP", "contentLeft"]
+- !private ["So16NSObjectProtocolP", "contentRight"]
+- !private ["So16NSObjectProtocolP", "contentTop"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "viewPortHandler"]
+- ["So16NSObjectProtocolP", ""]
+- ["6Charts8RendererC", "Animator"]
+- ["6Charts8RendererC", "CGContext"]
+- ["6Charts8RendererC", "CGPoint"]
+- ["6Charts8RendererC", "ILineScatterCandleRadarChartDataSet"]
+- ["6Charts8RendererC", "ViewPortHandler"]
+- ["6Charts8RendererC", "drawHighlightLines"]
+- !private ["6Charts8RendererC", "viewPortHandler"]
+- !private ["6Charts15ViewPortHandlerC", "contentBottom"]
+- !private ["6Charts15ViewPortHandlerC", "contentLeft"]
+- !private ["6Charts15ViewPortHandlerC", "contentRight"]
+- !private ["6Charts15ViewPortHandlerC", "contentTop"]
+- !private ["14CoreFoundation9_CFObjectP", "addLine"]
+- !private ["14CoreFoundation9_CFObjectP", "beginPath"]
+- !private ["14CoreFoundation9_CFObjectP", "move"]
+- !private ["14CoreFoundation9_CFObjectP", "strokePath"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CGPoint"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "contentBottom"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "contentLeft"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "contentRight"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "contentTop"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewPortHandler"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "x"]
+- !private ["s21_ObjectiveCBridgeableP", "y"]
+depends-nominal:
+- "6Charts34BarLineScatterCandleBubbleRendererC"
+- !private "Sb"
+- !private "So9CGContextC"
+- !private "SC7CGPointV"
+- "s7CVarArgP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "6Charts12DataRendererC"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- "s8HashableP"
+- !private "6Charts39IBarLineScatterCandleBubbleChartDataSetP"
+- !private "6Charts13IChartDataSetP"
+- !private "6Charts35ILineScatterCandleRadarChartDataSetP"
+- "6Charts30LineScatterCandleRadarRendererC"
+- !private "s25LosslessStringConvertibleP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "6Charts8RendererC"
+- !private "6Charts15ViewPortHandlerC"
+- !private "14CoreFoundation9_CFObjectP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/build/Pods.build/Debug-iphonesimulator/Charts.build/unextended-module.modulemap"
+interface-hash: "26c08010e0d19564b9b0bf6d80ddc9e2"

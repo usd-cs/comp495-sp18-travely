@@ -1,0 +1,237 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Description"
+provides-nominal:
+- "6Charts11DescriptionC"
+provides-member:
+- ["6Charts11DescriptionC", ""]
+provides-dynamic-lookup:
+- "font"
+- "text"
+- "textAlign"
+- "textColor"
+depends-top-level:
+- "AssignmentPrecedence"
+- "CGPoint"
+- "ComponentBase"
+- "Description"
+- "NSTextAlignment"
+- "NSUIColor"
+- "NSUIFont"
+- "String"
+- "StringLiteralType"
+depends-member:
+- ["s23BidirectionalCollectionP", "init"]
+- ["s7CVarArgP", "NSTextAlignment"]
+- ["s7CVarArgP", "NSUIColor"]
+- !private ["s7CVarArgP", "NSUIFont"]
+- ["s7CVarArgP", "black"]
+- !private ["s7CVarArgP", "font"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "systemFont"]
+- ["s7CVarArgP", ""]
+- ["s10CollectionP", "init"]
+- ["s10ComparableP", "init"]
+- ["6Charts13ComponentBaseC", "CGPoint"]
+- ["6Charts13ComponentBaseC", "NSTextAlignment"]
+- ["6Charts13ComponentBaseC", "NSUIColor"]
+- ["6Charts13ComponentBaseC", "NSUIFont"]
+- ["6Charts13ComponentBaseC", "String"]
+- ["6Charts13ComponentBaseC", "font"]
+- ["6Charts13ComponentBaseC", "init"]
+- ["6Charts13ComponentBaseC", "position"]
+- ["6Charts13ComponentBaseC", "text"]
+- ["6Charts13ComponentBaseC", "textAlign"]
+- ["6Charts13ComponentBaseC", "textColor"]
+- ["6Charts13ComponentBaseC", ""]
+- ["s28CustomDebugStringConvertibleP", "NSTextAlignment"]
+- ["s28CustomDebugStringConvertibleP", "NSUIColor"]
+- !private ["s28CustomDebugStringConvertibleP", "NSUIFont"]
+- ["s28CustomDebugStringConvertibleP", "black"]
+- !private ["s28CustomDebugStringConvertibleP", "font"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "systemFont"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s17CustomReflectableP", "init"]
+- ["s23CustomStringConvertibleP", "NSTextAlignment"]
+- ["s23CustomStringConvertibleP", "NSUIColor"]
+- !private ["s23CustomStringConvertibleP", "NSUIFont"]
+- ["s23CustomStringConvertibleP", "black"]
+- !private ["s23CustomStringConvertibleP", "font"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "systemFont"]
+- ["s23CustomStringConvertibleP", ""]
+- ["s9DecodableP", "init"]
+- ["6Charts11DescriptionC", "CGPoint"]
+- ["6Charts11DescriptionC", "NSTextAlignment"]
+- ["6Charts11DescriptionC", "NSUIColor"]
+- ["6Charts11DescriptionC", "NSUIFont"]
+- ["6Charts11DescriptionC", "String"]
+- ["6Charts11DescriptionC", "deinit"]
+- ["6Charts11DescriptionC", "font"]
+- ["6Charts11DescriptionC", "init"]
+- ["6Charts11DescriptionC", "position"]
+- ["6Charts11DescriptionC", "text"]
+- ["6Charts11DescriptionC", "textAlign"]
+- ["6Charts11DescriptionC", "textColor"]
+- ["s9EncodableP", "init"]
+- ["s9EquatableP", "NSTextAlignment"]
+- ["s9EquatableP", "NSUIColor"]
+- !private ["s9EquatableP", "NSUIFont"]
+- ["s9EquatableP", "black"]
+- !private ["s9EquatableP", "font"]
+- ["s9EquatableP", "init"]
+- ["s9EquatableP", "right"]
+- !private ["s9EquatableP", "systemFont"]
+- ["s9EquatableP", ""]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["s8HashableP", "NSTextAlignment"]
+- ["s8HashableP", "NSUIColor"]
+- !private ["s8HashableP", "NSUIFont"]
+- ["s8HashableP", "black"]
+- !private ["s8HashableP", "font"]
+- ["s8HashableP", "init"]
+- ["s8HashableP", "right"]
+- !private ["s8HashableP", "systemFont"]
+- ["s8HashableP", ""]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s10MirrorPathP", "init"]
+- ["So8NSCodingP", "black"]
+- ["So8NSCodingP", "init"]
+- ["So9NSCopyingP", "black"]
+- ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "systemFont"]
+- ["So21NSItemProviderReadingP", "black"]
+- ["So21NSItemProviderReadingP", "init"]
+- ["So21NSItemProviderWritingP", "black"]
+- ["So21NSItemProviderWritingP", "init"]
+- ["So16NSMutableCopyingP", "init"]
+- ["So8NSObjectC", "CGPoint"]
+- ["So8NSObjectC", "NSTextAlignment"]
+- ["So8NSObjectC", "NSUIColor"]
+- ["So8NSObjectC", "NSUIFont"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "black"]
+- ["So8NSObjectC", "font"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "position"]
+- !private ["So8NSObjectC", "systemFont"]
+- ["So8NSObjectC", "text"]
+- ["So8NSObjectC", "textAlign"]
+- ["So8NSObjectC", "textColor"]
+- ["So16NSObjectProtocolP", "NSTextAlignment"]
+- ["So16NSObjectProtocolP", "NSUIColor"]
+- !private ["So16NSObjectProtocolP", "NSUIFont"]
+- ["So16NSObjectProtocolP", "black"]
+- !private ["So16NSObjectProtocolP", "font"]
+- ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "systemFont"]
+- ["So16NSObjectProtocolP", ""]
+- ["So14NSSecureCodingP", "black"]
+- ["So14NSSecureCodingP", "init"]
+- ["So8NSStringC", "init"]
+- ["SC15NSTextAlignmentO", "right"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- ["s16RawRepresentableP", "right"]
+- ["s8SequenceP", "init"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- ["So7UIColorC", "black"]
+- !private ["So6UIFontC", "systemFont"]
+- ["s23_BidirectionalIndexableP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s26_ExpressibleByColorLiteralP", "black"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- ["s10_IndexableP", "init"]
+- ["s14_IndexableBaseP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "NSTextAlignment"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "NSUIColor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSUIFont"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "black"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "font"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "systemFont"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- ["s26_RangeReplaceableIndexableP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- "s23BidirectionalCollectionP"
+- "s7CVarArgP"
+- "s10CollectionP"
+- "s10ComparableP"
+- "6Charts13ComponentBaseC"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- "6Charts11DescriptionC"
+- "s9EncodableP"
+- "s9EquatableP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "s8HashableP"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- "So21NSItemProviderReadingP"
+- "So21NSItemProviderWritingP"
+- "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "So14NSSecureCodingP"
+- "So8NSStringC"
+- "SC15NSTextAlignmentO"
+- "s26RangeReplaceableCollectionP"
+- "s16RawRepresentableP"
+- "s8SequenceP"
+- "SS"
+- "s14StringProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- "So7UIColorC"
+- !private "So6UIFontC"
+- "s23_BidirectionalIndexableP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s26_ExpressibleByColorLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "s10_IndexableP"
+- "s14_IndexableBaseP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- "s26_RangeReplaceableIndexableP"
+- "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/build/Pods.build/Debug-iphonesimulator/Charts.build/unextended-module.modulemap"
+interface-hash: "9b2408fb1afb616f3b4141ae12f26618"

@@ -1,0 +1,103 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "IRadarChartDataSet"
+provides-nominal:
+- "6Charts18IRadarChartDataSetP"
+provides-member:
+- ["6Charts18IRadarChartDataSetP", ""]
+provides-dynamic-lookup:
+- "drawHighlightCircleEnabled"
+- "highlightCircleFillColor"
+- "highlightCircleInnerRadius"
+- "highlightCircleOuterRadius"
+- "highlightCircleStrokeAlpha"
+- "highlightCircleStrokeColor"
+- "highlightCircleStrokeWidth"
+- "isDrawHighlightCircleEnabled"
+depends-top-level:
+- "Bool"
+- "CGFloat"
+- "ILineRadarChartDataSet"
+- "IRadarChartDataSet"
+- "NSUIColor"
+depends-member:
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "Bool"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "CGFloat"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "NSUIColor"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "drawHighlightCircleEnabled"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "highlightCircleFillColor"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "highlightCircleInnerRadius"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "highlightCircleOuterRadius"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "highlightCircleStrokeAlpha"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "highlightCircleStrokeColor"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "highlightCircleStrokeWidth"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "isDrawHighlightCircleEnabled"]
+- ["6Charts13IChartDataSetP", "Bool"]
+- ["6Charts13IChartDataSetP", "CGFloat"]
+- ["6Charts13IChartDataSetP", "NSUIColor"]
+- ["6Charts13IChartDataSetP", "drawHighlightCircleEnabled"]
+- ["6Charts13IChartDataSetP", "highlightCircleFillColor"]
+- ["6Charts13IChartDataSetP", "highlightCircleInnerRadius"]
+- ["6Charts13IChartDataSetP", "highlightCircleOuterRadius"]
+- ["6Charts13IChartDataSetP", "highlightCircleStrokeAlpha"]
+- ["6Charts13IChartDataSetP", "highlightCircleStrokeColor"]
+- ["6Charts13IChartDataSetP", "highlightCircleStrokeWidth"]
+- ["6Charts13IChartDataSetP", "isDrawHighlightCircleEnabled"]
+- ["6Charts22ILineRadarChartDataSetP", "Bool"]
+- ["6Charts22ILineRadarChartDataSetP", "CGFloat"]
+- ["6Charts22ILineRadarChartDataSetP", "NSUIColor"]
+- ["6Charts22ILineRadarChartDataSetP", "drawHighlightCircleEnabled"]
+- ["6Charts22ILineRadarChartDataSetP", "highlightCircleFillColor"]
+- ["6Charts22ILineRadarChartDataSetP", "highlightCircleInnerRadius"]
+- ["6Charts22ILineRadarChartDataSetP", "highlightCircleOuterRadius"]
+- ["6Charts22ILineRadarChartDataSetP", "highlightCircleStrokeAlpha"]
+- ["6Charts22ILineRadarChartDataSetP", "highlightCircleStrokeColor"]
+- ["6Charts22ILineRadarChartDataSetP", "highlightCircleStrokeWidth"]
+- ["6Charts22ILineRadarChartDataSetP", "isDrawHighlightCircleEnabled"]
+- ["6Charts22ILineRadarChartDataSetP", ""]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "Bool"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "CGFloat"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "NSUIColor"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "drawHighlightCircleEnabled"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "highlightCircleFillColor"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "highlightCircleInnerRadius"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "highlightCircleOuterRadius"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "highlightCircleStrokeAlpha"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "highlightCircleStrokeColor"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "highlightCircleStrokeWidth"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "isDrawHighlightCircleEnabled"]
+- ["6Charts18IRadarChartDataSetP", "Bool"]
+- ["6Charts18IRadarChartDataSetP", "CGFloat"]
+- ["6Charts18IRadarChartDataSetP", "NSUIColor"]
+- ["6Charts18IRadarChartDataSetP", "drawHighlightCircleEnabled"]
+- ["6Charts18IRadarChartDataSetP", "highlightCircleFillColor"]
+- ["6Charts18IRadarChartDataSetP", "highlightCircleInnerRadius"]
+- ["6Charts18IRadarChartDataSetP", "highlightCircleOuterRadius"]
+- ["6Charts18IRadarChartDataSetP", "highlightCircleStrokeAlpha"]
+- ["6Charts18IRadarChartDataSetP", "highlightCircleStrokeColor"]
+- ["6Charts18IRadarChartDataSetP", "highlightCircleStrokeWidth"]
+- ["6Charts18IRadarChartDataSetP", "isDrawHighlightCircleEnabled"]
+depends-nominal:
+- "6Charts39IBarLineScatterCandleBubbleChartDataSetP"
+- "6Charts13IChartDataSetP"
+- "6Charts22ILineRadarChartDataSetP"
+- "6Charts35ILineScatterCandleRadarChartDataSetP"
+- "6Charts18IRadarChartDataSetP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/build/Pods.build/Debug-iphonesimulator/Charts.build/unextended-module.modulemap"
+interface-hash: "be8bf28344338c502ba0c662ca96e24c"

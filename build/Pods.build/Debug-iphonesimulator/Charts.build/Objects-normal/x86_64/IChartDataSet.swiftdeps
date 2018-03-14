@@ -1,0 +1,182 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "IChartDataSet"
+provides-nominal:
+- "6Charts13IChartDataSetP"
+provides-member:
+- ["6Charts13IChartDataSetP", ""]
+provides-dynamic-lookup:
+- "addColor"
+- "addEntry"
+- "addEntryOrdered"
+- "axisDependency"
+- "calcMinMax"
+- "calcMinMaxY"
+- "clear"
+- "color"
+- "colors"
+- "contains"
+- "drawIconsEnabled"
+- "drawValuesEnabled"
+- "entriesForXValue"
+- "entryCount"
+- "entryForIndex"
+- "entryForXValue"
+- "entryIndex"
+- "form"
+- "formLineDashLengths"
+- "formLineDashPhase"
+- "formLineWidth"
+- "formSize"
+- "highlightEnabled"
+- "iconsOffset"
+- "isDrawIconsEnabled"
+- "isDrawValuesEnabled"
+- "isHighlightEnabled"
+- "isVisible"
+- "label"
+- "needsFormatter"
+- "notifyDataSetChanged"
+- "removeEntry"
+- "removeFirst"
+- "removeLast"
+- "resetColors"
+- "setColor"
+- "valueColors"
+- "valueFont"
+- "valueFormatter"
+- "valueTextColor"
+- "valueTextColorAt"
+- "visible"
+- "xMax"
+- "xMin"
+- "yMax"
+- "yMin"
+depends-top-level:
+- "Bool"
+- "CGFloat"
+- "CGPoint"
+- "ChartDataEntry"
+- "ChartDataSetRounding"
+- "Double"
+- "IChartDataSet"
+- "IValueFormatter"
+- "Int"
+- "Legend"
+- "NSUIColor"
+- "NSUIFont"
+- "String"
+- "YAxis"
+depends-member:
+- ["6Charts8AxisBaseC", "AxisDependency"]
+- ["s7CVarArgP", "AxisDependency"]
+- ["s7CVarArgP", "Form"]
+- ["6Charts13ComponentBaseC", "AxisDependency"]
+- ["6Charts13ComponentBaseC", "Form"]
+- ["s28CustomDebugStringConvertibleP", "AxisDependency"]
+- ["s28CustomDebugStringConvertibleP", "Form"]
+- ["s23CustomStringConvertibleP", "AxisDependency"]
+- ["s23CustomStringConvertibleP", "Form"]
+- ["s9EquatableP", "AxisDependency"]
+- ["s9EquatableP", "Form"]
+- ["s8HashableP", "AxisDependency"]
+- ["s8HashableP", "Form"]
+- ["6Charts13IChartDataSetP", "Bool"]
+- ["6Charts13IChartDataSetP", "CGFloat"]
+- ["6Charts13IChartDataSetP", "CGPoint"]
+- ["6Charts13IChartDataSetP", "ChartDataEntry"]
+- ["6Charts13IChartDataSetP", "ChartDataSetRounding"]
+- ["6Charts13IChartDataSetP", "Double"]
+- ["6Charts13IChartDataSetP", "IValueFormatter"]
+- ["6Charts13IChartDataSetP", "Int"]
+- ["6Charts13IChartDataSetP", "Legend"]
+- ["6Charts13IChartDataSetP", "NSUIColor"]
+- ["6Charts13IChartDataSetP", "NSUIFont"]
+- ["6Charts13IChartDataSetP", "String"]
+- ["6Charts13IChartDataSetP", "YAxis"]
+- ["6Charts13IChartDataSetP", "addColor"]
+- ["6Charts13IChartDataSetP", "addEntry"]
+- ["6Charts13IChartDataSetP", "addEntryOrdered"]
+- ["6Charts13IChartDataSetP", "axisDependency"]
+- ["6Charts13IChartDataSetP", "calcMinMax"]
+- ["6Charts13IChartDataSetP", "calcMinMaxY"]
+- ["6Charts13IChartDataSetP", "clear"]
+- ["6Charts13IChartDataSetP", "color"]
+- ["6Charts13IChartDataSetP", "colors"]
+- ["6Charts13IChartDataSetP", "contains"]
+- ["6Charts13IChartDataSetP", "drawIconsEnabled"]
+- ["6Charts13IChartDataSetP", "drawValuesEnabled"]
+- ["6Charts13IChartDataSetP", "entriesForXValue"]
+- ["6Charts13IChartDataSetP", "entryCount"]
+- ["6Charts13IChartDataSetP", "entryForIndex"]
+- ["6Charts13IChartDataSetP", "entryForXValue"]
+- ["6Charts13IChartDataSetP", "entryIndex"]
+- ["6Charts13IChartDataSetP", "form"]
+- ["6Charts13IChartDataSetP", "formLineDashLengths"]
+- ["6Charts13IChartDataSetP", "formLineDashPhase"]
+- ["6Charts13IChartDataSetP", "formLineWidth"]
+- ["6Charts13IChartDataSetP", "formSize"]
+- ["6Charts13IChartDataSetP", "highlightEnabled"]
+- ["6Charts13IChartDataSetP", "iconsOffset"]
+- ["6Charts13IChartDataSetP", "isDrawIconsEnabled"]
+- ["6Charts13IChartDataSetP", "isDrawValuesEnabled"]
+- ["6Charts13IChartDataSetP", "isHighlightEnabled"]
+- ["6Charts13IChartDataSetP", "isVisible"]
+- ["6Charts13IChartDataSetP", "label"]
+- ["6Charts13IChartDataSetP", "needsFormatter"]
+- ["6Charts13IChartDataSetP", "notifyDataSetChanged"]
+- ["6Charts13IChartDataSetP", "removeEntry"]
+- ["6Charts13IChartDataSetP", "removeFirst"]
+- ["6Charts13IChartDataSetP", "removeLast"]
+- ["6Charts13IChartDataSetP", "resetColors"]
+- ["6Charts13IChartDataSetP", "setColor"]
+- ["6Charts13IChartDataSetP", "valueColors"]
+- ["6Charts13IChartDataSetP", "valueFont"]
+- ["6Charts13IChartDataSetP", "valueFormatter"]
+- ["6Charts13IChartDataSetP", "valueTextColor"]
+- ["6Charts13IChartDataSetP", "valueTextColorAt"]
+- ["6Charts13IChartDataSetP", "visible"]
+- ["6Charts13IChartDataSetP", "xMax"]
+- ["6Charts13IChartDataSetP", "xMin"]
+- ["6Charts13IChartDataSetP", "yMax"]
+- ["6Charts13IChartDataSetP", "yMin"]
+- ["6Charts6LegendC", "Form"]
+- ["So8NSObjectC", "AxisDependency"]
+- ["So8NSObjectC", "Form"]
+- ["So16NSObjectProtocolP", "AxisDependency"]
+- ["So16NSObjectProtocolP", "Form"]
+- ["6Charts5YAxisC", "AxisDependency"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "AxisDependency"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Form"]
+depends-nominal:
+- "6Charts8AxisBaseC"
+- "s7CVarArgP"
+- "6Charts13ComponentBaseC"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- "s9EquatableP"
+- "s8HashableP"
+- "6Charts13IChartDataSetP"
+- "6Charts6LegendC"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "6Charts5YAxisC"
+- "10Foundation27_KeyValueCodingAndObservingP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/build/Pods.build/Debug-iphonesimulator/Charts.build/unextended-module.modulemap"
+interface-hash: "d78b0163f748b43683bfe92c2c2a6a97"

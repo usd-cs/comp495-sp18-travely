@@ -1,0 +1,59 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "BarChartDataProvider"
+provides-nominal:
+- "6Charts20BarChartDataProviderP"
+provides-member:
+- ["6Charts20BarChartDataProviderP", ""]
+provides-dynamic-lookup:
+- "barData"
+- "isDrawBarShadowEnabled"
+- "isDrawValueAboveBarEnabled"
+- "isHighlightFullBarEnabled"
+depends-top-level:
+- "BarChartData"
+- "BarChartDataProvider"
+- "BarLineScatterCandleBubbleChartDataProvider"
+- "Bool"
+depends-member:
+- ["6Charts20BarChartDataProviderP", "BarChartData"]
+- ["6Charts20BarChartDataProviderP", "Bool"]
+- ["6Charts20BarChartDataProviderP", "barData"]
+- ["6Charts20BarChartDataProviderP", "isDrawBarShadowEnabled"]
+- ["6Charts20BarChartDataProviderP", "isDrawValueAboveBarEnabled"]
+- ["6Charts20BarChartDataProviderP", "isHighlightFullBarEnabled"]
+- ["6Charts43BarLineScatterCandleBubbleChartDataProviderP", "BarChartData"]
+- ["6Charts43BarLineScatterCandleBubbleChartDataProviderP", "Bool"]
+- ["6Charts43BarLineScatterCandleBubbleChartDataProviderP", "barData"]
+- ["6Charts43BarLineScatterCandleBubbleChartDataProviderP", "isDrawBarShadowEnabled"]
+- ["6Charts43BarLineScatterCandleBubbleChartDataProviderP", "isDrawValueAboveBarEnabled"]
+- ["6Charts43BarLineScatterCandleBubbleChartDataProviderP", "isHighlightFullBarEnabled"]
+- ["6Charts43BarLineScatterCandleBubbleChartDataProviderP", ""]
+- ["6Charts17ChartDataProviderP", "BarChartData"]
+- ["6Charts17ChartDataProviderP", "Bool"]
+- ["6Charts17ChartDataProviderP", "barData"]
+- ["6Charts17ChartDataProviderP", "isDrawBarShadowEnabled"]
+- ["6Charts17ChartDataProviderP", "isDrawValueAboveBarEnabled"]
+- ["6Charts17ChartDataProviderP", "isHighlightFullBarEnabled"]
+depends-nominal:
+- "6Charts20BarChartDataProviderP"
+- "6Charts43BarLineScatterCandleBubbleChartDataProviderP"
+- "6Charts17ChartDataProviderP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/build/Pods.build/Debug-iphonesimulator/Charts.build/unextended-module.modulemap"
+interface-hash: "2d0da47c09718f0ff88c1ce1ada2b1dc"

@@ -1,0 +1,394 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ChartLimitLine"
+provides-nominal:
+- "6Charts14ChartLimitLineC"
+- "6Charts14ChartLimitLineC13LabelPositionO"
+provides-member:
+- ["6Charts14ChartLimitLineC", ""]
+- ["6Charts14ChartLimitLineC13LabelPositionO", ""]
+provides-dynamic-lookup:
+- "drawLabelEnabled"
+- "label"
+- "labelPosition"
+- "limit"
+- "lineColor"
+- "lineDashLengths"
+- "lineDashPhase"
+- "lineWidth"
+- "valueFont"
+- "valueTextColor"
+depends-top-level:
+- "/"
+- !private "<"
+- "=="
+- !private ">"
+- "AssignmentPrecedence"
+- "BooleanLiteralType"
+- "CGFloat"
+- "ChartLimitLine"
+- "ComponentBase"
+- "Double"
+- "Int"
+- "NSUIColor"
+- "NSUIFont"
+- "String"
+- "StringLiteralType"
+- !private "~="
+depends-member:
+- ["s23BidirectionalCollectionP", "init"]
+- ["s19BinaryFloatingPointP", "init"]
+- !private ["s13BinaryIntegerP", "hashValue"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- ["12CoreGraphics7CGFloatV", "init"]
+- ["s7CVarArgP", "CGFloat"]
+- ["s7CVarArgP", "Double"]
+- ["s7CVarArgP", "LabelPosition"]
+- ["s7CVarArgP", "NSUIColor"]
+- ["s7CVarArgP", "NSUIFont"]
+- !private ["s7CVarArgP", "_lineWidth"]
+- ["s7CVarArgP", "black"]
+- !private ["s7CVarArgP", "hashValue"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "label"]
+- !private ["s7CVarArgP", "limit"]
+- ["s7CVarArgP", "systemFont"]
+- ["s7CVarArgP", ""]
+- ["6Charts14ChartLimitLineC", "CGFloat"]
+- ["6Charts14ChartLimitLineC", "Double"]
+- ["6Charts14ChartLimitLineC", "Int"]
+- ["6Charts14ChartLimitLineC", "LabelPosition"]
+- ["6Charts14ChartLimitLineC", "NSUIColor"]
+- ["6Charts14ChartLimitLineC", "NSUIFont"]
+- ["6Charts14ChartLimitLineC", "String"]
+- !private ["6Charts14ChartLimitLineC", "_lineWidth"]
+- ["6Charts14ChartLimitLineC", "deinit"]
+- ["6Charts14ChartLimitLineC", "drawLabelEnabled"]
+- ["6Charts14ChartLimitLineC", "init"]
+- ["6Charts14ChartLimitLineC", "label"]
+- ["6Charts14ChartLimitLineC", "labelPosition"]
+- ["6Charts14ChartLimitLineC", "limit"]
+- ["6Charts14ChartLimitLineC", "lineColor"]
+- ["6Charts14ChartLimitLineC", "lineDashLengths"]
+- ["6Charts14ChartLimitLineC", "lineDashPhase"]
+- ["6Charts14ChartLimitLineC", "lineWidth"]
+- ["6Charts14ChartLimitLineC", "valueFont"]
+- ["6Charts14ChartLimitLineC", "valueTextColor"]
+- ["s10CollectionP", "init"]
+- !private ["s10ComparableP", "hashValue"]
+- ["s10ComparableP", "init"]
+- ["6Charts13ComponentBaseC", "CGFloat"]
+- ["6Charts13ComponentBaseC", "Double"]
+- ["6Charts13ComponentBaseC", "Int"]
+- ["6Charts13ComponentBaseC", "LabelPosition"]
+- ["6Charts13ComponentBaseC", "NSUIColor"]
+- ["6Charts13ComponentBaseC", "NSUIFont"]
+- ["6Charts13ComponentBaseC", "String"]
+- ["6Charts13ComponentBaseC", "_lineWidth"]
+- ["6Charts13ComponentBaseC", "drawLabelEnabled"]
+- ["6Charts13ComponentBaseC", "init"]
+- ["6Charts13ComponentBaseC", "label"]
+- ["6Charts13ComponentBaseC", "labelPosition"]
+- ["6Charts13ComponentBaseC", "limit"]
+- ["6Charts13ComponentBaseC", "lineColor"]
+- ["6Charts13ComponentBaseC", "lineDashLengths"]
+- ["6Charts13ComponentBaseC", "lineDashPhase"]
+- ["6Charts13ComponentBaseC", "lineWidth"]
+- ["6Charts13ComponentBaseC", "valueFont"]
+- ["6Charts13ComponentBaseC", "valueTextColor"]
+- ["6Charts13ComponentBaseC", ""]
+- ["s28CustomDebugStringConvertibleP", "CGFloat"]
+- ["s28CustomDebugStringConvertibleP", "Double"]
+- ["s28CustomDebugStringConvertibleP", "LabelPosition"]
+- ["s28CustomDebugStringConvertibleP", "NSUIColor"]
+- ["s28CustomDebugStringConvertibleP", "NSUIFont"]
+- !private ["s28CustomDebugStringConvertibleP", "_lineWidth"]
+- ["s28CustomDebugStringConvertibleP", "black"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "label"]
+- !private ["s28CustomDebugStringConvertibleP", "limit"]
+- ["s28CustomDebugStringConvertibleP", "systemFont"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "hashValue"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "hashValue"]
+- ["s17CustomReflectableP", "init"]
+- ["s23CustomStringConvertibleP", "CGFloat"]
+- ["s23CustomStringConvertibleP", "Double"]
+- ["s23CustomStringConvertibleP", "LabelPosition"]
+- ["s23CustomStringConvertibleP", "NSUIColor"]
+- ["s23CustomStringConvertibleP", "NSUIFont"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "_lineWidth"]
+- ["s23CustomStringConvertibleP", "black"]
+- !private ["s23CustomStringConvertibleP", "hashValue"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "label"]
+- !private ["s23CustomStringConvertibleP", "limit"]
+- ["s23CustomStringConvertibleP", "systemFont"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "hashValue"]
+- ["s9DecodableP", "init"]
+- ["Sd", "init"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "hashValue"]
+- ["s9EncodableP", "init"]
+- ["s9EquatableP", "CGFloat"]
+- ["s9EquatableP", "Double"]
+- ["s9EquatableP", "LabelPosition"]
+- ["s9EquatableP", "NSUIColor"]
+- ["s9EquatableP", "NSUIFont"]
+- ["s9EquatableP", "RawValue"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "_lineWidth"]
+- ["s9EquatableP", "black"]
+- ["s9EquatableP", "hashValue"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "label"]
+- !private ["s9EquatableP", "limit"]
+- ["s9EquatableP", "rawValue"]
+- ["s9EquatableP", "rightTop"]
+- ["s9EquatableP", "systemFont"]
+- ["s9EquatableP", ""]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "hashValue"]
+- ["s27ExpressibleByIntegerLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s17FixedWidthIntegerP", "hashValue"]
+- ["s13FloatingPointP", "init"]
+- ["s8HashableP", "CGFloat"]
+- ["s8HashableP", "Double"]
+- ["s8HashableP", "LabelPosition"]
+- ["s8HashableP", "NSUIColor"]
+- ["s8HashableP", "NSUIFont"]
+- ["s8HashableP", "RawValue"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "_lineWidth"]
+- ["s8HashableP", "black"]
+- ["s8HashableP", "hashValue"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "label"]
+- !private ["s8HashableP", "limit"]
+- ["s8HashableP", "rawValue"]
+- ["s8HashableP", "rightTop"]
+- ["s8HashableP", "systemFont"]
+- ["s8HashableP", ""]
+- !private ["Si", "hashValue"]
+- ["6Charts14ChartLimitLineC13LabelPositionO", "RawValue"]
+- ["6Charts14ChartLimitLineC13LabelPositionO", "deinit"]
+- ["6Charts14ChartLimitLineC13LabelPositionO", "hashValue"]
+- ["6Charts14ChartLimitLineC13LabelPositionO", "init"]
+- ["6Charts14ChartLimitLineC13LabelPositionO", "leftBottom"]
+- ["6Charts14ChartLimitLineC13LabelPositionO", "leftTop"]
+- ["6Charts14ChartLimitLineC13LabelPositionO", "rawValue"]
+- ["6Charts14ChartLimitLineC13LabelPositionO", "rightBottom"]
+- ["6Charts14ChartLimitLineC13LabelPositionO", "rightTop"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "hashValue"]
+- ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "hashValue"]
+- ["s10MirrorPathP", "init"]
+- ["So8NSCodingP", "black"]
+- ["So8NSCodingP", "init"]
+- ["So9NSCopyingP", "black"]
+- ["So9NSCopyingP", "init"]
+- ["So9NSCopyingP", "systemFont"]
+- ["So21NSItemProviderReadingP", "black"]
+- ["So21NSItemProviderReadingP", "init"]
+- ["So21NSItemProviderWritingP", "black"]
+- ["So21NSItemProviderWritingP", "init"]
+- ["So16NSMutableCopyingP", "init"]
+- ["So8NSObjectC", "CGFloat"]
+- ["So8NSObjectC", "Double"]
+- ["So8NSObjectC", "Int"]
+- ["So8NSObjectC", "LabelPosition"]
+- ["So8NSObjectC", "NSUIColor"]
+- ["So8NSObjectC", "NSUIFont"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "_lineWidth"]
+- ["So8NSObjectC", "black"]
+- ["So8NSObjectC", "drawLabelEnabled"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "label"]
+- ["So8NSObjectC", "labelPosition"]
+- ["So8NSObjectC", "limit"]
+- ["So8NSObjectC", "lineColor"]
+- ["So8NSObjectC", "lineDashLengths"]
+- ["So8NSObjectC", "lineDashPhase"]
+- ["So8NSObjectC", "lineWidth"]
+- ["So8NSObjectC", "systemFont"]
+- ["So8NSObjectC", "valueFont"]
+- ["So8NSObjectC", "valueTextColor"]
+- ["So16NSObjectProtocolP", "CGFloat"]
+- ["So16NSObjectProtocolP", "Double"]
+- ["So16NSObjectProtocolP", "LabelPosition"]
+- ["So16NSObjectProtocolP", "NSUIColor"]
+- ["So16NSObjectProtocolP", "NSUIFont"]
+- !private ["So16NSObjectProtocolP", "_lineWidth"]
+- ["So16NSObjectProtocolP", "black"]
+- ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "label"]
+- !private ["So16NSObjectProtocolP", "limit"]
+- ["So16NSObjectProtocolP", "systemFont"]
+- ["So16NSObjectProtocolP", ""]
+- ["So14NSSecureCodingP", "black"]
+- ["So14NSSecureCodingP", "init"]
+- ["So8NSStringC", "init"]
+- !private ["s7NumericP", "hashValue"]
+- ["s7NumericP", "init"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- ["s16RawRepresentableP", "RawValue"]
+- ["s16RawRepresentableP", "hashValue"]
+- ["s16RawRepresentableP", "init"]
+- ["s16RawRepresentableP", "rawValue"]
+- ["s16RawRepresentableP", "rightTop"]
+- ["s16RawRepresentableP", ""]
+- ["s8SequenceP", "init"]
+- !private ["s13SignedIntegerP", "hashValue"]
+- !private ["s13SignedNumericP", "hashValue"]
+- ["s13SignedNumericP", "init"]
+- !private ["s10StrideableP", "hashValue"]
+- ["s10StrideableP", "init"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- ["So7UIColorC", "black"]
+- ["So7UIColorC", "init"]
+- ["So6UIFontC", "systemFont"]
+- ["s23_BidirectionalIndexableP", "init"]
+- !private ["s18_BitwiseOperationsP", "hashValue"]
+- ["s15_CVarArgAlignedP", "init"]
+- ["s22_CVarArgPassedAsDoubleP", "init"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "hashValue"]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s26_ExpressibleByColorLiteralP", "black"]
+- ["s26_ExpressibleByColorLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- ["s10_IndexableP", "init"]
+- ["s14_IndexableBaseP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "CGFloat"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Double"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "LabelPosition"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "NSUIColor"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "NSUIFont"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_lineWidth"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "black"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "label"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "limit"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "systemFont"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "hashValue"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- ["s26_RangeReplaceableIndexableP", "init"]
+- !private ["s11_StrideableP", "hashValue"]
+- ["s11_StrideableP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- "s23BidirectionalCollectionP"
+- "s19BinaryFloatingPointP"
+- !private "s13BinaryIntegerP"
+- !private "Sb"
+- "12CoreGraphics7CGFloatV"
+- "s7CVarArgP"
+- "6Charts14ChartLimitLineC"
+- "s10CollectionP"
+- "s10ComparableP"
+- "6Charts13ComponentBaseC"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- "Sd"
+- "s9EncodableP"
+- "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s25ExpressibleByFloatLiteralP"
+- "s27ExpressibleByIntegerLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s17FixedWidthIntegerP"
+- "s13FloatingPointP"
+- "s8HashableP"
+- !private "Si"
+- "6Charts14ChartLimitLineC13LabelPositionO"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- "So21NSItemProviderReadingP"
+- "So21NSItemProviderWritingP"
+- "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "So14NSSecureCodingP"
+- "So8NSStringC"
+- "s7NumericP"
+- "s26RangeReplaceableCollectionP"
+- "s16RawRepresentableP"
+- "s8SequenceP"
+- !private "s13SignedIntegerP"
+- "s13SignedNumericP"
+- "s10StrideableP"
+- "SS"
+- "s14StringProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- "So7UIColorC"
+- "So6UIFontC"
+- "s23_BidirectionalIndexableP"
+- !private "s18_BitwiseOperationsP"
+- "s15_CVarArgAlignedP"
+- "s22_CVarArgPassedAsDoubleP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s33_ExpressibleByBuiltinFloatLiteralP"
+- "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s26_ExpressibleByColorLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "s10_IndexableP"
+- "s14_IndexableBaseP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- "s26_RangeReplaceableIndexableP"
+- "s11_StrideableP"
+- "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/build/Pods.build/Debug-iphonesimulator/Charts.build/unextended-module.modulemap"
+interface-hash: "4d1cfcbfdd330b6f573e1c752ea6e4a9"

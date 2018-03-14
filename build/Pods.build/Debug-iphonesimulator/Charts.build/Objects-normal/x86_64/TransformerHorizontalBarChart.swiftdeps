@@ -1,0 +1,178 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "TransformerHorizontalBarChart"
+provides-nominal:
+- "6Charts29TransformerHorizontalBarChartC"
+provides-member:
+- ["6Charts29TransformerHorizontalBarChartC", ""]
+provides-dynamic-lookup:
+- "prepareMatrixOffset"
+depends-top-level:
+- !private "!"
+- !private "-"
+- "AssignmentPrecedence"
+- "Bool"
+- !private "CGAffineTransform"
+- "Transformer"
+- "TransformerHorizontalBarChart"
+depends-member:
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["SC17CGAffineTransformV", "init"]
+- !private ["SC17CGAffineTransformV", "translatedBy"]
+- !private ["s7CVarArgP", "CGAffineTransform"]
+- !private ["s7CVarArgP", "_matrixOffset"]
+- !private ["s7CVarArgP", "_viewPortHandler"]
+- !private ["s7CVarArgP", "chartHeight"]
+- !private ["s7CVarArgP", "chartWidth"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "offsetBottom"]
+- !private ["s7CVarArgP", "offsetLeft"]
+- !private ["s7CVarArgP", "offsetRight"]
+- ["s7CVarArgP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "CGAffineTransform"]
+- !private ["s28CustomDebugStringConvertibleP", "_matrixOffset"]
+- !private ["s28CustomDebugStringConvertibleP", "_viewPortHandler"]
+- !private ["s28CustomDebugStringConvertibleP", "chartHeight"]
+- !private ["s28CustomDebugStringConvertibleP", "chartWidth"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "offsetBottom"]
+- !private ["s28CustomDebugStringConvertibleP", "offsetLeft"]
+- !private ["s28CustomDebugStringConvertibleP", "offsetRight"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "CGAffineTransform"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "_matrixOffset"]
+- !private ["s23CustomStringConvertibleP", "_viewPortHandler"]
+- !private ["s23CustomStringConvertibleP", "chartHeight"]
+- !private ["s23CustomStringConvertibleP", "chartWidth"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "offsetBottom"]
+- !private ["s23CustomStringConvertibleP", "offsetLeft"]
+- !private ["s23CustomStringConvertibleP", "offsetRight"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "translatedBy"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "translatedBy"]
+- !private ["s9EquatableP", "CGAffineTransform"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "_matrixOffset"]
+- !private ["s9EquatableP", "_viewPortHandler"]
+- !private ["s9EquatableP", "chartHeight"]
+- !private ["s9EquatableP", "chartWidth"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "offsetBottom"]
+- !private ["s9EquatableP", "offsetLeft"]
+- !private ["s9EquatableP", "offsetRight"]
+- !private ["s9EquatableP", "translatedBy"]
+- ["s9EquatableP", ""]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "CGAffineTransform"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "_matrixOffset"]
+- !private ["s8HashableP", "_viewPortHandler"]
+- !private ["s8HashableP", "chartHeight"]
+- !private ["s8HashableP", "chartWidth"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "offsetBottom"]
+- !private ["s8HashableP", "offsetLeft"]
+- !private ["s8HashableP", "offsetRight"]
+- ["s8HashableP", ""]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- ["So8NSObjectC", "Bool"]
+- !private ["So8NSObjectC", "CGAffineTransform"]
+- !private ["So8NSObjectC", "_matrixOffset"]
+- !private ["So8NSObjectC", "_viewPortHandler"]
+- !private ["So8NSObjectC", "chartHeight"]
+- !private ["So8NSObjectC", "chartWidth"]
+- !private ["So8NSObjectC", "offsetBottom"]
+- !private ["So8NSObjectC", "offsetLeft"]
+- !private ["So8NSObjectC", "offsetRight"]
+- ["So8NSObjectC", "prepareMatrixOffset"]
+- !private ["So16NSObjectProtocolP", "CGAffineTransform"]
+- !private ["So16NSObjectProtocolP", "_matrixOffset"]
+- !private ["So16NSObjectProtocolP", "_viewPortHandler"]
+- !private ["So16NSObjectProtocolP", "chartHeight"]
+- !private ["So16NSObjectProtocolP", "chartWidth"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "offsetBottom"]
+- !private ["So16NSObjectProtocolP", "offsetLeft"]
+- !private ["So16NSObjectProtocolP", "offsetRight"]
+- ["So16NSObjectProtocolP", ""]
+- ["6Charts11TransformerC", "Bool"]
+- !private ["6Charts11TransformerC", "CGAffineTransform"]
+- !private ["6Charts11TransformerC", "_matrixOffset"]
+- !private ["6Charts11TransformerC", "_viewPortHandler"]
+- ["6Charts11TransformerC", "init"]
+- ["6Charts11TransformerC", "prepareMatrixOffset"]
+- ["6Charts11TransformerC", ""]
+- ["6Charts29TransformerHorizontalBarChartC", "Bool"]
+- !private ["6Charts29TransformerHorizontalBarChartC", "CGAffineTransform"]
+- !private ["6Charts29TransformerHorizontalBarChartC", "_matrixOffset"]
+- !private ["6Charts29TransformerHorizontalBarChartC", "_viewPortHandler"]
+- ["6Charts29TransformerHorizontalBarChartC", "deinit"]
+- ["6Charts29TransformerHorizontalBarChartC", "init"]
+- ["6Charts29TransformerHorizontalBarChartC", "prepareMatrixOffset"]
+- !private ["6Charts15ViewPortHandlerC", "chartHeight"]
+- !private ["6Charts15ViewPortHandlerC", "chartWidth"]
+- !private ["6Charts15ViewPortHandlerC", "offsetBottom"]
+- !private ["6Charts15ViewPortHandlerC", "offsetLeft"]
+- !private ["6Charts15ViewPortHandlerC", "offsetRight"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CGAffineTransform"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_matrixOffset"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "_viewPortHandler"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "chartHeight"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "chartWidth"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "offsetBottom"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "offsetLeft"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "offsetRight"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "translatedBy"]
+depends-nominal:
+- !private "Sb"
+- !private "SC17CGAffineTransformV"
+- "s7CVarArgP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- "s8HashableP"
+- !private "s25LosslessStringConvertibleP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "6Charts11TransformerC"
+- "6Charts29TransformerHorizontalBarChartC"
+- !private "6Charts15ViewPortHandlerC"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/build/Pods.build/Debug-iphonesimulator/Charts.build/unextended-module.modulemap"
+interface-hash: "76970d7d9caeb4aabe7f640afe478cd4"

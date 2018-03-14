@@ -1,0 +1,202 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "LegendEntry"
+provides-nominal:
+- "6Charts11LegendEntryC"
+provides-member:
+- ["6Charts11LegendEntryC", ""]
+provides-dynamic-lookup:
+- "form"
+- "formColor"
+- "formLineDashLengths"
+- "formLineDashPhase"
+- "formLineWidth"
+- "formSize"
+- "label"
+depends-top-level:
+- "AssignmentPrecedence"
+- "CGFloat"
+- "Legend"
+- "LegendEntry"
+- "NSObject"
+- "NSUIColor"
+- "String"
+depends-member:
+- ["s19BinaryFloatingPointP", "nan"]
+- ["12CoreGraphics7CGFloatV", "nan"]
+- ["s7CVarArgP", "CGFloat"]
+- ["s7CVarArgP", "Form"]
+- !private ["s7CVarArgP", "form"]
+- !private ["s7CVarArgP", "formColor"]
+- !private ["s7CVarArgP", "formLineDashLengths"]
+- !private ["s7CVarArgP", "formLineDashPhase"]
+- !private ["s7CVarArgP", "formLineWidth"]
+- !private ["s7CVarArgP", "formSize"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "label"]
+- ["s7CVarArgP", "nan"]
+- ["s7CVarArgP", ""]
+- ["s10ComparableP", "nan"]
+- ["6Charts13ComponentBaseC", "Form"]
+- ["s28CustomDebugStringConvertibleP", "CGFloat"]
+- ["s28CustomDebugStringConvertibleP", "Form"]
+- !private ["s28CustomDebugStringConvertibleP", "form"]
+- !private ["s28CustomDebugStringConvertibleP", "formColor"]
+- !private ["s28CustomDebugStringConvertibleP", "formLineDashLengths"]
+- !private ["s28CustomDebugStringConvertibleP", "formLineDashPhase"]
+- !private ["s28CustomDebugStringConvertibleP", "formLineWidth"]
+- !private ["s28CustomDebugStringConvertibleP", "formSize"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "label"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- ["s17CustomReflectableP", "nan"]
+- ["s23CustomStringConvertibleP", "CGFloat"]
+- ["s23CustomStringConvertibleP", "Form"]
+- !private ["s23CustomStringConvertibleP", "form"]
+- !private ["s23CustomStringConvertibleP", "formColor"]
+- !private ["s23CustomStringConvertibleP", "formLineDashLengths"]
+- !private ["s23CustomStringConvertibleP", "formLineDashPhase"]
+- !private ["s23CustomStringConvertibleP", "formLineWidth"]
+- !private ["s23CustomStringConvertibleP", "formSize"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "label"]
+- ["s23CustomStringConvertibleP", "nan"]
+- ["s23CustomStringConvertibleP", ""]
+- ["s9DecodableP", "nan"]
+- ["s9EncodableP", "nan"]
+- ["s9EquatableP", "CGFloat"]
+- ["s9EquatableP", "Form"]
+- ["s9EquatableP", "default"]
+- !private ["s9EquatableP", "form"]
+- !private ["s9EquatableP", "formColor"]
+- !private ["s9EquatableP", "formLineDashLengths"]
+- !private ["s9EquatableP", "formLineDashPhase"]
+- !private ["s9EquatableP", "formLineWidth"]
+- !private ["s9EquatableP", "formSize"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "label"]
+- ["s9EquatableP", "nan"]
+- ["s9EquatableP", ""]
+- ["s25ExpressibleByFloatLiteralP", "nan"]
+- ["s27ExpressibleByIntegerLiteralP", "nan"]
+- ["s13FloatingPointP", "nan"]
+- ["6Charts6LegendC4FormO", "default"]
+- ["s8HashableP", "CGFloat"]
+- ["s8HashableP", "Form"]
+- ["s8HashableP", "default"]
+- !private ["s8HashableP", "form"]
+- !private ["s8HashableP", "formColor"]
+- !private ["s8HashableP", "formLineDashLengths"]
+- !private ["s8HashableP", "formLineDashPhase"]
+- !private ["s8HashableP", "formLineWidth"]
+- !private ["s8HashableP", "formSize"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "label"]
+- ["s8HashableP", "nan"]
+- ["s8HashableP", ""]
+- ["6Charts6LegendC", "Form"]
+- ["6Charts11LegendEntryC", "CGFloat"]
+- ["6Charts11LegendEntryC", "Legend"]
+- ["6Charts11LegendEntryC", "NSUIColor"]
+- ["6Charts11LegendEntryC", "String"]
+- ["6Charts11LegendEntryC", "deinit"]
+- ["6Charts11LegendEntryC", "form"]
+- ["6Charts11LegendEntryC", "formColor"]
+- ["6Charts11LegendEntryC", "formLineDashLengths"]
+- ["6Charts11LegendEntryC", "formLineDashPhase"]
+- ["6Charts11LegendEntryC", "formLineWidth"]
+- ["6Charts11LegendEntryC", "formSize"]
+- ["6Charts11LegendEntryC", "init"]
+- ["6Charts11LegendEntryC", "label"]
+- ["So8NSObjectC", "CGFloat"]
+- ["So8NSObjectC", "Form"]
+- ["So8NSObjectC", "Legend"]
+- ["So8NSObjectC", "NSUIColor"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "form"]
+- ["So8NSObjectC", "formColor"]
+- ["So8NSObjectC", "formLineDashLengths"]
+- ["So8NSObjectC", "formLineDashPhase"]
+- ["So8NSObjectC", "formLineWidth"]
+- ["So8NSObjectC", "formSize"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "label"]
+- ["So8NSObjectC", ""]
+- ["So16NSObjectProtocolP", "CGFloat"]
+- ["So16NSObjectProtocolP", "Form"]
+- !private ["So16NSObjectProtocolP", "form"]
+- !private ["So16NSObjectProtocolP", "formColor"]
+- !private ["So16NSObjectProtocolP", "formLineDashLengths"]
+- !private ["So16NSObjectProtocolP", "formLineDashPhase"]
+- !private ["So16NSObjectProtocolP", "formLineWidth"]
+- !private ["So16NSObjectProtocolP", "formSize"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "label"]
+- ["So16NSObjectProtocolP", ""]
+- ["s7NumericP", "nan"]
+- ["s16RawRepresentableP", "default"]
+- ["s13SignedNumericP", "nan"]
+- ["s10StrideableP", "nan"]
+- ["s15_CVarArgAlignedP", "nan"]
+- ["s22_CVarArgPassedAsDoubleP", "nan"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "CGFloat"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Form"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "form"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "formColor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "formLineDashLengths"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "formLineDashPhase"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "formLineWidth"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "formSize"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "label"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- ["s21_ObjectiveCBridgeableP", "nan"]
+- ["s11_StrideableP", "nan"]
+depends-nominal:
+- "s19BinaryFloatingPointP"
+- "12CoreGraphics7CGFloatV"
+- "s7CVarArgP"
+- "s10ComparableP"
+- "6Charts13ComponentBaseC"
+- "s28CustomDebugStringConvertibleP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- "s9EncodableP"
+- "s9EquatableP"
+- "s25ExpressibleByFloatLiteralP"
+- "s27ExpressibleByIntegerLiteralP"
+- "s13FloatingPointP"
+- "6Charts6LegendC4FormO"
+- "s8HashableP"
+- "6Charts6LegendC"
+- "6Charts11LegendEntryC"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "s7NumericP"
+- "s16RawRepresentableP"
+- "s13SignedNumericP"
+- "s10StrideableP"
+- "s15_CVarArgAlignedP"
+- "s22_CVarArgPassedAsDoubleP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- "s11_StrideableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/build/Pods.build/Debug-iphonesimulator/Charts.build/unextended-module.modulemap"
+interface-hash: "ed9baa564ce4d43b67328d1343ed4682"

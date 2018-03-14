@@ -1,0 +1,194 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "LineScatterCandleRadarChartDataSet"
+provides-nominal:
+- "6Charts34LineScatterCandleRadarChartDataSetC"
+provides-member:
+- ["6Charts34LineScatterCandleRadarChartDataSetC", ""]
+provides-dynamic-lookup:
+- "copyWithZone"
+- "drawHorizontalHighlightIndicatorEnabled"
+- "drawVerticalHighlightIndicatorEnabled"
+- "isHorizontalHighlightIndicatorEnabled"
+- "isVerticalHighlightIndicatorEnabled"
+- "setDrawHighlightIndicators"
+depends-top-level:
+- "AnyObject"
+- "AssignmentPrecedence"
+- "BarLineScatterCandleBubbleChartDataSet"
+- "Bool"
+- "BooleanLiteralType"
+- "CastingPrecedence"
+- "ILineScatterCandleRadarChartDataSet"
+- "LineScatterCandleRadarChartDataSet"
+- "NSZone"
+depends-member:
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "AnyObject"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "Bool"]
+- !private ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "LineScatterCandleRadarChartDataSet"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "NSZone"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "copyWithZone"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "drawHorizontalHighlightIndicatorEnabled"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "drawVerticalHighlightIndicatorEnabled"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "init"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "isHorizontalHighlightIndicatorEnabled"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "isVerticalHighlightIndicatorEnabled"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "setDrawHighlightIndicators"]
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", ""]
+- !private ["s7CVarArgP", "copyWithZone"]
+- ["s7CVarArgP", "drawHorizontalHighlightIndicatorEnabled"]
+- ["s7CVarArgP", "drawVerticalHighlightIndicatorEnabled"]
+- !private ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "isHorizontalHighlightIndicatorEnabled"]
+- ["s7CVarArgP", "isVerticalHighlightIndicatorEnabled"]
+- ["s7CVarArgP", "setDrawHighlightIndicators"]
+- ["s7CVarArgP", ""]
+- ["6Charts16ChartBaseDataSetC", "AnyObject"]
+- ["6Charts16ChartBaseDataSetC", "Bool"]
+- !private ["6Charts16ChartBaseDataSetC", "LineScatterCandleRadarChartDataSet"]
+- ["6Charts16ChartBaseDataSetC", "NSZone"]
+- ["6Charts16ChartBaseDataSetC", "copyWithZone"]
+- ["6Charts16ChartBaseDataSetC", "drawHorizontalHighlightIndicatorEnabled"]
+- ["6Charts16ChartBaseDataSetC", "drawVerticalHighlightIndicatorEnabled"]
+- ["6Charts16ChartBaseDataSetC", "init"]
+- ["6Charts16ChartBaseDataSetC", "isHorizontalHighlightIndicatorEnabled"]
+- ["6Charts16ChartBaseDataSetC", "isVerticalHighlightIndicatorEnabled"]
+- ["6Charts16ChartBaseDataSetC", "setDrawHighlightIndicators"]
+- ["6Charts12ChartDataSetC", "AnyObject"]
+- ["6Charts12ChartDataSetC", "Bool"]
+- !private ["6Charts12ChartDataSetC", "LineScatterCandleRadarChartDataSet"]
+- ["6Charts12ChartDataSetC", "NSZone"]
+- ["6Charts12ChartDataSetC", "copyWithZone"]
+- ["6Charts12ChartDataSetC", "drawHorizontalHighlightIndicatorEnabled"]
+- ["6Charts12ChartDataSetC", "drawVerticalHighlightIndicatorEnabled"]
+- ["6Charts12ChartDataSetC", "init"]
+- ["6Charts12ChartDataSetC", "isHorizontalHighlightIndicatorEnabled"]
+- ["6Charts12ChartDataSetC", "isVerticalHighlightIndicatorEnabled"]
+- ["6Charts12ChartDataSetC", "setDrawHighlightIndicators"]
+- !private ["s28CustomDebugStringConvertibleP", "copyWithZone"]
+- ["s28CustomDebugStringConvertibleP", "drawHorizontalHighlightIndicatorEnabled"]
+- ["s28CustomDebugStringConvertibleP", "drawVerticalHighlightIndicatorEnabled"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "isHorizontalHighlightIndicatorEnabled"]
+- ["s28CustomDebugStringConvertibleP", "isVerticalHighlightIndicatorEnabled"]
+- ["s28CustomDebugStringConvertibleP", "setDrawHighlightIndicators"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "copyWithZone"]
+- ["s23CustomStringConvertibleP", "drawHorizontalHighlightIndicatorEnabled"]
+- ["s23CustomStringConvertibleP", "drawVerticalHighlightIndicatorEnabled"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "isHorizontalHighlightIndicatorEnabled"]
+- ["s23CustomStringConvertibleP", "isVerticalHighlightIndicatorEnabled"]
+- ["s23CustomStringConvertibleP", "setDrawHighlightIndicators"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s9EquatableP", "copyWithZone"]
+- ["s9EquatableP", "drawHorizontalHighlightIndicatorEnabled"]
+- ["s9EquatableP", "drawVerticalHighlightIndicatorEnabled"]
+- !private ["s9EquatableP", "init"]
+- ["s9EquatableP", "isHorizontalHighlightIndicatorEnabled"]
+- ["s9EquatableP", "isVerticalHighlightIndicatorEnabled"]
+- ["s9EquatableP", "setDrawHighlightIndicators"]
+- ["s9EquatableP", ""]
+- !private ["s8HashableP", "copyWithZone"]
+- ["s8HashableP", "drawHorizontalHighlightIndicatorEnabled"]
+- ["s8HashableP", "drawVerticalHighlightIndicatorEnabled"]
+- !private ["s8HashableP", "init"]
+- ["s8HashableP", "isHorizontalHighlightIndicatorEnabled"]
+- ["s8HashableP", "isVerticalHighlightIndicatorEnabled"]
+- ["s8HashableP", "setDrawHighlightIndicators"]
+- ["s8HashableP", ""]
+- !private ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "copyWithZone"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "drawHorizontalHighlightIndicatorEnabled"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "drawVerticalHighlightIndicatorEnabled"]
+- !private ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "init"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "isHorizontalHighlightIndicatorEnabled"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "isVerticalHighlightIndicatorEnabled"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "setDrawHighlightIndicators"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", ""]
+- !private ["6Charts13IChartDataSetP", "copyWithZone"]
+- ["6Charts13IChartDataSetP", "drawHorizontalHighlightIndicatorEnabled"]
+- ["6Charts13IChartDataSetP", "drawVerticalHighlightIndicatorEnabled"]
+- !private ["6Charts13IChartDataSetP", "init"]
+- ["6Charts13IChartDataSetP", "isHorizontalHighlightIndicatorEnabled"]
+- ["6Charts13IChartDataSetP", "isVerticalHighlightIndicatorEnabled"]
+- ["6Charts13IChartDataSetP", "setDrawHighlightIndicators"]
+- ["6Charts13IChartDataSetP", ""]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "drawHorizontalHighlightIndicatorEnabled"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "drawVerticalHighlightIndicatorEnabled"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "isHorizontalHighlightIndicatorEnabled"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "isVerticalHighlightIndicatorEnabled"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "setDrawHighlightIndicators"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", ""]
+- ["6Charts34LineScatterCandleRadarChartDataSetC", "AnyObject"]
+- ["6Charts34LineScatterCandleRadarChartDataSetC", "Bool"]
+- !private ["6Charts34LineScatterCandleRadarChartDataSetC", "LineScatterCandleRadarChartDataSet"]
+- ["6Charts34LineScatterCandleRadarChartDataSetC", "NSZone"]
+- ["6Charts34LineScatterCandleRadarChartDataSetC", "copyWithZone"]
+- ["6Charts34LineScatterCandleRadarChartDataSetC", "deinit"]
+- ["6Charts34LineScatterCandleRadarChartDataSetC", "drawHorizontalHighlightIndicatorEnabled"]
+- ["6Charts34LineScatterCandleRadarChartDataSetC", "drawVerticalHighlightIndicatorEnabled"]
+- ["6Charts34LineScatterCandleRadarChartDataSetC", "init"]
+- ["6Charts34LineScatterCandleRadarChartDataSetC", "isHorizontalHighlightIndicatorEnabled"]
+- ["6Charts34LineScatterCandleRadarChartDataSetC", "isVerticalHighlightIndicatorEnabled"]
+- ["6Charts34LineScatterCandleRadarChartDataSetC", "setDrawHighlightIndicators"]
+- ["So8NSObjectC", "AnyObject"]
+- ["So8NSObjectC", "Bool"]
+- !private ["So8NSObjectC", "LineScatterCandleRadarChartDataSet"]
+- ["So8NSObjectC", "NSZone"]
+- ["So8NSObjectC", "copyWithZone"]
+- ["So8NSObjectC", "drawHorizontalHighlightIndicatorEnabled"]
+- ["So8NSObjectC", "drawVerticalHighlightIndicatorEnabled"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "isHorizontalHighlightIndicatorEnabled"]
+- ["So8NSObjectC", "isVerticalHighlightIndicatorEnabled"]
+- ["So8NSObjectC", "setDrawHighlightIndicators"]
+- !private ["So16NSObjectProtocolP", "copyWithZone"]
+- ["So16NSObjectProtocolP", "drawHorizontalHighlightIndicatorEnabled"]
+- ["So16NSObjectProtocolP", "drawVerticalHighlightIndicatorEnabled"]
+- !private ["So16NSObjectProtocolP", "init"]
+- ["So16NSObjectProtocolP", "isHorizontalHighlightIndicatorEnabled"]
+- ["So16NSObjectProtocolP", "isVerticalHighlightIndicatorEnabled"]
+- ["So16NSObjectProtocolP", "setDrawHighlightIndicators"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "copyWithZone"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "drawHorizontalHighlightIndicatorEnabled"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "drawVerticalHighlightIndicatorEnabled"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "isHorizontalHighlightIndicatorEnabled"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "isVerticalHighlightIndicatorEnabled"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "setDrawHighlightIndicators"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+depends-nominal:
+- "6Charts38BarLineScatterCandleBubbleChartDataSetC"
+- "s7CVarArgP"
+- "6Charts16ChartBaseDataSetC"
+- "6Charts12ChartDataSetC"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- "s9EquatableP"
+- "s8HashableP"
+- "6Charts39IBarLineScatterCandleBubbleChartDataSetP"
+- "6Charts13IChartDataSetP"
+- "6Charts35ILineScatterCandleRadarChartDataSetP"
+- "6Charts34LineScatterCandleRadarChartDataSetC"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/build/Pods.build/Debug-iphonesimulator/Charts.build/unextended-module.modulemap"
+interface-hash: "357e54b1621d7194774e71b3b36b5fe2"

@@ -1,0 +1,284 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "XAxis"
+provides-nominal:
+- "6Charts5XAxisC"
+- "6Charts5XAxisC13LabelPositionO"
+provides-member:
+- ["6Charts5XAxisC", ""]
+- ["6Charts5XAxisC13LabelPositionO", ""]
+provides-dynamic-lookup:
+- "avoidFirstLastClippingEnabled"
+- "isAvoidFirstLastClippingEnabled"
+- "isWordWrapEnabled"
+- "labelHeight"
+- "labelPosition"
+- "labelRotatedHeight"
+- "labelRotatedWidth"
+- "labelRotationAngle"
+- "labelWidth"
+- "wordWrapEnabled"
+- "wordWrapWidthPercent"
+depends-top-level:
+- "=="
+- "AssignmentPrecedence"
+- "AxisBase"
+- "Bool"
+- "BooleanLiteralType"
+- "CGFloat"
+- "Int"
+- "XAxis"
+- !private "~="
+depends-member:
+- ["6Charts8AxisBaseC", "Bool"]
+- ["6Charts8AxisBaseC", "CGFloat"]
+- ["6Charts8AxisBaseC", "Int"]
+- ["6Charts8AxisBaseC", "LabelPosition"]
+- ["6Charts8AxisBaseC", "avoidFirstLastClippingEnabled"]
+- ["6Charts8AxisBaseC", "init"]
+- ["6Charts8AxisBaseC", "isAvoidFirstLastClippingEnabled"]
+- ["6Charts8AxisBaseC", "isWordWrapEnabled"]
+- ["6Charts8AxisBaseC", "labelHeight"]
+- ["6Charts8AxisBaseC", "labelPosition"]
+- ["6Charts8AxisBaseC", "labelRotatedHeight"]
+- ["6Charts8AxisBaseC", "labelRotatedWidth"]
+- ["6Charts8AxisBaseC", "labelRotationAngle"]
+- ["6Charts8AxisBaseC", "labelWidth"]
+- ["6Charts8AxisBaseC", "wordWrapEnabled"]
+- ["6Charts8AxisBaseC", "wordWrapWidthPercent"]
+- !private ["6Charts8AxisBaseC", "yOffset"]
+- ["6Charts8AxisBaseC", ""]
+- ["s19BinaryFloatingPointP", "init"]
+- !private ["s13BinaryIntegerP", "hashValue"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- ["12CoreGraphics7CGFloatV", "init"]
+- ["s7CVarArgP", "CGFloat"]
+- ["s7CVarArgP", "LabelPosition"]
+- !private ["s7CVarArgP", "avoidFirstLastClippingEnabled"]
+- !private ["s7CVarArgP", "hashValue"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "wordWrapEnabled"]
+- !private ["s7CVarArgP", "yOffset"]
+- ["s7CVarArgP", ""]
+- !private ["s10ComparableP", "hashValue"]
+- ["s10ComparableP", "init"]
+- ["6Charts13ComponentBaseC", "Bool"]
+- ["6Charts13ComponentBaseC", "CGFloat"]
+- ["6Charts13ComponentBaseC", "Int"]
+- ["6Charts13ComponentBaseC", "LabelPosition"]
+- ["6Charts13ComponentBaseC", "avoidFirstLastClippingEnabled"]
+- ["6Charts13ComponentBaseC", "init"]
+- ["6Charts13ComponentBaseC", "isAvoidFirstLastClippingEnabled"]
+- ["6Charts13ComponentBaseC", "isWordWrapEnabled"]
+- ["6Charts13ComponentBaseC", "labelHeight"]
+- ["6Charts13ComponentBaseC", "labelPosition"]
+- ["6Charts13ComponentBaseC", "labelRotatedHeight"]
+- ["6Charts13ComponentBaseC", "labelRotatedWidth"]
+- ["6Charts13ComponentBaseC", "labelRotationAngle"]
+- ["6Charts13ComponentBaseC", "labelWidth"]
+- ["6Charts13ComponentBaseC", "wordWrapEnabled"]
+- ["6Charts13ComponentBaseC", "wordWrapWidthPercent"]
+- !private ["6Charts13ComponentBaseC", "yOffset"]
+- ["s28CustomDebugStringConvertibleP", "CGFloat"]
+- ["s28CustomDebugStringConvertibleP", "LabelPosition"]
+- !private ["s28CustomDebugStringConvertibleP", "avoidFirstLastClippingEnabled"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "wordWrapEnabled"]
+- !private ["s28CustomDebugStringConvertibleP", "yOffset"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "hashValue"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "hashValue"]
+- ["s17CustomReflectableP", "init"]
+- ["s23CustomStringConvertibleP", "CGFloat"]
+- ["s23CustomStringConvertibleP", "LabelPosition"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "avoidFirstLastClippingEnabled"]
+- !private ["s23CustomStringConvertibleP", "hashValue"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "wordWrapEnabled"]
+- !private ["s23CustomStringConvertibleP", "yOffset"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "hashValue"]
+- ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "hashValue"]
+- ["s9EncodableP", "init"]
+- ["s9EquatableP", "CGFloat"]
+- ["s9EquatableP", "LabelPosition"]
+- ["s9EquatableP", "RawValue"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "avoidFirstLastClippingEnabled"]
+- ["s9EquatableP", "hashValue"]
+- ["s9EquatableP", "init"]
+- ["s9EquatableP", "rawValue"]
+- ["s9EquatableP", "top"]
+- !private ["s9EquatableP", "wordWrapEnabled"]
+- !private ["s9EquatableP", "yOffset"]
+- ["s9EquatableP", ""]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "hashValue"]
+- ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s17FixedWidthIntegerP", "hashValue"]
+- ["s13FloatingPointP", "init"]
+- ["s8HashableP", "CGFloat"]
+- ["s8HashableP", "LabelPosition"]
+- ["s8HashableP", "RawValue"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "avoidFirstLastClippingEnabled"]
+- ["s8HashableP", "hashValue"]
+- ["s8HashableP", "init"]
+- ["s8HashableP", "rawValue"]
+- ["s8HashableP", "top"]
+- !private ["s8HashableP", "wordWrapEnabled"]
+- !private ["s8HashableP", "yOffset"]
+- ["s8HashableP", ""]
+- !private ["Si", "hashValue"]
+- ["6Charts5XAxisC13LabelPositionO", "RawValue"]
+- ["6Charts5XAxisC13LabelPositionO", "bothSided"]
+- ["6Charts5XAxisC13LabelPositionO", "bottom"]
+- ["6Charts5XAxisC13LabelPositionO", "bottomInside"]
+- ["6Charts5XAxisC13LabelPositionO", "deinit"]
+- ["6Charts5XAxisC13LabelPositionO", "hashValue"]
+- ["6Charts5XAxisC13LabelPositionO", "init"]
+- ["6Charts5XAxisC13LabelPositionO", "rawValue"]
+- ["6Charts5XAxisC13LabelPositionO", "top"]
+- ["6Charts5XAxisC13LabelPositionO", "topInside"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "hashValue"]
+- !private ["s10MirrorPathP", "hashValue"]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "CGFloat"]
+- ["So8NSObjectC", "Int"]
+- ["So8NSObjectC", "LabelPosition"]
+- ["So8NSObjectC", "avoidFirstLastClippingEnabled"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "isAvoidFirstLastClippingEnabled"]
+- ["So8NSObjectC", "isWordWrapEnabled"]
+- ["So8NSObjectC", "labelHeight"]
+- ["So8NSObjectC", "labelPosition"]
+- ["So8NSObjectC", "labelRotatedHeight"]
+- ["So8NSObjectC", "labelRotatedWidth"]
+- ["So8NSObjectC", "labelRotationAngle"]
+- ["So8NSObjectC", "labelWidth"]
+- ["So8NSObjectC", "wordWrapEnabled"]
+- ["So8NSObjectC", "wordWrapWidthPercent"]
+- !private ["So8NSObjectC", "yOffset"]
+- ["So16NSObjectProtocolP", "CGFloat"]
+- ["So16NSObjectProtocolP", "LabelPosition"]
+- !private ["So16NSObjectProtocolP", "avoidFirstLastClippingEnabled"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "wordWrapEnabled"]
+- !private ["So16NSObjectProtocolP", "yOffset"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["s7NumericP", "hashValue"]
+- ["s7NumericP", "init"]
+- ["s16RawRepresentableP", "RawValue"]
+- ["s16RawRepresentableP", "hashValue"]
+- ["s16RawRepresentableP", "init"]
+- ["s16RawRepresentableP", "rawValue"]
+- ["s16RawRepresentableP", "top"]
+- ["s16RawRepresentableP", ""]
+- !private ["s13SignedIntegerP", "hashValue"]
+- !private ["s13SignedNumericP", "hashValue"]
+- ["s13SignedNumericP", "init"]
+- !private ["s10StrideableP", "hashValue"]
+- ["s10StrideableP", "init"]
+- ["6Charts5XAxisC", "Bool"]
+- ["6Charts5XAxisC", "CGFloat"]
+- ["6Charts5XAxisC", "Int"]
+- ["6Charts5XAxisC", "LabelPosition"]
+- ["6Charts5XAxisC", "avoidFirstLastClippingEnabled"]
+- ["6Charts5XAxisC", "deinit"]
+- ["6Charts5XAxisC", "init"]
+- ["6Charts5XAxisC", "isAvoidFirstLastClippingEnabled"]
+- ["6Charts5XAxisC", "isWordWrapEnabled"]
+- ["6Charts5XAxisC", "labelHeight"]
+- ["6Charts5XAxisC", "labelPosition"]
+- ["6Charts5XAxisC", "labelRotatedHeight"]
+- ["6Charts5XAxisC", "labelRotatedWidth"]
+- ["6Charts5XAxisC", "labelRotationAngle"]
+- ["6Charts5XAxisC", "labelWidth"]
+- ["6Charts5XAxisC", "wordWrapEnabled"]
+- ["6Charts5XAxisC", "wordWrapWidthPercent"]
+- !private ["6Charts5XAxisC", "yOffset"]
+- !private ["s18_BitwiseOperationsP", "hashValue"]
+- ["s15_CVarArgAlignedP", "init"]
+- ["s22_CVarArgPassedAsDoubleP", "init"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "hashValue"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "CGFloat"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "LabelPosition"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "avoidFirstLastClippingEnabled"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "wordWrapEnabled"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "yOffset"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "hashValue"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s11_StrideableP", "hashValue"]
+- ["s11_StrideableP", "init"]
+depends-nominal:
+- "6Charts8AxisBaseC"
+- "s19BinaryFloatingPointP"
+- !private "s13BinaryIntegerP"
+- !private "Sb"
+- "12CoreGraphics7CGFloatV"
+- "s7CVarArgP"
+- "s10ComparableP"
+- "6Charts13ComponentBaseC"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- "s9EncodableP"
+- "s9EquatableP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- "s25ExpressibleByFloatLiteralP"
+- "s27ExpressibleByIntegerLiteralP"
+- !private "s17FixedWidthIntegerP"
+- "s13FloatingPointP"
+- "s8HashableP"
+- !private "Si"
+- "6Charts5XAxisC13LabelPositionO"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "s7NumericP"
+- "s16RawRepresentableP"
+- !private "s13SignedIntegerP"
+- "s13SignedNumericP"
+- "s10StrideableP"
+- "6Charts5XAxisC"
+- !private "s18_BitwiseOperationsP"
+- "s15_CVarArgAlignedP"
+- "s22_CVarArgPassedAsDoubleP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- "s11_StrideableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/build/Pods.build/Debug-iphonesimulator/Charts.build/unextended-module.modulemap"
+interface-hash: "553cae8475237398f0cb79de0a731e41"

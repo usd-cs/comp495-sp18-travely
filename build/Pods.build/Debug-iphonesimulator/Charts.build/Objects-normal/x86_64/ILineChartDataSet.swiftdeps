@@ -1,0 +1,214 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ILineChartDataSet"
+provides-nominal:
+- "6Charts17ILineChartDataSetP"
+provides-member:
+- ["6Charts17ILineChartDataSetP", ""]
+provides-dynamic-lookup:
+- "circleColors"
+- "circleHoleColor"
+- "circleHoleRadius"
+- "circleRadius"
+- "cubicIntensity"
+- "drawCircleHoleEnabled"
+- "drawCirclesEnabled"
+- "fillFormatter"
+- "getCircleColor"
+- "isDrawCircleHoleEnabled"
+- "isDrawCirclesEnabled"
+- "lineCapType"
+- "lineDashLengths"
+- "lineDashPhase"
+- "mode"
+- "resetCircleColors"
+- "setCircleColor"
+depends-top-level:
+- "Bool"
+- "CGFloat"
+- "CGLineCap"
+- "IFillFormatter"
+- "ILineChartDataSet"
+- "ILineRadarChartDataSet"
+- "Int"
+- "LineChartDataSet"
+- "NSUIColor"
+depends-member:
+- ["6Charts38BarLineScatterCandleBubbleChartDataSetC", "Mode"]
+- ["s7CVarArgP", "Mode"]
+- ["6Charts16ChartBaseDataSetC", "Mode"]
+- ["6Charts12ChartDataSetC", "Mode"]
+- ["s28CustomDebugStringConvertibleP", "Mode"]
+- ["s23CustomStringConvertibleP", "Mode"]
+- ["s9EquatableP", "Mode"]
+- ["s8HashableP", "Mode"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "Bool"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "CGFloat"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "CGLineCap"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "IFillFormatter"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "Int"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "LineChartDataSet"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "Mode"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "NSUIColor"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "circleColors"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "circleHoleColor"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "circleHoleRadius"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "circleRadius"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "cubicIntensity"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "drawCircleHoleEnabled"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "drawCirclesEnabled"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "fillFormatter"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "getCircleColor"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "isDrawCircleHoleEnabled"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "isDrawCirclesEnabled"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "lineCapType"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "lineDashLengths"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "lineDashPhase"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "mode"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "resetCircleColors"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "setCircleColor"]
+- ["6Charts13IChartDataSetP", "Bool"]
+- ["6Charts13IChartDataSetP", "CGFloat"]
+- ["6Charts13IChartDataSetP", "CGLineCap"]
+- ["6Charts13IChartDataSetP", "IFillFormatter"]
+- ["6Charts13IChartDataSetP", "Int"]
+- ["6Charts13IChartDataSetP", "LineChartDataSet"]
+- ["6Charts13IChartDataSetP", "Mode"]
+- ["6Charts13IChartDataSetP", "NSUIColor"]
+- ["6Charts13IChartDataSetP", "circleColors"]
+- ["6Charts13IChartDataSetP", "circleHoleColor"]
+- ["6Charts13IChartDataSetP", "circleHoleRadius"]
+- ["6Charts13IChartDataSetP", "circleRadius"]
+- ["6Charts13IChartDataSetP", "cubicIntensity"]
+- ["6Charts13IChartDataSetP", "drawCircleHoleEnabled"]
+- ["6Charts13IChartDataSetP", "drawCirclesEnabled"]
+- ["6Charts13IChartDataSetP", "fillFormatter"]
+- ["6Charts13IChartDataSetP", "getCircleColor"]
+- ["6Charts13IChartDataSetP", "isDrawCircleHoleEnabled"]
+- ["6Charts13IChartDataSetP", "isDrawCirclesEnabled"]
+- ["6Charts13IChartDataSetP", "lineCapType"]
+- ["6Charts13IChartDataSetP", "lineDashLengths"]
+- ["6Charts13IChartDataSetP", "lineDashPhase"]
+- ["6Charts13IChartDataSetP", "mode"]
+- ["6Charts13IChartDataSetP", "resetCircleColors"]
+- ["6Charts13IChartDataSetP", "setCircleColor"]
+- ["6Charts17ILineChartDataSetP", "Bool"]
+- ["6Charts17ILineChartDataSetP", "CGFloat"]
+- ["6Charts17ILineChartDataSetP", "CGLineCap"]
+- ["6Charts17ILineChartDataSetP", "IFillFormatter"]
+- ["6Charts17ILineChartDataSetP", "Int"]
+- ["6Charts17ILineChartDataSetP", "LineChartDataSet"]
+- ["6Charts17ILineChartDataSetP", "Mode"]
+- ["6Charts17ILineChartDataSetP", "NSUIColor"]
+- ["6Charts17ILineChartDataSetP", "circleColors"]
+- ["6Charts17ILineChartDataSetP", "circleHoleColor"]
+- ["6Charts17ILineChartDataSetP", "circleHoleRadius"]
+- ["6Charts17ILineChartDataSetP", "circleRadius"]
+- ["6Charts17ILineChartDataSetP", "cubicIntensity"]
+- ["6Charts17ILineChartDataSetP", "drawCircleHoleEnabled"]
+- ["6Charts17ILineChartDataSetP", "drawCirclesEnabled"]
+- ["6Charts17ILineChartDataSetP", "fillFormatter"]
+- ["6Charts17ILineChartDataSetP", "getCircleColor"]
+- ["6Charts17ILineChartDataSetP", "isDrawCircleHoleEnabled"]
+- ["6Charts17ILineChartDataSetP", "isDrawCirclesEnabled"]
+- ["6Charts17ILineChartDataSetP", "lineCapType"]
+- ["6Charts17ILineChartDataSetP", "lineDashLengths"]
+- ["6Charts17ILineChartDataSetP", "lineDashPhase"]
+- ["6Charts17ILineChartDataSetP", "mode"]
+- ["6Charts17ILineChartDataSetP", "resetCircleColors"]
+- ["6Charts17ILineChartDataSetP", "setCircleColor"]
+- ["6Charts22ILineRadarChartDataSetP", "Bool"]
+- ["6Charts22ILineRadarChartDataSetP", "CGFloat"]
+- ["6Charts22ILineRadarChartDataSetP", "CGLineCap"]
+- ["6Charts22ILineRadarChartDataSetP", "IFillFormatter"]
+- ["6Charts22ILineRadarChartDataSetP", "Int"]
+- ["6Charts22ILineRadarChartDataSetP", "LineChartDataSet"]
+- ["6Charts22ILineRadarChartDataSetP", "Mode"]
+- ["6Charts22ILineRadarChartDataSetP", "NSUIColor"]
+- ["6Charts22ILineRadarChartDataSetP", "circleColors"]
+- ["6Charts22ILineRadarChartDataSetP", "circleHoleColor"]
+- ["6Charts22ILineRadarChartDataSetP", "circleHoleRadius"]
+- ["6Charts22ILineRadarChartDataSetP", "circleRadius"]
+- ["6Charts22ILineRadarChartDataSetP", "cubicIntensity"]
+- ["6Charts22ILineRadarChartDataSetP", "drawCircleHoleEnabled"]
+- ["6Charts22ILineRadarChartDataSetP", "drawCirclesEnabled"]
+- ["6Charts22ILineRadarChartDataSetP", "fillFormatter"]
+- ["6Charts22ILineRadarChartDataSetP", "getCircleColor"]
+- ["6Charts22ILineRadarChartDataSetP", "isDrawCircleHoleEnabled"]
+- ["6Charts22ILineRadarChartDataSetP", "isDrawCirclesEnabled"]
+- ["6Charts22ILineRadarChartDataSetP", "lineCapType"]
+- ["6Charts22ILineRadarChartDataSetP", "lineDashLengths"]
+- ["6Charts22ILineRadarChartDataSetP", "lineDashPhase"]
+- ["6Charts22ILineRadarChartDataSetP", "mode"]
+- ["6Charts22ILineRadarChartDataSetP", "resetCircleColors"]
+- ["6Charts22ILineRadarChartDataSetP", "setCircleColor"]
+- ["6Charts22ILineRadarChartDataSetP", ""]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "Bool"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "CGFloat"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "CGLineCap"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "IFillFormatter"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "Int"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "LineChartDataSet"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "Mode"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "NSUIColor"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "circleColors"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "circleHoleColor"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "circleHoleRadius"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "circleRadius"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "cubicIntensity"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "drawCircleHoleEnabled"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "drawCirclesEnabled"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "fillFormatter"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "getCircleColor"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "isDrawCircleHoleEnabled"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "isDrawCirclesEnabled"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "lineCapType"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "lineDashLengths"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "lineDashPhase"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "mode"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "resetCircleColors"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "setCircleColor"]
+- ["6Charts16LineChartDataSetC", "Mode"]
+- ["6Charts21LineRadarChartDataSetC", "Mode"]
+- ["6Charts34LineScatterCandleRadarChartDataSetC", "Mode"]
+- ["So8NSObjectC", "Mode"]
+- ["So16NSObjectProtocolP", "Mode"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Mode"]
+depends-nominal:
+- "6Charts38BarLineScatterCandleBubbleChartDataSetC"
+- "s7CVarArgP"
+- "6Charts16ChartBaseDataSetC"
+- "6Charts12ChartDataSetC"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- "s9EquatableP"
+- "s8HashableP"
+- "6Charts39IBarLineScatterCandleBubbleChartDataSetP"
+- "6Charts13IChartDataSetP"
+- "6Charts17ILineChartDataSetP"
+- "6Charts22ILineRadarChartDataSetP"
+- "6Charts35ILineScatterCandleRadarChartDataSetP"
+- "6Charts16LineChartDataSetC"
+- "6Charts21LineRadarChartDataSetC"
+- "6Charts34LineScatterCandleRadarChartDataSetC"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/build/Pods.build/Debug-iphonesimulator/Charts.build/unextended-module.modulemap"
+interface-hash: "28b7c6ac7e67ea2df0a5cf9f5d8430c3"
