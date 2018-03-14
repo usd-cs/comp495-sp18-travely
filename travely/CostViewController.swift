@@ -18,7 +18,7 @@ class CostViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         let expenses = ["Transportation", "Accomodations", "Food", "Miscellaneous"]
-        let costOfExpense = [999.99, 100.00, 200.00, 150.00]
+        let costOfExpense = [999.99, 999.99, 999.99, 999.99]
         setChart(dataPoints: expenses, values: costOfExpense)
     }
 
@@ -36,7 +36,11 @@ class CostViewController: UIViewController {
             pieDataEntry.append(dataEntry)
         }
         let pieChartDataSet = PieChartDataSet(values: pieDataEntry, label: "Total Cost")
+        pieChartDataSet.colors = ChartColorTemplates.colorful()
+        pieChartDataSet.label = "Total Cost Breakdown"
+        pieChartDataSet.entryLabelFont = NSUIFont(name: "Arial", size: CGFloat(integerLiteral: 10))
         let pieChartData = PieChartData(dataSet: pieChartDataSet)
+        pieChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
         pieChartView.data = pieChartData
     }
     
