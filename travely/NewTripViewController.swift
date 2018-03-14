@@ -135,5 +135,39 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         return true
     }
 
+    //Only for demo purpose, after demo then change to segue to Activities
+    @IBAction func switchToCost(_ sender: UIButton) {
+        //Validating user input before button action
+        //Get time values and change format of dates
+        let current_date = Date()
+        let departure_date = departureDatePicker.date
+        let return_date = returnDatePicker.date
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd"
+        let departure_date_str: String = formatter.string(from: departure_date)
+        let return_date_str: String = formatter.string(from: return_date)
+        let current_date_str: String = formatter.string(from: current_date)
+        
+        //check that user picked a county
+        guard originPlacePicked.count > 1, destinationPlacePicked.count > 1 else {
+            print("Invalid Oigin or Destination: not Selected")
+            return
+            
+        }
+        
+        //Check that departure date is not less than the current date
+        guard departure_date_str >= current_date_str else {
+            print("Invalid Dates: departure time less than current date")
+            return
+        }
+        
+        //Check that departure date is not greater than return date
+        guard departure_date_str <= return_date_str else {
+            print("Invalid Dates: departure time is greater than return date")
+            return
+        }
+        tabBarController?.selectedIndex = 2
+    }
 }
 

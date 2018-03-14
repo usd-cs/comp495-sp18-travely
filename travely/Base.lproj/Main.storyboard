@@ -125,7 +125,7 @@
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Calculate"/>
                                 <connections>
-                                    <segue destination="MhJ-ku-Jcb" kind="show" identifier="CalculatePressedNewTripToActivities" id="weP-Wx-thm"/>
+                                    <action selector="switchToCost:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Oc-Ab-Y7x"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="gWg-jB-tuj">
@@ -497,7 +497,4 @@
         <image name="sky_image" width="640" height="960"/>
         <image name="world_map_image" width="2953" height="1911"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="weP-Wx-thm"/>
-    </inferredMetricsTieBreakers>
 </document>
