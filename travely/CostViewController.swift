@@ -21,6 +21,20 @@ class CostViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    /*
+     *   This function will return the average price for the hotels and air travel
+     *   Parameters: An array of doubles, all of the prices received from the API
+     *   Returns: the average cost of all of prices
+     */
+    func findDataAverage(dataCosts: [Double]) -> Double{
+        var averageCost = 0.0;
+        var totalCost = 0.0;
+        for i in 0...(dataCosts.count-1) {
+            totalCost = totalCost + dataCosts[i]
+        }
+        averageCost = totalCost/Double(dataCosts.count)
+        return averageCost
+    }
 
     /*
     // MARK: - Navigation
