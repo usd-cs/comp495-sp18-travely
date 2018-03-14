@@ -7,18 +7,37 @@
 //
 
 import UIKit
+import Charts
 
 class CostViewController: UIViewController {
 
+    @IBOutlet weak var pieChartView: PieChartView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        let expenses = ["Transportation", "Accomodations", "Food", "Miscellaneous"]
+        let costOfExpense = [999.99, 100.00, 200.00, 150.00]
+        setChart(dataPoints: expenses, values: costOfExpense)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //TODO: declare a func that takes in the data and preps the pie chart
+    func setChart(dataPoints: [String], values: [Double]){
+        var pieDataEntry: [PieChartDataEntry] = []
+        //for-loop below creates data entries for each of the values
+        for i in 0...(dataPoints.count-1){
+            let dataEntry = PieChartDataEntry(value: values[i], label: dataPoints[i])
+            pieDataEntry.append(dataEntry)
+        }
+        let pieChartDataSet = PieChartDataSet(values: pieDataEntry, label: "Total Cost")
+        let pieChartData = PieChartData(dataSet: pieChartDataSet)
+        pieChartView.data = pieChartData
     }
     
 
