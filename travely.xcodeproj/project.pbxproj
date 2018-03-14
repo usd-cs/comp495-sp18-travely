@@ -72,6 +72,12 @@
 		6378194B204B37B700734092 /* travely */ = {
 			isa = PBXGroup;
 			children = (
+				6378194C204B37B700734092 /* AppDelegate.swift */,
+				6378194E204B37B700734092 /* NewTripViewController.swift */,
+				63781950204B37B700734092 /* Main.storyboard */,
+				63781953204B37B700734092 /* Assets.xcassets */,
+				63781955204B37B700734092 /* LaunchScreen.storyboard */,
+				63781958204B37B700734092 /* Info.plist */,
 			);
 			path = travely;
 			sourceTree = "<group>";
