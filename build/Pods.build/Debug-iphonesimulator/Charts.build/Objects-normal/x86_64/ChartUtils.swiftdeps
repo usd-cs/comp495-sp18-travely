@@ -1,0 +1,818 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ChartUtils"
+provides-nominal:
+- "6Charts10ChartUtilsC"
+provides-member:
+- ["s13FloatingPointP", ""]
+- ["SC6CGSizeV", ""]
+- ["Sd", ""]
+- ["SC7CGPointV", ""]
+- ["6Charts10ChartUtilsC", ""]
+- ["s13FloatingPointP", "DEG2RAD"]
+- ["s13FloatingPointP", "RAD2DEG"]
+- ["s13FloatingPointP", "normalizedAngle"]
+- ["SC6CGSizeV", "rotatedBy"]
+- ["SC6CGSizeV", "rotatedBy"]
+- ["Sd", "roundedToNextSignficant"]
+- ["Sd", "decimalPlaces"]
+- ["SC7CGPointV", "moving"]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!"
+- !private "!="
+- !private "&&"
+- !private "*"
+- !private "+"
+- !private "+="
+- !private "-"
+- !private "-="
+- !private "/"
+- !private "<"
+- !private "=="
+- "AssignmentPrecedence"
+- !private "BooleanLiteralType"
+- "CGContext"
+- "CGFloat"
+- "CGPoint"
+- !private "CGRect"
+- "CGSize"
+- "CastingPrecedence"
+- "ChartUtils"
+- !private "DefaultValueFormatter"
+- "Double"
+- "FloatingPoint"
+- "IValueFormatter"
+- "Int"
+- "NSAttributedStringKey"
+- !private "NSString"
+- "NSTextAlignment"
+- !private "NSUIGraphicsBeginImageContextWithOptions"
+- !private "NSUIGraphicsEndImageContext"
+- !private "NSUIGraphicsGetImageFromCurrentImageContext"
+- !private "NSUIGraphicsPopContext"
+- !private "NSUIGraphicsPushContext"
+- "NSUIImage"
+- "String"
+- !private "StringLiteralType"
+- "TernaryPrecedence"
+- !private "UnicodeScalarType"
+- !private "abs"
+- !private "ceil"
+- !private "cos"
+- !private "log10"
+- !private "objc_getAssociatedObject"
+- !private "objc_setAssociatedObject"
+- !private "pow"
+- !private "sin"
+- !private "||"
+depends-member:
+- !private ["s23BidirectionalCollectionP", "boundingRect"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "size"]
+- !private ["s19BinaryFloatingPointP", "DEG2RAD"]
+- !private ["s19BinaryFloatingPointP", "Double"]
+- !private ["s19BinaryFloatingPointP", "Int"]
+- !private ["s19BinaryFloatingPointP", "ceil"]
+- !private ["s19BinaryFloatingPointP", "init"]
+- !private ["s19BinaryFloatingPointP", "isInfinite"]
+- !private ["s19BinaryFloatingPointP", "isNaN"]
+- !private ["s19BinaryFloatingPointP", "log10"]
+- !private ["s19BinaryFloatingPointP", "pow"]
+- !private ["s19BinaryFloatingPointP", "rounded"]
+- !private ["s19BinaryFloatingPointP", "roundedToNextSignficant"]
+- !private ["s13BinaryIntegerP", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["So9CGContextC", "restoreGState"]
+- !private ["So9CGContextC", "rotate"]
+- !private ["So9CGContextC", "saveGState"]
+- !private ["So9CGContextC", "translateBy"]
+- !private ["12CoreGraphics7CGFloatV", "DEG2RAD"]
+- ["SC7CGPointV", "CGFloat"]
+- ["SC7CGPointV", "CGPoint"]
+- !private ["SC7CGPointV", "cos"]
+- !private ["SC7CGPointV", "init"]
+- ["SC7CGPointV", "moving"]
+- !private ["SC7CGPointV", "sin"]
+- !private ["SC7CGPointV", "x"]
+- !private ["SC7CGPointV", "y"]
+- !private ["SC6CGRectV", "init"]
+- !private ["SC6CGRectV", "origin"]
+- !private ["SC6CGRectV", "size"]
+- ["SC6CGSizeV", "CGFloat"]
+- ["SC6CGSizeV", "CGSize"]
+- !private ["SC6CGSizeV", "abs"]
+- !private ["SC6CGSizeV", "cos"]
+- !private ["SC6CGSizeV", "height"]
+- !private ["SC6CGSizeV", "init"]
+- ["SC6CGSizeV", "rotatedBy"]
+- !private ["SC6CGSizeV", "sin"]
+- !private ["SC6CGSizeV", "width"]
+- !private ["s7CVarArgP", "DEG2RAD"]
+- !private ["s7CVarArgP", "Double"]
+- !private ["s7CVarArgP", "Int"]
+- !private ["s7CVarArgP", "boundingRect"]
+- !private ["s7CVarArgP", "ceil"]
+- !private ["s7CVarArgP", "draw"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "isInfinite"]
+- !private ["s7CVarArgP", "isNaN"]
+- !private ["s7CVarArgP", "log10"]
+- !private ["s7CVarArgP", "pow"]
+- !private ["s7CVarArgP", "rounded"]
+- !private ["s7CVarArgP", "roundedToNextSignficant"]
+- !private ["s7CVarArgP", "size"]
+- ["6Charts10ChartUtilsC", "CGContext"]
+- ["6Charts10ChartUtilsC", "CGFloat"]
+- ["6Charts10ChartUtilsC", "CGPoint"]
+- !private ["6Charts10ChartUtilsC", "CGRect"]
+- ["6Charts10ChartUtilsC", "CGSize"]
+- ["6Charts10ChartUtilsC", "ChartUtils"]
+- !private ["6Charts10ChartUtilsC", "DefaultValueFormatter"]
+- ["6Charts10ChartUtilsC", "IValueFormatter"]
+- ["6Charts10ChartUtilsC", "NSAttributedStringKey"]
+- !private ["6Charts10ChartUtilsC", "NSString"]
+- ["6Charts10ChartUtilsC", "NSTextAlignment"]
+- !private ["6Charts10ChartUtilsC", "NSUIGraphicsBeginImageContextWithOptions"]
+- !private ["6Charts10ChartUtilsC", "NSUIGraphicsEndImageContext"]
+- !private ["6Charts10ChartUtilsC", "NSUIGraphicsGetImageFromCurrentImageContext"]
+- !private ["6Charts10ChartUtilsC", "NSUIGraphicsPopContext"]
+- !private ["6Charts10ChartUtilsC", "NSUIGraphicsPushContext"]
+- ["6Charts10ChartUtilsC", "NSUIImage"]
+- ["6Charts10ChartUtilsC", "String"]
+- !private ["6Charts10ChartUtilsC", "_defaultValueFormatter"]
+- ["6Charts10ChartUtilsC", "defaultValueFormatter"]
+- ["6Charts10ChartUtilsC", "deinit"]
+- ["6Charts10ChartUtilsC", "drawImage"]
+- ["6Charts10ChartUtilsC", "drawMultilineText"]
+- ["6Charts10ChartUtilsC", "drawText"]
+- ["6Charts10ChartUtilsC", "generateDefaultValueFormatter"]
+- ["6Charts10ChartUtilsC", "init"]
+- !private ["6Charts10ChartUtilsC", "objc_getAssociatedObject"]
+- !private ["6Charts10ChartUtilsC", "objc_setAssociatedObject"]
+- !private ["s10CollectionP", "boundingRect"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "size"]
+- !private ["s10ComparableP", "DEG2RAD"]
+- !private ["s10ComparableP", "Double"]
+- !private ["s10ComparableP", "Int"]
+- ["s10ComparableP", "Self"]
+- !private ["s10ComparableP", "boundingRect"]
+- !private ["s10ComparableP", "ceil"]
+- !private ["s10ComparableP", "init"]
+- !private ["s10ComparableP", "isInfinite"]
+- !private ["s10ComparableP", "isNaN"]
+- !private ["s10ComparableP", "log10"]
+- !private ["s10ComparableP", "pi"]
+- !private ["s10ComparableP", "pow"]
+- !private ["s10ComparableP", "rounded"]
+- !private ["s10ComparableP", "roundedToNextSignficant"]
+- !private ["s10ComparableP", "sign"]
+- !private ["s10ComparableP", "size"]
+- !private ["s10ComparableP", "truncatingRemainder"]
+- !private ["s28CustomDebugStringConvertibleP", "CGPoint"]
+- !private ["s28CustomDebugStringConvertibleP", "CGSize"]
+- !private ["s28CustomDebugStringConvertibleP", "Double"]
+- !private ["s28CustomDebugStringConvertibleP", "Int"]
+- !private ["s28CustomDebugStringConvertibleP", "abs"]
+- !private ["s28CustomDebugStringConvertibleP", "boundingRect"]
+- !private ["s28CustomDebugStringConvertibleP", "ceil"]
+- !private ["s28CustomDebugStringConvertibleP", "cos"]
+- !private ["s28CustomDebugStringConvertibleP", "draw"]
+- !private ["s28CustomDebugStringConvertibleP", "height"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isInfinite"]
+- !private ["s28CustomDebugStringConvertibleP", "isNaN"]
+- !private ["s28CustomDebugStringConvertibleP", "log10"]
+- !private ["s28CustomDebugStringConvertibleP", "origin"]
+- !private ["s28CustomDebugStringConvertibleP", "pow"]
+- !private ["s28CustomDebugStringConvertibleP", "rotatedBy"]
+- !private ["s28CustomDebugStringConvertibleP", "rounded"]
+- !private ["s28CustomDebugStringConvertibleP", "roundedToNextSignficant"]
+- !private ["s28CustomDebugStringConvertibleP", "sin"]
+- !private ["s28CustomDebugStringConvertibleP", "size"]
+- !private ["s28CustomDebugStringConvertibleP", "width"]
+- !private ["s28CustomDebugStringConvertibleP", "x"]
+- !private ["s28CustomDebugStringConvertibleP", "y"]
+- !private ["s29CustomPlaygroundQuickLookableP", "CGPoint"]
+- !private ["s29CustomPlaygroundQuickLookableP", "CGSize"]
+- !private ["s29CustomPlaygroundQuickLookableP", "Double"]
+- !private ["s29CustomPlaygroundQuickLookableP", "Int"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "abs"]
+- !private ["s29CustomPlaygroundQuickLookableP", "boundingRect"]
+- !private ["s29CustomPlaygroundQuickLookableP", "ceil"]
+- !private ["s29CustomPlaygroundQuickLookableP", "cos"]
+- !private ["s29CustomPlaygroundQuickLookableP", "draw"]
+- !private ["s29CustomPlaygroundQuickLookableP", "height"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "isInfinite"]
+- !private ["s29CustomPlaygroundQuickLookableP", "isNaN"]
+- !private ["s29CustomPlaygroundQuickLookableP", "log10"]
+- !private ["s29CustomPlaygroundQuickLookableP", "origin"]
+- !private ["s29CustomPlaygroundQuickLookableP", "pow"]
+- !private ["s29CustomPlaygroundQuickLookableP", "rotatedBy"]
+- !private ["s29CustomPlaygroundQuickLookableP", "rounded"]
+- !private ["s29CustomPlaygroundQuickLookableP", "roundedToNextSignficant"]
+- !private ["s29CustomPlaygroundQuickLookableP", "sin"]
+- !private ["s29CustomPlaygroundQuickLookableP", "size"]
+- !private ["s29CustomPlaygroundQuickLookableP", "width"]
+- !private ["s29CustomPlaygroundQuickLookableP", "x"]
+- !private ["s29CustomPlaygroundQuickLookableP", "y"]
+- !private ["s17CustomReflectableP", "CGPoint"]
+- !private ["s17CustomReflectableP", "CGSize"]
+- !private ["s17CustomReflectableP", "DEG2RAD"]
+- !private ["s17CustomReflectableP", "Double"]
+- !private ["s17CustomReflectableP", "Int"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "abs"]
+- !private ["s17CustomReflectableP", "boundingRect"]
+- !private ["s17CustomReflectableP", "ceil"]
+- !private ["s17CustomReflectableP", "cos"]
+- !private ["s17CustomReflectableP", "height"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "isInfinite"]
+- !private ["s17CustomReflectableP", "isNaN"]
+- !private ["s17CustomReflectableP", "log10"]
+- !private ["s17CustomReflectableP", "origin"]
+- !private ["s17CustomReflectableP", "pow"]
+- !private ["s17CustomReflectableP", "rotatedBy"]
+- !private ["s17CustomReflectableP", "rounded"]
+- !private ["s17CustomReflectableP", "roundedToNextSignficant"]
+- !private ["s17CustomReflectableP", "sin"]
+- !private ["s17CustomReflectableP", "size"]
+- !private ["s17CustomReflectableP", "width"]
+- !private ["s17CustomReflectableP", "x"]
+- !private ["s17CustomReflectableP", "y"]
+- !private ["s23CustomStringConvertibleP", "DEG2RAD"]
+- !private ["s23CustomStringConvertibleP", "Double"]
+- !private ["s23CustomStringConvertibleP", "Int"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "boundingRect"]
+- !private ["s23CustomStringConvertibleP", "ceil"]
+- !private ["s23CustomStringConvertibleP", "draw"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isInfinite"]
+- !private ["s23CustomStringConvertibleP", "isNaN"]
+- !private ["s23CustomStringConvertibleP", "log10"]
+- !private ["s23CustomStringConvertibleP", "pow"]
+- !private ["s23CustomStringConvertibleP", "rounded"]
+- !private ["s23CustomStringConvertibleP", "roundedToNextSignficant"]
+- !private ["s23CustomStringConvertibleP", "size"]
+- !private ["s9DecodableP", "CGPoint"]
+- !private ["s9DecodableP", "CGSize"]
+- !private ["s9DecodableP", "DEG2RAD"]
+- !private ["s9DecodableP", "Double"]
+- !private ["s9DecodableP", "Int"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "abs"]
+- !private ["s9DecodableP", "boundingRect"]
+- !private ["s9DecodableP", "ceil"]
+- !private ["s9DecodableP", "cos"]
+- !private ["s9DecodableP", "height"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "isInfinite"]
+- !private ["s9DecodableP", "isNaN"]
+- !private ["s9DecodableP", "log10"]
+- !private ["s9DecodableP", "origin"]
+- !private ["s9DecodableP", "pow"]
+- !private ["s9DecodableP", "rotatedBy"]
+- !private ["s9DecodableP", "rounded"]
+- !private ["s9DecodableP", "roundedToNextSignficant"]
+- !private ["s9DecodableP", "sin"]
+- !private ["s9DecodableP", "size"]
+- !private ["s9DecodableP", "width"]
+- !private ["s9DecodableP", "x"]
+- !private ["s9DecodableP", "y"]
+- !private ["6Charts21DefaultValueFormatterC", "deinit"]
+- !private ["6Charts21DefaultValueFormatterC", "init"]
+- ["Sd", "Double"]
+- ["Sd", "Int"]
+- !private ["Sd", "ceil"]
+- ["Sd", "decimalPlaces"]
+- !private ["Sd", "init"]
+- !private ["Sd", "isInfinite"]
+- !private ["Sd", "isNaN"]
+- !private ["Sd", "log10"]
+- !private ["Sd", "pow"]
+- !private ["Sd", "rounded"]
+- ["Sd", "roundedToNextSignficant"]
+- !private ["s9EncodableP", "CGPoint"]
+- !private ["s9EncodableP", "CGSize"]
+- !private ["s9EncodableP", "DEG2RAD"]
+- !private ["s9EncodableP", "Double"]
+- !private ["s9EncodableP", "Int"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "abs"]
+- !private ["s9EncodableP", "boundingRect"]
+- !private ["s9EncodableP", "ceil"]
+- !private ["s9EncodableP", "cos"]
+- !private ["s9EncodableP", "height"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "isInfinite"]
+- !private ["s9EncodableP", "isNaN"]
+- !private ["s9EncodableP", "log10"]
+- !private ["s9EncodableP", "origin"]
+- !private ["s9EncodableP", "pow"]
+- !private ["s9EncodableP", "rotatedBy"]
+- !private ["s9EncodableP", "rounded"]
+- !private ["s9EncodableP", "roundedToNextSignficant"]
+- !private ["s9EncodableP", "sin"]
+- !private ["s9EncodableP", "size"]
+- !private ["s9EncodableP", "width"]
+- !private ["s9EncodableP", "x"]
+- !private ["s9EncodableP", "y"]
+- !private ["s9EquatableP", "CGPoint"]
+- !private ["s9EquatableP", "CGSize"]
+- !private ["s9EquatableP", "DEG2RAD"]
+- !private ["s9EquatableP", "Double"]
+- !private ["s9EquatableP", "Int"]
+- !private ["s9EquatableP", "OBJC_ASSOCIATION_RETAIN_NONATOMIC"]
+- ["s9EquatableP", "Self"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "abs"]
+- !private ["s9EquatableP", "boundingRect"]
+- !private ["s9EquatableP", "ceil"]
+- !private ["s9EquatableP", "center"]
+- !private ["s9EquatableP", "cos"]
+- !private ["s9EquatableP", "draw"]
+- !private ["s9EquatableP", "height"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "isInfinite"]
+- !private ["s9EquatableP", "isNaN"]
+- !private ["s9EquatableP", "log10"]
+- !private ["s9EquatableP", "minus"]
+- !private ["s9EquatableP", "origin"]
+- !private ["s9EquatableP", "pi"]
+- !private ["s9EquatableP", "pow"]
+- !private ["s9EquatableP", "restoreGState"]
+- !private ["s9EquatableP", "right"]
+- !private ["s9EquatableP", "rotate"]
+- !private ["s9EquatableP", "rotatedBy"]
+- !private ["s9EquatableP", "rounded"]
+- !private ["s9EquatableP", "roundedToNextSignficant"]
+- !private ["s9EquatableP", "saveGState"]
+- !private ["s9EquatableP", "sign"]
+- !private ["s9EquatableP", "sin"]
+- !private ["s9EquatableP", "size"]
+- !private ["s9EquatableP", "translateBy"]
+- !private ["s9EquatableP", "truncatingRemainder"]
+- !private ["s9EquatableP", "usesLineFragmentOrigin"]
+- !private ["s9EquatableP", "width"]
+- !private ["s9EquatableP", "x"]
+- !private ["s9EquatableP", "y"]
+- !private ["s25ExpressibleByArrayLiteralP", "usesLineFragmentOrigin"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "boundingRect"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "draw"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "size"]
+- !private ["s25ExpressibleByFloatLiteralP", "DEG2RAD"]
+- !private ["s25ExpressibleByFloatLiteralP", "Double"]
+- !private ["s25ExpressibleByFloatLiteralP", "Int"]
+- !private ["s25ExpressibleByFloatLiteralP", "ceil"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s25ExpressibleByFloatLiteralP", "isInfinite"]
+- !private ["s25ExpressibleByFloatLiteralP", "isNaN"]
+- !private ["s25ExpressibleByFloatLiteralP", "log10"]
+- !private ["s25ExpressibleByFloatLiteralP", "pow"]
+- !private ["s25ExpressibleByFloatLiteralP", "rounded"]
+- !private ["s25ExpressibleByFloatLiteralP", "roundedToNextSignficant"]
+- !private ["s27ExpressibleByIntegerLiteralP", "DEG2RAD"]
+- !private ["s27ExpressibleByIntegerLiteralP", "Double"]
+- !private ["s27ExpressibleByIntegerLiteralP", "Int"]
+- ["s27ExpressibleByIntegerLiteralP", "Self"]
+- !private ["s27ExpressibleByIntegerLiteralP", "ceil"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "isInfinite"]
+- !private ["s27ExpressibleByIntegerLiteralP", "isNaN"]
+- !private ["s27ExpressibleByIntegerLiteralP", "log10"]
+- !private ["s27ExpressibleByIntegerLiteralP", "pi"]
+- !private ["s27ExpressibleByIntegerLiteralP", "pow"]
+- !private ["s27ExpressibleByIntegerLiteralP", "rounded"]
+- !private ["s27ExpressibleByIntegerLiteralP", "roundedToNextSignficant"]
+- !private ["s27ExpressibleByIntegerLiteralP", "sign"]
+- !private ["s27ExpressibleByIntegerLiteralP", "truncatingRemainder"]
+- !private ["s26ExpressibleByStringLiteralP", "boundingRect"]
+- !private ["s26ExpressibleByStringLiteralP", "draw"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "size"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "boundingRect"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "draw"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "size"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- ["s13FloatingPointP", "DEG2RAD"]
+- !private ["s13FloatingPointP", "Double"]
+- !private ["s13FloatingPointP", "Int"]
+- ["s13FloatingPointP", "RAD2DEG"]
+- ["s13FloatingPointP", "Self"]
+- !private ["s13FloatingPointP", "ceil"]
+- !private ["s13FloatingPointP", "init"]
+- !private ["s13FloatingPointP", "isInfinite"]
+- !private ["s13FloatingPointP", "isNaN"]
+- !private ["s13FloatingPointP", "log10"]
+- ["s13FloatingPointP", "normalizedAngle"]
+- !private ["s13FloatingPointP", "pi"]
+- !private ["s13FloatingPointP", "pow"]
+- !private ["s13FloatingPointP", "rounded"]
+- !private ["s13FloatingPointP", "roundedToNextSignficant"]
+- !private ["s13FloatingPointP", "sign"]
+- !private ["s13FloatingPointP", "truncatingRemainder"]
+- !private ["s17FloatingPointSignO", "minus"]
+- !private ["s8HashableP", "DEG2RAD"]
+- !private ["s8HashableP", "Double"]
+- !private ["s8HashableP", "Int"]
+- !private ["s8HashableP", "OBJC_ASSOCIATION_RETAIN_NONATOMIC"]
+- ["s8HashableP", "Self"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "boundingRect"]
+- !private ["s8HashableP", "ceil"]
+- !private ["s8HashableP", "center"]
+- !private ["s8HashableP", "draw"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "isInfinite"]
+- !private ["s8HashableP", "isNaN"]
+- !private ["s8HashableP", "log10"]
+- !private ["s8HashableP", "minus"]
+- !private ["s8HashableP", "pi"]
+- !private ["s8HashableP", "pow"]
+- !private ["s8HashableP", "restoreGState"]
+- !private ["s8HashableP", "right"]
+- !private ["s8HashableP", "rotate"]
+- !private ["s8HashableP", "rounded"]
+- !private ["s8HashableP", "roundedToNextSignficant"]
+- !private ["s8HashableP", "saveGState"]
+- !private ["s8HashableP", "sign"]
+- !private ["s8HashableP", "size"]
+- !private ["s8HashableP", "translateBy"]
+- !private ["s8HashableP", "truncatingRemainder"]
+- !private ["6Charts15IValueFormatterP", "init"]
+- !private ["Si", "init"]
+- !private ["s25LosslessStringConvertibleP", "Double"]
+- !private ["s25LosslessStringConvertibleP", "Int"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "boundingRect"]
+- !private ["s25LosslessStringConvertibleP", "ceil"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "isInfinite"]
+- !private ["s25LosslessStringConvertibleP", "isNaN"]
+- !private ["s25LosslessStringConvertibleP", "log10"]
+- !private ["s25LosslessStringConvertibleP", "pow"]
+- !private ["s25LosslessStringConvertibleP", "rounded"]
+- !private ["s25LosslessStringConvertibleP", "roundedToNextSignficant"]
+- !private ["s25LosslessStringConvertibleP", "size"]
+- !private ["s10MirrorPathP", "boundingRect"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s10MirrorPathP", "size"]
+- !private ["So8NSCodingP", "boundingRect"]
+- !private ["So8NSCodingP", "draw"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "size"]
+- !private ["So9NSCopyingP", "boundingRect"]
+- !private ["So9NSCopyingP", "draw"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "size"]
+- !private ["So21NSItemProviderReadingP", "boundingRect"]
+- !private ["So21NSItemProviderReadingP", "draw"]
+- !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderReadingP", "size"]
+- !private ["So21NSItemProviderWritingP", "boundingRect"]
+- !private ["So21NSItemProviderWritingP", "draw"]
+- !private ["So21NSItemProviderWritingP", "init"]
+- !private ["So21NSItemProviderWritingP", "size"]
+- !private ["So16NSMutableCopyingP", "boundingRect"]
+- !private ["So16NSMutableCopyingP", "draw"]
+- !private ["So16NSMutableCopyingP", "init"]
+- !private ["So16NSMutableCopyingP", "size"]
+- !private ["So8NSObjectC", "boundingRect"]
+- !private ["So8NSObjectC", "draw"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "size"]
+- !private ["So16NSObjectProtocolP", "boundingRect"]
+- !private ["So16NSObjectProtocolP", "draw"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "size"]
+- !private ["So14NSSecureCodingP", "boundingRect"]
+- !private ["So14NSSecureCodingP", "draw"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "size"]
+- !private ["So8NSStringC", "boundingRect"]
+- !private ["So8NSStringC", "draw"]
+- !private ["So8NSStringC", "init"]
+- !private ["So8NSStringC", "size"]
+- !private ["SC22NSStringDrawingOptionsV", "usesLineFragmentOrigin"]
+- !private ["SC15NSTextAlignmentO", "center"]
+- !private ["SC15NSTextAlignmentO", "right"]
+- !private ["s7NumericP", "DEG2RAD"]
+- !private ["s7NumericP", "Double"]
+- !private ["s7NumericP", "Int"]
+- ["s7NumericP", "Self"]
+- !private ["s7NumericP", "ceil"]
+- !private ["s7NumericP", "init"]
+- !private ["s7NumericP", "isInfinite"]
+- !private ["s7NumericP", "isNaN"]
+- !private ["s7NumericP", "log10"]
+- !private ["s7NumericP", "pi"]
+- !private ["s7NumericP", "pow"]
+- !private ["s7NumericP", "rounded"]
+- !private ["s7NumericP", "roundedToNextSignficant"]
+- !private ["s7NumericP", "sign"]
+- !private ["s7NumericP", "truncatingRemainder"]
+- !private ["s9OptionSetP", "usesLineFragmentOrigin"]
+- !private ["s26RangeReplaceableCollectionP", "boundingRect"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "size"]
+- !private ["s16RawRepresentableP", "OBJC_ASSOCIATION_RETAIN_NONATOMIC"]
+- !private ["s16RawRepresentableP", "center"]
+- !private ["s16RawRepresentableP", "minus"]
+- !private ["s16RawRepresentableP", "right"]
+- !private ["s16RawRepresentableP", "usesLineFragmentOrigin"]
+- !private ["s8SequenceP", "boundingRect"]
+- !private ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "size"]
+- !private ["s10SetAlgebraP", "usesLineFragmentOrigin"]
+- !private ["s13SignedIntegerP", "init"]
+- !private ["s13SignedNumericP", "DEG2RAD"]
+- !private ["s13SignedNumericP", "Double"]
+- !private ["s13SignedNumericP", "Int"]
+- ["s13SignedNumericP", "Self"]
+- !private ["s13SignedNumericP", "ceil"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["s13SignedNumericP", "isInfinite"]
+- !private ["s13SignedNumericP", "isNaN"]
+- !private ["s13SignedNumericP", "log10"]
+- !private ["s13SignedNumericP", "pi"]
+- !private ["s13SignedNumericP", "pow"]
+- !private ["s13SignedNumericP", "rounded"]
+- !private ["s13SignedNumericP", "roundedToNextSignficant"]
+- !private ["s13SignedNumericP", "sign"]
+- !private ["s13SignedNumericP", "truncatingRemainder"]
+- !private ["s10StrideableP", "DEG2RAD"]
+- !private ["s10StrideableP", "Double"]
+- !private ["s10StrideableP", "Int"]
+- ["s10StrideableP", "Self"]
+- !private ["s10StrideableP", "ceil"]
+- !private ["s10StrideableP", "init"]
+- !private ["s10StrideableP", "isInfinite"]
+- !private ["s10StrideableP", "isNaN"]
+- !private ["s10StrideableP", "log10"]
+- !private ["s10StrideableP", "pi"]
+- !private ["s10StrideableP", "pow"]
+- !private ["s10StrideableP", "rounded"]
+- !private ["s10StrideableP", "roundedToNextSignficant"]
+- !private ["s10StrideableP", "sign"]
+- !private ["s10StrideableP", "truncatingRemainder"]
+- !private ["SS", "boundingRect"]
+- !private ["SS", "init"]
+- !private ["SS", "size"]
+- !private ["s14StringProtocolP", "boundingRect"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s14StringProtocolP", "size"]
+- !private ["s16TextOutputStreamP", "boundingRect"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "size"]
+- !private ["s20TextOutputStreamableP", "boundingRect"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "size"]
+- !private ["So29UIAccessibilityIdentificationP", "draw"]
+- !private ["So29UIAccessibilityIdentificationP", "size"]
+- !private ["So7UIImageC", "draw"]
+- !private ["So7UIImageC", "size"]
+- !private ["So39UIItemProviderPresentationSizeProvidingP", "draw"]
+- !private ["So39UIItemProviderPresentationSizeProvidingP", "size"]
+- !private ["s23_BidirectionalIndexableP", "boundingRect"]
+- !private ["s23_BidirectionalIndexableP", "init"]
+- !private ["s23_BidirectionalIndexableP", "size"]
+- !private ["s18_BitwiseOperationsP", "init"]
+- !private ["14CoreFoundation9_CFObjectP", "restoreGState"]
+- !private ["14CoreFoundation9_CFObjectP", "rotate"]
+- !private ["14CoreFoundation9_CFObjectP", "saveGState"]
+- !private ["14CoreFoundation9_CFObjectP", "translateBy"]
+- !private ["s15_CVarArgAlignedP", "DEG2RAD"]
+- !private ["s15_CVarArgAlignedP", "Double"]
+- !private ["s15_CVarArgAlignedP", "Int"]
+- !private ["s15_CVarArgAlignedP", "ceil"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s15_CVarArgAlignedP", "isInfinite"]
+- !private ["s15_CVarArgAlignedP", "isNaN"]
+- !private ["s15_CVarArgAlignedP", "log10"]
+- !private ["s15_CVarArgAlignedP", "pow"]
+- !private ["s15_CVarArgAlignedP", "rounded"]
+- !private ["s15_CVarArgAlignedP", "roundedToNextSignficant"]
+- !private ["s22_CVarArgPassedAsDoubleP", "DEG2RAD"]
+- !private ["s22_CVarArgPassedAsDoubleP", "Double"]
+- !private ["s22_CVarArgPassedAsDoubleP", "Int"]
+- !private ["s22_CVarArgPassedAsDoubleP", "ceil"]
+- !private ["s22_CVarArgPassedAsDoubleP", "init"]
+- !private ["s22_CVarArgPassedAsDoubleP", "isInfinite"]
+- !private ["s22_CVarArgPassedAsDoubleP", "isNaN"]
+- !private ["s22_CVarArgPassedAsDoubleP", "log10"]
+- !private ["s22_CVarArgPassedAsDoubleP", "pow"]
+- !private ["s22_CVarArgPassedAsDoubleP", "rounded"]
+- !private ["s22_CVarArgPassedAsDoubleP", "roundedToNextSignficant"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "boundingRect"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "size"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "Double"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "Int"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "ceil"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "isInfinite"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "isNaN"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "log10"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "pow"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "rounded"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "roundedToNextSignficant"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "Double"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "Int"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "ceil"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "isInfinite"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "isNaN"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "log10"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "pow"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "rounded"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "roundedToNextSignficant"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "boundingRect"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "size"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "boundingRect"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "size"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "boundingRect"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "size"]
+- !private ["s26_ExpressibleByImageLiteralP", "draw"]
+- !private ["s26_ExpressibleByImageLiteralP", "size"]
+- !private ["s33_ExpressibleByStringInterpolationP", "boundingRect"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "size"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "boundingRect"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "draw"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "size"]
+- !private ["s10_IndexableP", "boundingRect"]
+- !private ["s10_IndexableP", "init"]
+- !private ["s10_IndexableP", "size"]
+- !private ["s14_IndexableBaseP", "boundingRect"]
+- !private ["s14_IndexableBaseP", "init"]
+- !private ["s14_IndexableBaseP", "size"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "boundingRect"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "draw"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "size"]
+- !private ["s21_ObjectiveCBridgeableP", "CGPoint"]
+- !private ["s21_ObjectiveCBridgeableP", "CGSize"]
+- !private ["s21_ObjectiveCBridgeableP", "DEG2RAD"]
+- !private ["s21_ObjectiveCBridgeableP", "Double"]
+- !private ["s21_ObjectiveCBridgeableP", "Int"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "abs"]
+- !private ["s21_ObjectiveCBridgeableP", "boundingRect"]
+- !private ["s21_ObjectiveCBridgeableP", "ceil"]
+- !private ["s21_ObjectiveCBridgeableP", "cos"]
+- !private ["s21_ObjectiveCBridgeableP", "height"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "isInfinite"]
+- !private ["s21_ObjectiveCBridgeableP", "isNaN"]
+- !private ["s21_ObjectiveCBridgeableP", "log10"]
+- !private ["s21_ObjectiveCBridgeableP", "origin"]
+- !private ["s21_ObjectiveCBridgeableP", "pow"]
+- !private ["s21_ObjectiveCBridgeableP", "rotatedBy"]
+- !private ["s21_ObjectiveCBridgeableP", "rounded"]
+- !private ["s21_ObjectiveCBridgeableP", "roundedToNextSignficant"]
+- !private ["s21_ObjectiveCBridgeableP", "sin"]
+- !private ["s21_ObjectiveCBridgeableP", "size"]
+- !private ["s21_ObjectiveCBridgeableP", "width"]
+- !private ["s21_ObjectiveCBridgeableP", "x"]
+- !private ["s21_ObjectiveCBridgeableP", "y"]
+- !private ["s26_RangeReplaceableIndexableP", "boundingRect"]
+- !private ["s26_RangeReplaceableIndexableP", "init"]
+- !private ["s26_RangeReplaceableIndexableP", "size"]
+- !private ["s11_StrideableP", "DEG2RAD"]
+- !private ["s11_StrideableP", "Double"]
+- !private ["s11_StrideableP", "Int"]
+- ["s11_StrideableP", "Self"]
+- !private ["s11_StrideableP", "ceil"]
+- !private ["s11_StrideableP", "init"]
+- !private ["s11_StrideableP", "isInfinite"]
+- !private ["s11_StrideableP", "isNaN"]
+- !private ["s11_StrideableP", "log10"]
+- !private ["s11_StrideableP", "pi"]
+- !private ["s11_StrideableP", "pow"]
+- !private ["s11_StrideableP", "rounded"]
+- !private ["s11_StrideableP", "roundedToNextSignficant"]
+- !private ["s11_StrideableP", "sign"]
+- !private ["s11_StrideableP", "truncatingRemainder"]
+- !private ["s16_SwiftStringViewP", "boundingRect"]
+- !private ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "size"]
+- !private ["SC22objc_AssociationPolicyO", "OBJC_ASSOCIATION_RETAIN_NONATOMIC"]
+depends-nominal:
+- !private "s23BidirectionalCollectionP"
+- !private "s19BinaryFloatingPointP"
+- !private "s13BinaryIntegerP"
+- !private "Sb"
+- !private "So9CGContextC"
+- !private "12CoreGraphics7CGFloatV"
+- "SC7CGPointV"
+- !private "SC6CGRectV"
+- "SC6CGSizeV"
+- !private "s7CVarArgP"
+- "6Charts10ChartUtilsC"
+- !private "s10CollectionP"
+- "s10ComparableP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "6Charts21DefaultValueFormatterC"
+- "Sd"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- "s27ExpressibleByIntegerLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s17FixedWidthIntegerP"
+- "s13FloatingPointP"
+- !private "s17FloatingPointSignO"
+- "s8HashableP"
+- !private "6Charts15IValueFormatterP"
+- !private "Si"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- !private "So8NSObjectC"
+- !private "So16NSObjectProtocolP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "SC22NSStringDrawingOptionsV"
+- !private "SC15NSTextAlignmentO"
+- "s7NumericP"
+- !private "s9OptionSetP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s16RawRepresentableP"
+- !private "s8SequenceP"
+- !private "s10SetAlgebraP"
+- !private "s13SignedIntegerP"
+- "s13SignedNumericP"
+- "s10StrideableP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So7UIImageC"
+- !private "So39UIItemProviderPresentationSizeProvidingP"
+- !private "s23_BidirectionalIndexableP"
+- !private "s18_BitwiseOperationsP"
+- !private "14CoreFoundation9_CFObjectP"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s33_ExpressibleByBuiltinFloatLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s26_ExpressibleByImageLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "s10_IndexableP"
+- !private "s14_IndexableBaseP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s26_RangeReplaceableIndexableP"
+- "s11_StrideableP"
+- !private "s16_SwiftStringViewP"
+- !private "SC22objc_AssociationPolicyO"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/build/Pods.build/Debug-iphonesimulator/Charts.build/unextended-module.modulemap"
+interface-hash: "f67ff0b34dce5abaac32baedb8a7bc6e"

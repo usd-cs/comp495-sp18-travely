@@ -1,0 +1,226 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "PieHighlighter"
+provides-nominal:
+- "6Charts14PieHighlighterC"
+provides-member:
+- ["6Charts14PieHighlighterC", ""]
+provides-dynamic-lookup:
+- "closestHighlight"
+depends-top-level:
+- "CGFloat"
+- !private "Double"
+- "Highlight"
+- "Int"
+- "PieHighlighter"
+- "PieRadarHighlighter"
+depends-member:
+- !private ["Sa", "subscript"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
+- !private ["s19BinaryFloatingPointP", "init"]
+- !private ["s7CVarArgP", "Double"]
+- !private ["s7CVarArgP", "Highlight"]
+- !private ["s7CVarArgP", "chart"]
+- !private ["s7CVarArgP", "dataSets"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "y"]
+- ["s7CVarArgP", ""]
+- !private ["6Charts9ChartDataC", "dataSets"]
+- !private ["6Charts14ChartDataEntryC", "y"]
+- !private ["6Charts18ChartDataEntryBaseC", "y"]
+- !private ["6Charts17ChartDataProviderP", "data"]
+- ["6Charts16ChartHighlighterC", "CGFloat"]
+- !private ["6Charts16ChartHighlighterC", "Double"]
+- ["6Charts16ChartHighlighterC", "Highlight"]
+- ["6Charts16ChartHighlighterC", "Int"]
+- !private ["6Charts16ChartHighlighterC", "chart"]
+- ["6Charts16ChartHighlighterC", "closestHighlight"]
+- ["6Charts16ChartHighlighterC", "init"]
+- !private ["s10CollectionP", "subscript"]
+- !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "Double"]
+- !private ["s28CustomDebugStringConvertibleP", "Highlight"]
+- !private ["s28CustomDebugStringConvertibleP", "chart"]
+- !private ["s28CustomDebugStringConvertibleP", "dataSets"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "y"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "Double"]
+- !private ["s23CustomStringConvertibleP", "Highlight"]
+- !private ["s23CustomStringConvertibleP", "chart"]
+- !private ["s23CustomStringConvertibleP", "dataSets"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "y"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["Sd", "init"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "subscript"]
+- !private ["s9EquatableP", "Double"]
+- !private ["s9EquatableP", "Highlight"]
+- !private ["s9EquatableP", "chart"]
+- !private ["s9EquatableP", "dataSets"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "y"]
+- ["s9EquatableP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s13FloatingPointP", "init"]
+- !private ["s8HashableP", "Double"]
+- !private ["s8HashableP", "Highlight"]
+- !private ["s8HashableP", "chart"]
+- !private ["s8HashableP", "dataSets"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "y"]
+- ["s8HashableP", ""]
+- !private ["6Charts9HighlightC", "init"]
+- !private ["6Charts13IChartDataSetP", "axisDependency"]
+- !private ["6Charts13IChartDataSetP", "entryForIndex"]
+- !private ["6Charts12IHighlighterP", "Double"]
+- !private ["6Charts12IHighlighterP", "Highlight"]
+- !private ["6Charts12IHighlighterP", "chart"]
+- !private ["6Charts12IHighlighterP", "init"]
+- ["6Charts12IHighlighterP", ""]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s17MutableCollectionP", "subscript"]
+- ["So8NSObjectC", "CGFloat"]
+- !private ["So8NSObjectC", "Double"]
+- ["So8NSObjectC", "Highlight"]
+- ["So8NSObjectC", "Int"]
+- !private ["So8NSObjectC", "chart"]
+- ["So8NSObjectC", "closestHighlight"]
+- !private ["So8NSObjectC", "dataSets"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "y"]
+- !private ["So16NSObjectProtocolP", "Double"]
+- !private ["So16NSObjectProtocolP", "Highlight"]
+- !private ["So16NSObjectProtocolP", "chart"]
+- !private ["So16NSObjectProtocolP", "dataSets"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "y"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["s7NumericP", "init"]
+- ["6Charts14PieHighlighterC", "CGFloat"]
+- !private ["6Charts14PieHighlighterC", "Double"]
+- ["6Charts14PieHighlighterC", "Highlight"]
+- ["6Charts14PieHighlighterC", "Int"]
+- !private ["6Charts14PieHighlighterC", "chart"]
+- ["6Charts14PieHighlighterC", "closestHighlight"]
+- ["6Charts14PieHighlighterC", "deinit"]
+- ["6Charts14PieHighlighterC", "init"]
+- ["6Charts19PieRadarHighlighterC", "CGFloat"]
+- !private ["6Charts19PieRadarHighlighterC", "Double"]
+- ["6Charts19PieRadarHighlighterC", "Highlight"]
+- ["6Charts19PieRadarHighlighterC", "Int"]
+- !private ["6Charts19PieRadarHighlighterC", "chart"]
+- ["6Charts19PieRadarHighlighterC", "closestHighlight"]
+- ["6Charts19PieRadarHighlighterC", "init"]
+- ["6Charts19PieRadarHighlighterC", ""]
+- !private ["s22RandomAccessCollectionP", "subscript"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
+- !private ["s8SequenceP", "subscript"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["s10StrideableP", "init"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s23_BidirectionalIndexableP", "subscript"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s22_CVarArgPassedAsDoubleP", "init"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s10_IndexableP", "subscript"]
+- !private ["s14_IndexableBaseP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Double"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Highlight"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "chart"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dataSets"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "y"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["s17_MutableIndexableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s22_RandomAccessIndexableP", "subscript"]
+- !private ["s26_RangeReplaceableIndexableP", "subscript"]
+- !private ["s11_StrideableP", "init"]
+depends-nominal:
+- !private "Sa"
+- !private "s23BidirectionalCollectionP"
+- !private "s19BinaryFloatingPointP"
+- "s7CVarArgP"
+- !private "6Charts9ChartDataC"
+- !private "6Charts14ChartDataEntryC"
+- !private "6Charts18ChartDataEntryBaseC"
+- !private "6Charts17ChartDataProviderP"
+- "6Charts16ChartHighlighterC"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "Sd"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s13FloatingPointP"
+- "s8HashableP"
+- !private "6Charts9HighlightC"
+- !private "6Charts13IChartDataSetP"
+- "6Charts12IHighlighterP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s17MutableCollectionP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "s7NumericP"
+- "6Charts14PieHighlighterC"
+- "6Charts19PieRadarHighlighterC"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s8SequenceP"
+- !private "s13SignedNumericP"
+- !private "s10StrideableP"
+- !private "s14_ArrayProtocolP"
+- !private "s23_BidirectionalIndexableP"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s33_ExpressibleByBuiltinFloatLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s10_IndexableP"
+- !private "s14_IndexableBaseP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s17_MutableIndexableP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s22_RandomAccessIndexableP"
+- !private "s26_RangeReplaceableIndexableP"
+- !private "s11_StrideableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/build/Pods.build/Debug-iphonesimulator/Charts.build/unextended-module.modulemap"
+interface-hash: "058c40695559de6e8daf210f06d29481"

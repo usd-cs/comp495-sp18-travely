@@ -1,0 +1,86 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ILineRadarChartDataSet"
+provides-nominal:
+- "6Charts22ILineRadarChartDataSetP"
+provides-member:
+- ["6Charts22ILineRadarChartDataSetP", ""]
+provides-dynamic-lookup:
+- "drawFilledEnabled"
+- "fill"
+- "fillAlpha"
+- "fillColor"
+- "isDrawFilledEnabled"
+- "lineWidth"
+depends-top-level:
+- "Bool"
+- "CGFloat"
+- "Fill"
+- "ILineRadarChartDataSet"
+- "ILineScatterCandleRadarChartDataSet"
+- "NSUIColor"
+depends-member:
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "Bool"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "CGFloat"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "Fill"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "NSUIColor"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "drawFilledEnabled"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "fill"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "fillAlpha"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "fillColor"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "isDrawFilledEnabled"]
+- ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "lineWidth"]
+- ["6Charts13IChartDataSetP", "Bool"]
+- ["6Charts13IChartDataSetP", "CGFloat"]
+- ["6Charts13IChartDataSetP", "Fill"]
+- ["6Charts13IChartDataSetP", "NSUIColor"]
+- ["6Charts13IChartDataSetP", "drawFilledEnabled"]
+- ["6Charts13IChartDataSetP", "fill"]
+- ["6Charts13IChartDataSetP", "fillAlpha"]
+- ["6Charts13IChartDataSetP", "fillColor"]
+- ["6Charts13IChartDataSetP", "isDrawFilledEnabled"]
+- ["6Charts13IChartDataSetP", "lineWidth"]
+- ["6Charts22ILineRadarChartDataSetP", "Bool"]
+- ["6Charts22ILineRadarChartDataSetP", "CGFloat"]
+- ["6Charts22ILineRadarChartDataSetP", "Fill"]
+- ["6Charts22ILineRadarChartDataSetP", "NSUIColor"]
+- ["6Charts22ILineRadarChartDataSetP", "drawFilledEnabled"]
+- ["6Charts22ILineRadarChartDataSetP", "fill"]
+- ["6Charts22ILineRadarChartDataSetP", "fillAlpha"]
+- ["6Charts22ILineRadarChartDataSetP", "fillColor"]
+- ["6Charts22ILineRadarChartDataSetP", "isDrawFilledEnabled"]
+- ["6Charts22ILineRadarChartDataSetP", "lineWidth"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "Bool"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "CGFloat"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "Fill"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "NSUIColor"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "drawFilledEnabled"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "fill"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "fillAlpha"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "fillColor"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "isDrawFilledEnabled"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", "lineWidth"]
+- ["6Charts35ILineScatterCandleRadarChartDataSetP", ""]
+depends-nominal:
+- "6Charts39IBarLineScatterCandleBubbleChartDataSetP"
+- "6Charts13IChartDataSetP"
+- "6Charts22ILineRadarChartDataSetP"
+- "6Charts35ILineScatterCandleRadarChartDataSetP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/build/Pods.build/Debug-iphonesimulator/Charts.build/unextended-module.modulemap"
+interface-hash: "acc21b9cdcfa87676c7402745761b053"

@@ -1,0 +1,279 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "RadarChartData"
+provides-nominal:
+- "6Charts14RadarChartDataC"
+provides-member:
+- ["6Charts14RadarChartDataC", ""]
+provides-dynamic-lookup:
+- "entryForHighlight"
+- "highlightColor"
+- "highlightLineDashLengths"
+- "highlightLineDashPhase"
+- "highlightLineWidth"
+- "labels"
+depends-top-level:
+- "/"
+- "AssignmentPrecedence"
+- "CGFloat"
+- "ChartData"
+- "ChartDataEntry"
+- "Highlight"
+- "IChartDataSet"
+- !private "Int"
+- "NSUIColor"
+- "RadarChartData"
+- "String"
+depends-member:
+- ["Sa", "init"]
+- ["s23BidirectionalCollectionP", "init"]
+- ["s19BinaryFloatingPointP", "init"]
+- !private ["s13BinaryIntegerP", "init"]
+- ["12CoreGraphics7CGFloatV", "init"]
+- ["s7CVarArgP", "CGFloat"]
+- !private ["s7CVarArgP", "Int"]
+- ["s7CVarArgP", "NSUIColor"]
+- ["s7CVarArgP", "String"]
+- !private ["s7CVarArgP", "dataSetIndex"]
+- !private ["s7CVarArgP", "getDataSetByIndex"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "labels"]
+- !private ["s7CVarArgP", "x"]
+- ["s7CVarArgP", ""]
+- ["6Charts9ChartDataC", "CGFloat"]
+- ["6Charts9ChartDataC", "ChartDataEntry"]
+- ["6Charts9ChartDataC", "Highlight"]
+- ["6Charts9ChartDataC", "IChartDataSet"]
+- !private ["6Charts9ChartDataC", "Int"]
+- ["6Charts9ChartDataC", "NSUIColor"]
+- ["6Charts9ChartDataC", "String"]
+- ["6Charts9ChartDataC", "entryForHighlight"]
+- !private ["6Charts9ChartDataC", "getDataSetByIndex"]
+- ["6Charts9ChartDataC", "highlightColor"]
+- ["6Charts9ChartDataC", "highlightLineDashLengths"]
+- ["6Charts9ChartDataC", "highlightLineDashPhase"]
+- ["6Charts9ChartDataC", "highlightLineWidth"]
+- ["6Charts9ChartDataC", "init"]
+- ["6Charts9ChartDataC", "labels"]
+- ["6Charts9ChartDataC", "setLabels"]
+- ["6Charts9ChartDataC", ""]
+- ["s10CollectionP", "init"]
+- ["s10ComparableP", "init"]
+- ["s28CustomDebugStringConvertibleP", "CGFloat"]
+- !private ["s28CustomDebugStringConvertibleP", "Int"]
+- ["s28CustomDebugStringConvertibleP", "NSUIColor"]
+- ["s28CustomDebugStringConvertibleP", "String"]
+- !private ["s28CustomDebugStringConvertibleP", "dataSetIndex"]
+- !private ["s28CustomDebugStringConvertibleP", "getDataSetByIndex"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "labels"]
+- !private ["s28CustomDebugStringConvertibleP", "x"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s17CustomReflectableP", "init"]
+- ["s23CustomStringConvertibleP", "CGFloat"]
+- !private ["s23CustomStringConvertibleP", "Int"]
+- ["s23CustomStringConvertibleP", "NSUIColor"]
+- ["s23CustomStringConvertibleP", "String"]
+- !private ["s23CustomStringConvertibleP", "dataSetIndex"]
+- !private ["s23CustomStringConvertibleP", "getDataSetByIndex"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "labels"]
+- !private ["s23CustomStringConvertibleP", "x"]
+- ["s23CustomStringConvertibleP", ""]
+- ["s9DecodableP", "init"]
+- ["s9EncodableP", "init"]
+- ["s9EquatableP", "CGFloat"]
+- !private ["s9EquatableP", "Int"]
+- ["s9EquatableP", "NSUIColor"]
+- ["s9EquatableP", "String"]
+- !private ["s9EquatableP", "dataSetIndex"]
+- !private ["s9EquatableP", "getDataSetByIndex"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "labels"]
+- !private ["s9EquatableP", "x"]
+- ["s9EquatableP", ""]
+- ["s25ExpressibleByArrayLiteralP", "init"]
+- ["s25ExpressibleByFloatLiteralP", "init"]
+- ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- ["s13FloatingPointP", "init"]
+- ["s8HashableP", "CGFloat"]
+- !private ["s8HashableP", "Int"]
+- ["s8HashableP", "NSUIColor"]
+- ["s8HashableP", "String"]
+- !private ["s8HashableP", "dataSetIndex"]
+- !private ["s8HashableP", "getDataSetByIndex"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "labels"]
+- !private ["s8HashableP", "x"]
+- ["s8HashableP", ""]
+- !private ["6Charts9HighlightC", "dataSetIndex"]
+- !private ["6Charts9HighlightC", "x"]
+- !private ["6Charts13IChartDataSetP", "entryForIndex"]
+- !private ["Si", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- ["s17MutableCollectionP", "init"]
+- ["So8NSCodingP", "init"]
+- ["So9NSCopyingP", "init"]
+- ["So21NSItemProviderReadingP", "init"]
+- ["So21NSItemProviderWritingP", "init"]
+- ["So8NSObjectC", "CGFloat"]
+- ["So8NSObjectC", "ChartDataEntry"]
+- ["So8NSObjectC", "Highlight"]
+- ["So8NSObjectC", "IChartDataSet"]
+- !private ["So8NSObjectC", "Int"]
+- ["So8NSObjectC", "NSUIColor"]
+- ["So8NSObjectC", "String"]
+- !private ["So8NSObjectC", "dataSetIndex"]
+- ["So8NSObjectC", "entryForHighlight"]
+- !private ["So8NSObjectC", "getDataSetByIndex"]
+- ["So8NSObjectC", "highlightColor"]
+- ["So8NSObjectC", "highlightLineDashLengths"]
+- ["So8NSObjectC", "highlightLineDashPhase"]
+- ["So8NSObjectC", "highlightLineWidth"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "labels"]
+- ["So8NSObjectC", "setLabels"]
+- !private ["So8NSObjectC", "x"]
+- ["So16NSObjectProtocolP", "CGFloat"]
+- !private ["So16NSObjectProtocolP", "Int"]
+- ["So16NSObjectProtocolP", "NSUIColor"]
+- ["So16NSObjectProtocolP", "String"]
+- !private ["So16NSObjectProtocolP", "dataSetIndex"]
+- !private ["So16NSObjectProtocolP", "getDataSetByIndex"]
+- ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "labels"]
+- !private ["So16NSObjectProtocolP", "x"]
+- ["So16NSObjectProtocolP", ""]
+- ["So14NSSecureCodingP", "init"]
+- ["s7NumericP", "init"]
+- ["6Charts14RadarChartDataC", "CGFloat"]
+- ["6Charts14RadarChartDataC", "ChartDataEntry"]
+- ["6Charts14RadarChartDataC", "Highlight"]
+- ["6Charts14RadarChartDataC", "IChartDataSet"]
+- !private ["6Charts14RadarChartDataC", "Int"]
+- ["6Charts14RadarChartDataC", "NSUIColor"]
+- ["6Charts14RadarChartDataC", "String"]
+- ["6Charts14RadarChartDataC", "deinit"]
+- ["6Charts14RadarChartDataC", "entryForHighlight"]
+- !private ["6Charts14RadarChartDataC", "getDataSetByIndex"]
+- ["6Charts14RadarChartDataC", "highlightColor"]
+- ["6Charts14RadarChartDataC", "highlightLineDashLengths"]
+- ["6Charts14RadarChartDataC", "highlightLineDashPhase"]
+- ["6Charts14RadarChartDataC", "highlightLineWidth"]
+- ["6Charts14RadarChartDataC", "init"]
+- ["6Charts14RadarChartDataC", "labels"]
+- ["6Charts14RadarChartDataC", "setLabels"]
+- ["s22RandomAccessCollectionP", "init"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- ["s8SequenceP", "init"]
+- !private ["s13SignedIntegerP", "init"]
+- ["s13SignedNumericP", "init"]
+- ["s10StrideableP", "init"]
+- ["So7UIColorC", "init"]
+- ["s14_ArrayProtocolP", "init"]
+- ["s23_BidirectionalIndexableP", "init"]
+- !private ["s18_BitwiseOperationsP", "init"]
+- ["s15_CVarArgAlignedP", "init"]
+- ["s22_CVarArgPassedAsDoubleP", "init"]
+- ["s24_DestructorSafeContainerP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s26_ExpressibleByColorLiteralP", "init"]
+- ["s10_IndexableP", "init"]
+- ["s14_IndexableBaseP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "CGFloat"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Int"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "NSUIColor"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "String"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dataSetIndex"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getDataSetByIndex"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "labels"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "x"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- ["s17_MutableIndexableP", "init"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- ["s22_RandomAccessIndexableP", "init"]
+- ["s26_RangeReplaceableIndexableP", "init"]
+- ["s11_StrideableP", "init"]
+depends-nominal:
+- "Sa"
+- "s23BidirectionalCollectionP"
+- "s19BinaryFloatingPointP"
+- !private "s13BinaryIntegerP"
+- "12CoreGraphics7CGFloatV"
+- "s7CVarArgP"
+- "6Charts9ChartDataC"
+- "s10CollectionP"
+- "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- "s9EncodableP"
+- "s9EquatableP"
+- "s25ExpressibleByArrayLiteralP"
+- "s25ExpressibleByFloatLiteralP"
+- "s27ExpressibleByIntegerLiteralP"
+- !private "s17FixedWidthIntegerP"
+- "s13FloatingPointP"
+- "s8HashableP"
+- !private "6Charts9HighlightC"
+- !private "6Charts13IChartDataSetP"
+- !private "Si"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- "s17MutableCollectionP"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- "So21NSItemProviderReadingP"
+- "So21NSItemProviderWritingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "So14NSSecureCodingP"
+- "s7NumericP"
+- "6Charts14RadarChartDataC"
+- "s22RandomAccessCollectionP"
+- "s26RangeReplaceableCollectionP"
+- "s8SequenceP"
+- !private "s13SignedIntegerP"
+- "s13SignedNumericP"
+- "s10StrideableP"
+- "So7UIColorC"
+- "s14_ArrayProtocolP"
+- "s23_BidirectionalIndexableP"
+- !private "s18_BitwiseOperationsP"
+- "s15_CVarArgAlignedP"
+- "s22_CVarArgPassedAsDoubleP"
+- "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s26_ExpressibleByColorLiteralP"
+- "s10_IndexableP"
+- "s14_IndexableBaseP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s17_MutableIndexableP"
+- "s21_ObjectiveCBridgeableP"
+- "s22_RandomAccessIndexableP"
+- "s26_RangeReplaceableIndexableP"
+- "s11_StrideableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/build/Pods.build/Debug-iphonesimulator/Charts.build/unextended-module.modulemap"
+interface-hash: "d563a61770183ac3a9021ba7b09d5318"

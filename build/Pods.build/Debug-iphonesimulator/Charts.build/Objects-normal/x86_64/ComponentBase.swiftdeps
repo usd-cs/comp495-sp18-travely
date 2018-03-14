@@ -1,0 +1,123 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ComponentBase"
+provides-nominal:
+- "6Charts13ComponentBaseC"
+provides-member:
+- ["6Charts13ComponentBaseC", ""]
+provides-dynamic-lookup:
+- "enabled"
+- "isEnabled"
+- "xOffset"
+- "yOffset"
+depends-top-level:
+- "Bool"
+- "BooleanLiteralType"
+- "CGFloat"
+- "ComponentBase"
+- "NSObject"
+depends-member:
+- ["s19BinaryFloatingPointP", "init"]
+- ["12CoreGraphics7CGFloatV", "init"]
+- ["s7CVarArgP", "CGFloat"]
+- !private ["s7CVarArgP", "enabled"]
+- ["s7CVarArgP", "init"]
+- ["s7CVarArgP", ""]
+- ["s10ComparableP", "init"]
+- ["6Charts13ComponentBaseC", "Bool"]
+- ["6Charts13ComponentBaseC", "CGFloat"]
+- ["6Charts13ComponentBaseC", "deinit"]
+- ["6Charts13ComponentBaseC", "enabled"]
+- ["6Charts13ComponentBaseC", "init"]
+- ["6Charts13ComponentBaseC", "isEnabled"]
+- ["6Charts13ComponentBaseC", "xOffset"]
+- ["6Charts13ComponentBaseC", "yOffset"]
+- ["s28CustomDebugStringConvertibleP", "CGFloat"]
+- !private ["s28CustomDebugStringConvertibleP", "enabled"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- ["s17CustomReflectableP", "init"]
+- ["s23CustomStringConvertibleP", "CGFloat"]
+- !private ["s23CustomStringConvertibleP", "enabled"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", ""]
+- ["s9DecodableP", "init"]
+- ["s9EncodableP", "init"]
+- ["s9EquatableP", "CGFloat"]
+- !private ["s9EquatableP", "enabled"]
+- ["s9EquatableP", "init"]
+- ["s9EquatableP", ""]
+- ["s25ExpressibleByFloatLiteralP", "init"]
+- ["s27ExpressibleByIntegerLiteralP", "init"]
+- ["s13FloatingPointP", "init"]
+- ["s8HashableP", "CGFloat"]
+- !private ["s8HashableP", "enabled"]
+- ["s8HashableP", "init"]
+- ["s8HashableP", ""]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "CGFloat"]
+- ["So8NSObjectC", "enabled"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "isEnabled"]
+- ["So8NSObjectC", "xOffset"]
+- ["So8NSObjectC", "yOffset"]
+- ["So8NSObjectC", ""]
+- ["So16NSObjectProtocolP", "CGFloat"]
+- !private ["So16NSObjectProtocolP", "enabled"]
+- !private ["So16NSObjectProtocolP", "init"]
+- ["So16NSObjectProtocolP", ""]
+- ["s7NumericP", "init"]
+- ["s13SignedNumericP", "init"]
+- ["s10StrideableP", "init"]
+- ["s15_CVarArgAlignedP", "init"]
+- ["s22_CVarArgPassedAsDoubleP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "CGFloat"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "enabled"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- ["s11_StrideableP", "init"]
+depends-nominal:
+- "s19BinaryFloatingPointP"
+- "12CoreGraphics7CGFloatV"
+- "s7CVarArgP"
+- "s10ComparableP"
+- "6Charts13ComponentBaseC"
+- "s28CustomDebugStringConvertibleP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- "s9EncodableP"
+- "s9EquatableP"
+- "s25ExpressibleByFloatLiteralP"
+- "s27ExpressibleByIntegerLiteralP"
+- "s13FloatingPointP"
+- "s8HashableP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "s7NumericP"
+- "s13SignedNumericP"
+- "s10StrideableP"
+- "s15_CVarArgAlignedP"
+- "s22_CVarArgPassedAsDoubleP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- "s11_StrideableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/build/Pods.build/Debug-iphonesimulator/Charts.build/unextended-module.modulemap"
+interface-hash: "3b71663ce2463ee2a4b46d7f17b054c4"

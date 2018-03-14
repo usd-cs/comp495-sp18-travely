@@ -1,0 +1,493 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "BarHighlighter"
+provides-nominal:
+- "6Charts14BarHighlighterC"
+provides-member:
+- ["6Charts14BarHighlighterC", ""]
+provides-dynamic-lookup:
+- "getClosestStackIndex"
+- "getHighlight"
+- "getStackedHighlight"
+depends-top-level:
+- !private "+="
+- !private "-"
+- !private "=="
+- !private ">"
+- !private "BarChartDataEntry"
+- !private "BarChartDataProvider"
+- "BarHighlighter"
+- !private "BarLineScatterCandleBubbleChartDataProvider"
+- "CGFloat"
+- "CastingPrecedence"
+- "ChartData"
+- "ChartHighlighter"
+- "Double"
+- "Highlight"
+- "IBarChartDataSet"
+- "Int"
+- "Range"
+- "TernaryPrecedence"
+- !private "abs"
+- !private "max"
+depends-member:
+- !private ["Sa", "count"]
+- !private ["Sa", "subscript"]
+- !private ["s10ArraySliceV", "to"]
+- !private ["6Charts12BarChartDataC", "getDataSetByIndex"]
+- !private ["6Charts17BarChartDataEntryC", "ranges"]
+- !private ["6Charts17BarChartDataEntryC", "x"]
+- !private ["6Charts17BarChartDataEntryC", "y"]
+- !private ["6Charts17BarChartDataEntryC", "yValues"]
+- !private ["6Charts20BarChartDataProviderP", "barData"]
+- !private ["6Charts14BarHighlighterC", "BarChartDataEntry"]
+- !private ["6Charts14BarHighlighterC", "BarChartDataProvider"]
+- !private ["6Charts14BarHighlighterC", "BarLineScatterCandleBubbleChartDataProvider"]
+- ["6Charts14BarHighlighterC", "CGFloat"]
+- ["6Charts14BarHighlighterC", "ChartData"]
+- ["6Charts14BarHighlighterC", "Double"]
+- ["6Charts14BarHighlighterC", "Highlight"]
+- ["6Charts14BarHighlighterC", "IBarChartDataSet"]
+- ["6Charts14BarHighlighterC", "Int"]
+- ["6Charts14BarHighlighterC", "Range"]
+- !private ["6Charts14BarHighlighterC", "abs"]
+- !private ["6Charts14BarHighlighterC", "chart"]
+- ["6Charts14BarHighlighterC", "data"]
+- ["6Charts14BarHighlighterC", "deinit"]
+- ["6Charts14BarHighlighterC", "getClosestStackIndex"]
+- ["6Charts14BarHighlighterC", "getDistance"]
+- ["6Charts14BarHighlighterC", "getHighlight"]
+- ["6Charts14BarHighlighterC", "getStackedHighlight"]
+- !private ["6Charts14BarHighlighterC", "getValsForTouch"]
+- ["6Charts14BarHighlighterC", "init"]
+- !private ["6Charts14BarHighlighterC", "max"]
+- !private ["6Charts35BarLineScatterCandleBubbleChartDataC", "getDataSetByIndex"]
+- !private ["6Charts43BarLineScatterCandleBubbleChartDataProviderP", "barData"]
+- !private ["6Charts43BarLineScatterCandleBubbleChartDataProviderP", "getTransformer"]
+- !private ["s23BidirectionalCollectionP", "count"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
+- !private ["s23BidirectionalCollectionP", "to"]
+- !private ["s19BinaryFloatingPointP", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["SC7CGPointV", "x"]
+- !private ["SC7CGPointV", "y"]
+- !private ["s7CVarArgP", "Double"]
+- !private ["s7CVarArgP", "Highlight"]
+- !private ["s7CVarArgP", "abs"]
+- !private ["s7CVarArgP", "axis"]
+- !private ["s7CVarArgP", "chart"]
+- !private ["s7CVarArgP", "contains"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "dataSetIndex"]
+- !private ["s7CVarArgP", "getClosestStackIndex"]
+- !private ["s7CVarArgP", "getDataSetByIndex"]
+- !private ["s7CVarArgP", "getHighlight"]
+- !private ["s7CVarArgP", "getStackedHighlight"]
+- !private ["s7CVarArgP", "getValsForTouch"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "max"]
+- !private ["s7CVarArgP", "pixelForValues"]
+- !private ["s7CVarArgP", "ranges"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "to"]
+- !private ["s7CVarArgP", "x"]
+- !private ["s7CVarArgP", "y"]
+- !private ["s7CVarArgP", "yValues"]
+- ["s7CVarArgP", ""]
+- !private ["6Charts9ChartDataC", "getDataSetByIndex"]
+- !private ["6Charts14ChartDataEntryC", "ranges"]
+- !private ["6Charts14ChartDataEntryC", "x"]
+- !private ["6Charts14ChartDataEntryC", "y"]
+- !private ["6Charts14ChartDataEntryC", "yValues"]
+- !private ["6Charts18ChartDataEntryBaseC", "ranges"]
+- !private ["6Charts18ChartDataEntryBaseC", "x"]
+- !private ["6Charts18ChartDataEntryBaseC", "y"]
+- !private ["6Charts18ChartDataEntryBaseC", "yValues"]
+- !private ["6Charts17ChartDataProviderP", "barData"]
+- !private ["6Charts17ChartDataProviderP", "getTransformer"]
+- !private ["6Charts16ChartHighlighterC", "BarChartDataEntry"]
+- !private ["6Charts16ChartHighlighterC", "BarChartDataProvider"]
+- !private ["6Charts16ChartHighlighterC", "BarLineScatterCandleBubbleChartDataProvider"]
+- ["6Charts16ChartHighlighterC", "CGFloat"]
+- ["6Charts16ChartHighlighterC", "ChartData"]
+- ["6Charts16ChartHighlighterC", "Double"]
+- ["6Charts16ChartHighlighterC", "Highlight"]
+- ["6Charts16ChartHighlighterC", "IBarChartDataSet"]
+- ["6Charts16ChartHighlighterC", "Int"]
+- ["6Charts16ChartHighlighterC", "Range"]
+- !private ["6Charts16ChartHighlighterC", "abs"]
+- !private ["6Charts16ChartHighlighterC", "chart"]
+- ["6Charts16ChartHighlighterC", "data"]
+- !private ["6Charts16ChartHighlighterC", "deinit"]
+- ["6Charts16ChartHighlighterC", "getClosestStackIndex"]
+- ["6Charts16ChartHighlighterC", "getDistance"]
+- ["6Charts16ChartHighlighterC", "getHighlight"]
+- ["6Charts16ChartHighlighterC", "getStackedHighlight"]
+- !private ["6Charts16ChartHighlighterC", "getValsForTouch"]
+- ["6Charts16ChartHighlighterC", "init"]
+- !private ["6Charts16ChartHighlighterC", "max"]
+- ["6Charts16ChartHighlighterC", ""]
+- !private ["s10CollectionP", "count"]
+- !private ["s10CollectionP", "subscript"]
+- !private ["s10CollectionP", "to"]
+- !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "Double"]
+- !private ["s28CustomDebugStringConvertibleP", "Highlight"]
+- !private ["s28CustomDebugStringConvertibleP", "abs"]
+- !private ["s28CustomDebugStringConvertibleP", "axis"]
+- !private ["s28CustomDebugStringConvertibleP", "chart"]
+- !private ["s28CustomDebugStringConvertibleP", "contains"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "dataSetIndex"]
+- !private ["s28CustomDebugStringConvertibleP", "getClosestStackIndex"]
+- !private ["s28CustomDebugStringConvertibleP", "getDataSetByIndex"]
+- !private ["s28CustomDebugStringConvertibleP", "getHighlight"]
+- !private ["s28CustomDebugStringConvertibleP", "getStackedHighlight"]
+- !private ["s28CustomDebugStringConvertibleP", "getValsForTouch"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "max"]
+- !private ["s28CustomDebugStringConvertibleP", "pixelForValues"]
+- !private ["s28CustomDebugStringConvertibleP", "ranges"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "to"]
+- !private ["s28CustomDebugStringConvertibleP", "x"]
+- !private ["s28CustomDebugStringConvertibleP", "y"]
+- !private ["s28CustomDebugStringConvertibleP", "yValues"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "x"]
+- !private ["s29CustomPlaygroundQuickLookableP", "y"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s17CustomReflectableP", "to"]
+- !private ["s17CustomReflectableP", "x"]
+- !private ["s17CustomReflectableP", "y"]
+- !private ["s23CustomStringConvertibleP", "Double"]
+- !private ["s23CustomStringConvertibleP", "Highlight"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "abs"]
+- !private ["s23CustomStringConvertibleP", "axis"]
+- !private ["s23CustomStringConvertibleP", "chart"]
+- !private ["s23CustomStringConvertibleP", "contains"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "dataSetIndex"]
+- !private ["s23CustomStringConvertibleP", "getClosestStackIndex"]
+- !private ["s23CustomStringConvertibleP", "getDataSetByIndex"]
+- !private ["s23CustomStringConvertibleP", "getHighlight"]
+- !private ["s23CustomStringConvertibleP", "getStackedHighlight"]
+- !private ["s23CustomStringConvertibleP", "getValsForTouch"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "max"]
+- !private ["s23CustomStringConvertibleP", "pixelForValues"]
+- !private ["s23CustomStringConvertibleP", "ranges"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "to"]
+- !private ["s23CustomStringConvertibleP", "x"]
+- !private ["s23CustomStringConvertibleP", "y"]
+- !private ["s23CustomStringConvertibleP", "yValues"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "count"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["s9DecodableP", "x"]
+- !private ["s9DecodableP", "y"]
+- !private ["Sd", "init"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "count"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "subscript"]
+- !private ["s9EncodableP", "x"]
+- !private ["s9EncodableP", "y"]
+- !private ["s9EquatableP", "Double"]
+- !private ["s9EquatableP", "Highlight"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "abs"]
+- !private ["s9EquatableP", "axis"]
+- !private ["s9EquatableP", "chart"]
+- !private ["s9EquatableP", "contains"]
+- !private ["s9EquatableP", "dataSetIndex"]
+- !private ["s9EquatableP", "getClosestStackIndex"]
+- !private ["s9EquatableP", "getDataSetByIndex"]
+- !private ["s9EquatableP", "getHighlight"]
+- !private ["s9EquatableP", "getStackedHighlight"]
+- !private ["s9EquatableP", "getValsForTouch"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "max"]
+- !private ["s9EquatableP", "pixelForValues"]
+- !private ["s9EquatableP", "ranges"]
+- !private ["s9EquatableP", "to"]
+- !private ["s9EquatableP", "x"]
+- !private ["s9EquatableP", "y"]
+- !private ["s9EquatableP", "yValues"]
+- ["s9EquatableP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s25ExpressibleByArrayLiteralP", "to"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s13FloatingPointP", "init"]
+- !private ["s8HashableP", "Double"]
+- !private ["s8HashableP", "Highlight"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "abs"]
+- !private ["s8HashableP", "axis"]
+- !private ["s8HashableP", "chart"]
+- !private ["s8HashableP", "contains"]
+- !private ["s8HashableP", "dataSetIndex"]
+- !private ["s8HashableP", "getClosestStackIndex"]
+- !private ["s8HashableP", "getDataSetByIndex"]
+- !private ["s8HashableP", "getHighlight"]
+- !private ["s8HashableP", "getStackedHighlight"]
+- !private ["s8HashableP", "getValsForTouch"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "max"]
+- !private ["s8HashableP", "pixelForValues"]
+- !private ["s8HashableP", "ranges"]
+- !private ["s8HashableP", "to"]
+- !private ["s8HashableP", "x"]
+- !private ["s8HashableP", "y"]
+- !private ["s8HashableP", "yValues"]
+- ["s8HashableP", ""]
+- !private ["6Charts9HighlightC", "axis"]
+- !private ["6Charts9HighlightC", "dataSetIndex"]
+- !private ["6Charts9HighlightC", "init"]
+- !private ["6Charts9HighlightC", "x"]
+- !private ["6Charts16IBarChartDataSetP", "axisDependency"]
+- !private ["6Charts16IBarChartDataSetP", "entryForXValue"]
+- !private ["6Charts16IBarChartDataSetP", "isStacked"]
+- !private ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "axisDependency"]
+- !private ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "entryForXValue"]
+- !private ["6Charts39IBarLineScatterCandleBubbleChartDataSetP", "isStacked"]
+- !private ["6Charts13IChartDataSetP", "axisDependency"]
+- !private ["6Charts13IChartDataSetP", "entryForXValue"]
+- !private ["6Charts13IChartDataSetP", "isStacked"]
+- !private ["6Charts12IHighlighterP", "Double"]
+- !private ["6Charts12IHighlighterP", "Highlight"]
+- !private ["6Charts12IHighlighterP", "abs"]
+- !private ["6Charts12IHighlighterP", "chart"]
+- !private ["6Charts12IHighlighterP", "getClosestStackIndex"]
+- !private ["6Charts12IHighlighterP", "getHighlight"]
+- !private ["6Charts12IHighlighterP", "getStackedHighlight"]
+- !private ["6Charts12IHighlighterP", "getValsForTouch"]
+- !private ["6Charts12IHighlighterP", "init"]
+- !private ["6Charts12IHighlighterP", "max"]
+- ["6Charts12IHighlighterP", ""]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s17MutableCollectionP", "count"]
+- !private ["s17MutableCollectionP", "subscript"]
+- !private ["s17MutableCollectionP", "to"]
+- !private ["So8NSObjectC", "BarChartDataEntry"]
+- !private ["So8NSObjectC", "BarChartDataProvider"]
+- !private ["So8NSObjectC", "BarLineScatterCandleBubbleChartDataProvider"]
+- ["So8NSObjectC", "CGFloat"]
+- ["So8NSObjectC", "ChartData"]
+- ["So8NSObjectC", "Double"]
+- ["So8NSObjectC", "Highlight"]
+- ["So8NSObjectC", "IBarChartDataSet"]
+- ["So8NSObjectC", "Int"]
+- ["So8NSObjectC", "Range"]
+- !private ["So8NSObjectC", "abs"]
+- !private ["So8NSObjectC", "axis"]
+- !private ["So8NSObjectC", "chart"]
+- !private ["So8NSObjectC", "contains"]
+- ["So8NSObjectC", "data"]
+- !private ["So8NSObjectC", "dataSetIndex"]
+- ["So8NSObjectC", "getClosestStackIndex"]
+- !private ["So8NSObjectC", "getDataSetByIndex"]
+- ["So8NSObjectC", "getDistance"]
+- ["So8NSObjectC", "getHighlight"]
+- ["So8NSObjectC", "getStackedHighlight"]
+- !private ["So8NSObjectC", "getValsForTouch"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "max"]
+- !private ["So8NSObjectC", "pixelForValues"]
+- !private ["So8NSObjectC", "ranges"]
+- !private ["So8NSObjectC", "to"]
+- !private ["So8NSObjectC", "x"]
+- !private ["So8NSObjectC", "y"]
+- !private ["So8NSObjectC", "yValues"]
+- !private ["So16NSObjectProtocolP", "Double"]
+- !private ["So16NSObjectProtocolP", "Highlight"]
+- !private ["So16NSObjectProtocolP", "abs"]
+- !private ["So16NSObjectProtocolP", "axis"]
+- !private ["So16NSObjectProtocolP", "chart"]
+- !private ["So16NSObjectProtocolP", "contains"]
+- !private ["So16NSObjectProtocolP", "dataSetIndex"]
+- !private ["So16NSObjectProtocolP", "getClosestStackIndex"]
+- !private ["So16NSObjectProtocolP", "getDataSetByIndex"]
+- !private ["So16NSObjectProtocolP", "getHighlight"]
+- !private ["So16NSObjectProtocolP", "getStackedHighlight"]
+- !private ["So16NSObjectProtocolP", "getValsForTouch"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "max"]
+- !private ["So16NSObjectProtocolP", "pixelForValues"]
+- !private ["So16NSObjectProtocolP", "ranges"]
+- !private ["So16NSObjectProtocolP", "to"]
+- !private ["So16NSObjectProtocolP", "x"]
+- !private ["So16NSObjectProtocolP", "y"]
+- !private ["So16NSObjectProtocolP", "yValues"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["s7NumericP", "init"]
+- !private ["s22RandomAccessCollectionP", "count"]
+- !private ["s22RandomAccessCollectionP", "subscript"]
+- !private ["s22RandomAccessCollectionP", "to"]
+- !private ["6Charts5RangeC", "contains"]
+- !private ["6Charts5RangeC", "to"]
+- !private ["s26RangeReplaceableCollectionP", "count"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
+- !private ["s26RangeReplaceableCollectionP", "to"]
+- !private ["s8SequenceP", "count"]
+- !private ["s8SequenceP", "subscript"]
+- !private ["s8SequenceP", "to"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["s10StrideableP", "init"]
+- !private ["6Charts11TransformerC", "pixelForValues"]
+- !private ["s14_ArrayProtocolP", "count"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s14_ArrayProtocolP", "to"]
+- !private ["s23_BidirectionalIndexableP", "count"]
+- !private ["s23_BidirectionalIndexableP", "subscript"]
+- !private ["s23_BidirectionalIndexableP", "to"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s22_CVarArgPassedAsDoubleP", "init"]
+- !private ["s24_DestructorSafeContainerP", "count"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s24_DestructorSafeContainerP", "to"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s10_IndexableP", "count"]
+- !private ["s10_IndexableP", "subscript"]
+- !private ["s10_IndexableP", "to"]
+- !private ["s14_IndexableBaseP", "count"]
+- !private ["s14_IndexableBaseP", "subscript"]
+- !private ["s14_IndexableBaseP", "to"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Double"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Highlight"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "abs"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "axis"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "chart"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "contains"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dataSetIndex"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getClosestStackIndex"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getDataSetByIndex"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getHighlight"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getStackedHighlight"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getValsForTouch"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "max"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "pixelForValues"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ranges"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "to"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "x"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "y"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "yValues"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["s17_MutableIndexableP", "count"]
+- !private ["s17_MutableIndexableP", "subscript"]
+- !private ["s17_MutableIndexableP", "to"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "x"]
+- !private ["s21_ObjectiveCBridgeableP", "y"]
+- !private ["s22_RandomAccessIndexableP", "count"]
+- !private ["s22_RandomAccessIndexableP", "subscript"]
+- !private ["s22_RandomAccessIndexableP", "to"]
+- !private ["s26_RangeReplaceableIndexableP", "count"]
+- !private ["s26_RangeReplaceableIndexableP", "subscript"]
+- !private ["s26_RangeReplaceableIndexableP", "to"]
+- !private ["s11_StrideableP", "init"]
+depends-nominal:
+- !private "Sa"
+- !private "s10ArraySliceV"
+- !private "6Charts12BarChartDataC"
+- !private "6Charts17BarChartDataEntryC"
+- !private "6Charts20BarChartDataProviderP"
+- "6Charts14BarHighlighterC"
+- !private "6Charts35BarLineScatterCandleBubbleChartDataC"
+- !private "6Charts43BarLineScatterCandleBubbleChartDataProviderP"
+- !private "s23BidirectionalCollectionP"
+- !private "s19BinaryFloatingPointP"
+- !private "Sb"
+- !private "SC7CGPointV"
+- "s7CVarArgP"
+- !private "6Charts9ChartDataC"
+- !private "6Charts14ChartDataEntryC"
+- !private "6Charts18ChartDataEntryBaseC"
+- !private "6Charts17ChartDataProviderP"
+- "6Charts16ChartHighlighterC"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "Sd"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s13FloatingPointP"
+- "s8HashableP"
+- !private "6Charts9HighlightC"
+- !private "6Charts16IBarChartDataSetP"
+- !private "6Charts39IBarLineScatterCandleBubbleChartDataSetP"
+- !private "6Charts13IChartDataSetP"
+- "6Charts12IHighlighterP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s17MutableCollectionP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "s7NumericP"
+- !private "s22RandomAccessCollectionP"
+- !private "6Charts5RangeC"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s8SequenceP"
+- !private "s13SignedNumericP"
+- !private "s10StrideableP"
+- !private "6Charts11TransformerC"
+- !private "s14_ArrayProtocolP"
+- !private "s23_BidirectionalIndexableP"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s33_ExpressibleByBuiltinFloatLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s10_IndexableP"
+- !private "s14_IndexableBaseP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s17_MutableIndexableP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s22_RandomAccessIndexableP"
+- !private "s26_RangeReplaceableIndexableP"
+- !private "s11_StrideableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/Pods/Target Support Files/Charts/Charts-umbrella.h"
+- "/Users/alexandraleonidova/Desktop/comp495-sp18-travely/build/Pods.build/Debug-iphonesimulator/Charts.build/unextended-module.modulemap"
+interface-hash: "4fc660dc604f98a6d6a91553b58662b7"
