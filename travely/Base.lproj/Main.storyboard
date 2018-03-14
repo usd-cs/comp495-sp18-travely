@@ -353,11 +353,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lhn-yi-UKP" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="313" width="375" height="305"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Ljt-Ex-kYR"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Cost" id="qr3-pD-Vsx"/>
+                    <connections>
+                        <outlet property="pieChartView" destination="lhn-yi-UKP" id="VK1-cN-Vak"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lXz-Od-6wy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
