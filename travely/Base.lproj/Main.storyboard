@@ -125,7 +125,6 @@
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Calculate"/>
                                 <connections>
-                                    <action selector="calculateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YfI-HH-l9N"/>
                                     <segue destination="MhJ-ku-Jcb" kind="show" identifier="CalculatePressedNewTripToActivities" id="weP-Wx-thm"/>
                                 </connections>
                             </button>
@@ -153,10 +152,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="New Trip" id="aGa-nF-sHN"/>
                     <connections>
-                        <outlet property="departureDatePicker" destination="ZpF-Zl-X0v" id="lNf-Hu-CWB"/>
+                        <outlet property="departureDatePicker" destination="6zZ-sl-hzp" id="oAm-b3-NIm"/>
                         <outlet property="destinationPicker" destination="wde-T4-Ike" id="Dkl-1W-LEm"/>
                         <outlet property="originPicker" destination="dSv-AP-9YZ" id="wTq-g1-CN4"/>
-                        <outlet property="returnDatePicker" destination="6zZ-sl-hzp" id="C2q-Rr-fwO"/>
+                        <outlet property="returnDatePicker" destination="ZpF-Zl-X0v" id="PRA-Jn-atz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
