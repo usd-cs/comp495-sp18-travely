@@ -12,11 +12,12 @@ class ActivitiesViewController: UIViewController {
 
     var originLocation = ""
     var destinaionLocation = ""
+    var numOfTravellers = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         var costData = callAPI(originPlace: originLocation, destinationPlace: destinaionLocation)
-        print("Recieved from Segue. Origin Location: \(originLocation), Dectination Location: \(destinaionLocation)")
+        print("Recieved from Segue. Origin Location: \(originLocation), Dectination Location: \(destinaionLocation), Num Travellers: \(numOfTravellers)")
         // Do any additional setup after loading the view.
     }
 

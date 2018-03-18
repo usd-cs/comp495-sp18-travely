@@ -29,22 +29,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="0pt-br-I2K">
-                                <rect key="frame" x="27.5" y="74" width="320" height="461"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="0pt-br-I2K">
+                                <rect key="frame" x="27.5" y="74" width="320" height="449.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Yv4-al-Zu8">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="156"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="123"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Origin:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmH-mv-5fE">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="23"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dSv-AP-9YZ">
-                                                <rect key="frame" x="0.0" y="23" width="320" height="55"/>
+                                                <rect key="frame" x="0.0" y="19.5" width="320" height="42"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="55" id="3Ei-L5-RFH"/>
+                                                    <constraint firstAttribute="height" constant="42" id="3Ei-L5-RFH"/>
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="iGI-P5-J4F"/>
@@ -52,15 +52,15 @@
                                                 </connections>
                                             </pickerView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BgI-2x-pHH">
-                                                <rect key="frame" x="0.0" y="78" width="320" height="23"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <rect key="frame" x="0.0" y="61.5" width="320" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wde-T4-Ike">
-                                                <rect key="frame" x="0.0" y="101" width="320" height="55"/>
+                                                <rect key="frame" x="0.0" y="81" width="320" height="42"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="55" id="ain-vy-zGd"/>
+                                                    <constraint firstAttribute="height" constant="42" id="ain-vy-zGd"/>
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="mxX-bo-Wf1"/>
@@ -71,7 +71,7 @@
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </stackView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="world_map_image" translatesAutoresizingMaskIntoConstraints="NO" id="8KJ-pQ-yeK">
-                                        <rect key="frame" x="40" y="163" width="240" height="125"/>
+                                        <rect key="frame" x="40" y="126" width="240" height="125"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="6ZD-U2-CRN"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="ZLD-3w-tTW"/>
@@ -79,38 +79,59 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PgH-ma-E1G">
-                                        <rect key="frame" x="0.0" y="295" width="320" height="166"/>
+                                        <rect key="frame" x="0.0" y="254" width="320" height="123"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure Date: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vwo-HP-taL" userLabel="Departure Date:">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="23"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZpF-Zl-X0v">
-                                                <rect key="frame" x="0.0" y="23" width="320" height="60"/>
+                                                <rect key="frame" x="0.0" y="19.5" width="320" height="42"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="nT7-g2-XD1"/>
+                                                    <constraint firstAttribute="height" constant="42" id="nT7-g2-XD1"/>
                                                 </constraints>
                                                 <date key="date" timeIntervalSinceReferenceDate="542242319.58744299">
                                                     <!--2018-03-08 22:51:59 +0000-->
                                                 </date>
                                             </datePicker>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Return Date:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxd-8v-7mq">
-                                                <rect key="frame" x="0.0" y="83" width="320" height="23"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <rect key="frame" x="0.0" y="61.5" width="320" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="6zZ-sl-hzp">
-                                                <rect key="frame" x="0.0" y="106" width="320" height="60"/>
+                                                <rect key="frame" x="0.0" y="81" width="320" height="42"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="q9f-zb-PPB"/>
+                                                    <constraint firstAttribute="height" constant="42" id="q9f-zb-PPB"/>
                                                 </constraints>
                                                 <date key="date" timeIntervalSinceReferenceDate="542241687.69630694">
                                                     <!--2018-03-08 22:41:27 +0000-->
                                                 </date>
                                             </datePicker>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sSc-uo-H9y">
+                                        <rect key="frame" x="0.0" y="380" width="320" height="69.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Travellers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIk-fa-KcL">
+                                                <rect key="frame" x="84.5" y="0.0" width="151" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UJv-2d-Bag">
+                                                <rect key="frame" x="0.0" y="19.5" width="320" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="W9N-Jf-zrX"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="cTt-av-2yF"/>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="2Sk-vy-mBf"/>
+                                                </connections>
+                                            </pickerView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -125,7 +146,7 @@
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Calculate"/>
                                 <connections>
-                                    <action selector="switchToCost:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Oc-Ab-Y7x"/>
+                                    <segue destination="MhJ-ku-Jcb" kind="show" identifier="CalculatePressedNewTripToActivities" id="9S2-Sh-ab9"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="gWg-jB-tuj">
@@ -153,7 +174,8 @@
                     <tabBarItem key="tabBarItem" title="New Trip" id="aGa-nF-sHN"/>
                     <connections>
                         <outlet property="departureDatePicker" destination="ZpF-Zl-X0v" id="hUW-Vo-QDp"/>
-                        <outlet property="destinationPicker" destination="wde-T4-Ike" id="Dkl-1W-LEm"/>
+                        <outlet property="destinationPicker" destination="UJv-2d-Bag" id="riR-lr-DAn"/>
+                        <outlet property="numTravellersPicker" destination="UJv-2d-Bag" id="BON-ka-KhW"/>
                         <outlet property="originPicker" destination="dSv-AP-9YZ" id="wTq-g1-CN4"/>
                         <outlet property="returnDatePicker" destination="6zZ-sl-hzp" id="45l-sI-1md"/>
                     </connections>
@@ -497,4 +519,7 @@
         <image name="sky_image" width="640" height="960"/>
         <image name="world_map_image" width="2953" height="1911"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="9S2-Sh-ab9"/>
+    </inferredMetricsTieBreakers>
 </document>
