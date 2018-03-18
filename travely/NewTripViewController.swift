@@ -150,27 +150,48 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         let current_date_str: String = formatter.string(from: current_date)
         
         //check that user picked a county
-        guard originPlacePicked.count > 1, destinationPlacePicked.count > 1 else {
-            print("Invalid Oigin or Destination: not Selected")
+        guard originPlacePicked.count > 1 else {
+            let alertController = UIAlertController(title: "Error", message:
+                "Origin not selected.", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+            return
+            
+        }
+        
+        guard destinationPlacePicked.count > 1 else {
+            let alertController = UIAlertController(title: "Error", message:
+                "Destination not selected.", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alertController, animated: true, completion: nil)
             return
             
         }
         
         //Check that the user didn't select the same destination and origin
         guard originPlacePicked != destinationPlacePicked else {
-            print("Invalid Origin or Destination: Same Destination and Origin")
+            let alertController = UIAlertController(title: "Error", message:
+                "Origin and destination must be differnt.", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alertController, animated: true, completion: nil)
             return
         }
     
         //Check that departure date is not less than the current date
         guard departure_date_str >= current_date_str else {
-            print("Invalid Dates: departure time less than current date")
+            let alertController = UIAlertController(title: "Error", message:
+                "Deperture date can't be earlier than today.", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alertController, animated: true, completion: nil)
             return
         }
         
         //Check that departure date is not greater than return date
-        guard departure_date_str <= return_date_str else {
-            print("Invalid Dates: departure time is greater than return date")
+        guard departure_date_str < return_date_str else {
+            let alertController = UIAlertController(title: "Error", message:
+                "Return date must be past departure date.", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alertController, animated: true, completion: nil)
             return
         }
         tabBarController?.selectedIndex = 2
