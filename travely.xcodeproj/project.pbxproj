@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B27D942205F108300570716 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27D941205F108300570716 /* Country.swift */; };
 		58C62F1CB34F057972E182F6 /* Pods_travely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B49138DCF969A308DB008052 /* Pods_travely.framework */; };
 		636ECEED2058E35C00F668F2 /* MyTripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636ECEE52058E35C00F668F2 /* MyTripsViewController.swift */; };
 		636ECEEE2058E35C00F668F2 /* NewTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636ECEE62058E35C00F668F2 /* NewTripViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B27D941205F108300570716 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		636ECEE52058E35C00F668F2 /* MyTripsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTripsViewController.swift; sourceTree = "<group>"; };
 		636ECEE62058E35C00F668F2 /* NewTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTripViewController.swift; sourceTree = "<group>"; };
 		636ECEE72058E35C00F668F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				636ECEE92058E35C00F668F2 /* AppDelegate.swift */,
 				636ECEE72058E35C00F668F2 /* Assets.xcassets */,
 				636ECEE82058E35C00F668F2 /* CostViewController.swift */,
+				2B27D941205F108300570716 /* Country.swift */,
 				636ECEEB2058E35C00F668F2 /* Info.plist */,
 				636ECEE52058E35C00F668F2 /* MyTripsViewController.swift */,
 				636ECEE62058E35C00F668F2 /* NewTripViewController.swift */,
@@ -230,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B27D942205F108300570716 /* Country.swift in Sources */,
 				636ECEF12058E35C00F668F2 /* AppDelegate.swift in Sources */,
 				636ECEF42058E35C00F668F2 /* ActivitiesViewController.swift in Sources */,
 				636ECEEE2058E35C00F668F2 /* NewTripViewController.swift in Sources */,
