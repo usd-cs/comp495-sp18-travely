@@ -8,10 +8,16 @@
 
 import Foundation
 class Country{
+    //data
+    
+    var cityName: String
     var etiquette: [String]
     var courtesy: [String]
-    init(etiquette: [String], courtesy: [String]) {
+    //var activities: [String : String]
+    
+    init(cityName: String, etiquette: [String], courtesy: [String]) {
         self.etiquette = etiquette
         self.courtesy = courtesy
+        self.cityName = cityName
     }
 }

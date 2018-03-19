@@ -21,9 +21,9 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     // Tag 1 is Origin Picker
     // Tag 2 is Destination Picker
     // Tag 3 is Num of Travellers Picker
-    let placesOrigin = ["-", "San Diego", "New York", "Rome"]
-    let placesDestination = ["-", "San Diego", "New York", "Rome"]
-    let numTravellersRange = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+    let placesOrigin = ["-", "San Diego", "Beijing", "Rome"]
+    let placesDestination = ["-", "San Diego", "Beijing", "Rome"]
+    let numTravellersRange = ["-", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
     
     var originPlacePicked = ""
     var destinationPlacePicked = ""
@@ -170,6 +170,16 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
                 alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
                 self.present(alertController, animated: true, completion: nil)
                 return false
+            }
+            
+            guard numOfTravellersPicked.count > 0 && numOfTravellersPicked != "-" else {
+                print("numOfTravellersPicked \(numOfTravellersPicked)")
+                let alertController = UIAlertController(title: "Error", message:
+                    "Number of travellers not selected.", preferredStyle: UIAlertControllerStyle.alert)
+                alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+                self.present(alertController, animated: true, completion: nil)
+                return false
+                
             }
         }
         return true

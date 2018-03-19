@@ -18,7 +18,8 @@
 		636ECEF42058E35C00F668F2 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636ECEEC2058E35C00F668F2 /* ActivitiesViewController.swift */; };
 		636ECEF92058E36B00F668F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 636ECEF52058E36B00F668F2 /* LaunchScreen.storyboard */; };
 		636ECEFA2058E36B00F668F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 636ECEF72058E36B00F668F2 /* Main.storyboard */; };
-		638B6713205F1E35004DE5BB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638B6712205F1E35004DE5BB /* Constants.swift */; };
+		BB6A73B3205F2882008D00B1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6A73B2205F2882008D00B1 /* Constants.swift */; };
+		BB6A73B5205F818A008D00B1 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6A73B4205F818A008D00B1 /* Activities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,9 +35,10 @@
 		636ECEF62058E36B00F668F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		636ECEF82058E36B00F668F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		63781949204B37B700734092 /* travely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = travely.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		638B6712205F1E35004DE5BB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		97D556CA870AF4C173EDFF89 /* Pods-travely.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travely.release.xcconfig"; path = "Pods/Target Support Files/Pods-travely/Pods-travely.release.xcconfig"; sourceTree = "<group>"; };
 		B49138DCF969A308DB008052 /* Pods_travely.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_travely.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB6A73B2205F2882008D00B1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BB6A73B4205F818A008D00B1 /* Activities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
 		DC76EC9AFA689650288BA9DB /* Pods-travely.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travely.debug.xcconfig"; path = "Pods/Target Support Files/Pods-travely/Pods-travely.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,10 +100,11 @@
 				636ECEE72058E35C00F668F2 /* Assets.xcassets */,
 				636ECEE82058E35C00F668F2 /* CostViewController.swift */,
 				2B27D941205F108300570716 /* Country.swift */,
+				BB6A73B4205F818A008D00B1 /* Activities.swift */,
 				636ECEEB2058E35C00F668F2 /* Info.plist */,
 				636ECEE52058E35C00F668F2 /* MyTripsViewController.swift */,
 				636ECEE62058E35C00F668F2 /* NewTripViewController.swift */,
-				638B6712205F1E35004DE5BB /* Constants.swift */,
+				BB6A73B2205F2882008D00B1 /* Constants.swift */,
 			);
 			path = travely;
 			sourceTree = "<group>";
@@ -241,9 +244,10 @@
 				636ECEF42058E35C00F668F2 /* ActivitiesViewController.swift in Sources */,
 				636ECEEE2058E35C00F668F2 /* NewTripViewController.swift in Sources */,
 				636ECEF02058E35C00F668F2 /* CostViewController.swift in Sources */,
+				BB6A73B5205F818A008D00B1 /* Activities.swift in Sources */,
 				636ECEF22058E35C00F668F2 /* AboutViewController.swift in Sources */,
 				636ECEED2058E35C00F668F2 /* MyTripsViewController.swift in Sources */,
-				638B6713205F1E35004DE5BB /* Constants.swift in Sources */,
+				BB6A73B3205F2882008D00B1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
