@@ -13,11 +13,13 @@ class Country{
     var cityName: String
     var etiquette: [String]
     var courtesy: [String]
+    var activities: Activities
     //var activities: [String : String]
     
     init(cityName: String, etiquette: [String], courtesy: [String]) {
         self.etiquette = etiquette
         self.courtesy = courtesy
         self.cityName = cityName
+        self.activities = Activities(cityName : cityName)
     }
 }
