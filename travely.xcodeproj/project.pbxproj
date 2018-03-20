@@ -20,6 +20,7 @@
 		636ECEFA2058E36B00F668F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 636ECEF72058E36B00F668F2 /* Main.storyboard */; };
 		638B6713205F1E35004DE5BB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638B6712205F1E35004DE5BB /* Constants.swift */; };
 		C965E500206095F0003EA5F1 /* countryEtiquette.txt in Resources */ = {isa = PBXBuildFile; fileRef = C965E4FF206095EF003EA5F1 /* countryEtiquette.txt */; };
+		C965E50220617130003EA5F1 /* SavedTripDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C965E50120617130003EA5F1 /* SavedTripDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		97D556CA870AF4C173EDFF89 /* Pods-travely.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travely.release.xcconfig"; path = "Pods/Target Support Files/Pods-travely/Pods-travely.release.xcconfig"; sourceTree = "<group>"; };
 		B49138DCF969A308DB008052 /* Pods_travely.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_travely.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C965E4FF206095EF003EA5F1 /* countryEtiquette.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = countryEtiquette.txt; sourceTree = "<group>"; };
+		C965E50120617130003EA5F1 /* SavedTripDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTripDetailsViewController.swift; sourceTree = "<group>"; };
 		DC76EC9AFA689650288BA9DB /* Pods-travely.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travely.debug.xcconfig"; path = "Pods/Target Support Files/Pods-travely/Pods-travely.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +107,7 @@
 				636ECEE52058E35C00F668F2 /* MyTripsViewController.swift */,
 				636ECEE62058E35C00F668F2 /* NewTripViewController.swift */,
 				638B6712205F1E35004DE5BB /* Constants.swift */,
+				C965E50120617130003EA5F1 /* SavedTripDetailsViewController.swift */,
 			);
 			path = travely;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			files = (
 				2B27D942205F108300570716 /* Country.swift in Sources */,
 				636ECEF12058E35C00F668F2 /* AppDelegate.swift in Sources */,
+				C965E50220617130003EA5F1 /* SavedTripDetailsViewController.swift in Sources */,
 				636ECEF42058E35C00F668F2 /* ActivitiesViewController.swift in Sources */,
 				636ECEEE2058E35C00F668F2 /* NewTripViewController.swift in Sources */,
 				636ECEF02058E35C00F668F2 /* CostViewController.swift in Sources */,
