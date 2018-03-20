@@ -19,6 +19,7 @@
 		636ECEF92058E36B00F668F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 636ECEF52058E36B00F668F2 /* LaunchScreen.storyboard */; };
 		636ECEFA2058E36B00F668F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 636ECEF72058E36B00F668F2 /* Main.storyboard */; };
 		638B6713205F1E35004DE5BB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638B6712205F1E35004DE5BB /* Constants.swift */; };
+		C965E500206095F0003EA5F1 /* countryEtiquette.txt in Resources */ = {isa = PBXBuildFile; fileRef = C965E4FF206095EF003EA5F1 /* countryEtiquette.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		638B6712205F1E35004DE5BB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		97D556CA870AF4C173EDFF89 /* Pods-travely.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travely.release.xcconfig"; path = "Pods/Target Support Files/Pods-travely/Pods-travely.release.xcconfig"; sourceTree = "<group>"; };
 		B49138DCF969A308DB008052 /* Pods_travely.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_travely.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C965E4FF206095EF003EA5F1 /* countryEtiquette.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = countryEtiquette.txt; sourceTree = "<group>"; };
 		DC76EC9AFA689650288BA9DB /* Pods-travely.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travely.debug.xcconfig"; path = "Pods/Target Support Files/Pods-travely/Pods-travely.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +92,7 @@
 		6378194B204B37B700734092 /* travely */ = {
 			isa = PBXGroup;
 			children = (
+				C965E4FF206095EF003EA5F1 /* countryEtiquette.txt */,
 				636ECEF52058E36B00F668F2 /* LaunchScreen.storyboard */,
 				636ECEF72058E36B00F668F2 /* Main.storyboard */,
 				636ECEEA2058E35C00F668F2 /* AboutViewController.swift */,
@@ -169,6 +172,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C965E500206095F0003EA5F1 /* countryEtiquette.txt in Resources */,
 				636ECEF92058E36B00F668F2 /* LaunchScreen.storyboard in Resources */,
 				636ECEEF2058E35C00F668F2 /* Assets.xcassets in Resources */,
 				636ECEFA2058E36B00F668F2 /* Main.storyboard in Resources */,
