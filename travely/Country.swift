@@ -6,6 +6,10 @@
 //  Copyright © 2018 University of San Diego. All rights reserved.
 //
 
+
+
+//TESTING DELETE AFTER IF YOU WANT
+
 import Foundation
 class Country{
     var etiquette: [String]
