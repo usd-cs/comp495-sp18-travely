@@ -13,11 +13,16 @@ class ActivitiesViewController: UIViewController {
     var originLocation = ""
     var destinaionLocation = ""
     var numOfTravellers = ""
+    var currCountry : Country?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         var costData = callAPI(originPlace: originLocation, destinationPlace: destinaionLocation)
         print("Recieved from Segue. Origin Location: \(originLocation), Dectination Location: \(destinaionLocation), Num Travellers: \(numOfTravellers)")
+        currCountry = Country(cityName: destinaionLocation, etiquette: ["test etiquette"], courtesy: ["test courtecy"])
+        print("currCountry: \(currCountry!.activities.culturalActivities)")
+        
         // Do any additional setup after loading the view.
     }
 
