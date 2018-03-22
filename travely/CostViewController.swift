@@ -20,7 +20,6 @@ class CostViewController: UIViewController {
         let expenses = ["Transportation", "Accomodations", "Food", "Miscellaneous"]
         let costOfExpense = [999.99, 999.99, 999.99, 999.99]
         setChart(dataPoints: expenses, values: costOfExpense)
-        getFlightMinCost()
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,9 +65,10 @@ class CostViewController: UIViewController {
     /*
     * This function will call the Amadeus Flights Airfare API and retrieve lowest cost information
     *
-    *
+    * NOTE: Not finished. Do not modify yet
     */
     func getFlightMinCost() -> Double {
+        
         let headers = [
             "Cache-Control": "no-cache",
             "Postman-Token": "6127903e-057b-463d-b201-3a9ed5c61041"
@@ -87,6 +87,7 @@ class CostViewController: UIViewController {
             } else {
                 let httpResponse = response as? HTTPURLResponse
                 print(httpResponse ?? "httpResponse default value since httpResponse didn't have value")
+                let json = try? JSONSerialization.jsonObject(with: data!, options: [])
             }
         })
         

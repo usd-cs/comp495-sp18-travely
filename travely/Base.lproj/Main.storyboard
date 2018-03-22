@@ -193,7 +193,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activities Tab" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QyH-eB-3cL">
-                                <rect key="frame" x="136.5" y="84" width="102" height="21"/>
+                                <rect key="frame" x="136.5" y="40" width="102" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -444,7 +444,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Tab" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tU5-ss-8vZ">
-                                <rect key="frame" x="148" y="84" width="79" height="21"/>
+                                <rect key="frame" x="148" y="40" width="79" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -797,7 +797,7 @@
         <image name="world_map_image" width="2953" height="1911"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AYf-TQ-PdF"/>
-        <segue reference="LKB-lS-uWR"/>
+        <segue reference="tra-9B-gCK"/>
+        <segue reference="TLc-Q0-HWp"/>
     </inferredMetricsTieBreakers>
 </document>
