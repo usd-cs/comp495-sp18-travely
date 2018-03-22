@@ -20,6 +20,7 @@ class CostViewController: UIViewController {
         let expenses = ["Transportation", "Accomodations", "Food", "Miscellaneous"]
         let costOfExpense = [999.99, 999.99, 999.99, 999.99]
         setChart(dataPoints: expenses, values: costOfExpense)
+        getFlightMinCost()
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,7 +63,38 @@ class CostViewController: UIViewController {
         return averageCost
     }
 
-    
+    /*
+    * This function will call the Amadeus Flights Airfare API and retrieve lowest cost information
+    *
+    *
+    */
+    func getFlightMinCost() -> Double {
+        let headers = [
+            "Cache-Control": "no-cache",
+            "Postman-Token": "6127903e-057b-463d-b201-3a9ed5c61041"
+        ]
+        
+        let request = NSMutableURLRequest(url: NSURL(string: "https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?apikey=" + AMADEUSFLIGHTAPIKEY + "&origin=BOS&destination=LON&departure_date=2018-06-25")! as URL,
+                                          cachePolicy: .useProtocolCachePolicy,
+                                          timeoutInterval: 10.0)
+        request.httpMethod = "GET"
+        request.allHTTPHeaderFields = headers
+        
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+            if (error != nil) {
+                print(error ?? "Error calling flight api")
+            } else {
+                let httpResponse = response as? HTTPURLResponse
+                print(httpResponse ?? "httpResponse default value since httpResponse didn't have value")
+            }
+        })
+        
+        
+        dataTask.resume()
+        
+        return 1.0
+    }
     /*
     // MARK: - Navigation
 
