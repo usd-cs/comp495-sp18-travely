@@ -22,6 +22,7 @@ class CostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var minHotelCost = getHotelMinCost()
         // Do any additional setup after loading the view.
         let expenses = ["Transportation", "Accomodations", "Food", "Miscellaneous"]
         let costOfExpense = [999.99, 999.99, 999.99, 999.99]
@@ -102,6 +103,67 @@ class CostViewController: UIViewController {
         
         return 1.0
     }
+    
+    /*
+     * This function will call the hotel API
+     * Returns -1 to signify that there were some invalid parameters
+     */
+    func getHotelMinCost() -> Double {
+        //Check for errors in passed data
+        guard destinationLocation != "" else {
+            print("Error in passed destinationLocation")
+            return -1
+        }
+        guard departureDate != "", returnDate != "" else {
+            print("Error in passed departureDate/returnDate")
+            return -1
+        }
+        
+        //Default radius value for API
+        let distanceFromAirport = "50"
+        
+        //Assign IATA codes for API
+        var destinationAirport = ""
+        if destinationLocation == "San Diego" {
+            destinationAirport = "SAN"
+        }
+        else if destinationLocation == "Rome" {
+            destinationAirport = "FCO"
+        }
+        else if destinationLocation == "New York" {
+            destinationAirport = "JFK"
+        }
+        else {
+            return -1
+            print("Error finding IATA code")
+        }
+        
+        let headers = [
+            "Cache-Control": "no-cache",
+            ]
+        
+        let request = NSMutableURLRequest(url: NSURL(string: "https://api.sandbox.amadeus.com/v1.2/hotels/search-airport?apikey="+AMADEUSHOTELSAPIKEY+"&location="+destinationAirport+"&check_in="+departureDate+"&check_out="+returnDate+"&radius="+distanceFromAirport)! as URL,
+                                          cachePolicy: .useProtocolCachePolicy,
+                                          timeoutInterval: 10.0)
+        request.httpMethod = "GET"
+        request.allHTTPHeaderFields = headers
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+            if (error != nil) {
+                print(error ?? "Error calling hotel API")
+            } else {
+                let httpResponse = response as? HTTPURLResponse
+                let json = try? JSONSerialization.jsonObject(with: data!, options: [])
+                print(json ?? "httpResponse default value since httpResponse didn't have value")
+                
+            }
+        })
+
+        //TODO: find the min cost using the JSON variable called json and pass it back to viewDidLoad
+        dataTask.resume()
+        return 1.0
+    }
+
     /*
     // MARK: - Navigation
 
