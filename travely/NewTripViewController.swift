@@ -97,6 +97,7 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         
     }
     
+    /*
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
@@ -108,6 +109,7 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
             resultsViewController.numOfTravellers = numOfTravellersPicked
         }
     }
+    
     
     //Add conditions to check before a segue is performed
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
@@ -174,8 +176,8 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         }
         return true
     }
-
-    /*
+    */
+    
     //Only for demo purpose, after demo then change to segue to Activities
     @IBAction func switchToCost(_ sender: UIButton) {
         //Validating user input before button action
@@ -189,6 +191,7 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         let departure_date_str: String = formatter.string(from: departure_date)
         let return_date_str: String = formatter.string(from: return_date)
         let current_date_str: String = formatter.string(from: current_date)
+        
         
         //check that user picked a county
         guard originPlacePicked.count > 1 else {
@@ -235,8 +238,16 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
             self.present(alertController, animated: true, completion: nil)
             return
         }
+        //tabBarController?.selectedIndex = 2
+        var costTab = self.tabBarController?.viewControllers![2] as! CostViewController
+        costTab.originLocation = originPlacePicked
+        costTab.destinationLocation = destinationPlacePicked
+        costTab.departureDate = departure_date_str
+        costTab.returnDate = return_date_str
+        costTab.numTravellers = numOfTravellersPicked
+        
         tabBarController?.selectedIndex = 2
     }
- */
+ 
 }
 

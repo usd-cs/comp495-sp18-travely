@@ -146,7 +146,7 @@
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Calculate"/>
                                 <connections>
-                                    <segue destination="MhJ-ku-Jcb" kind="show" identifier="CalculatePressedNewTripToActivities" id="9S2-Sh-ab9"/>
+                                    <action selector="switchToCost:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kA4-Vy-dCM"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="gWg-jB-tuj">

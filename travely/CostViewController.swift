@@ -11,12 +11,18 @@ import Charts
 
 class CostViewController: UIViewController {
 
+    var originLocation = ""
+    var destinationLocation = ""
+    var departureDate  = ""
+    var returnDate = ""
+    var numTravellers = ""
+    
+    
     @IBOutlet weak var pieChartView: PieChartView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
+        // Do any additional setup after loading the view.
         let expenses = ["Transportation", "Accomodations", "Food", "Miscellaneous"]
         let costOfExpense = [999.99, 999.99, 999.99, 999.99]
         setChart(dataPoints: expenses, values: costOfExpense)
