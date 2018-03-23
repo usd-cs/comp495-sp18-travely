@@ -220,11 +220,11 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
             self.present(alertController, animated: true, completion: nil)
             return
         }
-    
-        //Check that departure date is not less than the current date
-        guard departure_date_str >= current_date_str else {
+        
+        //Check that departure date is in the future
+        guard departure_date_str > current_date_str else {
             let alertController = UIAlertController(title: "Error", message:
-                "Deperture date can't be earlier than today.", preferredStyle: UIAlertControllerStyle.alert)
+                "Departure date needs to be in the future.", preferredStyle: UIAlertControllerStyle.alert)
             alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
             self.present(alertController, animated: true, completion: nil)
             return
