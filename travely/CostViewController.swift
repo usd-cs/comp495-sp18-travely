@@ -162,9 +162,9 @@ class CostViewController: UIViewController {
                 print(error ?? "Error calling hotel API")
             } else {
                 let httpResponse = response as? HTTPURLResponse
-                self.hotelCallDone = true
                 self.hotelData = data
                 self.hotelCallError = (error != nil) || (httpResponse?.statusCode != 200)
+                self.hotelCallDone = true
             }
         })
         dataTask.resume()
