@@ -245,6 +245,7 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         costTab.departureDate = departure_date_str
         costTab.returnDate = return_date_str
         costTab.numTravellers = numOfTravellersPicked
+        costTab.calculateButtonWasPressed = true
         
         tabBarController?.selectedIndex = 2
     }
