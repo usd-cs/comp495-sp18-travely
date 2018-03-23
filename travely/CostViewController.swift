@@ -17,26 +17,33 @@ class CostViewController: UIViewController {
     var returnDate = ""
     var numTravellers = ""
     
+
+    //Used for Amadeus Flights API method: getFlightMinCost
+    var flightcall_done = false
+    var flightcall_errors = false
+    var flight_data: Data?
+
     var hotelCallDone = false
     var hotelCallError = false
     var hotelData: Data?
     
     var calculateButtonWasPressed = false
+
     
     @IBOutlet weak var pieChartView: PieChartView!
     
     override func viewWillAppear(_ animated: Bool) {
         if calculateButtonWasPressed == true {
             var minHotelCost = getHotelMinCost()
+            var minFlightCost = getFlightMinCost()
         }
         calculateButtonWasPressed = false
-        
-        // Do any additional setup after loading the view.
+      
         let expenses = ["Transportation", "Accomodations", "Food", "Miscellaneous"]
         let costOfExpense = [999.99, 999.99, 999.99, 999.99]
         setChart(dataPoints: expenses, values: costOfExpense)
     }
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -83,17 +90,53 @@ class CostViewController: UIViewController {
 
     /*
     * This function will call the Amadeus Flights Airfare API and retrieve lowest cost information
+    * return -1 on error
     *
     * NOTE: Not finished. Do not modify yet
     */
     func getFlightMinCost() -> Double {
+        guard originLocation != "", destinationLocation != "" else {
+            print("Location values not set when trying to receive flight min cost")
+            return -1
+        }
+        
+        guard returnDate != "" else {
+            print("Return date value not set when trying to receive flight min cost")
+            return -1
+        }
+        
+        var origin_IATA = ""
+        var destination_IATA = ""
+        
+        //TODO: Eventually replace this IATA code method with calling API to retrieve IATA codes
+        if originLocation == "New York" {
+            origin_IATA = "JFK"
+        } else if originLocation == "San Diego" {
+            origin_IATA = "SAN"
+        } else if originLocation == "Rome" {
+            origin_IATA = "FCO"
+        } else {
+            print("Error determining IATA Code for flights API")
+            return -1
+        }
+        
+        if destinationLocation == "New York" {
+            destination_IATA = "JFK"
+        } else if destinationLocation == "San Diego" {
+            destination_IATA = "SAN"
+        } else if destinationLocation == "Rome" {
+            destination_IATA = "FCO"
+        } else {
+            print("Error determining IATA Code for flights API")
+            return -1
+        }
         
         let headers = [
             "Cache-Control": "no-cache",
             "Postman-Token": "6127903e-057b-463d-b201-3a9ed5c61041"
         ]
         
-        let request = NSMutableURLRequest(url: NSURL(string: "https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?apikey=" + AMADEUSFLIGHTAPIKEY + "&origin=BOS&destination=LON&departure_date=2018-06-25")! as URL,
+        let request = NSMutableURLRequest(url: NSURL(string: "https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?apikey=" + AMADEUSFLIGHTAPIKEY + "&origin=" + origin_IATA + "&destination=" + destination_IATA + "&departure_date=" + departureDate)! as URL,
                                           cachePolicy: .useProtocolCachePolicy,
                                           timeoutInterval: 10.0)
         request.httpMethod = "GET"
@@ -105,15 +148,36 @@ class CostViewController: UIViewController {
                 print(error ?? "Error calling flight api")
             } else {
                 let httpResponse = response as? HTTPURLResponse
-                print(httpResponse ?? "httpResponse default value since httpResponse didn't have value")
-                let json = try? JSONSerialization.jsonObject(with: data!, options: [])
+                
+                self.flightcall_errors = (error != nil) || (httpResponse?.statusCode != 200)
+                self.flight_data = data
+                self.flightcall_done = true
             }
         })
-        
-        
         dataTask.resume()
         
-        return 1.0
+        while !flightcall_done { } //Wait for api call to finish
+        
+        //Check if there were any errors when calling the api
+        guard !flightcall_errors else {
+            print("Error Calling flights api")
+            flightcall_errors = false
+            return -1
+        }
+        
+        //Check if flight data is there
+        guard flight_data != nil else {
+            print("Flight Data is Nil")
+            return -1
+        }
+        
+        let json = try? JSONSerialization.jsonObject(with: self.flight_data!, options: [])
+        //TODO: Alexandra's issue - parse JSON and return min cost - Use variable json
+        
+        
+        
+        flightcall_done = false //Set value back to false for next calculation
+        return 1
     }
     
     /*
