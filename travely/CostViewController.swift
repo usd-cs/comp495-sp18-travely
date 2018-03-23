@@ -138,8 +138,6 @@ class CostViewController: UIViewController {
             } else {
                 let httpResponse = response as? HTTPURLResponse
                 
-                print(httpResponse ?? "httpResponse default value since httpResponse didn't have value")
-                
                 self.flightcall_errors = (error != nil) || (httpResponse?.statusCode != 200)
                 self.flight_data = data
                 self.flightcall_done = true
@@ -164,7 +162,6 @@ class CostViewController: UIViewController {
         
         let json = try? JSONSerialization.jsonObject(with: self.flight_data!, options: [])
         //TODO: Alexandra's issue - parse JSON and return min cost - Use variable json
-        print(json)
         
         
         
