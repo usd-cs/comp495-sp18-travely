@@ -17,16 +17,28 @@ class CostViewController: UIViewController {
     var returnDate = ""
     var numTravellers = ""
     
+    var hotelCallDone = false
+    var hotelCallError = false
+    var hotelData: Data?
+    
+    var calculateButtonWasPressed = false
     
     @IBOutlet weak var pieChartView: PieChartView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if calculateButtonWasPressed == true {
+            var minHotelCost = getHotelMinCost()
+        }
+        calculateButtonWasPressed = false
         
-        var minHotelCost = getHotelMinCost()
         // Do any additional setup after loading the view.
         let expenses = ["Transportation", "Accomodations", "Food", "Miscellaneous"]
         let costOfExpense = [999.99, 999.99, 999.99, 999.99]
         setChart(dataPoints: expenses, values: costOfExpense)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
 
     override func didReceiveMemoryWarning() {
@@ -118,10 +130,8 @@ class CostViewController: UIViewController {
             print("Error in passed departureDate/returnDate")
             return -1
         }
-        
         //Default radius value for API
         let distanceFromAirport = "50"
-        
         //Assign IATA codes for API
         var destinationAirport = ""
         if destinationLocation == "San Diego" {
@@ -137,7 +147,6 @@ class CostViewController: UIViewController {
             return -1
             print("Error finding IATA code")
         }
-        
         let headers = [
             "Cache-Control": "no-cache",
             ]
@@ -153,16 +162,34 @@ class CostViewController: UIViewController {
                 print(error ?? "Error calling hotel API")
             } else {
                 let httpResponse = response as? HTTPURLResponse
-                let json = try? JSONSerialization.jsonObject(with: data!, options: [])
-                print(json ?? "httpResponse default value since httpResponse didn't have value")
-                
+                self.hotelCallDone = true
+                self.hotelData = data
+                self.hotelCallError = (error != nil) || (httpResponse?.statusCode != 200)
             }
         })
-
-        //TODO: find the min cost using the JSON variable called json and pass it back to viewDidLoad
         dataTask.resume()
-        return 1.0
+        //Wait for API call to finish
+        while !hotelCallDone { }
+        //Check if any errors when calling API
+        guard !hotelCallError else {
+            print("Error calling hotel API")
+            return -1
+        }
+        //Check if hotel data is there
+        guard hotelData != nil else {
+            print("Hotel data is nil")
+            return -1
+        }
+        //Put data into JSON object
+        let json = try? JSONSerialization.jsonObject(with: self.hotelData!, options: [])
+        hotelCallDone = false
+        
+        //TODO: ALEXANDRA find the min cost using the JSON variable called json and pass it back to viewDidLoad
+        //JSON object is being stored in json variable on line 184
+        
+        return 1
     }
+    
 
     /*
     // MARK: - Navigation
