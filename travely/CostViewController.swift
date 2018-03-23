@@ -17,16 +17,26 @@ class CostViewController: UIViewController {
     var returnDate = ""
     var numTravellers = ""
     
+    //Used for Amadeus Flights API method: getFlightMinCost
+    var flightcall_done = false
+    var flightcall_errors = false
+    var flight_data: Data?
+    
     
     @IBOutlet weak var pieChartView: PieChartView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+    
+    override func viewWillAppear(_ animated: Bool) {
         let expenses = ["Transportation", "Accomodations", "Food", "Miscellaneous"]
         let costOfExpense = [999.99, 999.99, 999.99, 999.99]
         setChart(dataPoints: expenses, values: costOfExpense)
         print("result " + String(getFlightMinCost()))
+        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -129,21 +139,38 @@ class CostViewController: UIViewController {
                 print(error ?? "Error calling flight api")
             } else {
                 let httpResponse = response as? HTTPURLResponse
-                guard httpResponse?.statusCode == 200 else {
-                    print("Error - API Flight statusCode is not 200")
-                    return
-                }
                 
                 print(httpResponse ?? "httpResponse default value since httpResponse didn't have value")
-                let json = try? JSONSerialization.jsonObject(with: data!, options: [])
                 
-                //TODO: Alexandra's issue - parse JSON and return min cost
+                self.flightcall_errors = (error != nil) || (httpResponse?.statusCode != 200)
+                self.flightcall_done = true
+                self.flight_data = data
             }
         })
         dataTask.resume()
         
+        while !flightcall_done { } //Wait for api call to finish
+        
+        //Check if there were any errors when calling the api
+        guard !flightcall_errors else {
+            print("Error Calling flights api")
+            flightcall_errors = false
+            return -1
+        }
+        
+        //Check if flight data is there
+        guard flight_data != nil else {
+            print("Flight Data is Nil")
+            return -1
+        }
+        
+        let json = try? JSONSerialization.jsonObject(with: self.flight_data!, options: [])
+        //TODO: Alexandra's issue - parse JSON and return min cost - Use variable json
+        print(json)
         
         
+        
+        flightcall_done = false //Set value back to false for next calculation
         return 1
     }
     /*
