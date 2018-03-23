@@ -141,8 +141,8 @@ class CostViewController: UIViewController {
                 print(httpResponse ?? "httpResponse default value since httpResponse didn't have value")
                 
                 self.flightcall_errors = (error != nil) || (httpResponse?.statusCode != 200)
-                self.flightcall_done = true
                 self.flight_data = data
+                self.flightcall_done = true
             }
         })
         dataTask.resume()
