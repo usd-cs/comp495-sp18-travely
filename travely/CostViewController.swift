@@ -249,7 +249,7 @@ class CostViewController: UIViewController {
         hotelCallDone = false
         
         //TODO: ALEXANDRA find the min cost using the JSON variable called json and pass it back to viewDidLoad
-        //JSON object is being stored in json variable on line 184
+        //JSON object is being stored in json variable on line 248
         
         return 1
     }
