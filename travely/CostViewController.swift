@@ -29,8 +29,6 @@ class CostViewController: UIViewController {
         let expenses = ["Transportation", "Accomodations", "Food", "Miscellaneous"]
         let costOfExpense = [999.99, 999.99, 999.99, 999.99]
         setChart(dataPoints: expenses, values: costOfExpense)
-        print("result " + String(getFlightMinCost()))
-        
     }
     
     override func viewDidLoad() {
