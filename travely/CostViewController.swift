@@ -17,15 +17,28 @@ class CostViewController: UIViewController {
     var returnDate = ""
     var numTravellers = ""
     
+    var hotelCallDone = false
+    var hotelCallError = false
+    var hotelData: Data?
+    
+    var calculateButtonWasPressed = false
     
     @IBOutlet weak var pieChartView: PieChartView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if calculateButtonWasPressed == true {
+            var minHotelCost = getHotelMinCost()
+        }
+        calculateButtonWasPressed = false
         
         // Do any additional setup after loading the view.
         let expenses = ["Transportation", "Accomodations", "Food", "Miscellaneous"]
         let costOfExpense = [999.99, 999.99, 999.99, 999.99]
         setChart(dataPoints: expenses, values: costOfExpense)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
 
     override func didReceiveMemoryWarning() {
@@ -102,6 +115,82 @@ class CostViewController: UIViewController {
         
         return 1.0
     }
+    
+    /*
+     * This function will call the hotel API
+     * Returns -1 to signify that there were some invalid parameters
+     */
+    func getHotelMinCost() -> Double {
+        //Check for errors in passed data
+        guard destinationLocation != "" else {
+            print("Error in passed destinationLocation")
+            return -1
+        }
+        guard departureDate != "", returnDate != "" else {
+            print("Error in passed departureDate/returnDate")
+            return -1
+        }
+        //Default radius value for API
+        let distanceFromAirport = "50"
+        //Assign IATA codes for API
+        var destinationAirport = ""
+        if destinationLocation == "San Diego" {
+            destinationAirport = "SAN"
+        }
+        else if destinationLocation == "Rome" {
+            destinationAirport = "FCO"
+        }
+        else if destinationLocation == "New York" {
+            destinationAirport = "JFK"
+        }
+        else {
+            return -1
+            print("Error finding IATA code")
+        }
+        let headers = [
+            "Cache-Control": "no-cache",
+            ]
+        
+        let request = NSMutableURLRequest(url: NSURL(string: "https://api.sandbox.amadeus.com/v1.2/hotels/search-airport?apikey="+AMADEUSHOTELSAPIKEY+"&location="+destinationAirport+"&check_in="+departureDate+"&check_out="+returnDate+"&radius="+distanceFromAirport)! as URL,
+                                          cachePolicy: .useProtocolCachePolicy,
+                                          timeoutInterval: 10.0)
+        request.httpMethod = "GET"
+        request.allHTTPHeaderFields = headers
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+            if (error != nil) {
+                print(error ?? "Error calling hotel API")
+            } else {
+                let httpResponse = response as? HTTPURLResponse
+                self.hotelCallDone = true
+                self.hotelData = data
+                self.hotelCallError = (error != nil) || (httpResponse?.statusCode != 200)
+            }
+        })
+        dataTask.resume()
+        //Wait for API call to finish
+        while !hotelCallDone { }
+        //Check if any errors when calling API
+        guard !hotelCallError else {
+            print("Error calling hotel API")
+            return -1
+        }
+        //Check if hotel data is there
+        guard hotelData != nil else {
+            print("Hotel data is nil")
+            return -1
+        }
+        //Put data into JSON object
+        let json = try? JSONSerialization.jsonObject(with: self.hotelData!, options: [])
+        hotelCallDone = false
+        
+        //TODO: ALEXANDRA find the min cost using the JSON variable called json and pass it back to viewDidLoad
+        //JSON object is being stored in json variable on line 184
+        
+        return 1
+    }
+    
+
     /*
     // MARK: - Navigation
 

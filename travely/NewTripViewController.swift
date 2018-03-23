@@ -187,7 +187,7 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         let return_date = returnDatePicker.date
         
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy/MM/dd"
+        formatter.dateFormat = "yyyy-MM-dd"
         let departure_date_str: String = formatter.string(from: departure_date)
         let return_date_str: String = formatter.string(from: return_date)
         let current_date_str: String = formatter.string(from: current_date)
@@ -245,6 +245,7 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         costTab.departureDate = departure_date_str
         costTab.returnDate = return_date_str
         costTab.numTravellers = numOfTravellersPicked
+        costTab.calculateButtonWasPressed = true
         
         tabBarController?.selectedIndex = 2
     }
