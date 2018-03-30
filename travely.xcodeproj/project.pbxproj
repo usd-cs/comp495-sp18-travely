@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B27D942205F108300570716 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27D941205F108300570716 /* Country.swift */; };
-		2B2BA79420630E4300170222 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2BA79320630E4300170222 /* Constants.swift */; };
+		2B7B2C99206EBA020095B8D2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B2C98206EBA020095B8D2 /* Constants.swift */; };
 		58C62F1CB34F057972E182F6 /* Pods_travely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B49138DCF969A308DB008052 /* Pods_travely.framework */; };
 		636ECEED2058E35C00F668F2 /* MyTripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636ECEE52058E35C00F668F2 /* MyTripsViewController.swift */; };
 		636ECEEE2058E35C00F668F2 /* NewTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636ECEE62058E35C00F668F2 /* NewTripViewController.swift */; };
@@ -25,7 +25,7 @@
 
 /* Begin PBXFileReference section */
 		2B27D941205F108300570716 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
-		2B2BA79320630E4300170222 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2B7B2C98206EBA020095B8D2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		636ECEE52058E35C00F668F2 /* MyTripsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTripsViewController.swift; sourceTree = "<group>"; };
 		636ECEE62058E35C00F668F2 /* NewTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTripViewController.swift; sourceTree = "<group>"; };
 		636ECEE72058E35C00F668F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 				636ECEE52058E35C00F668F2 /* MyTripsViewController.swift */,
 				636ECEE62058E35C00F668F2 /* NewTripViewController.swift */,
 				C965E50120617130003EA5F1 /* SavedTripDetailsViewController.swift */,
-				2B2BA79320630E4300170222 /* Constants.swift */,
+				2B7B2C98206EBA020095B8D2 /* Constants.swift */,
 			);
 			path = travely;
 			sourceTree = "<group>";
@@ -251,7 +251,7 @@
 				636ECEF02058E35C00F668F2 /* CostViewController.swift in Sources */,
 				636ECEF22058E35C00F668F2 /* AboutViewController.swift in Sources */,
 				636ECEED2058E35C00F668F2 /* MyTripsViewController.swift in Sources */,
-				2B2BA79420630E4300170222 /* Constants.swift in Sources */,
+				2B7B2C99206EBA020095B8D2 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
