@@ -193,7 +193,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activities Tab" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QyH-eB-3cL">
-                                <rect key="frame" x="136.5" y="40" width="102" height="21"/>
+                                <rect key="frame" x="136.5" y="84" width="102" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -443,25 +443,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Tab" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tU5-ss-8vZ">
-                                <rect key="frame" x="148" y="40" width="79" height="21"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QSQ-zv-HET">
+                                <rect key="frame" x="151" y="423" width="72" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vhl-uq-ZXX">
+                                <rect key="frame" x="16" y="451" width="157" height="61"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="FIQ-4V-Ux0" id="K2z-Jb-vIm"/>
+                                    <outlet property="delegate" destination="FIQ-4V-Ux0" id="kZM-8a-gfd"/>
+                                </connections>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XUo-I9-29U">
+                                <rect key="frame" x="202" y="451" width="157" height="61"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="FIQ-4V-Ux0" id="x2A-9y-FRA"/>
+                                    <outlet property="delegate" destination="FIQ-4V-Ux0" id="4EH-GD-WlU"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SC-oA-1Jm">
+                                <rect key="frame" x="166" y="511" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hma-JE-kVG">
+                                <rect key="frame" x="155" y="547" width="64" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="calcExchangeRate:" destination="FIQ-4V-Ux0" eventType="touchUpInside" id="DKv-M3-c77"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="tU5-ss-8vZ" firstAttribute="centerX" secondItem="met-m6-8ch" secondAttribute="centerX" id="CgT-FU-RYc"/>
-                            <constraint firstItem="tU5-ss-8vZ" firstAttribute="top" secondItem="8Xk-Fs-Bj2" secondAttribute="top" constant="20" id="T3v-lx-HdL"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8Xk-Fs-Bj2"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="About" id="CYJ-wZ-vAL"/>
+                    <connections>
+                        <outlet property="currCurrency" destination="vhl-uq-ZXX" id="vzB-eF-39z"/>
+                        <outlet property="destinationCurrency" destination="XUo-I9-29U" id="zXD-Kf-WzE"/>
+                        <outlet property="exchangeAmt" destination="QSQ-zv-HET" id="gnf-KW-WL3"/>
+                        <outlet property="exchangeResult" destination="7SC-oA-1Jm" id="2iW-M1-uD3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ONK-6A-xwC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3735" y="33"/>
+            <point key="canvasLocation" x="3733.5999999999999" y="32.833583208395808"/>
         </scene>
         <!--My Trips Tab-->
         <scene sceneID="zLJ-Su-vIT">
@@ -797,7 +831,7 @@
         <image name="world_map_image" width="2953" height="1911"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tra-9B-gCK"/>
-        <segue reference="TLc-Q0-HWp"/>
+        <segue reference="AYf-TQ-PdF"/>
+        <segue reference="LKB-lS-uWR"/>
     </inferredMetricsTieBreakers>
 </document>
