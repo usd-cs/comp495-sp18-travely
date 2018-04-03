@@ -94,12 +94,12 @@ class MyTripsTableViewController: UITableViewController {
     */
     
     private func loadSampleTrips() {
-        guard let trip1 = Trip(tripName: "China") else {
+        guard let trip1 = Trip(tripName: "MyTrip1") else {
             print("Cannot create trip 1")
             return
         }
         
-        guard let trip2 = Trip(tripName: "Rome") else {
+        guard let trip2 = Trip(tripName: "MyTrip2") else {
             print("Cannot create trip2")
             return
         }

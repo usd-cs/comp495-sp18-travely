@@ -26,7 +26,12 @@ class AboutViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        populateEtiquette()
+        if countryName != "" {
+            populateEtiquette()
+        }
+        else {
+            etiquetteLabel.text = ""
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,7 +63,6 @@ class AboutViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     func populateEtiquette() {
         etiquetteLabel.text = countryName
-        
         if let path = Bundle.main.path(forResource: "countryEtiquette", ofType: "txt") {
             do {
                 let data = try String(contentsOfFile: path, encoding: .utf8)
