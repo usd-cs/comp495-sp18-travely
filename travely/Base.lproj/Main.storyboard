@@ -452,7 +452,7 @@
                             </connections>
                         </button>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyTripCell" rowHeight="90" id="YkI-Y4-mpa">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyTripCell" rowHeight="90" id="YkI-Y4-mpa" customClass="MyTripsTableViewCell" customModule="travely" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YkI-Y4-mpa" id="npZ-s3-K0M">
@@ -468,6 +468,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="tripLabel" destination="sRH-6i-fYh" id="BUj-oB-RLs"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
