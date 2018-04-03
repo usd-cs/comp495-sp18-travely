@@ -67,39 +67,30 @@ class MyTripsTableViewController: UITableViewController {
         }
     }
 
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "SavedTripDetailsSegue" {
+            let destinationVC = segue.destination as! SavedTripDetailsViewController
+            
+            //Send chosen trip details to destination segue
+            destinationVC.my_trip = trips[tableView.indexPathForSelectedRow!.row]
+        }
+        
     }
-    */
     
     private func loadSampleTrips() {
-        guard let trip1 = Trip(tripName: "MyTrip1") else {
+        guard let trip1 = Trip(tripName: "MyTrip1", tripTotalCost: 1500, tripAirfareCost: 500, tripHotelCost: 300, foodCost: 200, activitiesCost: 500, originLocation: "San Diego", destinationLocation: "China", departureDate: "7/6/2018", returnDate: "7/7/2018") else {
             print("Cannot create trip 1")
             return
         }
         
-        guard let trip2 = Trip(tripName: "MyTrip2") else {
+        guard let trip2 = Trip(tripName: "MyTrip2", tripTotalCost: 1700, tripAirfareCost: 600, tripHotelCost: 400, foodCost: 200, activitiesCost: 500, originLocation: "China", destinationLocation: "Rome", departureDate: "7/6/2018", returnDate: "7/7/2018") else {
             print("Cannot create trip2")
             return
         }

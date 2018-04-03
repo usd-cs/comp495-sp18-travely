@@ -468,7 +468,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="tripLabel" destination="sRH-6i-fYh" id="BUj-oB-RLs"/>
-                                    <segue destination="IXL-oF-66A" kind="show" id="bj6-zW-78b"/>
+                                    <segue destination="IXL-oF-66A" kind="show" identifier="SavedTripDetailsSegue" id="bj6-zW-78b"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
