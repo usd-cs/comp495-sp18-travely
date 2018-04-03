@@ -12,6 +12,7 @@
 		58C62F1CB34F057972E182F6 /* Pods_travely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B49138DCF969A308DB008052 /* Pods_travely.framework */; };
 		6369F0B32072EEC800BD3A13 /* MyTripsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6369F0B22072EEC800BD3A13 /* MyTripsTableViewController.swift */; };
 		6369F0B52073099900BD3A13 /* MyTripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6369F0B42073099900BD3A13 /* MyTripsTableViewCell.swift */; };
+		6369F0B72073102400BD3A13 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6369F0B62073102400BD3A13 /* Trip.swift */; };
 		636ECEEE2058E35C00F668F2 /* NewTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636ECEE62058E35C00F668F2 /* NewTripViewController.swift */; };
 		636ECEEF2058E35C00F668F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 636ECEE72058E35C00F668F2 /* Assets.xcassets */; };
 		636ECEF02058E35C00F668F2 /* CostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636ECEE82058E35C00F668F2 /* CostViewController.swift */; };
@@ -29,6 +30,7 @@
 		2B7B2C98206EBA020095B8D2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6369F0B22072EEC800BD3A13 /* MyTripsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsTableViewController.swift; sourceTree = "<group>"; };
 		6369F0B42073099900BD3A13 /* MyTripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsTableViewCell.swift; sourceTree = "<group>"; };
+		6369F0B62073102400BD3A13 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		636ECEE62058E35C00F668F2 /* NewTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTripViewController.swift; sourceTree = "<group>"; };
 		636ECEE72058E35C00F668F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		636ECEE82058E35C00F668F2 /* CostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CostViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				2B7B2C98206EBA020095B8D2 /* Constants.swift */,
 				6369F0B22072EEC800BD3A13 /* MyTripsTableViewController.swift */,
 				6369F0B42073099900BD3A13 /* MyTripsTableViewCell.swift */,
+				6369F0B62073102400BD3A13 /* Trip.swift */,
 			);
 			path = travely;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6369F0B72073102400BD3A13 /* Trip.swift in Sources */,
 				2B27D942205F108300570716 /* Country.swift in Sources */,
 				636ECEF12058E35C00F668F2 /* AppDelegate.swift in Sources */,
 				6369F0B32072EEC800BD3A13 /* MyTripsTableViewController.swift in Sources */,
