@@ -74,6 +74,14 @@ class MyTripsTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "SavedTripDetailsSegue" {
+            let destinationVC = segue.destination as! SavedTripDetailsViewController
+            
+            //Send chosen trip details to destination segue
+            destinationVC.my_trip = trips[tableView.indexPathForSelectedRow!.row]
+        }
+        
     }
     
     private func loadSampleTrips() {

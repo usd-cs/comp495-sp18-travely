@@ -10,6 +10,7 @@ import UIKit
 import Charts
 
 class SavedTripDetailsViewController: UIViewController {
+    var my_trip: Trip?
     
     //Outlet for the chart
     @IBOutlet weak var pieChartView: PieChartView!
@@ -74,15 +75,16 @@ class SavedTripDetailsViewController: UIViewController {
         let expenses = ["Transportation", "Accomodations", "Food", "Miscellaneous"]
         let costOfExpense = [1700.00, 1500.00, 300.00, 500.00]
         setChart(dataPoints: expenses, values: costOfExpense)
-        tripNameField.text = "China Trip"
-        originLocation.text = "San Diego"
-        destinationLocation.text = "Shanghai"
-        departureDate.text = "April 1 2018"
-        returnDate.text = "April 18 2018"
-        airfareCostLabel.text = "$1,700.00"
-        hotelCostLabel.text = "$1,500.00"
-        foodCostLabel.text = "$300.00"
-        activitiesCostLabel.text = "$500.00"
+        tripNameField.text = my_trip?.tripName
+        originLocation.text = my_trip?.originLocation
+        destinationLocation.text = my_trip?.destinationLocation
+        departureDate.text = my_trip?.departureDate
+        returnDate.text = my_trip?.returnDate
+        airfareCostLabel.text = "$" + String(describing: my_trip!.tripAirfareCost)
+        hotelCostLabel.text = "$" + String(describing: my_trip!.tripHotelCost)
+        foodCostLabel.text = "$" + String(describing: my_trip!.foodCost)
+        activitiesCostLabel.text = "$" + String(describing: my_trip!.activitiesCost)
+        totalPriceField.text = "$" + String(describing: my_trip!.tripTotalCost)
     }
 }
 
