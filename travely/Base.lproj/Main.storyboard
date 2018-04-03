@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -193,7 +194,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activities Tab" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QyH-eB-3cL">
-                                <rect key="frame" x="136.5" y="40" width="102" height="21"/>
+                                <rect key="frame" x="136.5" y="84" width="102" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -443,33 +444,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9Nx-BO-w0B">
-                            <rect key="frame" x="0.0" y="118" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Click here for saved trips detail view"/>
-                            <connections>
-                                <segue destination="IXL-oF-66A" kind="show" id="bLD-HV-d0b"/>
-                            </connections>
-                        </button>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyTripCell" rowHeight="90" id="YkI-Y4-mpa" customClass="MyTripsTableViewCell" customModule="travely" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyTripsTableViewCell" rowHeight="120" id="YkI-Y4-mpa" customClass="MyTripsTableViewCell" customModule="travely" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YkI-Y4-mpa" id="npZ-s3-K0M">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trip Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRH-6i-fYh">
-                                            <rect key="frame" x="16" y="11" width="343" height="68"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRH-6i-fYh">
+                                            <rect key="frame" x="21" y="16" width="343" height="98"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="sRH-6i-fYh" firstAttribute="bottom" secondItem="npZ-s3-K0M" secondAttribute="bottomMargin" constant="5" id="LiQ-6X-Nqq"/>
+                                        <constraint firstItem="sRH-6i-fYh" firstAttribute="leading" secondItem="npZ-s3-K0M" secondAttribute="leadingMargin" constant="5" id="TPG-Bd-JZs"/>
+                                        <constraint firstItem="sRH-6i-fYh" firstAttribute="trailing" secondItem="npZ-s3-K0M" secondAttribute="trailingMargin" constant="5" id="q40-0Q-93S"/>
+                                        <constraint firstItem="sRH-6i-fYh" firstAttribute="top" secondItem="npZ-s3-K0M" secondAttribute="topMargin" constant="5" id="yGe-CA-xOB"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="tripLabel" destination="sRH-6i-fYh" id="BUj-oB-RLs"/>
+                                    <segue destination="IXL-oF-66A" kind="show" id="bj6-zW-78b"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -482,7 +481,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FLY-Ns-lco" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5773.6000000000004" y="32.833583208395808"/>
+            <point key="canvasLocation" x="6289" y="33"/>
         </scene>
         <!--About Tab-->
         <scene sceneID="cY9-vW-Fax">
@@ -816,7 +815,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7O5-qK-vy0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5773.6000000000004" y="1256.6716641679161"/>
+            <point key="canvasLocation" x="6289" y="1278"/>
         </scene>
         <!--My Trips-->
         <scene sceneID="iNi-Qr-25f">
@@ -844,7 +843,7 @@
         <image name="world_map_image" width="2953" height="1911"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tra-9B-gCK"/>
-        <segue reference="TLc-Q0-HWp"/>
+        <segue reference="AYf-TQ-PdF"/>
+        <segue reference="LKB-lS-uWR"/>
     </inferredMetricsTieBreakers>
 </document>
