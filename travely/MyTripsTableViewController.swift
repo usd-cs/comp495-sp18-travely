@@ -10,14 +10,12 @@ import UIKit
 
 class MyTripsTableViewController: UITableViewController {
 
+    var trips = [Trip]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        loadSampleTrips()
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,43 +27,46 @@ class MyTripsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return trips.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MyTripsTableViewCell", for: indexPath) as? MyTripsTableViewCell else {
+            fatalError("Cell for MyTrips not an instance of MyTripsTableView Controller")
+        }
 
         // Configure the cell...
+        
+        let trip = trips[indexPath.row]
+        cell.tripLabel.text = trip.tripName
 
         return cell
     }
-    */
+    
 
-    /*
+    
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
+    
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
+            trips.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
-    */
+
 
     /*
     // Override to support rearranging the table view.
@@ -91,5 +92,19 @@ class MyTripsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    private func loadSampleTrips() {
+        guard let trip1 = Trip(tripName: "MyTrip1") else {
+            print("Cannot create trip 1")
+            return
+        }
+        
+        guard let trip2 = Trip(tripName: "MyTrip2") else {
+            print("Cannot create trip2")
+            return
+        }
+        
+        trips += [trip1, trip2]
+    }
 
 }
