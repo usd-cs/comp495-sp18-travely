@@ -21,8 +21,8 @@ class AboutViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var currCurrency: UIPickerView!
     @IBOutlet weak var destinationCurrency: UIPickerView!
     @IBOutlet weak var etiquetteLabel: UILabel!
-    //@IBOutlet weak var etiquetteText: UILabel!
-
+    @IBOutlet weak var etiquetteText: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -62,9 +62,16 @@ class AboutViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         if let path = Bundle.main.path(forResource: "countryEtiquette", ofType: "txt") {
             do {
                 let data = try String(contentsOfFile: path, encoding: .utf8)
-                let myStrings = data.components(separatedBy: .newlines)
-                //etiquetteText.text = myStrings.joined(separator: ", ")
-            }
+                let myStrings = data.components(separatedBy: "----")
+                //Go through the entries in countryEtiquette.txt and set the text to the appropriate country's etiquette
+                for i in (0...myStrings.count-1) {
+                    if myStrings[i].contains(countryName + " Etiquette") {
+                        etiquetteText.text = myStrings[i]
+                        break
+                    }
+                }
+                etiquetteText.sizeToFit() 
+                }
             catch {
                 print(error)
             }
