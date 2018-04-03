@@ -26,12 +26,7 @@ class AboutViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        if countryName != "" {
-            populateEtiquette()
-        }
-        else {
-            etiquetteLabel.text = ""
-        }
+        populateEtiquette()
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,23 +57,28 @@ class AboutViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
     func populateEtiquette() {
-        etiquetteLabel.text = countryName
-        if let path = Bundle.main.path(forResource: "countryEtiquette", ofType: "txt") {
-            do {
-                let data = try String(contentsOfFile: path, encoding: .utf8)
-                let myStrings = data.components(separatedBy: "----")
-                //Go through the entries in countryEtiquette.txt and set the text to the appropriate country's etiquette
-                for i in (0...myStrings.count-1) {
-                    if myStrings[i].contains(countryName + " Etiquette") {
-                        etiquetteText.text = myStrings[i]
-                        break
+        if countryName != "" {
+            etiquetteLabel.text = countryName
+            if let path = Bundle.main.path(forResource: "countryEtiquette", ofType: "txt") {
+                do {
+                    let data = try String(contentsOfFile: path, encoding: .utf8)
+                    let myStrings = data.components(separatedBy: "----")
+                    //Go through the entries in countryEtiquette.txt and set the text to the appropriate country's etiquette
+                    for i in (0...myStrings.count-1) {
+                        if myStrings[i].contains(countryName + " Etiquette") {
+                            etiquetteText.text = myStrings[i]
+                            break
+                        }
                     }
+                    etiquetteText.sizeToFit()
+                    }
+                catch {
+                    print(error)
                 }
-                etiquetteText.sizeToFit() 
-                }
-            catch {
-                print(error)
             }
+        }
+        else {
+            etiquetteLabel.text = ""
         }
     }
     
