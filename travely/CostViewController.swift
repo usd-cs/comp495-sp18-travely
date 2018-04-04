@@ -171,14 +171,44 @@ class CostViewController: UIViewController {
             return -1
         }
         
-        let json = try? JSONSerialization.jsonObject(with: self.flight_data!, options: [])
-        //TODO: Alexandra's issue - parse JSON and return min cost - Use variable json
-        
-        print(json)
-        
-        
+        let json = try? JSONSerialization.jsonObject(with: self.flight_data!, options: []) as! [String: AnyObject]
+        var minCost = calculateMinCostFromAmadeusResponse(amadeusResponse: json)
         flightcall_done = false //Set value back to false for next calculation
-        return 1
+        return minCost
+    }
+    
+    /*
+     * This function calculates cheapers airfare price from Amadeus API response
+     * @param amadeusResponse - Amadeus API response as [String: AnyObject]
+     * @return currMin - the smallest cost in airfare
+     */
+    func calculateMinCostFromAmadeusResponse(amadeusResponse json: [String: AnyObject]?) -> Double{
+        var currMin: Double = 999999
+        
+        // do nester retrieve-casting to get all the prices
+        if let json = json{
+            if let results = json["results"]{
+                for result in results as! [AnyObject]{
+                    if let currFare = result["fare"] as? [String: Any]{
+                        if let currPriceObject = currFare["price_per_adult"] as? [String: Any]{
+                            if let currPrice = currPriceObject["total_fare"] as? String{
+                                if let currPriceInt = Double(currPrice){
+                                    if currPriceInt < currMin{
+                                        currMin = currPriceInt
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        //check for problem
+        if currMin == 999999{
+            return  -1
+        }
+        return currMin
     }
     
     /*
