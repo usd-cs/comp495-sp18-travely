@@ -225,13 +225,6 @@ class CostViewController: UIViewController {
             if (error != nil) {
                 print(error ?? "Error calling hotel API")
             } else {
-                /*
-                let jsonDecoder = JSONDecoder()
-                if let data = data,
-                   let hotelJsonReturnDictionary = try? jsonDecoder.decode([String: String].self, from: data) {
-                    print(hotelJsonReturnDictionary)
-                }
-                */
                 let httpResponse = response as? HTTPURLResponse
                 self.hotelData = data
                 self.hotelCallError = (error != nil) || (httpResponse?.statusCode != 200)
