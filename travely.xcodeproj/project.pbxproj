@@ -26,6 +26,7 @@
 		BB2BD4A92074580600B4F9F1 /* Airfairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2BD4A82074580600B4F9F1 /* Airfairs.swift */; };
 		C965E500206095F0003EA5F1 /* countryEtiquette.txt in Resources */ = {isa = PBXBuildFile; fileRef = C965E4FF206095EF003EA5F1 /* countryEtiquette.txt */; };
 		C965E50220617130003EA5F1 /* SavedTripDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C965E50120617130003EA5F1 /* SavedTripDetailsViewController.swift */; };
+		C9FDC45D20754E3300D72720 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FDC45C20754E3200D72720 /* Activities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		BB2BD4A82074580600B4F9F1 /* Airfairs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airfairs.swift; sourceTree = "<group>"; };
 		C965E4FF206095EF003EA5F1 /* countryEtiquette.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = countryEtiquette.txt; sourceTree = "<group>"; };
 		C965E50120617130003EA5F1 /* SavedTripDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTripDetailsViewController.swift; sourceTree = "<group>"; };
+		C9FDC45C20754E3200D72720 /* Activities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
 		DC76EC9AFA689650288BA9DB /* Pods-travely.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travely.debug.xcconfig"; path = "Pods/Target Support Files/Pods-travely/Pods-travely.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -268,6 +270,7 @@
 				6341883120754A7500F79441 /* Activities.swift in Sources */,
 				636ECEF42058E35C00F668F2 /* ActivitiesViewController.swift in Sources */,
 				BB2BD4D520754B3200B4F9F1 /* ActivitiesTabTableViewController.swift in Sources */,
+				C9FDC45D20754E3300D72720 /* Activities.swift in Sources */,
 				BB2BD4A92074580600B4F9F1 /* Airfairs.swift in Sources */,
 				636ECEEE2058E35C00F668F2 /* NewTripViewController.swift in Sources */,
 				636ECEF02058E35C00F668F2 /* CostViewController.swift in Sources */,
