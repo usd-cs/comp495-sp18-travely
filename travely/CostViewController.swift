@@ -291,8 +291,8 @@ class CostViewController: UIViewController {
             destinationAirport = "PEK"
         }
         else {
-            return -1
             print("Error finding IATA code")
+            return -1
         }
         let headers = [
             "Cache-Control": "no-cache",
