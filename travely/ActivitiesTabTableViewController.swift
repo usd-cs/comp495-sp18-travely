@@ -16,7 +16,12 @@ class ActivitiesTabTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        activities = Activities(cityName: city)
+        if city.count < 1{
+            activities = nil
+            return
+        } else {
+            activities = Activities(cityName: city)
+        }
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -33,11 +38,12 @@ class ActivitiesTabTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+        guard activities != nil else { return 0 }
         return 3
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard activities != nil else { return 0 }
         // #warning Incomplete implementation, return the number of rows
         return 3
     }
@@ -46,20 +52,20 @@ class ActivitiesTabTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "activityCell", for: indexPath)
         
+        guard let activities = activities else {
+            cell.textLabel?.text = ""
+            cell.detailTextLabel?.text = ""
+            return cell
+        }
+        
         var dataSource: [String: String] = [:]
         switch indexPath.section{
         case 0:
-            if let currDataSource = activities?.culturalActivities[indexPath.row]{
-                dataSource = currDataSource
-            }
+            dataSource = activities.culturalActivities[indexPath.row]
         case 1:
-            if let currDataSource = activities?.outdoorsActivities[indexPath.row]{
-                dataSource = currDataSource
-            }
+            dataSource = activities.outdoorsActivities[indexPath.row]
         case 2:
-            if let currDataSource = activities?.nightlifeActivities[indexPath.row]{
-                dataSource = currDataSource
-            }
+            dataSource = activities.nightlifeActivities[indexPath.row]
         default:
             fatalError("Error configuring cess in Activities Tab")
         }
