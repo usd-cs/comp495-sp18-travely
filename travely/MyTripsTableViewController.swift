@@ -17,6 +17,13 @@ class MyTripsTableViewController: UITableViewController {
         super.viewDidLoad()
 
         loadSampleTrips()
+        if let saved = loadTrips(){
+            trips += saved
+        }
+        else{
+            loadSampleTrips()
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -98,7 +105,7 @@ class MyTripsTableViewController: UITableViewController {
         
         trips += [trip1, trip2]
     }
-    private func saveTrips(){
+     func saveTrips(){
         let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(trips, toFile: Trip.ArchiveURL.path)
         if isSuccessfulSave{
             os_log("Trips successfully save",log: OSLog.default,type:.debug)
