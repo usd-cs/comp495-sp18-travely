@@ -23,10 +23,13 @@ class AboutViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var etiquetteLabel: UILabel!
     @IBOutlet weak var etiquetteText: UILabel!
     
+    override func viewWillAppear(_ animated: Bool) {
+        populateEtiquette()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        populateEtiquette()
+        //populateEtiquette()
     }
 
     override func didReceiveMemoryWarning() {

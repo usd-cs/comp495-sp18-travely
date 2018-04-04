@@ -11,6 +11,7 @@
 		2B7B2C99206EBA020095B8D2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B2C98206EBA020095B8D2 /* Constants.swift */; };
 		58C62F1CB34F057972E182F6 /* Pods_travely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B49138DCF969A308DB008052 /* Pods_travely.framework */; };
 		6341883120754A7500F79441 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6341883020754A7500F79441 /* Activities.swift */; };
+		6341884920756A4100F79441 /* ActivitiesTabTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6341884820756A4100F79441 /* ActivitiesTabTableViewController.swift */; };
 		6369F0B32072EEC800BD3A13 /* MyTripsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6369F0B22072EEC800BD3A13 /* MyTripsTableViewController.swift */; };
 		6369F0B52073099900BD3A13 /* MyTripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6369F0B42073099900BD3A13 /* MyTripsTableViewCell.swift */; };
 		6369F0B72073102400BD3A13 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6369F0B62073102400BD3A13 /* Trip.swift */; };
@@ -26,13 +27,13 @@
 		BB2BD4A92074580600B4F9F1 /* Airfairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2BD4A82074580600B4F9F1 /* Airfairs.swift */; };
 		C965E500206095F0003EA5F1 /* countryEtiquette.txt in Resources */ = {isa = PBXBuildFile; fileRef = C965E4FF206095EF003EA5F1 /* countryEtiquette.txt */; };
 		C965E50220617130003EA5F1 /* SavedTripDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C965E50120617130003EA5F1 /* SavedTripDetailsViewController.swift */; };
-		C9FDC45D20754E3300D72720 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FDC45C20754E3200D72720 /* Activities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2B27D941205F108300570716 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		2B7B2C98206EBA020095B8D2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6341883020754A7500F79441 /* Activities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
+		6341884820756A4100F79441 /* ActivitiesTabTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesTabTableViewController.swift; sourceTree = "<group>"; };
 		6369F0B22072EEC800BD3A13 /* MyTripsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsTableViewController.swift; sourceTree = "<group>"; };
 		6369F0B42073099900BD3A13 /* MyTripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsTableViewCell.swift; sourceTree = "<group>"; };
 		6369F0B62073102400BD3A13 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
@@ -52,7 +53,6 @@
 		BB2BD4A82074580600B4F9F1 /* Airfairs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airfairs.swift; sourceTree = "<group>"; };
 		C965E4FF206095EF003EA5F1 /* countryEtiquette.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = countryEtiquette.txt; sourceTree = "<group>"; };
 		C965E50120617130003EA5F1 /* SavedTripDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTripDetailsViewController.swift; sourceTree = "<group>"; };
-		C9FDC45C20754E3200D72720 /* Activities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
 		DC76EC9AFA689650288BA9DB /* Pods-travely.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travely.debug.xcconfig"; path = "Pods/Target Support Files/Pods-travely/Pods-travely.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +85,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6341884720756A2800F79441 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		63781940204B37B700734092 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +99,7 @@
 				6378194A204B37B700734092 /* Products */,
 				3E16561FC096E3544E0FD6F8 /* Pods */,
 				4392F41AF4234F40ACD062DF /* Frameworks */,
+				6341884720756A2800F79441 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +114,7 @@
 		6378194B204B37B700734092 /* travely */ = {
 			isa = PBXGroup;
 			children = (
+				6341884820756A4100F79441 /* ActivitiesTabTableViewController.swift */,
 				6341883020754A7500F79441 /* Activities.swift */,
 				C965E4FF206095EF003EA5F1 /* countryEtiquette.txt */,
 				636ECEF52058E36B00F668F2 /* LaunchScreen.storyboard */,
@@ -118,7 +127,6 @@
 				2B27D941205F108300570716 /* Country.swift */,
 				636ECEEB2058E35C00F668F2 /* Info.plist */,
 				636ECEE62058E35C00F668F2 /* NewTripViewController.swift */,
-				BB2BD4D420754B3200B4F9F1 /* ActivitiesTabTableViewController.swift */,
 				C965E50120617130003EA5F1 /* SavedTripDetailsViewController.swift */,
 				2B7B2C98206EBA020095B8D2 /* Constants.swift */,
 				6369F0B22072EEC800BD3A13 /* MyTripsTableViewController.swift */,
@@ -269,8 +277,7 @@
 				6369F0B52073099900BD3A13 /* MyTripsTableViewCell.swift in Sources */,
 				6341883120754A7500F79441 /* Activities.swift in Sources */,
 				636ECEF42058E35C00F668F2 /* ActivitiesViewController.swift in Sources */,
-				BB2BD4D520754B3200B4F9F1 /* ActivitiesTabTableViewController.swift in Sources */,
-				C9FDC45D20754E3300D72720 /* Activities.swift in Sources */,
+				6341884920756A4100F79441 /* ActivitiesTabTableViewController.swift in Sources */,
 				BB2BD4A92074580600B4F9F1 /* Airfairs.swift in Sources */,
 				636ECEEE2058E35C00F668F2 /* NewTripViewController.swift in Sources */,
 				636ECEF02058E35C00F668F2 /* CostViewController.swift in Sources */,
