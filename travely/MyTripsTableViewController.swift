@@ -7,15 +7,24 @@
 //
 
 import UIKit
+import os.log
 
 class MyTripsTableViewController: UITableViewController {
 
     var trips = [Trip]()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    override func viewWillAppear(_ animated: Bool) {
         loadSampleTrips()
+        if let saved = loadTrips(){
+            trips += saved
+        }
+        else{
+            loadSampleTrips()
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()        
     }
 
     override func didReceiveMemoryWarning() {
@@ -96,6 +105,18 @@ class MyTripsTableViewController: UITableViewController {
         }
         
         trips += [trip1, trip2]
+    }
+     func saveTrips(){
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(trips, toFile: Trip.ArchiveURL.path)
+        if isSuccessfulSave{
+            os_log("Trips successfully save",log: OSLog.default,type:.debug)
+        }
+        else{
+            os_log("Failed to save trips", log: OSLog.default, type: .debug)
+        }
+    }
+    private func loadTrips() -> [Trip]? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Trip.ArchiveURL.path) as? [Trip]
     }
 
 }
