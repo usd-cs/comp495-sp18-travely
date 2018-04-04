@@ -131,7 +131,11 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         let aboutTab = self.tabBarController?.viewControllers![3] as! AboutViewController
         aboutTab.countryName = destinationPlacePicked
         
-        tabBarController?.selectedIndex = 2
+        let activitiesTab = self.tabBarController?.viewControllers![1].childViewControllers[0] as! ActivitiesTabTableViewController
+        
+        activitiesTab.city = destinationPlacePicked
+        
+        tabBarController?.selectedIndex = 1
     }
     
     /*
