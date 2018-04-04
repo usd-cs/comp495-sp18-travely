@@ -174,6 +174,7 @@ class CostViewController: UIViewController {
         let json = try? JSONSerialization.jsonObject(with: self.flight_data!, options: [])
         //TODO: Alexandra's issue - parse JSON and return min cost - Use variable json
         
+        print(json)
         
         
         flightcall_done = false //Set value back to false for next calculation
