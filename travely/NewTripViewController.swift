@@ -127,6 +127,8 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         costTab.returnDate = return_date_str
         costTab.numTravellers = numOfTravellersPicked
         costTab.calculateButtonWasPressed = true
+        let diffInDays = Calendar.current.dateComponents([.day], from: departure_date, to: return_date).day
+        costTab.numDays = diffInDays!
         
         let aboutTab = self.tabBarController?.viewControllers![3] as! AboutViewController
         aboutTab.countryName = destinationPlacePicked
