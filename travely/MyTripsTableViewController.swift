@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 class MyTripsTableViewController: UITableViewController {
 
@@ -96,6 +97,18 @@ class MyTripsTableViewController: UITableViewController {
         }
         
         trips += [trip1, trip2]
+    }
+    private func saveTrips(){
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(trips, toFile: Trip.ArchiveURL.path)
+        if isSuccessfulSave{
+            os_log("Trips successfully save",log: OSLog.default,type:.debug)
+        }
+        else{
+            os_log("Failed to save trips", log: OSLog.default, type: .debug)
+        }
+    }
+    private func loadTrips() -> [Trip]? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Trip.ArchiveURL.path) as? [Trip]
     }
 
 }
