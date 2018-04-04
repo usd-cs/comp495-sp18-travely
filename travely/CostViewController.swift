@@ -172,7 +172,7 @@ class CostViewController: UIViewController {
         }
         
         let json = try? JSONSerialization.jsonObject(with: self.flight_data!, options: []) as! [String: AnyObject]
-        var minCost = calculateMinCostFromAmadeusResponse(amadeusResponse: json)
+        var minCost = calculateMinCostFromAmadeusFlightsResponse(amadeusResponse: json)
         flightcall_done = false //Set value back to false for next calculation
         return minCost
     }
@@ -180,9 +180,9 @@ class CostViewController: UIViewController {
     /*
      * This function calculates cheapers airfare price from Amadeus API response
      * @param amadeusResponse - Amadeus API response as [String: AnyObject]
-     * @return currMin - the smallest cost in airfare
+     * @return currMin - the smallest cost in airfare (-1 if error)
      */
-    func calculateMinCostFromAmadeusResponse(amadeusResponse json: [String: AnyObject]?) -> Double{
+    func calculateMinCostFromAmadeusFlightsResponse(amadeusResponse json: [String: AnyObject]?) -> Double{
         var currMin: Double = 999999
         
         // do nester retrieve-casting to get all the prices
@@ -276,13 +276,46 @@ class CostViewController: UIViewController {
             return -1
         }
         //Put data into JSON object
-        let json = try? JSONSerialization.jsonObject(with: self.hotelData!, options: [])
+        let json = try? JSONSerialization.jsonObject(with: self.hotelData!, options: []) as! [String: AnyObject]
         hotelCallDone = false
         
-        //TODO: ALEXANDRA find the min cost using the JSON variable called json and pass it back to viewDidLoad
-        //JSON object is being stored in json variable on line 248
+        //find the min cost using the JSON variable called json and pass it back to viewDidLoad
+
+        var minCost = calculateMinCostFromAmadeusHotelResponse(amadeusResponse: json)
+        return minCost
+    }
+    
+    /*
+     * This function calculates cheapers hotel price from Amadeus API response
+     * @param amadeusResponse - Amadeus API response as [String: AnyObject]
+     * @return currMin - the smallest cost for hotel (-1 if error)
+     */
+    func calculateMinCostFromAmadeusHotelResponse(amadeusResponse json: [String: AnyObject]?) -> Double{
+        var currMin: Double = 999999
         
-        return 1
+        // do nester retrieve-casting to get all the prices
+        if let json = json{
+            if let results = json["results"]{
+                for result in results as! [AnyObject]{
+                    if let currPriceObject = result["total_price"] as? [String: Any]{
+                        if let currPrice = currPriceObject["amount"] as? String{
+                            if let currPriceInt = Double(currPrice){
+                                if currPriceInt < currMin{
+                                    currMin = currPriceInt
+                                }
+                            }
+                        }
+                     
+                    }
+                }
+            }
+        }
+        
+        //check for problem
+        if currMin == 999999{
+            return  -1
+        }
+        return currMin
     }
     
 
