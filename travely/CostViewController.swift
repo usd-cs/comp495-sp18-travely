@@ -16,6 +16,7 @@ class CostViewController: UIViewController {
     var departureDate  = ""
     var returnDate = ""
     var numTravellers = ""
+    var numDays = 0
     
 
     //Used for Amadeus Flights API method: getFlightMinCost
@@ -32,16 +33,67 @@ class CostViewController: UIViewController {
     
     @IBOutlet weak var pieChartView: PieChartView!
     
+    @IBOutlet weak var totalCostLabel: UILabel!
+    @IBOutlet weak var airfareCostLabel: UILabel!
+    @IBOutlet weak var hotelCostLabel: UILabel!
+    @IBOutlet weak var publicTranportationLabel: UILabel!
+    @IBOutlet weak var activitiesCostLabel: UILabel!
+    @IBOutlet weak var foodCostLabel: UILabel!
+    
     override func viewWillAppear(_ animated: Bool) {
+        var minFlightCost = 0.0
+        var minHotelCost = 0.0
+        var totalCost = 0.0
+        
+        //Fill in the labels with dummy data
+        var foodCost = 0.0
+        var activitiesCost = 0.0
+        var publicTransportationCost = 0.0
+        var numberOfTravellers = (numTravellers as NSString).doubleValue
+        if numberOfTravellers == 0 {
+            numberOfTravellers = 1
+        }
+        if destinationLocation == "China" {
+            foodCost = 14 * Double(numDays) * numberOfTravellers
+            activitiesCost = 20 * Double(numDays) * numberOfTravellers
+            publicTransportationCost = 17 * Double(numDays) * numberOfTravellers
+
+        }
+        else if destinationLocation == "San Diego" {
+            foodCost = 40 * Double(numDays) * numberOfTravellers
+            activitiesCost = 50 * Double(numDays) * numberOfTravellers
+            publicTransportationCost = 18 * Double(numDays) * numberOfTravellers
+        }
+        else if destinationLocation == "Rome" {
+            foodCost = 43 * Double(numDays) * numberOfTravellers
+            activitiesCost = 39 * Double(numDays) * numberOfTravellers
+            publicTransportationCost = 20 * Double(numDays) * numberOfTravellers
+        }
+        
         if calculateButtonWasPressed == true {
-            var minHotelCost = getHotelMinCost()
-            var minFlightCost = getFlightMinCost()
+            minHotelCost = getHotelMinCost()
+            minFlightCost = getFlightMinCost()
+            //Multiply the flight cost by the number of travellers
+            minFlightCost = minFlightCost * numberOfTravellers
         }
         calculateButtonWasPressed = false
-      
+        
+        let totalTransportationCost = minFlightCost + publicTransportationCost
+        let expenses = ["Transportation", "Accomodations", "Food", "Miscellaneous"]
+        let costOfExpense = [totalTransportationCost, minHotelCost, foodCost, activitiesCost]
+        setChart(dataPoints: expenses, values: costOfExpense)
+        totalCost = minFlightCost + minHotelCost
+        totalCostLabel.text = String(totalCost)
+        airfareCostLabel.text = String(minFlightCost)
+        hotelCostLabel.text = String(minHotelCost)
+        publicTranportationLabel.text = String(publicTransportationCost)
+        activitiesCostLabel.text = String(activitiesCost)
+        foodCostLabel.text = String(foodCost)
+        /*
         let expenses = ["Transportation", "Accomodations", "Food", "Miscellaneous"]
         let costOfExpense = [999.99, 999.99, 999.99, 999.99]
         setChart(dataPoints: expenses, values: costOfExpense)
+        */
     }
    
     override func viewDidLoad() {
@@ -109,8 +161,8 @@ class CostViewController: UIViewController {
         var destination_IATA = ""
         
         //TODO: Eventually replace this IATA code method with calling API to retrieve IATA codes
-        if originLocation == "New York" {
-            origin_IATA = "JFK"
+        if originLocation == "China" {
+            origin_IATA = "PEK"
         } else if originLocation == "San Diego" {
             origin_IATA = "SAN"
         } else if originLocation == "Rome" {
@@ -120,8 +172,8 @@ class CostViewController: UIViewController {
             return -1
         }
         
-        if destinationLocation == "New York" {
-            destination_IATA = "JFK"
+        if destinationLocation == "China" {
+            destination_IATA = "PEK"
         } else if destinationLocation == "San Diego" {
             destination_IATA = "SAN"
         } else if destinationLocation == "Rome" {
@@ -235,8 +287,8 @@ class CostViewController: UIViewController {
         else if destinationLocation == "Rome" {
             destinationAirport = "FCO"
         }
-        else if destinationLocation == "New York" {
-            destinationAirport = "JFK"
+        else if destinationLocation == "China" {
+            destinationAirport = "PEK"
         }
         else {
             return -1
