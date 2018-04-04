@@ -17,6 +17,7 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     @IBOutlet weak var originPicker: UIPickerView!
     @IBOutlet weak var destinationPicker: UIPickerView!
     @IBOutlet weak var numTravellersPicker: UIPickerView!
+    
     //picker view related data and functions
     // Tag 1 is Origin Picker
     // Tag 2 is Destination Picker
@@ -29,10 +30,12 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     var destinationPlacePicked = ""
     var numOfTravellersPicked = ""
     
+    //all pickers will contain a single component
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
+    //determine number of rows that a picker needs to display its elements
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if pickerView.tag == 1{
             return placesOrigin.count
@@ -48,6 +51,7 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         }
     }
     
+    //determine title for currently displayed component
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView.tag == 1{
             return placesOrigin[row]
@@ -63,6 +67,7 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         }
     }
     
+    //respont to user selecting a new row
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 1{
             originPlacePicked = placesOrigin[row]
@@ -81,102 +86,18 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //picker related setup
         originPlacePicked = ""
         destinationPlacePicked = ""
         numOfTravellersPicked = ""
         
         self.numTravellersPicker.dataSource = self;
         self.numTravellersPicker.delegate = self;
-        // Do any additional setup after loading the view, typically from a nib.
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-        
     }
-    
-    /*
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        if segue.identifier == "CalculatePressedNewTripToActivities"{
-            let resultsViewController = segue.destination as! ActivitiesViewController
-            resultsViewController.originLocation = originPlacePicked
-            resultsViewController.destinaionLocation = destinationPlacePicked
-            resultsViewController.numOfTravellers = numOfTravellersPicked
-        }
-    }
-    
-    
-    //Add conditions to check before a segue is performed
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        //If calculate button was pressed
-        if identifier == "CalculatePressedNewTripToActivities" {
-            
-            //Validating user input before button action
-            //Get time values and change format of dates
-            let current_date = Date()
-            let departure_date = departureDatePicker.date
-            let return_date = returnDatePicker.date
-            
-            let formatter = DateFormatter()
-            formatter.dateFormat = "yyyy/MM/dd"
-            let departure_date_str: String = formatter.string(from: departure_date)
-            let return_date_str: String = formatter.string(from: return_date)
-            let current_date_str: String = formatter.string(from: current_date)
-            
-            //check that user picked a county
-            guard originPlacePicked.count > 1 else {
-                let alertController = UIAlertController(title: "Error", message:
-                    "Origin not selected.", preferredStyle: UIAlertControllerStyle.alert)
-                alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
-                self.present(alertController, animated: true, completion: nil)
-                return false
-                
-            }
-            
-            guard destinationPlacePicked.count > 1 else {
-                let alertController = UIAlertController(title: "Error", message:
-                    "Destination not selected.", preferredStyle: UIAlertControllerStyle.alert)
-                alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
-                self.present(alertController, animated: true, completion: nil)
-                return false
-                
-            }
-            
-            //Check that the user didn't select the same destination and origin
-            guard originPlacePicked != destinationPlacePicked else {
-                let alertController = UIAlertController(title: "Error", message:
-                    "Origin and destination must be differnt.", preferredStyle: UIAlertControllerStyle.alert)
-                alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
-                self.present(alertController, animated: true, completion: nil)
-                return false
-            }
-            
-            //Check that departure date is not less than the current date
-            guard departure_date_str >= current_date_str else {
-                let alertController = UIAlertController(title: "Error", message:
-                    "Deperture date can't be earlier than today.", preferredStyle: UIAlertControllerStyle.alert)
-                alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
-                self.present(alertController, animated: true, completion: nil)
-                return false
-            }
-            
-            //Check that departure date is not greater than return date
-            guard departure_date_str < return_date_str else {
-                let alertController = UIAlertController(title: "Error", message:
-                    "Return date must be past departure date.", preferredStyle: UIAlertControllerStyle.alert)
-                alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
-                self.present(alertController, animated: true, completion: nil)
-                return false
-            }
-        }
-        return true
-    }
-    */
     
     //Only for demo purpose, after demo then change to segue to Activities
     @IBAction func switchToCost(_ sender: UIButton) {
@@ -192,54 +113,14 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         let return_date_str: String = formatter.string(from: return_date)
         let current_date_str: String = formatter.string(from: current_date)
         
-        
         //check that user picked a county
-        guard originPlacePicked.count > 1 else {
-            let alertController = UIAlertController(title: "Error", message:
-                "Origin not selected.", preferredStyle: UIAlertControllerStyle.alert)
-            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
-            self.present(alertController, animated: true, completion: nil)
-            return
-            
-        }
-        
-        guard destinationPlacePicked.count > 1 else {
-            let alertController = UIAlertController(title: "Error", message:
-                "Destination not selected.", preferredStyle: UIAlertControllerStyle.alert)
-            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
-            self.present(alertController, animated: true, completion: nil)
-            return
-            
-        }
-        
-        //Check that the user didn't select the same destination and origin
-        guard originPlacePicked != destinationPlacePicked else {
-            let alertController = UIAlertController(title: "Error", message:
-                "Origin and destination must be differnt.", preferredStyle: UIAlertControllerStyle.alert)
-            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
-            self.present(alertController, animated: true, completion: nil)
+        if !validateOriginDestinationPickers(origin: originPlacePicked, destination: destinationPlacePicked) ||
+           !validateDepartureReturnDatePickers(departureDate: departure_date_str, returnDate: return_date_str, currentDate: current_date_str){
             return
         }
         
-        //Check that departure date is in the future
-        guard departure_date_str > current_date_str else {
-            let alertController = UIAlertController(title: "Error", message:
-                "Departure date needs to be in the future.", preferredStyle: UIAlertControllerStyle.alert)
-            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
-            self.present(alertController, animated: true, completion: nil)
-            return
-        }
-        
-        //Check that departure date is not greater than return date
-        guard departure_date_str < return_date_str else {
-            let alertController = UIAlertController(title: "Error", message:
-                "Return date must be past departure date.", preferredStyle: UIAlertControllerStyle.alert)
-            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
-            self.present(alertController, animated: true, completion: nil)
-            return
-        }
-        //tabBarController?.selectedIndex = 2
-        var costTab = self.tabBarController?.viewControllers![2] as! CostViewController
+        //switch to Cost Tab and pass relevant data to it and to About tab
+        let costTab = self.tabBarController?.viewControllers![2] as! CostViewController
         costTab.originLocation = originPlacePicked
         costTab.destinationLocation = destinationPlacePicked
         costTab.departureDate = departure_date_str
@@ -247,11 +128,151 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         costTab.numTravellers = numOfTravellersPicked
         costTab.calculateButtonWasPressed = true
         
-        var aboutTab = self.tabBarController?.viewControllers![3] as! AboutViewController
+        let aboutTab = self.tabBarController?.viewControllers![3] as! AboutViewController
         aboutTab.countryName = destinationPlacePicked
         
         tabBarController?.selectedIndex = 2
     }
- 
+    
+    /*
+     * This function validates data in Origin and Destination pickers
+     * @param origin - origin place name (city or country)
+     * @param destination - destination place name (city or country)
+     * @return true if input is valid, false otherwise
+     */
+    func validateOriginDestinationPickers(origin originPlacePicked: String, destination destinationPlacePicked: String) -> Bool{
+        guard originPlacePicked.count > 1 else {
+            let alertController = UIAlertController(title: "Error", message: "Origin not selected.", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+            return false
+        }
+        
+        guard destinationPlacePicked.count > 1 else {
+            let alertController = UIAlertController(title: "Error", message: "Destination not selected.", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+            return false
+            
+        }
+        
+        //Check that the user didn't select the same destination and origin
+        guard originPlacePicked != destinationPlacePicked else {
+            let alertController = UIAlertController(title: "Error", message: "Origin and destination must be differnt.", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+            return false
+        }
+        
+        return true
+    }
+    
+    /*
+     * This function validates data in Departere and Return Date pickers
+     * @param departureDate - departure date
+     * @param returnDate - return date
+     * @param currentDate - todays date
+     * @return true if input is valid, false otherwise
+     */
+    func validateDepartureReturnDatePickers(departureDate departure_date_str: String, returnDate return_date_str: String, currentDate current_date_str: String) ->Bool{
+        
+        //Check that departure date is in the future
+        guard departure_date_str > current_date_str else {
+            let alertController = UIAlertController(title: "Error", message: "Departure date needs to be in the future.", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+            return false
+        }
+        
+        //Check that departure date is not greater than return date
+        guard departure_date_str < return_date_str else {
+            let alertController = UIAlertController(title: "Error", message: "Return date must be past departure date.", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+            return false
+        }
+        
+        return true
+    }
+    
+    /*
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     if segue.identifier == "CalculatePressedNewTripToActivities"{
+     let resultsViewController = segue.destination as! ActivitiesViewController
+     resultsViewController.originLocation = originPlacePicked
+     resultsViewController.destinaionLocation = destinationPlacePicked
+     resultsViewController.numOfTravellers = numOfTravellersPicked
+     }
+     }
+     
+     //Add conditions to check before a segue is performed
+     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+     //If calculate button was pressed
+     if identifier == "CalculatePressedNewTripToActivities" {
+     
+     //Validating user input before button action
+     //Get time values and change format of dates
+     let current_date = Date()
+     let departure_date = departureDatePicker.date
+     let return_date = returnDatePicker.date
+     
+     let formatter = DateFormatter()
+     formatter.dateFormat = "yyyy/MM/dd"
+     let departure_date_str: String = formatter.string(from: departure_date)
+     let return_date_str: String = formatter.string(from: return_date)
+     let current_date_str: String = formatter.string(from: current_date)
+     
+     //check that user picked a county
+     guard originPlacePicked.count > 1 else {
+     let alertController = UIAlertController(title: "Error", message:
+     "Origin not selected.", preferredStyle: UIAlertControllerStyle.alert)
+     alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+     self.present(alertController, animated: true, completion: nil)
+     return false
+     
+     }
+     
+     guard destinationPlacePicked.count > 1 else {
+     let alertController = UIAlertController(title: "Error", message:
+     "Destination not selected.", preferredStyle: UIAlertControllerStyle.alert)
+     alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+     self.present(alertController, animated: true, completion: nil)
+     return false
+     
+     }
+     
+     //Check that the user didn't select the same destination and origin
+     guard originPlacePicked != destinationPlacePicked else {
+     let alertController = UIAlertController(title: "Error", message:
+     "Origin and destination must be differnt.", preferredStyle: UIAlertControllerStyle.alert)
+     alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+     self.present(alertController, animated: true, completion: nil)
+     return false
+     }
+     
+     //Check that departure date is not less than the current date
+     guard departure_date_str >= current_date_str else {
+     let alertController = UIAlertController(title: "Error", message:
+     "Deperture date can't be earlier than today.", preferredStyle: UIAlertControllerStyle.alert)
+     alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+     self.present(alertController, animated: true, completion: nil)
+     return false
+     }
+     
+     //Check that departure date is not greater than return date
+     guard departure_date_str < return_date_str else {
+     let alertController = UIAlertController(title: "Error", message:
+     "Return date must be past departure date.", preferredStyle: UIAlertControllerStyle.alert)
+     alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+     self.present(alertController, animated: true, completion: nil)
+     return false
+     }
+     }
+     return true
+     }
+     */
 }
 
