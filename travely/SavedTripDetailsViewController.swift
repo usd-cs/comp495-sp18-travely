@@ -12,11 +12,14 @@ import Charts
 class SavedTripDetailsViewController: UIViewController {
     var my_trip: Trip?
     
+    var countryName = ""
+    
     //Outlet for the chart
     @IBOutlet weak var pieChartView: PieChartView!
     //Outlet for the email trip button
     @IBAction func emailButton(_ sender: Any) {
-        print("Email button clicked")
+
+    
     }
     //Outlet for the trip name
     @IBOutlet weak var tripNameField: UILabel!
@@ -24,7 +27,8 @@ class SavedTripDetailsViewController: UIViewController {
     @IBOutlet weak var totalPriceField: UILabel!
     //Outlet for the view country information button
     @IBAction func viewCountryInformation(_ sender: Any) {
-        print("view country info button clicked")
+        
+        
     }
     //Outlet for the origin location
     @IBOutlet weak var originLocation: UILabel!
@@ -46,6 +50,7 @@ class SavedTripDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        countryName = "China"
         populateWithData()
     }
     
@@ -86,6 +91,17 @@ class SavedTripDetailsViewController: UIViewController {
         activitiesCostLabel.text = "$" + String(describing: my_trip!.activitiesCost)
         totalPriceField.text = "$" + String(describing: my_trip!.tripTotalCost)
     }
+    
+    //MARK:Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if segue.identifier == "toAboutTab" {
+            // Create a new variable to store the instance of searchResultsViewController
+            let destinationVC = segue.destination as! AboutViewController
+            destinationVC.countryName = countryName
+        }
+    }
+
 }
 
 

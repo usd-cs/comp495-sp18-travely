@@ -10,6 +10,7 @@ import UIKit
 
 class AboutViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
+    var countryName = ""
     
     let FIXER_BASE_URL = "http://data.fixer.io/api/"
     
@@ -19,10 +20,13 @@ class AboutViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var exchangeAmt: UITextField!
     @IBOutlet weak var currCurrency: UIPickerView!
     @IBOutlet weak var destinationCurrency: UIPickerView!
+    @IBOutlet weak var etiquetteLabel: UILabel!
+    @IBOutlet weak var etiquetteText: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        populateEtiquette()
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,6 +53,32 @@ class AboutViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         }
         else{
             print("Invalid Amount. Please try again.")
+        }
+    }
+    
+    func populateEtiquette() {
+        if countryName != "" {
+            etiquetteLabel.text = countryName
+            if let path = Bundle.main.path(forResource: "countryEtiquette", ofType: "txt") {
+                do {
+                    let data = try String(contentsOfFile: path, encoding: .utf8)
+                    let myStrings = data.components(separatedBy: "----")
+                    //Go through the entries in countryEtiquette.txt and set the text to the appropriate country's etiquette
+                    for i in (0...myStrings.count-1) {
+                        if myStrings[i].contains(countryName + " Etiquette") {
+                            etiquetteText.text = myStrings[i]
+                            break
+                        }
+                    }
+                    etiquetteText.sizeToFit()
+                    }
+                catch {
+                    print(error)
+                }
+            }
+        }
+        else {
+            etiquetteLabel.text = ""
         }
     }
     

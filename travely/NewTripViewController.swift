@@ -21,8 +21,8 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     // Tag 1 is Origin Picker
     // Tag 2 is Destination Picker
     // Tag 3 is Num of Travellers Picker
-    let placesOrigin = ["-", "San Diego", "New York", "Rome"]
-    let placesDestination = ["-", "San Diego", "New York", "Rome"]
+    let placesOrigin = ["-", "San Diego", "China", "Rome"]
+    let placesDestination = ["-", "San Diego", "China", "Rome"]
     let numTravellersRange = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
     
     var originPlacePicked = ""
@@ -246,6 +246,9 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         costTab.returnDate = return_date_str
         costTab.numTravellers = numOfTravellersPicked
         costTab.calculateButtonWasPressed = true
+        
+        var aboutTab = self.tabBarController?.viewControllers![3] as! AboutViewController
+        aboutTab.countryName = destinationPlacePicked
         
         tabBarController?.selectedIndex = 2
     }
