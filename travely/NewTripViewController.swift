@@ -130,6 +130,11 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         let diffInDays = Calendar.current.dateComponents([.day], from: departure_date, to: return_date).day
         costTab.numDays = diffInDays!
         
+        let newTrip = Trip(tripName: "Trip", tripTotalCost: 3000, tripAirfareCost: 1500, tripHotelCost: 1000, foodCost: 500, activitiesCost: 500, originLocation: originPlacePicked, destinationLocation: destinationPlacePicked, departureDate: departure_date_str, returnDate: return_date_str)
+        let myTripsTab = self.tabBarController?.viewControllers![4].childViewControllers[0] as! MyTripsTableViewController
+        myTripsTab.trips += [newTrip!]
+        myTripsTab.saveTrips()
+        
         let aboutTab = self.tabBarController?.viewControllers![3] as! AboutViewController
         aboutTab.countryName = destinationPlacePicked
         
