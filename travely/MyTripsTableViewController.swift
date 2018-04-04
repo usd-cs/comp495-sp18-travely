@@ -13,9 +13,7 @@ class MyTripsTableViewController: UITableViewController {
 
     var trips = [Trip]()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    override func viewWillAppear(_ animated: Bool) {
         loadSampleTrips()
         if let saved = loadTrips(){
             trips += saved
@@ -23,7 +21,10 @@ class MyTripsTableViewController: UITableViewController {
         else{
             loadSampleTrips()
         }
-        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()        
     }
 
     override func didReceiveMemoryWarning() {

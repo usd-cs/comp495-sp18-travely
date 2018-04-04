@@ -71,43 +71,43 @@ class Trip : NSObject,NSCoding{
     
     required convenience init?(coder aDecoder: NSCoder) {
         guard let tripName = aDecoder.decodeObject(forKey: PropertyKey.tripName) as? String else {
-            os_log("Unable to decode", log: OSLog.default, type: .debug)
+            os_log("Unable to decode tripName", log: OSLog.default, type: .debug)
             return nil
         }
         guard let tripTotalCost = aDecoder.decodeObject(forKey: PropertyKey.tripTotalCost) as? Double else {
-            os_log("Unable to decode", log: OSLog.default, type: .debug)
+            os_log("Unable to decode tripTotalCost", log: OSLog.default, type: .debug)
             return nil
         }
         guard let tripAirfareCost = aDecoder.decodeObject(forKey: PropertyKey.tripAirfareCost) as? Double else {
-            os_log("Unable to decode", log: OSLog.default, type: .debug)
+            os_log("Unable to decode tripAirfareCost", log: OSLog.default, type: .debug)
             return nil
         }
         guard let tripHotelCost = aDecoder.decodeObject(forKey: PropertyKey.tripHotelCost) as? Double else {
-            os_log("Unable to decode", log: OSLog.default, type: .debug)
+            os_log("Unable to decode tripHotelCost", log: OSLog.default, type: .debug)
             return nil
         }
         guard let foodCost = aDecoder.decodeObject(forKey: PropertyKey.foodCost) as? Double else {
-            os_log("Unable to decode", log: OSLog.default, type: .debug)
+            os_log("Unable to decode foodCost", log: OSLog.default, type: .debug)
             return nil
         }
         guard let activitiesCost = aDecoder.decodeObject(forKey: PropertyKey.activitiesCost) as? Double else {
-            os_log("Unable to decode", log: OSLog.default, type: .debug)
+            os_log("Unable to decode activitiesCost", log: OSLog.default, type: .debug)
             return nil
         }
         guard let destinationLocation = aDecoder.decodeObject(forKey: PropertyKey.destinationLocation) as? String else {
-            os_log("Unable to decode", log: OSLog.default, type: .debug)
+            os_log("Unable to decode destinationLocation", log: OSLog.default, type: .debug)
             return nil
         }
         guard let originLocation = aDecoder.decodeObject(forKey: PropertyKey.originLocation) as? String else {
-            os_log("Unable to decode", log: OSLog.default, type: .debug)
+            os_log("Unable to decode originLocation", log: OSLog.default, type: .debug)
             return nil
         }
         guard let departureDate = aDecoder.decodeObject(forKey: PropertyKey.departureDate) as? String else {
-            os_log("Unable to decode", log: OSLog.default, type: .debug)
+            os_log("Unable to decode departureDate", log: OSLog.default, type: .debug)
             return nil
         }
         guard let returnDate = aDecoder.decodeObject(forKey: PropertyKey.returnDate) as? String else {
-            os_log("Unable to decode", log: OSLog.default, type: .debug)
+            os_log("Unable to decode returnDate", log: OSLog.default, type: .debug)
             return nil
         }
         
