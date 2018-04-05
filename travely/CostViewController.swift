@@ -10,7 +10,7 @@ import UIKit
 import Charts
 
 class CostViewController: UIViewController {
-
+    
     var originLocation = ""
     var destinationLocation = ""
     var departureDate  = ""
@@ -18,21 +18,18 @@ class CostViewController: UIViewController {
     var numTravellers = ""
     var numDays = 0
     
-
     //Used for Amadeus Flights API method: getFlightMinCost
     var flightcall_done = false
     var flightcall_errors = false
     var flight_data: Data?
-
     var hotelCallDone = false
     var hotelCallError = false
     var hotelData: Data?
-    
     var calculateButtonWasPressed = false
-
+    var setLabelsToZero = true
+    var recalculateTrip = false
     
     @IBOutlet weak var pieChartView: PieChartView!
-    
     @IBOutlet weak var totalCostLabel: UILabel!
     @IBOutlet weak var airfareCostLabel: UILabel!
     @IBOutlet weak var hotelCostLabel: UILabel!
@@ -40,66 +37,99 @@ class CostViewController: UIViewController {
     @IBOutlet weak var activitiesCostLabel: UILabel!
     @IBOutlet weak var foodCostLabel: UILabel!
     
+    var minFlightCost: Double?
+    var minHotelCost: Double?
+    var totalCost: Double?
+    var foodCost: Double?
+    var activitiesCost: Double?
+    var publicTransportationCost: Double?
+    var numberOfTravellers: Double?
+    var totalTransportationCost: Double?
+    
+    //This function is called everytime the cost tab is visible
     override func viewWillAppear(_ animated: Bool) {
-        var minFlightCost = 0.0
-        var minHotelCost = 0.0
-        var totalCost = 0.0
+        if calculateButtonWasPressed == true {
+            setLabelsToZero = false
+            //Calculate the information, this is called everytime the calculate button is pressed but not everytime the cost tab is navigated to
+            if recalculateTrip == true {
+                calculateTripData()
+            }
+            //Set labels
+            setLabelsWithData()
+        }
+            //This will set the prices to $0 if no trip has been calculated and the user navigates to cost tab
+        else if setLabelsToZero == true {
+            zeroPrices()
+        }
+    }
+    
+    //This function calculates the data for a trip with dummy data and API data
+    func calculateTripData() {
+        initializeVaribles()
         
-        //Fill in the labels with dummy data
-        var foodCost = 0.0
-        var activitiesCost = 0.0
-        var publicTransportationCost = 0.0
-        var numberOfTravellers = (numTravellers as NSString).doubleValue
+        if destinationLocation == "China" {
+            foodCost = 14 * Double(numDays) * numberOfTravellers!
+            activitiesCost = 20 * Double(numDays) * numberOfTravellers!
+            publicTransportationCost = 17 * Double(numDays) * numberOfTravellers!
+            
+        }
+        else if destinationLocation == "San Diego" {
+            foodCost = 40 * Double(numDays) * numberOfTravellers!
+            activitiesCost = 50 * Double(numDays) * numberOfTravellers!
+            publicTransportationCost = 18 * Double(numDays) * numberOfTravellers!
+        }
+        else if destinationLocation == "Rome" {
+            foodCost = 43 * Double(numDays) * numberOfTravellers!
+            activitiesCost = 39 * Double(numDays) * numberOfTravellers!
+            publicTransportationCost = 20 * Double(numDays) * numberOfTravellers!
+        }
+        
+        minHotelCost = getHotelMinCost()
+        minFlightCost = getFlightMinCost()
+        //Multiply the flight cost by the number of travellers
+        minFlightCost = minFlightCost! * numberOfTravellers!
+        totalTransportationCost = minFlightCost! + publicTransportationCost!
+        totalCost = minFlightCost! + minHotelCost!
+        recalculateTrip = false
+    }
+    
+    //This function uses the existing or newly calculated information to populate the labels and chart
+    func setLabelsWithData() {
+        let expenses = ["Transportation", "Accomodations", "Food", "Miscellaneous"]
+        let costOfExpense = [totalTransportationCost, minHotelCost, foodCost, activitiesCost]
+        setChart(dataPoints: expenses, values: costOfExpense as! [Double])
+        totalCostLabel.text = String(describing: totalCost!)
+        airfareCostLabel.text = String(describing: minFlightCost!)
+        hotelCostLabel.text = String(describing: minHotelCost!)
+        publicTranportationLabel.text = String(describing: publicTransportationCost!)
+        activitiesCostLabel.text = String(describing: activitiesCost!)
+        foodCostLabel.text = String(describing: foodCost!)
+    }
+    
+    //This function resets all of the variables everytime a new trip is calculated
+    func initializeVaribles() {
+        minFlightCost = 0.0
+        minHotelCost = 0.0
+        totalCost = 0.0
+        foodCost = 0.0
+        activitiesCost = 0.0
+        publicTransportationCost = 0.0
+        numberOfTravellers = (numTravellers as NSString).doubleValue
         if numberOfTravellers == 0 {
             numberOfTravellers = 1
         }
-        if destinationLocation == "China" {
-            foodCost = 14 * Double(numDays) * numberOfTravellers
-            activitiesCost = 20 * Double(numDays) * numberOfTravellers
-            publicTransportationCost = 17 * Double(numDays) * numberOfTravellers
-
-        }
-        else if destinationLocation == "San Diego" {
-            foodCost = 40 * Double(numDays) * numberOfTravellers
-            activitiesCost = 50 * Double(numDays) * numberOfTravellers
-            publicTransportationCost = 18 * Double(numDays) * numberOfTravellers
-        }
-        else if destinationLocation == "Rome" {
-            foodCost = 43 * Double(numDays) * numberOfTravellers
-            activitiesCost = 39 * Double(numDays) * numberOfTravellers
-            publicTransportationCost = 20 * Double(numDays) * numberOfTravellers
-        }
-        
-        if calculateButtonWasPressed == true {
-            minHotelCost = getHotelMinCost()
-            minFlightCost = getFlightMinCost()
-            //Multiply the flight cost by the number of travellers
-            minFlightCost = minFlightCost * numberOfTravellers
-        }
-        calculateButtonWasPressed = false
-        
-        let totalTransportationCost = minFlightCost + publicTransportationCost
-        let expenses = ["Transportation", "Accomodations", "Food", "Miscellaneous"]
-        let costOfExpense = [totalTransportationCost, minHotelCost, foodCost, activitiesCost]
-        setChart(dataPoints: expenses, values: costOfExpense)
-        totalCost = minFlightCost + minHotelCost
-        totalCostLabel.text = String(totalCost)
-        airfareCostLabel.text = String(minFlightCost)
-        hotelCostLabel.text = String(minHotelCost)
-        publicTranportationLabel.text = String(publicTransportationCost)
-        activitiesCostLabel.text = String(activitiesCost)
-        foodCostLabel.text = String(foodCost)
-        /*
-        let expenses = ["Transportation", "Accomodations", "Food", "Miscellaneous"]
-        let costOfExpense = [999.99, 999.99, 999.99, 999.99]
-        setChart(dataPoints: expenses, values: costOfExpense)
-        */
     }
-   
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    //This function sets the prices to the default $0
+    func zeroPrices() {
+        totalCostLabel.text = "$0"
+        airfareCostLabel.text = "$0"
+        hotelCostLabel.text = "$0"
+        publicTranportationLabel.text = "$0"
+        activitiesCostLabel.text = "$0"
+        foodCostLabel.text = "$0"
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -139,13 +169,13 @@ class CostViewController: UIViewController {
         averageCost = totalCost/Double(dataCosts.count)
         return averageCost
     }
-
+    
     /*
-    * This function will call the Amadeus Flights Airfare API and retrieve lowest cost information
-    * return -1 on error
-    *
-    * NOTE: Not finished. Do not modify yet
-    */
+     * This function will call the Amadeus Flights Airfare API and retrieve lowest cost information
+     * return -1 on error
+     *
+     * NOTE: Not finished. Do not modify yet
+     */
     func getFlightMinCost() -> Double {
         guard originLocation != "", destinationLocation != "" else {
             print("Location values not set when trying to receive flight min cost")
@@ -213,11 +243,11 @@ class CostViewController: UIViewController {
     }
     
     /**
-    * This function takes in a location and finds the IATA code
-    *
-    * @param location - location to find IATA Code for
-    * @return - IATA Code or nil if not found
-    */
+     * This function takes in a location and finds the IATA code
+     *
+     * @param location - location to find IATA Code for
+     * @return - IATA Code or nil if not found
+     */
     func findIATACode(location: String) -> String? {
         if location == "China" {
             return "PEK"
@@ -323,7 +353,7 @@ class CostViewController: UIViewController {
         hotelCallDone = false
         
         //find the min cost using the JSON variable called json and pass it back to viewDidLoad
-
+        
         var minCost = calculateMinCostFromAmadeusHotelResponse(amadeusResponse: json)
         return minCost
     }
@@ -348,7 +378,7 @@ class CostViewController: UIViewController {
                                 }
                             }
                         }
-                     
+                        
                     }
                 }
             }
@@ -361,15 +391,15 @@ class CostViewController: UIViewController {
         return currMin
     }
     
-
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
+

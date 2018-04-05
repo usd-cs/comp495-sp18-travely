@@ -27,6 +27,7 @@
 		C965E500206095F0003EA5F1 /* countryEtiquette.txt in Resources */ = {isa = PBXBuildFile; fileRef = C965E4FF206095EF003EA5F1 /* countryEtiquette.txt */; };
 		C965E50220617130003EA5F1 /* SavedTripDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C965E50120617130003EA5F1 /* SavedTripDetailsViewController.swift */; };
 		C9FDC45D20754E3300D72720 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FDC45C20754E3200D72720 /* Activities.swift */; };
+		C9FDC45F2076E15100D72720 /* travely in Resources */ = {isa = PBXBuildFile; fileRef = C9FDC45E2076E14F00D72720 /* travely */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		C965E4FF206095EF003EA5F1 /* countryEtiquette.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = countryEtiquette.txt; sourceTree = "<group>"; };
 		C965E50120617130003EA5F1 /* SavedTripDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTripDetailsViewController.swift; sourceTree = "<group>"; };
 		C9FDC45C20754E3200D72720 /* Activities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
+		C9FDC45E2076E14F00D72720 /* travely */ = {isa = PBXFileReference; lastKnownFileType = folder; name = travely; sourceTree = "<group>"; };
 		DC76EC9AFA689650288BA9DB /* Pods-travely.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travely.debug.xcconfig"; path = "Pods/Target Support Files/Pods-travely/Pods-travely.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 		6378194B204B37B700734092 /* travely */ = {
 			isa = PBXGroup;
 			children = (
+				C9FDC45E2076E14F00D72720 /* travely */,
 				C9FDC45C20754E3200D72720 /* Activities.swift */,
 				C965E4FF206095EF003EA5F1 /* countryEtiquette.txt */,
 				636ECEF52058E36B00F668F2 /* LaunchScreen.storyboard */,
@@ -194,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C965E500206095F0003EA5F1 /* countryEtiquette.txt in Resources */,
+				C9FDC45F2076E15100D72720 /* travely in Resources */,
 				636ECEF92058E36B00F668F2 /* LaunchScreen.storyboard in Resources */,
 				636ECEEF2058E35C00F668F2 /* Assets.xcassets in Resources */,
 				636ECEFA2058E36B00F668F2 /* Main.storyboard in Resources */,
