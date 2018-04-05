@@ -10,14 +10,14 @@ import UIKit
 import Charts
 
 class CostViewController: UIViewController {
-
+    
     var originLocation = ""
     var destinationLocation = ""
     var departureDate  = ""
     var returnDate = ""
     var numTravellers = ""
     var numDays = 0
-
+    
     //Used for Amadeus Flights API method: getFlightMinCost
     var flightcall_done = false
     var flightcall_errors = false
@@ -26,7 +26,9 @@ class CostViewController: UIViewController {
     var hotelCallError = false
     var hotelData: Data?
     var calculateButtonWasPressed = false
-
+    var setLabelsToZero = true
+    var recalculateTrip = false
+    
     @IBOutlet weak var pieChartView: PieChartView!
     @IBOutlet weak var totalCostLabel: UILabel!
     @IBOutlet weak var airfareCostLabel: UILabel!
@@ -46,12 +48,19 @@ class CostViewController: UIViewController {
     
     //This function is called everytime the cost tab is visible
     override func viewWillAppear(_ animated: Bool) {
-        //Calculate the information, this is called everytime the calculate button is pressed but not everytime the cost tab is navigated to
         if calculateButtonWasPressed == true {
-            calculateTripData()
+            setLabelsToZero = false
+            //Calculate the information, this is called everytime the calculate button is pressed but not everytime the cost tab is navigated to
+            if recalculateTrip == true {
+                calculateTripData()
+            }
+            //Set labels
+            setLabelsWithData()
         }
-        //Set labels
-        setLabelsWithData()
+            //This will set the prices to $0 if no trip has been calculated and the user navigates to cost tab
+        else if setLabelsToZero == true {
+            zeroPrices()
+        }
     }
     
     //This function calculates the data for a trip with dummy data and API data
@@ -81,7 +90,7 @@ class CostViewController: UIViewController {
         minFlightCost = minFlightCost! * numberOfTravellers!
         totalTransportationCost = minFlightCost! + publicTransportationCost!
         totalCost = minFlightCost! + minHotelCost!
-        calculateButtonWasPressed = false
+        recalculateTrip = false
     }
     
     //This function uses the existing or newly calculated information to populate the labels and chart
@@ -110,7 +119,17 @@ class CostViewController: UIViewController {
             numberOfTravellers = 1
         }
     }
-
+    
+    //This function sets the prices to the default $0
+    func zeroPrices() {
+        totalCostLabel.text = "$0"
+        airfareCostLabel.text = "$0"
+        hotelCostLabel.text = "$0"
+        publicTranportationLabel.text = "$0"
+        activitiesCostLabel.text = "$0"
+        foodCostLabel.text = "$0"
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -150,13 +169,13 @@ class CostViewController: UIViewController {
         averageCost = totalCost/Double(dataCosts.count)
         return averageCost
     }
-
+    
     /*
-    * This function will call the Amadeus Flights Airfare API and retrieve lowest cost information
-    * return -1 on error
-    *
-    * NOTE: Not finished. Do not modify yet
-    */
+     * This function will call the Amadeus Flights Airfare API and retrieve lowest cost information
+     * return -1 on error
+     *
+     * NOTE: Not finished. Do not modify yet
+     */
     func getFlightMinCost() -> Double {
         guard originLocation != "", destinationLocation != "" else {
             print("Location values not set when trying to receive flight min cost")
@@ -224,11 +243,11 @@ class CostViewController: UIViewController {
     }
     
     /**
-    * This function takes in a location and finds the IATA code
-    *
-    * @param location - location to find IATA Code for
-    * @return - IATA Code or nil if not found
-    */
+     * This function takes in a location and finds the IATA code
+     *
+     * @param location - location to find IATA Code for
+     * @return - IATA Code or nil if not found
+     */
     func findIATACode(location: String) -> String? {
         if location == "China" {
             return "PEK"
@@ -334,7 +353,7 @@ class CostViewController: UIViewController {
         hotelCallDone = false
         
         //find the min cost using the JSON variable called json and pass it back to viewDidLoad
-
+        
         var minCost = calculateMinCostFromAmadeusHotelResponse(amadeusResponse: json)
         return minCost
     }
@@ -359,7 +378,7 @@ class CostViewController: UIViewController {
                                 }
                             }
                         }
-                     
+                        
                     }
                 }
             }
@@ -372,15 +391,15 @@ class CostViewController: UIViewController {
         return currMin
     }
     
-
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
+
