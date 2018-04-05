@@ -195,7 +195,7 @@ class CostViewController: UIViewController {
         }
         
         let tojson = try? JSONSerialization.jsonObject(with: self.flight_data!, options: []) as! [String: AnyObject]
-        var toCost = calculateMinCostFromAmadeusFlightsResponse(amadeusResponse: tojson)
+        let toCost = calculateMinCostFromAmadeusFlightsResponse(amadeusResponse: tojson)
         
         flightcall_done = false //Set value back to false for next calculation
         
@@ -221,7 +221,7 @@ class CostViewController: UIViewController {
         }
         
         let retjson = try? JSONSerialization.jsonObject(with: self.flight_data!, options: []) as! [String: AnyObject]
-        var retCost = calculateMinCostFromAmadeusFlightsResponse(amadeusResponse: retjson)
+        let retCost = calculateMinCostFromAmadeusFlightsResponse(amadeusResponse: retjson)
         
         flightcall_done = false //Set value back to false for next calculation
         
@@ -318,6 +318,7 @@ class CostViewController: UIViewController {
             print("Error in passed destinationLocation")
             return -1
         }
+        
         guard departureDate != "", returnDate != "" else {
             print("Error in passed departureDate/returnDate")
             return -1
@@ -340,6 +341,42 @@ class CostViewController: UIViewController {
                                           timeoutInterval: 10.0)
         request.httpMethod = "GET"
         request.allHTTPHeaderFields = headers
+        
+        callHotelAPIForLowCostData(request: request) //Call API
+        
+        //Check if any errors when calling API
+        guard !hotelCallError else {
+            print("Error calling hotel API")
+            hotelCallError = false
+            return -1
+        }
+        
+        //Check if hotel data is there
+        guard hotelData != nil else {
+            print("Hotel data is nil")
+            return -1
+        }
+        
+        //Put data into JSON object
+        let json = try? JSONSerialization.jsonObject(with: self.hotelData!, options: []) as! [String: AnyObject]
+        
+        //find the min cost using the JSON variable called json and pass it back to viewDidLoad
+        let minCost = calculateMinCostFromAmadeusHotelResponse(amadeusResponse: json)
+        
+        hotelCallDone = false //Set back to false so that next call can be made to api
+        
+        return minCost
+    }
+    
+    /**
+     * This function actually calls Amadeus API to get the lowest cost for hotels
+     * @request - Request to be made to Amadeus
+     * @global self.hotelData - set to determine if there was an error being called
+     * @global self.hotelCallError - hotel data returned from response
+     * @global self.hotelCallDone - used to determine if call to api is done so can move on
+     */
+    func callHotelAPIForLowCostData(request: NSMutableURLRequest){
+        
         let session = URLSession.shared
         let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
             if (error != nil) {
@@ -352,26 +389,10 @@ class CostViewController: UIViewController {
             }
         })
         dataTask.resume()
+        
         //Wait for API call to finish
         while !hotelCallDone { }
-        //Check if any errors when calling API
-        guard !hotelCallError else {
-            print("Error calling hotel API")
-            return -1
-        }
-        //Check if hotel data is there
-        guard hotelData != nil else {
-            print("Hotel data is nil")
-            return -1
-        }
-        //Put data into JSON object
-        let json = try? JSONSerialization.jsonObject(with: self.hotelData!, options: []) as! [String: AnyObject]
-        hotelCallDone = false
-        
-        //find the min cost using the JSON variable called json and pass it back to viewDidLoad
-
-        var minCost = calculateMinCostFromAmadeusHotelResponse(amadeusResponse: json)
-        return minCost
+        return
     }
     
     /*
