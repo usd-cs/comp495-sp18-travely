@@ -157,29 +157,12 @@ class CostViewController: UIViewController {
             return -1
         }
         
-        var origin_IATA = ""
-        var destination_IATA = ""
-        
-        //TODO: Eventually replace this IATA code method with calling API to retrieve IATA codes
-        if originLocation == "China" {
-            origin_IATA = "PEK"
-        } else if originLocation == "San Diego" {
-            origin_IATA = "SAN"
-        } else if originLocation == "Rome" {
-            origin_IATA = "FCO"
-        } else {
-            print("Error determining IATA Code for flights API")
+        //Find Correct IATA Codes for origin and destination
+        guard var origin_IATA = findIATACode(location: originLocation) else {
             return -1
         }
         
-        if destinationLocation == "China" {
-            destination_IATA = "PEK"
-        } else if destinationLocation == "San Diego" {
-            destination_IATA = "SAN"
-        } else if destinationLocation == "Rome" {
-            destination_IATA = "FCO"
-        } else {
-            print("Error determining IATA Code for flights API")
+        guard var destination_IATA = findIATACode(location: destinationLocation) else {
             return -1
         }
         
@@ -229,6 +212,25 @@ class CostViewController: UIViewController {
         return minCost
     }
     
+    /**
+    * This function takes in a location and finds the IATA code
+    *
+    * @param location - location to find IATA Code for
+    * @return - IATA Code or nil if not found
+    */
+    func findIATACode(location: String) -> String? {
+        if location == "China" {
+            return "PEK"
+        } else if location == "San Diego" {
+            return "SAN"
+        } else if location == "Rome" {
+            return "FCO"
+        } else {
+            print("Error determining IATA Code for flights API")
+            return nil
+        }
+    }
+    
     /*
      * This function calculates cheapers airfare price from Amadeus API response
      * @param amadeusResponse - Amadeus API response as [String: AnyObject]
@@ -236,7 +238,6 @@ class CostViewController: UIViewController {
      */
     func calculateMinCostFromAmadeusFlightsResponse(amadeusResponse json: [String: AnyObject]?) -> Double{
         var currMin: Double = 999999
-        
         // do nester retrieve-casting to get all the prices
         if let json = json{
             if let results = json["results"]{
@@ -280,20 +281,10 @@ class CostViewController: UIViewController {
         //Default radius value for API
         let distanceFromAirport = "50"
         //Assign IATA codes for API
-        var destinationAirport = ""
-        if destinationLocation == "San Diego" {
-            destinationAirport = "SAN"
-        }
-        else if destinationLocation == "Rome" {
-            destinationAirport = "FCO"
-        }
-        else if destinationLocation == "China" {
-            destinationAirport = "PEK"
-        }
-        else {
-            print("Error finding IATA code")
+        guard var destinationAirport = findIATACode(location: destinationLocation) else {
             return -1
         }
+        
         let headers = [
             "Cache-Control": "no-cache",
             ]
