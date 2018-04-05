@@ -19,7 +19,7 @@ class CostViewController: UIViewController {
     var numDays = 0
     
 
-    //Used for Amadeus Flights API method: getFlightMinCost
+    //Used for Amadeus Flights API method: getFlightMinCost, global variables used for getting data out of completion handler
     var flightcall_done = false
     var flightcall_errors = false
     var flight_data: Data?
@@ -141,57 +141,45 @@ class CostViewController: UIViewController {
     }
 
     /*
-    * This function will call the Amadeus Flights Airfare API and retrieve lowest cost information
-    * return -1 on error
+    * This function will call the Amadeus Flights Airfare API and retrieve lowest cost information for round trip
     *
-    * NOTE: Not finished. Do not modify yet
+    * @return - min cost of round trip from origin to destination, -1 on error
     */
     func getFlightMinCost() -> Double {
+        //check originLocation and destinationLocation aren't empty
         guard originLocation != "", destinationLocation != "" else {
             print("Location values not set when trying to receive flight min cost")
             return -1
         }
         
+        //Check returnDate isn't empty
         guard returnDate != "" else {
             print("Return date value not set when trying to receive flight min cost")
             return -1
         }
         
         //Find Correct IATA Codes for origin and destination
-        guard var origin_IATA = findIATACode(location: originLocation) else {
+        guard let origin_IATA = findIATACode(location: originLocation) else {
             return -1
         }
         
-        guard var destination_IATA = findIATACode(location: destinationLocation) else {
+        guard let destination_IATA = findIATACode(location: destinationLocation) else {
             return -1
         }
         
+        //Set headers for both first and second leg of flight, Postman-Token is a placeholder that is used to bypass Chrome bug
         let headers = [
             "Cache-Control": "no-cache",
             "Postman-Token": "6127903e-057b-463d-b201-3a9ed5c61041"
         ]
         
-        let request = NSMutableURLRequest(url: NSURL(string: "https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?apikey=" + AMADEUSFLIGHTAPIKEY + "&origin=" + origin_IATA + "&destination=" + destination_IATA + "&departure_date=" + departureDate)! as URL,
-                                          cachePolicy: .useProtocolCachePolicy,
-                                          timeoutInterval: 10.0)
+        //Create API Request for first leg of flight
+        let request = NSMutableURLRequest(url: NSURL(string: "https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?apikey=" + AMADEUSFLIGHTAPIKEY + "&origin=" + origin_IATA + "&destination=" + destination_IATA + "&departure_date=" + departureDate)! as URL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
+        
         request.httpMethod = "GET"
         request.allHTTPHeaderFields = headers
         
-        let session = URLSession.shared
-        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
-            if (error != nil) {
-                print(error ?? "Error calling flight api")
-            } else {
-                let httpResponse = response as? HTTPURLResponse
-                
-                self.flightcall_errors = (error != nil) || (httpResponse?.statusCode != 200)
-                self.flight_data = data
-                self.flightcall_done = true
-            }
-        })
-        dataTask.resume()
-        
-        while !flightcall_done { } //Wait for api call to finish
+        callFlightAPIForLowCostData(request: request) //Call Flight API
         
         //Check if there were any errors when calling the api
         guard !flightcall_errors else {
@@ -206,10 +194,66 @@ class CostViewController: UIViewController {
             return -1
         }
         
-        let json = try? JSONSerialization.jsonObject(with: self.flight_data!, options: []) as! [String: AnyObject]
-        var minCost = calculateMinCostFromAmadeusFlightsResponse(amadeusResponse: json)
+        let tojson = try? JSONSerialization.jsonObject(with: self.flight_data!, options: []) as! [String: AnyObject]
+        var toCost = calculateMinCostFromAmadeusFlightsResponse(amadeusResponse: tojson)
+        
         flightcall_done = false //Set value back to false for next calculation
-        return minCost
+        
+        //Create API Request for return leg of flight
+        let second_request = NSMutableURLRequest(url: NSURL(string: "https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?apikey=" + AMADEUSFLIGHTAPIKEY + "&origin=" + destination_IATA + "&destination=" + origin_IATA + "&departure_date=" + returnDate)! as URL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
+        
+        second_request.httpMethod = "GET"
+        second_request.allHTTPHeaderFields = headers
+        
+        callFlightAPIForLowCostData(request: second_request) //Call flight API
+        
+        //Check if there were any errors when calling the api
+        guard !flightcall_errors else {
+            print("Error Calling flights api")
+            flightcall_errors = false
+            return -1
+        }
+        
+        //Check if flight data is there
+        guard flight_data != nil else {
+            print("Flight Data is Nil")
+            return -1
+        }
+        
+        let retjson = try? JSONSerialization.jsonObject(with: self.flight_data!, options: []) as! [String: AnyObject]
+        var retCost = calculateMinCostFromAmadeusFlightsResponse(amadeusResponse: retjson)
+        
+        flightcall_done = false //Set value back to false for next calculation
+        
+        return toCost + retCost
+    }
+    
+    /**
+    * This function actually calls Amadeus API to get the lowest cost for airfare
+    * @request - Request to be made to Amadeus
+    * @global self.flightcall_errors - set to determine if there was an error being called
+    * @global self.flight_data - flight data returned from response
+    * @global self.flightcall_done - used to determine if call to api is done so can move on
+    */
+    func callFlightAPIForLowCostData(request: NSMutableURLRequest){
+        
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+            if (error != nil) {
+                print(error ?? "Error calling flight api")
+            } else {
+                let httpResponse = response as? HTTPURLResponse
+                
+                //Set global variables so they can be accessed outside of the completion handler
+                self.flightcall_errors = (error != nil) || (httpResponse?.statusCode != 200)
+                self.flight_data = data
+                self.flightcall_done = true
+            }
+        })
+        dataTask.resume()
+        
+        while !flightcall_done { } //Wait for api call to finish
+        return
     }
     
     /**
@@ -278,10 +322,12 @@ class CostViewController: UIViewController {
             print("Error in passed departureDate/returnDate")
             return -1
         }
+        
         //Default radius value for API
         let distanceFromAirport = "50"
+        
         //Assign IATA codes for API
-        guard var destinationAirport = findIATACode(location: destinationLocation) else {
+        guard let destinationAirport = findIATACode(location: destinationLocation) else {
             return -1
         }
         
