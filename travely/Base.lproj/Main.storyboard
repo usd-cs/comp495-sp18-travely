@@ -147,7 +147,7 @@
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Calculate"/>
                                 <connections>
-                                    <action selector="switchToCost:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kA4-Vy-dCM"/>
+                                    <action selector="switchToCost:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DKg-Jf-Qbl"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="gWg-jB-tuj">
@@ -183,7 +183,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="288.80000000000001" y="32.833583208395808"/>
+            <point key="canvasLocation" x="-1193" y="72"/>
+        </scene>
+        <!--Loading Screen View Controller-->
+        <scene sceneID="7GD-NG-6Gw">
+            <objects>
+                <viewController id="5hw-gM-K5Y" customClass="LoadingScreenViewController" customModule="travely" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AcH-6l-cOY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Loading..." borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4fz-v2-L35">
+                                <rect key="frame" x="100" y="278" width="174" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Ewe-5S-qFF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZfN-Wq-67U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-60" y="85.907046476761622"/>
         </scene>
         <!--Cost Tab-->
         <scene sceneID="cvZ-eI-h8G">
@@ -341,7 +365,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lXz-Od-6wy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2500" y="32.833583208395808"/>
+            <point key="canvasLocation" x="2522" y="72"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="zFq-yw-qgU">

@@ -99,7 +99,6 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         super.didReceiveMemoryWarning()
     }
     
-    //Only for demo purpose, after demo then change to segue to Activities
     @IBAction func switchToCost(_ sender: UIButton) {
         //Validating user input before button action
         //Get time values and change format of dates
@@ -145,6 +144,7 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         
         tabBarController?.selectedIndex = 1
     }
+ 
     
     /*
      * This function validates data in Origin and Destination pickers
