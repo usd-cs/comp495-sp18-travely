@@ -147,7 +147,6 @@
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Calculate"/>
                                 <connections>
-                                    <action selector="switchToCost:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DKg-Jf-Qbl"/>
                                     <segue destination="5hw-gM-K5Y" kind="presentation" id="tJm-yI-s20"/>
                                 </connections>
                             </button>

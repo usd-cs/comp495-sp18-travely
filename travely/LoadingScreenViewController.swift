@@ -10,6 +10,13 @@ import UIKit
 
 class LoadingScreenViewController: UIViewController {
 
+    var originLocation = ""
+    var destinationLocation = ""
+    var departureDate  = ""
+    var returnDate = ""
+    var numTravellers = ""
+    var numDays = 0
+    
     override func viewWillAppear(_ animated: Bool) {
         //Call APIs
         print("Call APIs")

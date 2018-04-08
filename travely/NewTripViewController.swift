@@ -99,6 +99,7 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         super.didReceiveMemoryWarning()
     }
     
+    /*
     @IBAction func switchToCost(_ sender: UIButton) {
         //Validating user input before button action
         //Get time values and change format of dates
@@ -144,6 +145,7 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         
         tabBarController?.selectedIndex = 1
     }
+    */
  
     
     /*
@@ -223,17 +225,59 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     * @param sender - who is sending segue
     */
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
- 
+        //Validating user input before button action
+        //Get time values and change format of dates
+        let current_date = Date()
+        let departure_date = departureDatePicker.date
+        let return_date = returnDatePicker.date
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let departure_date_str: String = formatter.string(from: departure_date)
+        let return_date_str: String = formatter.string(from: return_date)
+        let current_date_str: String = formatter.string(from: current_date)
+        
+        //check that user picked a country, correct dates, etc
+        if !validateOriginDestinationPickers(origin: originPlacePicked, destination: destinationPlacePicked) ||
+            !validateDepartureReturnDatePickers(departureDate: departure_date_str, returnDate: return_date_str, currentDate: current_date_str){
+            return false
+        }
+        
+        return true
     }
     
     /**
     * Used to pass data through segues
     *
-    * @param identifier - identifier of segue
+    * @param segue - segue to go to
     * @param sender - who is sending segue
     */
-    override func performSegue(withIdentifier identifier: String, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destinationVC = segue.destination as? LoadingScreenViewController else {
+            print("Error seguing to loading screen")
+            return
+        }
         
+        //Create and set date values
+        let current_date = Date()
+        let departure_date = departureDatePicker.date
+        let return_date = returnDatePicker.date
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let departure_date_str: String = formatter.string(from: departure_date)
+        let return_date_str: String = formatter.string(from: return_date)
+        let current_date_str: String = formatter.string(from: current_date)
+        
+        //Pass data needed for api calls to loadingScreenViewController
+        //Pass Cost Data
+        destinationVC.originLocation = originPlacePicked
+        destinationVC.destinationLocation = destinationPlacePicked
+        destinationVC.departureDate = departure_date_str
+        destinationVC.returnDate = return_date_str
+        destinationVC.numTravellers = numOfTravellersPicked
+        let diffInDays = Calendar.current.dateComponents([.day], from: departure_date, to: return_date).day
+        destinationVC.numDays = diffInDays!
     }
 }
 
