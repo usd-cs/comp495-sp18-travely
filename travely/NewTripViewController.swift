@@ -30,6 +30,8 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     var destinationPlacePicked = ""
     var numOfTravellersPicked = ""
     
+    var myTrip: Trip?
+    
     //all pickers will contain a single component
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -215,7 +217,16 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     * @param segue - segue to unwind from
     */
     @IBAction func unwindToRootViewController(segue: UIStoryboardSegue) {
-        print("Unwind to Root View Controller")
+        print("Unwind to Root View Controller Successful")
+        
+        //Get generated trip structure from LoadingScreenViewController
+        guard let sourceViewController = segue.source as? LoadingScreenViewController else {
+            print("Unwind from loading screen view controller error")
+            return
+        }
+        
+        myTrip = sourceViewController.newTrip
+        print(myTrip!.tripTotalCost)
     }
     
     /**
