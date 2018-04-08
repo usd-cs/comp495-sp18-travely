@@ -208,83 +208,32 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     }
     
     /*
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     if segue.identifier == "CalculatePressedNewTripToActivities"{
-     let resultsViewController = segue.destination as! ActivitiesViewController
-     resultsViewController.originLocation = originPlacePicked
-     resultsViewController.destinaionLocation = destinationPlacePicked
-     resultsViewController.numOfTravellers = numOfTravellersPicked
-     }
-     }
-     
-     //Add conditions to check before a segue is performed
-     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-     //If calculate button was pressed
-     if identifier == "CalculatePressedNewTripToActivities" {
-     
-     //Validating user input before button action
-     //Get time values and change format of dates
-     let current_date = Date()
-     let departure_date = departureDatePicker.date
-     let return_date = returnDatePicker.date
-     
-     let formatter = DateFormatter()
-     formatter.dateFormat = "yyyy/MM/dd"
-     let departure_date_str: String = formatter.string(from: departure_date)
-     let return_date_str: String = formatter.string(from: return_date)
-     let current_date_str: String = formatter.string(from: current_date)
-     
-     //check that user picked a county
-     guard originPlacePicked.count > 1 else {
-     let alertController = UIAlertController(title: "Error", message:
-     "Origin not selected.", preferredStyle: UIAlertControllerStyle.alert)
-     alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
-     self.present(alertController, animated: true, completion: nil)
-     return false
-     
-     }
-     
-     guard destinationPlacePicked.count > 1 else {
-     let alertController = UIAlertController(title: "Error", message:
-     "Destination not selected.", preferredStyle: UIAlertControllerStyle.alert)
-     alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
-     self.present(alertController, animated: true, completion: nil)
-     return false
-     
-     }
-     
-     //Check that the user didn't select the same destination and origin
-     guard originPlacePicked != destinationPlacePicked else {
-     let alertController = UIAlertController(title: "Error", message:
-     "Origin and destination must be differnt.", preferredStyle: UIAlertControllerStyle.alert)
-     alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
-     self.present(alertController, animated: true, completion: nil)
-     return false
-     }
-     
-     //Check that departure date is not less than the current date
-     guard departure_date_str >= current_date_str else {
-     let alertController = UIAlertController(title: "Error", message:
-     "Deperture date can't be earlier than today.", preferredStyle: UIAlertControllerStyle.alert)
-     alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
-     self.present(alertController, animated: true, completion: nil)
-     return false
-     }
-     
-     //Check that departure date is not greater than return date
-     guard departure_date_str < return_date_str else {
-     let alertController = UIAlertController(title: "Error", message:
-     "Return date must be past departure date.", preferredStyle: UIAlertControllerStyle.alert)
-     alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
-     self.present(alertController, animated: true, completion: nil)
-     return false
-     }
-     }
-     return true
-     }
-     */
+    * Steps after unwind from loading screen view controller
+    *
+    * @param segue - segue to unwind from
+    */
+    @IBAction func unwindToRootViewController(segue: UIStoryboardSegue) {
+        print("Unwind to Root View Controller")
+    }
+    
+    /**
+    * determines whether or not loading screen segue should happen
+    *
+    * @param identifier - identifier of segue
+    * @param sender - who is sending segue
+    */
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+ 
+    }
+    
+    /**
+    * Used to pass data through segues
+    *
+    * @param identifier - identifier of segue
+    * @param sender - who is sending segue
+    */
+    override func performSegue(withIdentifier identifier: String, sender: Any?) {
+        
+    }
 }
 

@@ -148,6 +148,7 @@
                                 <state key="normal" title="Calculate"/>
                                 <connections>
                                     <action selector="switchToCost:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DKg-Jf-Qbl"/>
+                                    <segue destination="5hw-gM-K5Y" kind="presentation" id="tJm-yI-s20"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="gWg-jB-tuj">
@@ -204,8 +205,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ewe-5S-qFF"/>
                     </view>
+                    <connections>
+                        <segue destination="eEm-Em-3wT" kind="unwind" identifier="unwindToRootViewController" unwindAction="unwindToRootViewControllerWithSegue:" id="e7K-fj-eui"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZfN-Wq-67U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="eEm-Em-3wT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-60" y="85.907046476761622"/>
         </scene>
