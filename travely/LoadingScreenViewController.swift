@@ -17,6 +17,7 @@ class LoadingScreenViewController: UIViewController {
     var returnDate = ""
     var numTravellers = ""
     var numDays = 0
+    var reportRunDate = ""
     
     //Used for Amadeus Flights and hotels API method: getFlightMinCost, global variables used for getting data out of completion handler
     var flightcall_done = false
@@ -44,7 +45,7 @@ class LoadingScreenViewController: UIViewController {
         calculateTripData()
         
         //Create Trip data structure to store information
-        newTrip = Trip(tripName: "Trip", tripTotalCost: totalCost!, tripAirfareCost: minFlightCost!, tripHotelCost: minHotelCost!, foodCost: foodCost!, activitiesCost: activitiesCost!, originLocation: originLocation, destinationLocation: destinationLocation, departureDate: departureDate, returnDate: returnDate, tripPublicTransportationCost: totalTransportationCost!, numberOfTravellers: numberOfTravellers!)
+        newTrip = Trip(tripName: "Trip", tripTotalCost: totalCost!, tripAirfareCost: minFlightCost!, tripHotelCost: minHotelCost!, foodCost: foodCost!, activitiesCost: activitiesCost!, originLocation: originLocation, destinationLocation: destinationLocation, departureDate: departureDate, returnDate: returnDate, tripPublicTransportationCost: totalTransportationCost!, numberOfTravellers: numberOfTravellers!, reportRunDate: reportRunDate)
         
         //unwind to previous segue
         self.performSegue(withIdentifier: "unwindToRootViewController", sender: self)

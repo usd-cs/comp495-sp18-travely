@@ -94,12 +94,12 @@ class MyTripsTableViewController: UITableViewController {
     }
     
     private func loadSampleTrips() {
-        guard let trip1 = Trip(tripName: "MyTrip1", tripTotalCost: 1500, tripAirfareCost: 500, tripHotelCost: 300, foodCost: 200, activitiesCost: 500, originLocation: "San Diego", destinationLocation: "China", departureDate: "7/6/2018", returnDate: "7/7/2018", tripPublicTransportationCost: 30, numberOfTravellers: 1) else {
+        guard let trip1 = Trip(tripName: "MyTrip1", tripTotalCost: 1500, tripAirfareCost: 500, tripHotelCost: 300, foodCost: 200, activitiesCost: 500, originLocation: "San Diego", destinationLocation: "China", departureDate: "7/6/2018", returnDate: "7/7/2018", tripPublicTransportationCost: 30, numberOfTravellers: 1, reportRunDate: "7/7/2018") else {
             print("Cannot create trip 1")
             return
         }
         
-        guard let trip2 = Trip(tripName: "MyTrip2", tripTotalCost: 1700, tripAirfareCost: 600, tripHotelCost: 400, foodCost: 200, activitiesCost: 500, originLocation: "China", destinationLocation: "Rome", departureDate: "7/6/2018", returnDate: "7/7/2018", tripPublicTransportationCost: 30, numberOfTravellers: 1) else {
+        guard let trip2 = Trip(tripName: "MyTrip2", tripTotalCost: 1700, tripAirfareCost: 600, tripHotelCost: 400, foodCost: 200, activitiesCost: 500, originLocation: "China", destinationLocation: "Rome", departureDate: "7/6/2018", returnDate: "7/7/2018", tripPublicTransportationCost: 30, numberOfTravellers: 1, reportRunDate: "7/7/2018") else {
             print("Cannot create trip2")
             return
         }

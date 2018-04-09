@@ -266,6 +266,7 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         destinationVC.numTravellers = numOfTravellersPicked
         let diffInDays = Calendar.current.dateComponents([.day], from: departure_date, to: return_date).day
         destinationVC.numDays = diffInDays!
+        destinationVC.reportRunDate = current_date_str
     }
 }
 
