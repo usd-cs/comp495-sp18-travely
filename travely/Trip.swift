@@ -20,6 +20,9 @@ struct PropertyKey{
     static let destinationLocation = "destinationLocation"
     static let departureDate = "departureDate"
     static let returnDate = "returnDate"
+    static let tripPublicTransportationCost = "tripPublicTransportationCost"
+    static let numberOfTravellers = "numberOfTravellers"
+    static let reportRunDate = "reportRunDate"
 }
 
 class Trip : NSObject,NSCoding{
@@ -37,10 +40,13 @@ class Trip : NSObject,NSCoding{
     var destinationLocation: String
     var departureDate: String
     var returnDate: String
+    var tripPublicTransportationCost: Double
+    var numberOfTravellers: Double
+    var reportRunDate: String
     
-    init?(tripName: String, tripTotalCost: Double, tripAirfareCost: Double, tripHotelCost: Double, foodCost: Double, activitiesCost: Double, originLocation: String, destinationLocation: String, departureDate: String, returnDate: String){
+    init?(tripName: String, tripTotalCost: Double, tripAirfareCost: Double, tripHotelCost: Double, foodCost: Double, activitiesCost: Double, originLocation: String, destinationLocation: String, departureDate: String, returnDate: String, tripPublicTransportationCost: Double, numberOfTravellers: Double, reportRunDate: String){
         
-        if tripName.isEmpty || originLocation.isEmpty || destinationLocation.isEmpty || departureDate.isEmpty || returnDate.isEmpty {
+        if tripName.isEmpty || originLocation.isEmpty || destinationLocation.isEmpty || departureDate.isEmpty || returnDate.isEmpty || reportRunDate.isEmpty {
             return nil
         }
         
@@ -54,6 +60,9 @@ class Trip : NSObject,NSCoding{
         self.destinationLocation = destinationLocation
         self.departureDate = departureDate
         self.returnDate = returnDate
+        self.tripPublicTransportationCost = tripPublicTransportationCost
+        self.numberOfTravellers = numberOfTravellers
+        self.reportRunDate = reportRunDate
     }
     
     func encode(with aCoder: NSCoder) {
@@ -67,6 +76,9 @@ class Trip : NSObject,NSCoding{
         aCoder.encode(destinationLocation, forKey: PropertyKey.destinationLocation)
         aCoder.encode(departureDate, forKey: PropertyKey.departureDate)
         aCoder.encode(returnDate, forKey: PropertyKey.returnDate)
+        aCoder.encode(tripPublicTransportationCost, forKey: PropertyKey.tripPublicTransportationCost)
+        aCoder.encode(numberOfTravellers, forKey: PropertyKey.numberOfTravellers)
+        aCoder.encode(numberOfTravellers, forKey: PropertyKey.reportRunDate)
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
@@ -110,8 +122,20 @@ class Trip : NSObject,NSCoding{
             os_log("Unable to decode returnDate", log: OSLog.default, type: .debug)
             return nil
         }
+        guard let tripPublicTransportationCost = aDecoder.decodeObject(forKey: PropertyKey.tripPublicTransportationCost) as? Double else {
+            os_log("Unable to decode tripPublicTransportationCost", log: OSLog.default, type: .debug)
+            return nil
+        }
+        guard let numberOfTravellers = aDecoder.decodeObject(forKey: PropertyKey.numberOfTravellers) as? Double else {
+            os_log("Unable to decode numberOfTravellers", log: OSLog.default, type: .debug)
+            return nil
+        }
+        guard let reportRunDate = aDecoder.decodeObject(forKey: PropertyKey.reportRunDate) as? String else {
+            os_log("Unable to decode reportRunDate", log: OSLog.default, type: .debug)
+            return nil
+        }
         
-        self.init(tripName: tripName, tripTotalCost: tripTotalCost, tripAirfareCost: tripAirfareCost, tripHotelCost: tripHotelCost, foodCost: foodCost, activitiesCost: activitiesCost, originLocation: originLocation, destinationLocation: destinationLocation, departureDate: departureDate, returnDate: returnDate)
+        self.init(tripName: tripName, tripTotalCost: tripTotalCost, tripAirfareCost: tripAirfareCost, tripHotelCost: tripHotelCost, foodCost: foodCost, activitiesCost: activitiesCost, originLocation: originLocation, destinationLocation: destinationLocation, departureDate: departureDate, returnDate: returnDate, tripPublicTransportationCost: tripPublicTransportationCost, numberOfTravellers: numberOfTravellers, reportRunDate: reportRunDate)
     }
 }
 
