@@ -30,7 +30,9 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     var destinationPlacePicked = ""
     var numOfTravellersPicked = ""
     
+    //Used for loading screen animation when calculate is pressed
     var myTrip: Trip?
+    var loadingScreenHappen = false //used to determine if loading screen completed so you navigate to next screen
     
     //all pickers will contain a single component
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -65,7 +67,7 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
             return numTravellersRange[row]
         }
         else{
-            return("Eror in picker")
+            return("Error in picker")
         }
     }
     
@@ -81,10 +83,16 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
             numOfTravellersPicked = numTravellersRange[row]
         }
         else{
-            print("Errror in picker")
+            print("Error in picker")
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if loadingScreenHappen {
+            tabBarController?.selectedIndex = 1
+            loadingScreenHappen = false
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,55 +108,6 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    /*
-    @IBAction func switchToCost(_ sender: UIButton) {
-        //Validating user input before button action
-        //Get time values and change format of dates
-        let current_date = Date()
-        let departure_date = departureDatePicker.date
-        let return_date = returnDatePicker.date
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        let departure_date_str: String = formatter.string(from: departure_date)
-        let return_date_str: String = formatter.string(from: return_date)
-        let current_date_str: String = formatter.string(from: current_date)
-        
-        //check that user picked a county
-        if !validateOriginDestinationPickers(origin: originPlacePicked, destination: destinationPlacePicked) ||
-           !validateDepartureReturnDatePickers(departureDate: departure_date_str, returnDate: return_date_str, currentDate: current_date_str){
-            return
-        }
-        
-        //switch to Cost Tab and pass relevant data to it and to About tab
-        let costTab = self.tabBarController?.viewControllers![2] as! CostViewController
-        costTab.originLocation = originPlacePicked
-        costTab.destinationLocation = destinationPlacePicked
-        costTab.departureDate = departure_date_str
-        costTab.returnDate = return_date_str
-        costTab.numTravellers = numOfTravellersPicked
-        costTab.calculateButtonWasPressed = true
-        costTab.recalculateTrip = true
-        let diffInDays = Calendar.current.dateComponents([.day], from: departure_date, to: return_date).day
-        costTab.numDays = diffInDays!
-        
-        let newTrip = Trip(tripName: "Trip", tripTotalCost: 3000, tripAirfareCost: 1500, tripHotelCost: 1000, foodCost: 500, activitiesCost: 500, originLocation: originPlacePicked, destinationLocation: destinationPlacePicked, departureDate: departure_date_str, returnDate: return_date_str)
-        let myTripsTab = self.tabBarController?.viewControllers![4].childViewControllers[0] as! MyTripsTableViewController
-        myTripsTab.trips += [newTrip!]
-        myTripsTab.saveTrips()
-        
-        let aboutTab = self.tabBarController?.viewControllers![3] as! AboutViewController
-        aboutTab.countryName = destinationPlacePicked
-        
-        let activitiesTab = self.tabBarController?.viewControllers![1].childViewControllers[0] as! ActivitiesTabTableViewController
-        
-        activitiesTab.city = destinationPlacePicked
-        
-        tabBarController?.selectedIndex = 1
-    }
-    */
- 
     
     /*
      * This function validates data in Origin and Destination pickers
@@ -244,7 +203,7 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         
         activitiesTab.city = destinationPlacePicked
         
-        self.tabBarController?.selectedIndex = 1
+        loadingScreenHappen = true
     }
     
     /**
@@ -276,7 +235,7 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     }
     
     /**
-    * Used to pass data through segues
+    * Used to pass data through segues - specifically to navigate to loading screen view controller
     *
     * @param segue - segue to go to
     * @param sender - who is sending segue

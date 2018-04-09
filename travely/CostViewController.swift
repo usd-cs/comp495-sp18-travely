@@ -12,24 +12,6 @@ import Charts
 class CostViewController: UIViewController {
     var myTrip: Trip?
     
-    var originLocation = ""
-    var destinationLocation = ""
-    var departureDate  = ""
-    var returnDate = ""
-    var numTravellers = ""
-    var numDays = 0
-
-    //Used for Amadeus Flights API method: getFlightMinCost, global variables used for getting data out of completion handler
-    var flightcall_done = false
-    var flightcall_errors = false
-    var flight_data: Data?
-    var hotelCallDone = false
-    var hotelCallError = false
-    var hotelData: Data?
-    var calculateButtonWasPressed = false
-    var setLabelsToZero = true
-    var recalculateTrip = false
-    
     @IBOutlet weak var pieChartView: PieChartView!
     @IBOutlet weak var totalCostLabel: UILabel!
     @IBOutlet weak var airfareCostLabel: UILabel!
@@ -72,51 +54,7 @@ class CostViewController: UIViewController {
         
             setLabelsWithData()
         }
-        
-        /*if calculateButtonWasPressed == true {
-            setLabelsToZero = false
-            //Calculate the information, this is called everytime the calculate button is pressed but not everytime the cost tab is navigated to
-            if recalculateTrip == true {
-                calculateTripData()
-            }
-            //Set labels
-            setLabelsWithData()
-        }
-            //This will set the prices to $0 if no trip has been calculated and the user navigates to cost tab
-        else if setLabelsToZero == true {
-            zeroPrices()
-        }*/
     }
-    
-    /*//This function calculates the data for a trip with dummy data and API data
-    func calculateTripData() {
-        initializeVaribles()
-        
-        if destinationLocation == "China" {
-            foodCost = 14 * Double(numDays) * numberOfTravellers!
-            activitiesCost = 20 * Double(numDays) * numberOfTravellers!
-            publicTransportationCost = 17 * Double(numDays) * numberOfTravellers!
-            
-        }
-        else if destinationLocation == "San Diego" {
-            foodCost = 40 * Double(numDays) * numberOfTravellers!
-            activitiesCost = 50 * Double(numDays) * numberOfTravellers!
-            publicTransportationCost = 18 * Double(numDays) * numberOfTravellers!
-        }
-        else if destinationLocation == "Rome" {
-            foodCost = 43 * Double(numDays) * numberOfTravellers!
-            activitiesCost = 39 * Double(numDays) * numberOfTravellers!
-            publicTransportationCost = 20 * Double(numDays) * numberOfTravellers!
-        }
-        
-        minHotelCost = getHotelMinCost()
-        minFlightCost = getFlightMinCost()
-        //Multiply the flight cost by the number of travellers
-        minFlightCost = minFlightCost! * numberOfTravellers!
-        totalTransportationCost = minFlightCost! + publicTransportationCost!
-        totalCost = minFlightCost! + minHotelCost!
-        recalculateTrip = false
-    }*/
     
     //This function uses the existing or newly calculated information to populate the labels and chart
     func setLabelsWithData() {
@@ -130,20 +68,6 @@ class CostViewController: UIViewController {
         activitiesCostLabel.text = String(describing: activitiesCost!)
         foodCostLabel.text = String(describing: foodCost!)
     }
-    /*
-    //This function resets all of the variables everytime a new trip is calculated
-    func initializeVaribles() {
-        minFlightCost = 0.0
-        minHotelCost = 0.0
-        totalCost = 0.0
-        foodCost = 0.0
-        activitiesCost = 0.0
-        publicTransportationCost = 0.0
-        numberOfTravellers = (numTravellers as NSString).doubleValue
-        if numberOfTravellers == 0 {
-            numberOfTravellers = 1
-        }
-    } */
     
     //This function sets the prices to the default $0
     func zeroPrices() {
@@ -160,7 +84,6 @@ class CostViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    //TODO: declare a func that takes in the data and preps the pie chart
     func setChart(dataPoints: [String], values: [Double]){
         var pieDataEntry: [PieChartDataEntry] = []
         //for-loop below creates data entries for each of the values
