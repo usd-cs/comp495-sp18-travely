@@ -224,9 +224,27 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
             print("Unwind from loading screen view controller error")
             return
         }
-        
         myTrip = sourceViewController.newTrip
-        print(myTrip!.tripTotalCost)
+        
+        //Pass myTrip variable to cost tab
+        let myCostTab = self.tabBarController?.viewControllers![2] as! CostViewController
+        myCostTab.myTrip = myTrip
+        
+        //Pass myTrip variable to MyTrips tab
+        let myTripsTab = self.tabBarController?.viewControllers![4].childViewControllers[0] as! MyTripsTableViewController
+        myTripsTab.trips += [myTrip!]
+        myTripsTab.saveTrips()
+        
+        //Pass data to aboutTab
+        let aboutTab = self.tabBarController?.viewControllers![3] as! AboutViewController
+        aboutTab.countryName = destinationPlacePicked
+        
+        //Pass data to ActivitiesTab
+        let activitiesTab = self.tabBarController?.viewControllers![1].childViewControllers[0] as! ActivitiesTabTableViewController
+        
+        activitiesTab.city = destinationPlacePicked
+        
+        self.tabBarController?.selectedIndex = 1
     }
     
     /**

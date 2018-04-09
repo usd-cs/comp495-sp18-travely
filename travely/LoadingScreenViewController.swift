@@ -44,7 +44,7 @@ class LoadingScreenViewController: UIViewController {
         calculateTripData()
         
         //Create Trip data structure to store information
-        newTrip = Trip(tripName: "Trip", tripTotalCost: totalCost!, tripAirfareCost: minFlightCost!, tripHotelCost: minHotelCost!, foodCost: foodCost!, activitiesCost: activitiesCost!, originLocation: originLocation, destinationLocation: destinationLocation, departureDate: departureDate, returnDate: returnDate)
+        newTrip = Trip(tripName: "Trip", tripTotalCost: totalCost!, tripAirfareCost: minFlightCost!, tripHotelCost: minHotelCost!, foodCost: foodCost!, activitiesCost: activitiesCost!, originLocation: originLocation, destinationLocation: destinationLocation, departureDate: departureDate, returnDate: returnDate, tripPublicTransportationCost: totalTransportationCost!, numberOfTravellers: numberOfTravellers!)
         
         //unwind to previous segue
         self.performSegue(withIdentifier: "unwindToRootViewController", sender: self)
