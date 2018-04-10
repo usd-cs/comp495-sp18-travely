@@ -29,6 +29,7 @@ class LoadingScreenViewController: UIViewController {
     
     //Used for timeout
     var apiTimeout = false
+    var wasTimeout = false
     
     //Other Cost variables to be calculated
     var minFlightCost: Double?
@@ -49,8 +50,10 @@ class LoadingScreenViewController: UIViewController {
         
         //Display error message if API error, go back to NewTripViewController
         if apiTimeout == true {
+            apiTimeout = false
+            wasTimeout = true
             let alertController = UIAlertController(title: "Error", message: "An error occured calculating this trip, please recalculate trip", preferredStyle: UIAlertControllerStyle.alert)
-            alertController.addAction(UIAlertAction(title:"OK", style: .default, handler:  { action in self.performSegue(withIdentifier: "apiTimeoutSegue", sender: self) }))
+            alertController.addAction(UIAlertAction(title:"OK", style: .default, handler:  { action in self.performSegue(withIdentifier: "unwindToRootViewController", sender: self) }))
             self.present(alertController, animated: true, completion: nil)
         }
         else {
@@ -106,7 +109,6 @@ class LoadingScreenViewController: UIViewController {
             activitiesCost = 39 * Double(numDays) * numberOfTravellers!
             publicTransportationCost = 20 * Double(numDays) * numberOfTravellers!
         }
-        
         minHotelCost = getHotelMinCost()
         minFlightCost = getFlightMinCost()
         //-1 signifies an error in API call, call the API once more before displaying an error
@@ -114,7 +116,7 @@ class LoadingScreenViewController: UIViewController {
             print("Recalling hotel API")
             minHotelCost = getHotelMinCost()
         }
-        if minFlightCost == -1 {
+        if minFlightCost == -1 || minFlightCost == -2 {
             print("Recalling flight API")
             minFlightCost = getFlightMinCost()
         }
@@ -122,7 +124,6 @@ class LoadingScreenViewController: UIViewController {
         if minFlightCost == -1 || minHotelCost == -1 {
             apiTimeout = true
         }
-        
         //Multiply the flight cost by the number of travellers
         minFlightCost = minFlightCost! * numberOfTravellers!
         totalTransportationCost = minFlightCost! + publicTransportationCost!

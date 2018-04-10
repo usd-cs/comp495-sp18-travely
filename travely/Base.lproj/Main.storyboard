@@ -138,7 +138,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAM-o7-Icf">
-                                <rect key="frame" x="72" y="597" width="230" height="60"/>
+                                <rect key="frame" x="72" y="548" width="230" height="60"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Lg5-Pu-LqR"/>
@@ -206,13 +206,12 @@
                     </view>
                     <connections>
                         <segue destination="eEm-Em-3wT" kind="unwind" identifier="unwindToRootViewController" unwindAction="unwindToRootViewControllerWithSegue:" id="e7K-fj-eui"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="apiTimeoutSegue" id="8G7-mP-Wgt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZfN-Wq-67U" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="eEm-Em-3wT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-60" y="85.907046476761622"/>
+            <point key="canvasLocation" x="-62" y="72"/>
         </scene>
         <!--Cost Tab-->
         <scene sceneID="cvZ-eI-h8G">
@@ -917,6 +916,5 @@
     <inferredMetricsTieBreakers>
         <segue reference="tra-9B-gCK"/>
         <segue reference="EQZ-sy-WDC"/>
-        <segue reference="8G7-mP-Wgt"/>
     </inferredMetricsTieBreakers>
 </document>
