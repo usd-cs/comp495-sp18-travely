@@ -489,7 +489,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uLV-mA-eka">
-                                <rect key="frame" x="0.0" y="20" width="375" height="1131"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="1087"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfb-YU-3gy">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
@@ -914,7 +914,7 @@
         <image name="world_map_image" width="2953" height="1911"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tra-9B-gCK"/>
-        <segue reference="EQZ-sy-WDC"/>
+        <segue reference="AYf-TQ-PdF"/>
+        <segue reference="eig-cr-pwT"/>
     </inferredMetricsTieBreakers>
 </document>
