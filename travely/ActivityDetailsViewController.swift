@@ -10,9 +10,28 @@ import UIKit
 
 class ActivityDetailsViewController: UIViewController {
 
+    var selectedActivity: [String: String]?
+    
+    @IBOutlet weak var activityCostLabel: UILabel!
+    @IBOutlet weak var activityTitleLable: UILabel!
+    @IBOutlet weak var activityDetailedDescriptionTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if let selectedActivity = selectedActivity{
+            activityTitleLable.text = selectedActivity["name"]
+            if let price = Int(selectedActivity["price"]!){
+                if price > 0{
+                    activityCostLabel?.text = "$\(price)"
+                } else {
+                    activityCostLabel?.text = "FREE"
+                }
+            } else {
+                activityCostLabel?.text = "???"
+            }
+            activityDetailedDescriptionTextView.text = selectedActivity["description"]
+        }
         // Do any additional setup after loading the view.
     }
 
