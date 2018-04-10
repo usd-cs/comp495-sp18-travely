@@ -14,7 +14,7 @@
         <!--New Trip Tab-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="New Trip Tab" id="BYZ-38-t0r" customClass="NewTripViewController" customModule="travely" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="newTripVC" title="New Trip Tab" id="BYZ-38-t0r" customClass="NewTripViewController" customModule="travely" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -138,7 +138,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAM-o7-Icf">
-                                <rect key="frame" x="72" y="548" width="230" height="60"/>
+                                <rect key="frame" x="72" y="597" width="230" height="60"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Lg5-Pu-LqR"/>
@@ -147,7 +147,7 @@
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Calculate"/>
                                 <connections>
-                                    <segue destination="5hw-gM-K5Y" kind="presentation" id="tJm-yI-s20"/>
+                                    <segue destination="5hw-gM-K5Y" kind="show" identifier="" id="MM6-zp-gac"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="gWg-jB-tuj">
@@ -206,6 +206,7 @@
                     </view>
                     <connections>
                         <segue destination="eEm-Em-3wT" kind="unwind" identifier="unwindToRootViewController" unwindAction="unwindToRootViewControllerWithSegue:" id="e7K-fj-eui"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="apiTimeoutSegue" id="8G7-mP-Wgt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZfN-Wq-67U" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -916,5 +917,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="tra-9B-gCK"/>
         <segue reference="EQZ-sy-WDC"/>
+        <segue reference="8G7-mP-Wgt"/>
     </inferredMetricsTieBreakers>
 </document>
