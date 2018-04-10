@@ -30,6 +30,17 @@ class ActivitiesTabTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
+    override func viewDidAppear(_ animated: Bool){
+        super.viewDidAppear(true)
+        
+        if city.count < 1{
+            activities = nil
+            return
+        } else {
+            activities = Activities(cityName: city)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
