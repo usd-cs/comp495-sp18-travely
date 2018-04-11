@@ -19,6 +19,7 @@ class ActivityDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //assign values to UI Elements
         if let selectedActivity = selectedActivity{
             activityTitleLable.text = selectedActivity["name"]
             if let price = Int(selectedActivity["price"]!){
