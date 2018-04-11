@@ -9,7 +9,7 @@
 import UIKit
 
 class LoadingScreenViewController: UIViewController {
-
+    
     //User input values passsed from NewTripViewController
     var originLocation = ""
     var destinationLocation = ""
@@ -26,6 +26,10 @@ class LoadingScreenViewController: UIViewController {
     var hotelCallDone = false
     var hotelCallError = false
     var hotelData: Data?
+    
+    //Used for timeout
+    var apiTimeout = false
+    var wasTimeout = false
     
     //Other Cost variables to be calculated
     var minFlightCost: Double?
@@ -44,18 +48,28 @@ class LoadingScreenViewController: UIViewController {
         print("Call APIs")
         calculateTripData()
         
-        //Create Trip data structure to store information
-        newTrip = Trip(tripName: "Trip", tripTotalCost: totalCost!, tripAirfareCost: minFlightCost!, tripHotelCost: minHotelCost!, foodCost: foodCost!, activitiesCost: activitiesCost!, originLocation: originLocation, destinationLocation: destinationLocation, departureDate: departureDate, returnDate: returnDate, tripPublicTransportationCost: totalTransportationCost!, numberOfTravellers: numberOfTravellers!, reportRunDate: reportRunDate)
-        
-        //unwind to previous segue
-        self.performSegue(withIdentifier: "unwindToRootViewController", sender: self)
+        //Display error message if API error, go back to NewTripViewController
+        if apiTimeout == true {
+            apiTimeout = false
+            wasTimeout = true
+            let alertController = UIAlertController(title: "Error", message: "An error occured calculating this trip, please recalculate trip", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title:"OK", style: .default, handler:  { action in self.performSegue(withIdentifier: "unwindToRootViewController", sender: self) }))
+            self.present(alertController, animated: true, completion: nil)
+        }
+        else {
+            //Create Trip data structure to store information
+            newTrip = Trip(tripName: "Trip", tripTotalCost: totalCost!, tripAirfareCost: minFlightCost!, tripHotelCost: minHotelCost!, foodCost: foodCost!, activitiesCost: activitiesCost!, originLocation: originLocation, destinationLocation: destinationLocation, departureDate: departureDate, returnDate: returnDate, tripPublicTransportationCost: totalTransportationCost!, numberOfTravellers: numberOfTravellers!, reportRunDate: reportRunDate)
+            
+            //unwind to previous segue
+            self.performSegue(withIdentifier: "unwindToRootViewController", sender: self)
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -95,9 +109,21 @@ class LoadingScreenViewController: UIViewController {
             activitiesCost = 39 * Double(numDays) * numberOfTravellers!
             publicTransportationCost = 20 * Double(numDays) * numberOfTravellers!
         }
-        
         minHotelCost = getHotelMinCost()
         minFlightCost = getFlightMinCost()
+        //-1 signifies an error in API call, call the API once more before displaying an error
+        if minHotelCost == -1 {
+            print("Recalling hotel API")
+            minHotelCost = getHotelMinCost()
+        }
+        if minFlightCost == -1 || minFlightCost == -2 {
+            print("Recalling flight API")
+            minFlightCost = getFlightMinCost()
+        }
+        //If it gets more than one API error, display error message and reprompt to calculate trip
+        if minFlightCost == -1 || minHotelCost == -1 {
+            apiTimeout = true
+        }
         //Multiply the flight cost by the number of travellers
         minFlightCost = minFlightCost! * numberOfTravellers!
         totalTransportationCost = minFlightCost! + publicTransportationCost!
@@ -205,6 +231,7 @@ class LoadingScreenViewController: UIViewController {
         let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
             if (error != nil) {
                 print(error ?? "Error calling flight api")
+                self.flightcall_done = true
             } else {
                 let httpResponse = response as? HTTPURLResponse
                 
@@ -343,6 +370,7 @@ class LoadingScreenViewController: UIViewController {
         let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
             if (error != nil) {
                 print(error ?? "Error calling hotel API")
+                self.hotelCallDone = true
             } else {
                 let httpResponse = response as? HTTPURLResponse
                 self.hotelData = data

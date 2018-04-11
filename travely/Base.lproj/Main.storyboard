@@ -14,7 +14,7 @@
         <!--New Trip Tab-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="New Trip Tab" id="BYZ-38-t0r" customClass="NewTripViewController" customModule="travely" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="newTripVC" title="New Trip Tab" id="BYZ-38-t0r" customClass="NewTripViewController" customModule="travely" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -147,7 +147,7 @@
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Calculate"/>
                                 <connections>
-                                    <segue destination="5hw-gM-K5Y" kind="presentation" id="tJm-yI-s20"/>
+                                    <segue destination="5hw-gM-K5Y" kind="show" identifier="" id="MM6-zp-gac"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="gWg-jB-tuj">
@@ -211,7 +211,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZfN-Wq-67U" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="eEm-Em-3wT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-60" y="85.907046476761622"/>
+            <point key="canvasLocation" x="-62" y="72"/>
         </scene>
         <!--Cost Tab-->
         <scene sceneID="cvZ-eI-h8G">

@@ -25,6 +25,7 @@
 		BB2BD4A7207457F800B4F9F1 /* Hotels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2BD4A6207457F800B4F9F1 /* Hotels.swift */; };
 		BB2BD4A92074580600B4F9F1 /* Airfairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2BD4A82074580600B4F9F1 /* Airfairs.swift */; };
 		BB2BD4D520754B3200B4F9F1 /* ActivitiesTabTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2BD4D420754B3200B4F9F1 /* ActivitiesTabTableViewController.swift */; };
+		BB2BD4D7207C5D5800B4F9F1 /* ActivityDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2BD4D6207C5D5800B4F9F1 /* ActivityDetailsViewController.swift */; };
 		C965E500206095F0003EA5F1 /* countryEtiquette.txt in Resources */ = {isa = PBXBuildFile; fileRef = C965E4FF206095EF003EA5F1 /* countryEtiquette.txt */; };
 		C965E50220617130003EA5F1 /* SavedTripDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C965E50120617130003EA5F1 /* SavedTripDetailsViewController.swift */; };
 		C9FDC45D20754E3300D72720 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FDC45C20754E3200D72720 /* Activities.swift */; };
@@ -52,6 +53,7 @@
 		BB2BD4A6207457F800B4F9F1 /* Hotels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hotels.swift; sourceTree = "<group>"; };
 		BB2BD4A82074580600B4F9F1 /* Airfairs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airfairs.swift; sourceTree = "<group>"; };
 		BB2BD4D420754B3200B4F9F1 /* ActivitiesTabTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesTabTableViewController.swift; sourceTree = "<group>"; };
+		BB2BD4D6207C5D5800B4F9F1 /* ActivityDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailsViewController.swift; sourceTree = "<group>"; };
 		C965E4FF206095EF003EA5F1 /* countryEtiquette.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = countryEtiquette.txt; sourceTree = "<group>"; };
 		C965E50120617130003EA5F1 /* SavedTripDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTripDetailsViewController.swift; sourceTree = "<group>"; };
 		C9FDC45C20754E3200D72720 /* Activities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				C965E4FF206095EF003EA5F1 /* countryEtiquette.txt */,
 				636ECEF52058E36B00F668F2 /* LaunchScreen.storyboard */,
 				636ECEF72058E36B00F668F2 /* Main.storyboard */,
+				BB2BD4D6207C5D5800B4F9F1 /* ActivityDetailsViewController.swift */,
 				636ECEEA2058E35C00F668F2 /* AboutViewController.swift */,
 				636ECEEC2058E35C00F668F2 /* ActivitiesViewController.swift */,
 				636ECEE92058E35C00F668F2 /* AppDelegate.swift */,
@@ -273,6 +276,7 @@
 				636ECEF42058E35C00F668F2 /* ActivitiesViewController.swift in Sources */,
 				BB2BD4D520754B3200B4F9F1 /* ActivitiesTabTableViewController.swift in Sources */,
 				C9FDC45D20754E3300D72720 /* Activities.swift in Sources */,
+				BB2BD4D7207C5D5800B4F9F1 /* ActivityDetailsViewController.swift in Sources */,
 				BB2BD4A92074580600B4F9F1 /* Airfairs.swift in Sources */,
 				636ECEEE2058E35C00F668F2 /* NewTripViewController.swift in Sources */,
 				6365824D207ABC0600056469 /* LoadingScreenViewController.swift in Sources */,
