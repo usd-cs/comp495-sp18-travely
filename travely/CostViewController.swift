@@ -1,6 +1,6 @@
 //
 //  CostViewController.swift
-//  travely
+//  trave.ly
 //
 //  Created by Alexandra Leonidova on 3/11/18.
 //  Copyright © 2018 University of San Diego. All rights reserved.
