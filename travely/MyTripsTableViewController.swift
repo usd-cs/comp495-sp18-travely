@@ -12,20 +12,17 @@ import os.log
 class MyTripsTableViewController: UITableViewController {
     
     var trips = [Trip]()
-    var firstLoad = false //Used to determine if you need to load saved data. Only need to load on first go through
     
     override func viewWillAppear(_ animated: Bool) {
-        print(firstLoad)
-        if !firstLoad {
-            if let saved = loadTrips() {
-                trips += saved
-            }
-            firstLoad = true
+      
+        if let saved = loadTrips() {
+            trips = saved
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -45,7 +42,6 @@ class MyTripsTableViewController: UITableViewController {
         return trips.count
     }
     
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "MyTripsTableViewCell", for: indexPath) as? MyTripsTableViewCell else {
             fatalError("Cell for MyTrips not an instance of MyTripsTableView Controller")
@@ -59,25 +55,20 @@ class MyTripsTableViewController: UITableViewController {
         return cell
     }
     
-    
-    
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
     
-    
-    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            print("delete row: " + String(describing: indexPath.row))
-            print("trips_szie: " + String(describing: trips.count))
             trips.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-            saveTrips()
         }
+        
+        saveTrips()
     }
     
     
@@ -110,6 +101,7 @@ class MyTripsTableViewController: UITableViewController {
         
         trips += [trip1, trip2]
     }
+    
     func saveTrips(){
         let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(trips, toFile: Trip.ArchiveURL.path)
         if isSuccessfulSave{
@@ -119,6 +111,7 @@ class MyTripsTableViewController: UITableViewController {
             os_log("Failed to save trips", log: OSLog.default, type: .debug)
         }
     }
+    
     private func loadTrips() -> [Trip]? {
         return NSKeyedUnarchiver.unarchiveObject(withFile: Trip.ArchiveURL.path) as? [Trip]
     }
