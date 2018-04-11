@@ -29,6 +29,26 @@ class ActivitiesTabTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    override func viewWillAppear(_ animated: Bool) {
+        print(city)
+        if city.count < 1{
+            activities = nil
+            return
+        } else {
+            activities = Activities(cityName: city)
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool){
+        super.viewDidAppear(true)
+        
+        if city.count < 1{
+            activities = nil
+            return
+        } else {
+            activities = Activities(cityName: city)
+        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -136,13 +156,24 @@ class ActivitiesTabTableViewController: UITableViewController {
      }
      */
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "viewActivityDetailSegue" {
+            let activityDetailsViewController = segue.destination as! ActivityDetailsViewController
+            let indexPath = tableView.indexPathForSelectedRow!
+            var selectedActivity: [String: String] = [:]
+            switch indexPath.section{
+            case 0:
+                selectedActivity = (activities?.culturalActivities[indexPath.row])!
+            case 1:
+                selectedActivity = (activities?.outdoorsActivities[indexPath.row])!
+            case 2:
+                selectedActivity = (activities?.nightlifeActivities[indexPath.row])!
+            default:
+                return
+            }
+            activityDetailsViewController.selectedActivity = selectedActivity
+        }
+    }
 }

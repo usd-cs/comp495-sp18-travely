@@ -93,7 +93,7 @@ class LoadingScreenViewController: UIViewController {
     func calculateTripData() {
         initializeVaribles()
         
-        if destinationLocation == "China" {
+        if destinationLocation == "Beijing" {
             foodCost = 14 * Double(numDays) * numberOfTravellers!
             activitiesCost = 20 * Double(numDays) * numberOfTravellers!
             publicTransportationCost = 17 * Double(numDays) * numberOfTravellers!
@@ -127,7 +127,7 @@ class LoadingScreenViewController: UIViewController {
         //Multiply the flight cost by the number of travellers
         minFlightCost = minFlightCost! * numberOfTravellers!
         totalTransportationCost = minFlightCost! + publicTransportationCost!
-        totalCost = minFlightCost! + minHotelCost!
+        totalCost = totalTransportationCost! + minHotelCost! + foodCost! + activitiesCost!
     }
     
     /*
@@ -254,7 +254,7 @@ class LoadingScreenViewController: UIViewController {
      * @return - IATA Code or nil if not found
      */
     func findIATACode(location: String) -> String? {
-        if location == "China" {
+        if location == "Beijing" {
             return "PEK"
         } else if location == "San Diego" {
             return "SAN"

@@ -22,8 +22,8 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     // Tag 1 is Origin Picker
     // Tag 2 is Destination Picker
     // Tag 3 is Num of Travellers Picker
-    let placesOrigin = ["-", "San Diego", "China", "Rome"]
-    let placesDestination = ["-", "San Diego", "China", "Rome"]
+    let placesOrigin = ["-", "San Diego", "Beijing", "Rome"]
+    let placesDestination = ["-", "San Diego", "Beijing", "Rome"]
     let numTravellersRange = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
     
     var originPlacePicked = ""
