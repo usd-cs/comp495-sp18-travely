@@ -12,14 +12,15 @@ import os.log
 class MyTripsTableViewController: UITableViewController {
     
     var trips = [Trip]()
+    var firstLoad = false //Used to determine if you need to load saved data. Only need to load on first go through
     
     override func viewWillAppear(_ animated: Bool) {
-        loadSampleTrips()
-        if let saved = loadTrips(){
-            trips += saved
-        }
-        else{
-            loadSampleTrips()
+        print(firstLoad)
+        if !firstLoad {
+            if let saved = loadTrips() {
+                trips += saved
+            }
+            firstLoad = true
         }
     }
     
@@ -71,8 +72,11 @@ class MyTripsTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            print("delete row: " + String(describing: indexPath.row))
+            print("trips_szie: " + String(describing: trips.count))
             trips.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            saveTrips()
         }
     }
     
