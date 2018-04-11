@@ -15,8 +15,10 @@ class MyTripsTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
       
+        //Load and reload trips when navigated to this page
         if let saved = loadTrips() {
             trips = saved
+            self.tableView.reloadData()
         }
     }
     
@@ -68,6 +70,7 @@ class MyTripsTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
         
+        //Save trips after editing
         saveTrips()
     }
     
