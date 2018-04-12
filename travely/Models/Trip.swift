@@ -78,32 +78,12 @@ class Trip : NSObject,NSCoding{
         aCoder.encode(returnDate, forKey: PropertyKey.returnDate)
         aCoder.encode(tripPublicTransportationCost, forKey: PropertyKey.tripPublicTransportationCost)
         aCoder.encode(numberOfTravellers, forKey: PropertyKey.numberOfTravellers)
-        aCoder.encode(numberOfTravellers, forKey: PropertyKey.reportRunDate)
+        aCoder.encode(reportRunDate, forKey: PropertyKey.reportRunDate)
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
         guard let tripName = aDecoder.decodeObject(forKey: PropertyKey.tripName) as? String else {
             os_log("Unable to decode tripName", log: OSLog.default, type: .debug)
-            return nil
-        }
-        guard let tripTotalCost = aDecoder.decodeObject(forKey: PropertyKey.tripTotalCost) as? Double else {
-            os_log("Unable to decode tripTotalCost", log: OSLog.default, type: .debug)
-            return nil
-        }
-        guard let tripAirfareCost = aDecoder.decodeObject(forKey: PropertyKey.tripAirfareCost) as? Double else {
-            os_log("Unable to decode tripAirfareCost", log: OSLog.default, type: .debug)
-            return nil
-        }
-        guard let tripHotelCost = aDecoder.decodeObject(forKey: PropertyKey.tripHotelCost) as? Double else {
-            os_log("Unable to decode tripHotelCost", log: OSLog.default, type: .debug)
-            return nil
-        }
-        guard let foodCost = aDecoder.decodeObject(forKey: PropertyKey.foodCost) as? Double else {
-            os_log("Unable to decode foodCost", log: OSLog.default, type: .debug)
-            return nil
-        }
-        guard let activitiesCost = aDecoder.decodeObject(forKey: PropertyKey.activitiesCost) as? Double else {
-            os_log("Unable to decode activitiesCost", log: OSLog.default, type: .debug)
             return nil
         }
         guard let destinationLocation = aDecoder.decodeObject(forKey: PropertyKey.destinationLocation) as? String else {
@@ -122,18 +102,18 @@ class Trip : NSObject,NSCoding{
             os_log("Unable to decode returnDate", log: OSLog.default, type: .debug)
             return nil
         }
-        guard let tripPublicTransportationCost = aDecoder.decodeObject(forKey: PropertyKey.tripPublicTransportationCost) as? Double else {
-            os_log("Unable to decode tripPublicTransportationCost", log: OSLog.default, type: .debug)
-            return nil
-        }
-        guard let numberOfTravellers = aDecoder.decodeObject(forKey: PropertyKey.numberOfTravellers) as? Double else {
-            os_log("Unable to decode numberOfTravellers", log: OSLog.default, type: .debug)
-            return nil
-        }
         guard let reportRunDate = aDecoder.decodeObject(forKey: PropertyKey.reportRunDate) as? String else {
             os_log("Unable to decode reportRunDate", log: OSLog.default, type: .debug)
             return nil
         }
+        
+        let tripPublicTransportationCost = aDecoder.decodeDouble(forKey: PropertyKey.tripPublicTransportationCost) as Double
+        let numberOfTravellers = aDecoder.decodeDouble(forKey: PropertyKey.numberOfTravellers) as Double
+        let tripTotalCost = aDecoder.decodeDouble(forKey: PropertyKey.tripTotalCost) as Double
+        let tripAirfareCost = aDecoder.decodeDouble(forKey: PropertyKey.tripAirfareCost) as Double
+        let tripHotelCost = aDecoder.decodeDouble(forKey: PropertyKey.tripHotelCost) as Double
+        let foodCost = aDecoder.decodeDouble(forKey: PropertyKey.foodCost) as Double
+        let activitiesCost = aDecoder.decodeDouble(forKey: PropertyKey.activitiesCost) as Double
         
         self.init(tripName: tripName, tripTotalCost: tripTotalCost, tripAirfareCost: tripAirfareCost, tripHotelCost: tripHotelCost, foodCost: foodCost, activitiesCost: activitiesCost, originLocation: originLocation, destinationLocation: destinationLocation, departureDate: departureDate, returnDate: returnDate, tripPublicTransportationCost: tripPublicTransportationCost, numberOfTravellers: numberOfTravellers, reportRunDate: reportRunDate)
     }
