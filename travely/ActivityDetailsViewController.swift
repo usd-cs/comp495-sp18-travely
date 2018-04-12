@@ -12,6 +12,7 @@ class ActivityDetailsViewController: UIViewController {
 
     var selectedActivity: [String: String]?
     
+    @IBOutlet weak var activityImage: UIImageView!
     @IBOutlet weak var activityCostLabel: UILabel!
     @IBOutlet weak var activityTitleLable: UILabel!
     @IBOutlet weak var activityDetailedDescriptionTextView: UITextView!
@@ -32,6 +33,11 @@ class ActivityDetailsViewController: UIViewController {
                 activityCostLabel?.text = "???"
             }
             activityDetailedDescriptionTextView.text = selectedActivity["description"]
+            let activityImageSelected = UIImage(named: selectedActivity["image"]!)
+            activityImage.contentMode = .scaleAspectFit
+            activityImage.image = activityImageSelected
+            
+            
         }
         // Do any additional setup after loading the view.
     }

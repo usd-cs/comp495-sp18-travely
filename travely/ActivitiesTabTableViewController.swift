@@ -16,6 +16,11 @@ class ActivitiesTabTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // design
+        let backgroundImage = UIImage(named: "gradient_background.jpg")
+        let imageView = UIImageView(image: backgroundImage)
+        self.tableView.backgroundView = imageView
+        
         if city.count < 1{
             activities = nil
             return
@@ -41,7 +46,6 @@ class ActivitiesTabTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool){
         super.viewDidAppear(true)
-        
         if city.count < 1{
             activities = nil
             return
