@@ -61,12 +61,12 @@ class CostViewController: UIViewController {
         let expenses = ["Transportation", "Accomodations", "Food", "Miscellaneous"]
         let costOfExpense = [totalTransportationCost, minHotelCost, foodCost, activitiesCost]
         setChart(dataPoints: expenses, values: costOfExpense as! [Double])
-        totalCostLabel.text = String(describing: totalCost!)
-        airfareCostLabel.text = String(describing: minFlightCost!)
-        hotelCostLabel.text = String(describing: minHotelCost!)
-        publicTranportationLabel.text = String(describing: publicTransportationCost!)
-        activitiesCostLabel.text = String(describing: activitiesCost!)
-        foodCostLabel.text = String(describing: foodCost!)
+        totalCostLabel.text = "$" + String(describing: totalCost!)
+        airfareCostLabel.text = "$" + String(describing: minFlightCost!)
+        hotelCostLabel.text = "$" + String(describing: minHotelCost!)
+        publicTranportationLabel.text = "$" + String(describing: publicTransportationCost!)
+        activitiesCostLabel.text = "$" + String(describing: activitiesCost!)
+        foodCostLabel.text = "$" + String(describing: foodCost!)
     }
     
     //This function sets the prices to the default $0
