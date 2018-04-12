@@ -25,6 +25,11 @@ class MyTripsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // design
+        let backgroundImage = UIImage(named: "gradient_background.jpg")
+        let imageView = UIImageView(image: backgroundImage)
+        self.tableView.backgroundView = imageView
     }
     
     override func didReceiveMemoryWarning() {
