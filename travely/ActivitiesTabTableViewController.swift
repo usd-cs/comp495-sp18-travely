@@ -35,23 +35,14 @@ class ActivitiesTabTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     override func viewWillAppear(_ animated: Bool) {
-        print(city)
+        print("viewWillAppear")
         if city.count < 1{
             activities = nil
             return
         } else {
             activities = Activities(cityName: city)
         }
-    }
-    
-    override func viewDidAppear(_ animated: Bool){
-        super.viewDidAppear(true)
-        if city.count < 1{
-            activities = nil
-            return
-        } else {
-            activities = Activities(cityName: city)
-        }
+        self.tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
