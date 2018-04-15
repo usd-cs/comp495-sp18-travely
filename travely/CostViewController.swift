@@ -11,6 +11,7 @@ import Charts
 
 class CostViewController: UIViewController {
     var myTrip: Trip?
+    var activitiesCostAccepted: Double?
     
     @IBOutlet weak var pieChartView: PieChartView!
     @IBOutlet weak var totalCostLabel: UILabel!
@@ -47,11 +48,17 @@ class CostViewController: UIViewController {
             minHotelCost = myTrip!.tripHotelCost
             totalCost = myTrip!.tripTotalCost
             foodCost = myTrip!.foodCost
-            activitiesCost = myTrip!.activitiesCost
+            //activitiesCost = myTrip!.activitiesCost
             publicTransportationCost = myTrip!.tripPublicTransportationCost
             numberOfTravellers = myTrip!.numberOfTravellers
+            if let activitiesCostAccepted = activitiesCostAccepted, let numberOfTravellers = numberOfTravellers{
+                activitiesCost = activitiesCostAccepted * numberOfTravellers
+            } else {
+                activitiesCost = 0.0
+            }
             totalTransportationCost = myTrip!.tripPublicTransportationCost + myTrip!.tripAirfareCost
         
+            print("activitiesCost: \(activitiesCost)")
             setLabelsWithData()
         }
     }

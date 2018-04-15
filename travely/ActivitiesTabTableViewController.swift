@@ -8,10 +8,53 @@
 
 import UIKit
 
-class ActivitiesTabTableViewController: UITableViewController {
-
+class ActivitiesTabTableViewController: UITableViewController, ActivityCellDelegate {
+    
     var city = ""
     var activities: Activities?
+    var selectedArray = [false, false, false, false, false, false, false, false, false]
+    var totalCost = 0.0
+    
+    func checkmarkTapped(sender: ActivityTableViewCell) {
+        if let indexPath = tableView.indexPath(for: sender){
+            var index = indexPath.section * 3 + indexPath.row
+            selectedArray[index] = !selectedArray[index]
+            
+            guard let activities = activities else {
+                tableView.reloadRows(at: [indexPath], with: .automatic)
+                return
+            }
+            
+            var dataSource: [String: String] = [:]
+            switch indexPath.section{
+            case 0:
+                dataSource = activities.culturalActivities[indexPath.row]
+            case 1:
+                dataSource = activities.outdoorsActivities[indexPath.row]
+            case 2:
+                dataSource = activities.nightlifeActivities[indexPath.row]
+            default:
+                fatalError("Error configuring cell in Activities Tab")
+                return
+                
+            }
+            if selectedArray[index]{
+                if let price = Double(dataSource["price"]!){
+                    totalCost += price
+                }
+            } else {
+                if let price = Double(dataSource["price"]!){
+                    totalCost -= price
+                }
+            }
+            print("checkmarkTapped : \(totalCost)")
+            let myCostTab = self.tabBarController?.viewControllers![2] as! CostViewController
+            myCostTab.activitiesCostAccepted = totalCost
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+        }
+        
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +88,12 @@ class ActivitiesTabTableViewController: UITableViewController {
         self.tableView.reloadData()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        //Pass myTrip variable to cost tab
+        let myCostTab = self.tabBarController?.viewControllers![2] as! CostViewController
+        myCostTab.activitiesCostAccepted = totalCost
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -65,11 +114,20 @@ class ActivitiesTabTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "activityCell", for: indexPath)
+        //let cell = tableView.dequeueReusableCell(withIdentifier: "activityCell", for: indexPath)
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ActivityTableViewCell") as? ActivityTableViewCell
+            else{
+                fatalError("Could not dequeue a cell")
+        }
+        
+        cell.delegate = self
         
         guard let activities = activities else {
-            cell.textLabel?.text = ""
-            cell.detailTextLabel?.text = ""
+            cell.titleLabel?.text = ""
+            cell.priceLabel?.text = ""
+            let image = UIImage(named: "Unhecked")
+            cell.checkedButton?.setBackgroundImage(image, for: .normal)
             return cell
         }
         
@@ -86,16 +144,26 @@ class ActivitiesTabTableViewController: UITableViewController {
         }
         
         // Configure the cell
-        cell.textLabel?.text = dataSource["name"]
+        cell.titleLabel?.text = dataSource["name"]
         if let price = Int(dataSource["price"]!){
             if price > 0{
-                cell.detailTextLabel?.text = "$\(price)"
+                cell.priceLabel?.text = "$\(price)"
             } else {
-                cell.detailTextLabel?.text = "FREE"
+                cell.priceLabel?.text = "FREE"
             }
         } else {
-            cell.detailTextLabel?.text = "???"
+            cell.priceLabel?.text = "???"
         }
+        
+        var index = indexPath.section * 3 + indexPath.row
+        if selectedArray[index]{
+            let image = UIImage(named: "Checked")
+            cell.checkedButton.setBackgroundImage(image, for: .normal)
+        } else {
+            let image = UIImage(named: "Unchecked")
+            cell.checkedButton.setBackgroundImage(image, for: .normal)
+        }
+        tableView.reloadRows(at: [indexPath], with: .automatic)
         
         return cell
     }
@@ -113,6 +181,7 @@ class ActivitiesTabTableViewController: UITableViewController {
             return "Other Activities"
         }
     }
+    
     
     
     
