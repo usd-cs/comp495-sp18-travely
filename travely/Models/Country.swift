@@ -12,6 +12,7 @@ import Foundation
 class Country{
     var etiquette: [String]
     var courtesy: [String]
+    
     init(etiquette: [String], courtesy: [String]) {
         self.etiquette = etiquette
         self.courtesy = courtesy
