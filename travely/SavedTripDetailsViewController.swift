@@ -48,7 +48,7 @@ class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        countryName = "China"
+        countryName = "Beijing"
         populateWithData()
     }
     
