@@ -8,17 +8,19 @@
 
 import UIKit
 import Charts
-import MessageUI
 
-class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControllerDelegate {
+class SavedTripDetailsViewController: UIViewController {
     var my_trip: Trip?
     
     var countryName = ""
     
     //Outlet for the chart
     @IBOutlet weak var pieChartView: PieChartView!
+    //Outlet for the email trip button
+    @IBAction func emailButton(_ sender: Any) {
 
     
+    }
     //Outlet for the trip name
     @IBOutlet weak var tripNameField: UILabel!
     //Outlet for the trip price
@@ -98,42 +100,6 @@ class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControl
             let destinationVC = segue.destination as! AboutViewController
             destinationVC.countryName = countryName
         }
-    }
-    
-    //Outlet for the email trip button
-    @IBAction func emailButton(_ sender: Any) {
-        let mailVC = configureMailController()
-        if MFMailComposeViewController.canSendMail(){
-            self.present(mailVC, animated: true, completion: nil)
-        }
-        else{
-            showMailError()
-        }
-    }
-    
-    //This function will configure the Mail VC by setting this VC as its delegate
-    //as well as providing who the recipient is and message body
-    func configureMailController() -> MFMailComposeViewController{
-        let mailComposeVC = MFMailComposeViewController()
-        //creates subject line in form of ORG to DEST
-        var subject : String = originLocation.text!+" to "+destinationLocation.text!+" Trip Details"
-        var body : String = ""
-        mailComposeVC.mailComposeDelegate = self
-        mailComposeVC.setSubject(subject)
-        mailComposeVC.setMessageBody(body, isHTML: false)
-        return mailComposeVC
-    }
-    
-    //Will handle if there was an error creating an email
-    func showMailError(){
-        let sendMailAlert = UIAlertController(title: "Could not send mail.", message: "Your device couldn't send mail.", preferredStyle: .alert)
-        let dismiss = UIAlertAction(title: "Ok", style: .default, handler: nil)
-        sendMailAlert.addAction(dismiss)
-        self.present(sendMailAlert, animated: true, completion: nil)
-    }
-    
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        controller.dismiss(animated: true, completion: nil)
     }
 
 }
