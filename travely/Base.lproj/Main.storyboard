@@ -1130,4 +1130,8 @@
         <image name="sky_image" width="640" height="960"/>
         <image name="world_map_image" width="2953" height="1911"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="AYf-TQ-PdF"/>
+        <segue reference="eig-cr-pwT"/>
+    </inferredMetricsTieBreakers>
 </document>
