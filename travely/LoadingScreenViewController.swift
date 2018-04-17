@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftSpinner
 
 class LoadingScreenViewController: UIViewController {
     
@@ -45,29 +46,35 @@ class LoadingScreenViewController: UIViewController {
     var newTrip: Trip?
     
     override func viewDidAppear(_ animated: Bool) {
+        DispatchQueue.global(qos: .utility).async {
+            
         print("Call APIs")
-        calculateTripData()
+        self.calculateTripData()
         
         //Display error message if API error, go back to NewTripViewController
-        if apiTimeout == true {
-            apiTimeout = false
-            wasTimeout = true
+        if self.apiTimeout == true {
+            self.apiTimeout = false
+            self.wasTimeout = true
+            SwiftSpinner.hide()
             let alertController = UIAlertController(title: "Error", message: "An error occured calculating this trip, please recalculate trip", preferredStyle: UIAlertControllerStyle.alert)
             alertController.addAction(UIAlertAction(title:"OK", style: .default, handler:  { action in self.performSegue(withIdentifier: "unwindToRootViewController", sender: self) }))
             self.present(alertController, animated: true, completion: nil)
         }
         else {
             //Create Trip data structure to store information
-            newTrip = Trip(tripName: "Trip", tripTotalCost: totalCost!, tripAirfareCost: minFlightCost!, tripHotelCost: minHotelCost!, foodCost: foodCost!, activitiesCost: activitiesCost!, originLocation: originLocation, destinationLocation: destinationLocation, departureDate: departureDate, returnDate: returnDate, tripPublicTransportationCost: totalTransportationCost!, numberOfTravellers: numberOfTravellers!, reportRunDate: reportRunDate)
+            self.newTrip = Trip(tripName: "Trip", tripTotalCost: self.totalCost!, tripAirfareCost: self.minFlightCost!, tripHotelCost: self.minHotelCost!, foodCost: self.foodCost!, activitiesCost: self.activitiesCost!, originLocation: self.originLocation, destinationLocation: self.destinationLocation, departureDate: self.departureDate, returnDate: self.returnDate, tripPublicTransportationCost: self.totalTransportationCost!, numberOfTravellers: self.numberOfTravellers!, reportRunDate: self.reportRunDate)
             
             //unwind to previous segue
+            SwiftSpinner.hide()
             self.performSegue(withIdentifier: "unwindToRootViewController", sender: self)
+        }
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        SwiftSpinner.show("Generating Report...")
     }
     
     override func didReceiveMemoryWarning() {
@@ -365,7 +372,7 @@ class LoadingScreenViewController: UIViewController {
      * @global self.hotelCallDone - used to determine if call to api is done so can move on
      */
     func callHotelAPIForLowCostData(request: NSMutableURLRequest){
-        
+        print(request)
         let session = URLSession.shared
         let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
             if (error != nil) {
@@ -373,6 +380,7 @@ class LoadingScreenViewController: UIViewController {
                 self.hotelCallDone = true
             } else {
                 let httpResponse = response as? HTTPURLResponse
+                print(response!)
                 self.hotelData = data
                 self.hotelCallError = (error != nil) || (httpResponse?.statusCode != 200)
                 self.hotelCallDone = true
