@@ -207,6 +207,8 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
             let activitiesTab = self.tabBarController?.viewControllers![1].childViewControllers[0] as! ActivitiesTabTableViewController
             
             activitiesTab.city = destinationPlacePicked
+            activitiesTab.selectedArray = [false, false, false, false, false, false, false, false, false]
+            activitiesTab.totalCost = 0.0
             
             loadingScreenHappen = true
         }
