@@ -6,5 +6,5 @@ target 'travely' do
 
   # Pods for travely
     pod 'Charts'
-
+    pod 'SwiftSpinner'
 end
