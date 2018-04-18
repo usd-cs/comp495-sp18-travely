@@ -46,7 +46,7 @@ class CostViewController: UIViewController {
         } else {
             minFlightCost = myTrip!.tripAirfareCost
             minHotelCost = myTrip!.tripHotelCost
-            totalCost = myTrip!.tripTotalCost
+            totalCost = myTrip!.tripTotalCost + myTrip!.activitiesCost
             foodCost = myTrip!.foodCost
             //activitiesCost = myTrip!.activitiesCost
             publicTransportationCost = myTrip!.tripPublicTransportationCost
@@ -57,8 +57,6 @@ class CostViewController: UIViewController {
                 activitiesCost = 0.0
             }
             totalTransportationCost = myTrip!.tripPublicTransportationCost + myTrip!.tripAirfareCost
-        
-            print("activitiesCost: \(activitiesCost)")
             setLabelsWithData()
         }
     }
