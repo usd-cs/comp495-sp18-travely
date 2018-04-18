@@ -46,27 +46,31 @@ class LoadingScreenViewController: UIViewController {
     var newTrip: Trip?
     
     override func viewDidAppear(_ animated: Bool) {
+        //Perform this all on separate thread from main thread so loading screen functions properly
         DispatchQueue.global(qos: .utility).async {
             
-        print("Call APIs")
-        self.calculateTripData()
+            print("Call APIs")
+            self.calculateTripData()
         
-        //Display error message if API error, go back to NewTripViewController
-        if self.apiTimeout == true {
-            self.apiTimeout = false
-            self.wasTimeout = true
-            SwiftSpinner.hide()
-            let alertController = UIAlertController(title: "Error", message: "An error occured calculating this trip, please recalculate trip", preferredStyle: UIAlertControllerStyle.alert)
-            alertController.addAction(UIAlertAction(title:"OK", style: .default, handler:  { action in self.performSegue(withIdentifier: "unwindToRootViewController", sender: self) }))
-            self.present(alertController, animated: true, completion: nil)
-        }
-        else {
-            //Create Trip data structure to store information
-            self.newTrip = Trip(tripName: "Trip", tripTotalCost: self.totalCost!, tripAirfareCost: self.minFlightCost!, tripHotelCost: self.minHotelCost!, foodCost: self.foodCost!, activitiesCost: self.activitiesCost!, originLocation: self.originLocation, destinationLocation: self.destinationLocation, departureDate: self.departureDate, returnDate: self.returnDate, tripPublicTransportationCost: self.totalTransportationCost!, numberOfTravellers: self.numberOfTravellers!, reportRunDate: self.reportRunDate)
+            //Display error message if API error, go back to NewTripViewController
+            if self.apiTimeout == true {
+                self.apiTimeout = false
+                self.wasTimeout = true
+                
+                //Create alert on error
+                let alertController = UIAlertController(title: "Error", message: "An error occured calculating this trip, please recalculate trip", preferredStyle: UIAlertControllerStyle.alert)
+                alertController.addAction(UIAlertAction(title:"OK", style: .default, handler:  { action in self.performSegue(withIdentifier: "unwindToRootViewController", sender: self) }))
+                
+                SwiftSpinner.hide() //hide loading screen before unwinding
+                self.present(alertController, animated: true, completion: nil)
+            }
+            else {
+                //Create Trip data structure to store information
+                self.newTrip = Trip(tripName: "Trip", tripTotalCost: self.totalCost!, tripAirfareCost: self.minFlightCost!, tripHotelCost: self.minHotelCost!, foodCost: self.foodCost!, activitiesCost: self.activitiesCost!, originLocation: self.originLocation, destinationLocation: self.destinationLocation, departureDate: self.departureDate, returnDate: self.returnDate, tripPublicTransportationCost: self.totalTransportationCost!, numberOfTravellers: self.numberOfTravellers!, reportRunDate: self.reportRunDate)
             
-            //unwind to previous segue
-            SwiftSpinner.hide()
-            self.performSegue(withIdentifier: "unwindToRootViewController", sender: self)
+                //unwind to previous segue
+                SwiftSpinner.hide() //Hide loading screen before unwinding
+                self.performSegue(withIdentifier: "unwindToRootViewController", sender: self)
         }
         }
     }
@@ -241,7 +245,7 @@ class LoadingScreenViewController: UIViewController {
                 self.flightcall_done = true
             } else {
                 let httpResponse = response as? HTTPURLResponse
-                
+                //print(httpResponse!)
                 //Set global variables so they can be accessed outside of the completion handler
                 self.flightcall_errors = (error != nil) || (httpResponse?.statusCode != 200)
                 self.flight_data = data
