@@ -57,8 +57,7 @@ class MyTripsTableViewController: UITableViewController {
         // Configure the cell...
         
         let trip = trips[indexPath.row]
-        cell.tripLabel.text = trip.tripName
-        
+        cell.tripLabel.text = trip.originLocation+" to "+trip.destinationLocation
         return cell
     }
     

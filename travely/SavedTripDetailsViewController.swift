@@ -115,7 +115,7 @@ class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControl
         //creates subject line in form of ORG to DEST
         let subject : String = originLocation.text!+" to "+destinationLocation.text!+" Trip Details"
         let body : String =
-        "<div> <h3>Trip Details</h3> <div>Origin:</div><div>Destination:</div><div>Departure Date:</div><div>Return Date:</div><h3>Cost Breakdown</h3><div>Transportation:</div><div>Accommodation:</div><div>Food:</div><div>Activities:</div></div>"
+        "<div> <h3>Trip Details</h3> <div>Origin: \(originLocation.text!)</div><div>Destination: \(destinationLocation.text!)</div><div>Departure Date: \(departureDate.text!)</div><div>Return Date: \(returnDate.text!)</div><h3>Cost Breakdown</h3><div>Transportation:\(airfareCostLabel.text!)</div><div>Accommodation: \(hotelCostLabel.text!)</div><div>Food: \(foodCostLabel.text!)</div><div>Activities: \(activitiesCostLabel.text!)</div><div>Total Cost: \(totalPriceField.text!)</div></div>"
         mailComposeVC.mailComposeDelegate = self
         mailComposeVC.setSubject(subject)
         mailComposeVC.setMessageBody(body, isHTML: true)
