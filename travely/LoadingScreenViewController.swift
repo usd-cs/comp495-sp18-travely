@@ -78,6 +78,7 @@ class LoadingScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Start loading screen
         SwiftSpinner.show("Generating Report...")
     }
     
@@ -245,7 +246,6 @@ class LoadingScreenViewController: UIViewController {
                 self.flightcall_done = true
             } else {
                 let httpResponse = response as? HTTPURLResponse
-                //print(httpResponse!)
                 //Set global variables so they can be accessed outside of the completion handler
                 self.flightcall_errors = (error != nil) || (httpResponse?.statusCode != 200)
                 self.flight_data = data
@@ -376,7 +376,7 @@ class LoadingScreenViewController: UIViewController {
      * @global self.hotelCallDone - used to determine if call to api is done so can move on
      */
     func callHotelAPIForLowCostData(request: NSMutableURLRequest){
-        print(request)
+
         let session = URLSession.shared
         let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
             if (error != nil) {
@@ -384,7 +384,6 @@ class LoadingScreenViewController: UIViewController {
                 self.hotelCallDone = true
             } else {
                 let httpResponse = response as? HTTPURLResponse
-                print(response!)
                 self.hotelData = data
                 self.hotelCallError = (error != nil) || (httpResponse?.statusCode != 200)
                 self.hotelCallDone = true
