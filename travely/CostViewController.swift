@@ -46,13 +46,14 @@ class CostViewController: UIViewController {
         } else {
             minFlightCost = myTrip!.tripAirfareCost
             minHotelCost = myTrip!.tripHotelCost
-            totalCost = myTrip!.tripTotalCost + myTrip!.activitiesCost
+            totalCost = myTrip!.tripTotalCost
             foodCost = myTrip!.foodCost
             //activitiesCost = myTrip!.activitiesCost
             publicTransportationCost = myTrip!.tripPublicTransportationCost
             numberOfTravellers = myTrip!.numberOfTravellers
             if let activitiesCostAccepted = activitiesCostAccepted, let numberOfTravellers = numberOfTravellers{
                 activitiesCost = activitiesCostAccepted * numberOfTravellers
+                totalCost = totalCost! + activitiesCost!
             } else {
                 activitiesCost = 0.0
             }
