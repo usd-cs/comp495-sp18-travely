@@ -27,6 +27,7 @@
 		BB2BD4D7207C5D5800B4F9F1 /* ActivityDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2BD4D6207C5D5800B4F9F1 /* ActivityDetailsViewController.swift */; };
 		BB46C84C208D6DF60041C85D /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB46C84B208D6DF60041C85D /* SettingsTableViewController.swift */; };
 		BBAE6CEA20830DC20053E1DE /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAE6CE920830DC20053E1DE /* ActivityTableViewCell.swift */; };
+		BBC0486C208D765B002CB0E7 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC0486B208D765B002CB0E7 /* Settings.swift */; };
 		C965E500206095F0003EA5F1 /* countryEtiquette.txt in Resources */ = {isa = PBXBuildFile; fileRef = C965E4FF206095EF003EA5F1 /* countryEtiquette.txt */; };
 		C965E50220617130003EA5F1 /* SavedTripDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C965E50120617130003EA5F1 /* SavedTripDetailsViewController.swift */; };
 		C9FDC45D20754E3300D72720 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FDC45C20754E3200D72720 /* Activities.swift */; };
@@ -56,6 +57,7 @@
 		BB2BD4D6207C5D5800B4F9F1 /* ActivityDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailsViewController.swift; sourceTree = "<group>"; };
 		BB46C84B208D6DF60041C85D /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		BBAE6CE920830DC20053E1DE /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
+		BBC0486B208D765B002CB0E7 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		C965E4FF206095EF003EA5F1 /* countryEtiquette.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = countryEtiquette.txt; sourceTree = "<group>"; };
 		C965E50120617130003EA5F1 /* SavedTripDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTripDetailsViewController.swift; sourceTree = "<group>"; };
 		C9FDC45C20754E3200D72720 /* Activities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				636ECEEB2058E35C00F668F2 /* Info.plist */,
 				636ECEF52058E36B00F668F2 /* LaunchScreen.storyboard */,
 				636ECEF72058E36B00F668F2 /* Main.storyboard */,
+				BBC0486B208D765B002CB0E7 /* Settings.swift */,
 				636ECEE92058E35C00F668F2 /* AppDelegate.swift */,
 				2B7B2C98206EBA020095B8D2 /* Constants.swift */,
 				636ECEE72058E35C00F668F2 /* Assets.xcassets */,
@@ -298,6 +301,7 @@
 				636ECEF22058E35C00F668F2 /* AboutViewController.swift in Sources */,
 				BB2BD4A7207457F800B4F9F1 /* Hotels.swift in Sources */,
 				2B7B2C99206EBA020095B8D2 /* Constants.swift in Sources */,
+				BBC0486C208D765B002CB0E7 /* Settings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
