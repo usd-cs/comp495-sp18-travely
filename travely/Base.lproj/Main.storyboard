@@ -993,6 +993,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="gYT-lx-qXq"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="QVk-TH-m0o">
                             <connections>
+                                <action selector="saveButtonPressed:" destination="PQZ-HX-sJ3" id="bvw-iP-V9o"/>
                                 <segue destination="Md3-VB-MOg" kind="unwind" identifier="saveInSettingsViewControllerSegue" unwindAction="unwindToNewTripViewControllerWithUnwindSegue:" id="sRa-B6-tLG"/>
                             </connections>
                         </barButtonItem>
