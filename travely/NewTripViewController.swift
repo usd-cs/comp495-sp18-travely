@@ -183,7 +183,7 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
             print("Unwind from loading screen view controller error")
             return
         }
-        var loadWasTimeout = sourceViewController.wasTimeout
+        let loadWasTimeout = sourceViewController.wasTimeout
         if loadWasTimeout == false {
             myTrip = sourceViewController.newTrip
             

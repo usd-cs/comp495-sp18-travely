@@ -17,7 +17,7 @@ class ActivitiesTabTableViewController: UITableViewController, ActivityCellDeleg
     
     func checkmarkTapped(sender: ActivityTableViewCell) {
         if let indexPath = tableView.indexPath(for: sender){
-            var index = indexPath.section * 3 + indexPath.row
+            let index = indexPath.section * 3 + indexPath.row
             selectedArray[index] = !selectedArray[index]
             
             guard let activities = activities else {
@@ -35,8 +35,6 @@ class ActivitiesTabTableViewController: UITableViewController, ActivityCellDeleg
                 dataSource = activities.nightlifeActivities[indexPath.row]
             default:
                 fatalError("Error configuring cell in Activities Tab")
-                return
-                
             }
             if selectedArray[index]{
                 if let price = Double(dataSource["price"]!){
@@ -155,7 +153,7 @@ class ActivitiesTabTableViewController: UITableViewController, ActivityCellDeleg
             cell.priceLabel?.text = "???"
         }
         
-        var index = indexPath.section * 3 + indexPath.row
+        let index = indexPath.section * 3 + indexPath.row
         if selectedArray[index]{
             let image = UIImage(named: "Checked")
             cell.checkedButton.setBackgroundImage(image, for: .normal)
