@@ -282,7 +282,8 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     }
     
     @IBAction func unwindToNewTripViewController(unwindSegue: UIStoryboardSegue) {
-        prin("test")
+        print("test")
+        
     }
 }
 

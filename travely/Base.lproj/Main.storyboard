@@ -264,7 +264,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Activities Prefference" id="kpG-Yp-UQ0">
+                            <tableViewSection headerTitle="Activities Preference" id="kpG-Yp-UQ0">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="MKf-Li-jUc">
                                         <rect key="frame" x="0.0" y="199.5" width="375" height="44"/>
