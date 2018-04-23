@@ -12,10 +12,53 @@ class SettingsTableViewController: UITableViewController {
     
     var mySettings: Settings?
     
+    @IBAction func budgetTextFieldValueChanged(_ sender: UITextField) {
+        if let budget = Double(budgetTextField.text ?? "0"){
+            budgetTextField.text = String(budget)
+        } else {
+            //display alert to user
+            let alertController = UIAlertController(title: "Invalid Budget:", message: "Budget must be a number", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Ok.", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+            budgetTextField.text = "0"
+        }
+    }
+    @IBAction func budgetTextPrimary(_ sender: UITextField) {
+        if let budget = Double(budgetTextField.text ?? "0"){
+            budgetTextField.text = String(budget)
+        } else {
+            //display alert to user
+            let alertController = UIAlertController(title: "Invalid Budget:", message: "Budget must be a number", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Ok.", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+            budgetTextField.text = "0"
+        }
+    }
+    @IBAction func budgetTextldPrimaryAction(_ sender: UITextField) {
+        if let budget = Double(budgetTextField.text ?? "0"){
+            budgetTextField.text = String(budget)
+        } else {
+            //display alert to user
+            let alertController = UIAlertController(title: "Invalid Budget:", message: "Budget must be a number", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Ok.", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+            budgetTextField.text = "0"
+        }
+    }
+    
     /*
      * This function saves data from settings page to mySettings object
      */
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        mySettings!.budgetSet = budgetSwitch.isOn
+        if mySettings!.budgetSet{
+            if let budget = Double(budgetTextField.text ?? "0"){
+                mySettings!.budgetAmount = budget
+            } else {
+                mySettings!.budgetAmount = 0
+            }
+        }
+        performSegue(withIdentifier: "saveSettingsSegue", sender: self)
     }
     
     @IBOutlet weak var budgetSwitch: UISwitch!
@@ -33,6 +76,12 @@ class SettingsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        guard mySettings != nil else{
+            fatalError("Didnt recieve mySettings object in SettingsTableViewController")
+        }
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(SettingsTableViewController.saveButtonPressed(_:)))
+        
         assignInitialValues()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -50,7 +99,22 @@ class SettingsTableViewController: UITableViewController {
      * This function sets up the initial setting view based on accepted Settings Object
      */
     func assignInitialValues(){
-    
+        //TODO: team, extract your values here\
+        
+        //budget section
+        budgetSwitch.isOn = mySettings!.budgetSet
+        let currBudget: String = String(describing: mySettings?.budgetAmount)
+        if currBudget != "nil" {
+            budgetTextField.text = currBudget
+        } else {
+            budgetTextField.text = "0"
+        }
+        
+        if budgetSwitch.isOn{
+            budgetAmountCell.isHidden = false
+        } else {
+            budgetAmountCell.isHidden = true
+        }
     }
     
     // MARK: - Table view data source
