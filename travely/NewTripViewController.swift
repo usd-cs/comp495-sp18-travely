@@ -104,7 +104,7 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         
         //create empty settings if they are not created yet
         if mySettings == nil{
-            mySettings = Settings(budgetSet: false, budgetAmount: nil, hotelRaiting: nil, amenitiesPrefferenceSelected: [], activitiesPrefferenceSelected[])
+            mySettings = Settings(budgetSet: false, budgetAmount: nil, hotelRaiting: nil, amenitiesPrefferenceSelected: [], activitiesPrefferenceSelected: [])
         }
         
         self.numTravellersPicker.dataSource = self;
@@ -233,22 +233,25 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         //Validating user input before button action
         //Get time values and change format of dates
-        let current_date = Date()
-        let departure_date = departureDatePicker.date
-        let return_date = returnDatePicker.date
+        if identifier == "toSettingsSegue" {
+            return true
+        } else {
+            let current_date = Date()
+            let departure_date = departureDatePicker.date
+            let return_date = returnDatePicker.date
         
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        let departure_date_str: String = formatter.string(from: departure_date)
-        let return_date_str: String = formatter.string(from: return_date)
-        let current_date_str: String = formatter.string(from: current_date)
-        
-        //check that user picked a country, correct dates, etc
-        if !validateOriginDestinationPickers(origin: originPlacePicked, destination: destinationPlacePicked) ||
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd"
+            let departure_date_str: String = formatter.string(from: departure_date)
+            let return_date_str: String = formatter.string(from: return_date)
+            let current_date_str: String = formatter.string(from: current_date)
+            
+            //check that user picked a country, correct dates, etc
+            if !validateOriginDestinationPickers(origin: originPlacePicked, destination: destinationPlacePicked) ||
             !validateDepartureReturnDatePickers(departureDate: departure_date_str, returnDate: return_date_str, currentDate: current_date_str){
-            return false
+                return false
+            }
         }
-        
         return true
     }
     
