@@ -9,7 +9,21 @@
 import UIKit
 
 class SettingsTableViewController: UITableViewController {
+    
+    var mySettings: Settings?
 
+    @IBOutlet weak var budgetSwitch: UISwitch!
+    @IBOutlet weak var budgetTextField: UITextField!
+    @IBOutlet weak var budgetAmountCell: UITableViewCell!
+    
+    @IBAction func budgetSwitchPressed(_ sender: UISwitch) {
+        if budgetSwitch.isOn{
+            budgetAmountCell.isHidden = false
+        } else {
+            budgetAmountCell.isHidden = true
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
