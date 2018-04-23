@@ -201,7 +201,7 @@
         <!--Settings-->
         <scene sceneID="1Bg-04-4R9">
             <objects>
-                <tableViewController id="PQZ-HX-sJ3" sceneMemberID="viewController">
+                <tableViewController id="PQZ-HX-sJ3" customClass="SettingsTableViewController" customModule="travely" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="nOB-9q-jQq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -356,10 +356,15 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="jTv-Ym-NYN">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="gYT-lx-qXq"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="QVk-TH-m0o"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="QVk-TH-m0o">
+                            <connections>
+                                <segue destination="Md3-VB-MOg" kind="unwind" identifier="saveInSettingsViewControllerSegue" unwindAction="unwindToNewTripViewControllerWithUnwindSegue:" id="sRa-B6-tLG"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="67r-M6-Jga" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Md3-VB-MOg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-327" y="902"/>
         </scene>

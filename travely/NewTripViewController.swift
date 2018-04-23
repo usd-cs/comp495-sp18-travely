@@ -280,5 +280,9 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         destinationVC.numDays = diffInDays!
         destinationVC.reportRunDate = current_date_str
     }
+    
+    @IBAction func unwindToNewTripViewController(unwindSegue: UIStoryboardSegue) {
+        prin("test")
+    }
 }
 
