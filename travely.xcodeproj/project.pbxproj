@@ -25,6 +25,7 @@
 		BB2BD4A92074580600B4F9F1 /* Airfairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2BD4A82074580600B4F9F1 /* Airfairs.swift */; };
 		BB2BD4D520754B3200B4F9F1 /* ActivitiesTabTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2BD4D420754B3200B4F9F1 /* ActivitiesTabTableViewController.swift */; };
 		BB2BD4D7207C5D5800B4F9F1 /* ActivityDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2BD4D6207C5D5800B4F9F1 /* ActivityDetailsViewController.swift */; };
+		BB46C84C208D6DF60041C85D /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB46C84B208D6DF60041C85D /* SettingsTableViewController.swift */; };
 		BBAE6CEA20830DC20053E1DE /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAE6CE920830DC20053E1DE /* ActivityTableViewCell.swift */; };
 		C965E500206095F0003EA5F1 /* countryEtiquette.txt in Resources */ = {isa = PBXBuildFile; fileRef = C965E4FF206095EF003EA5F1 /* countryEtiquette.txt */; };
 		C965E50220617130003EA5F1 /* SavedTripDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C965E50120617130003EA5F1 /* SavedTripDetailsViewController.swift */; };
@@ -53,6 +54,7 @@
 		BB2BD4A82074580600B4F9F1 /* Airfairs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airfairs.swift; sourceTree = "<group>"; };
 		BB2BD4D420754B3200B4F9F1 /* ActivitiesTabTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesTabTableViewController.swift; sourceTree = "<group>"; };
 		BB2BD4D6207C5D5800B4F9F1 /* ActivityDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailsViewController.swift; sourceTree = "<group>"; };
+		BB46C84B208D6DF60041C85D /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		BBAE6CE920830DC20053E1DE /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		C965E4FF206095EF003EA5F1 /* countryEtiquette.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = countryEtiquette.txt; sourceTree = "<group>"; };
 		C965E50120617130003EA5F1 /* SavedTripDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTripDetailsViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				2B7B2C98206EBA020095B8D2 /* Constants.swift */,
 				636ECEE72058E35C00F668F2 /* Assets.xcassets */,
 				636ECEE62058E35C00F668F2 /* NewTripViewController.swift */,
+				BB46C84B208D6DF60041C85D /* SettingsTableViewController.swift */,
 				6365824C207ABC0600056469 /* LoadingScreenViewController.swift */,
 				BB2BD4D420754B3200B4F9F1 /* ActivitiesTabTableViewController.swift */,
 				BB2BD4D6207C5D5800B4F9F1 /* ActivityDetailsViewController.swift */,
@@ -285,6 +288,7 @@
 				6369F0B52073099900BD3A13 /* MyTripsTableViewCell.swift in Sources */,
 				BB2BD4D520754B3200B4F9F1 /* ActivitiesTabTableViewController.swift in Sources */,
 				C9FDC45D20754E3300D72720 /* Activities.swift in Sources */,
+				BB46C84C208D6DF60041C85D /* SettingsTableViewController.swift in Sources */,
 				BB2BD4D7207C5D5800B4F9F1 /* ActivityDetailsViewController.swift in Sources */,
 				BB2BD4A92074580600B4F9F1 /* Airfairs.swift in Sources */,
 				636ECEEE2058E35C00F668F2 /* NewTripViewController.swift in Sources */,
@@ -433,9 +437,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SH2HV3NZE5;
 				INFOPLIST_FILE = travely/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.comp495.travely;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.comp495.trave.ly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -450,9 +455,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SH2HV3NZE5;
 				INFOPLIST_FILE = travely/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.comp495.travely;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.sandiego.comp495.trave.ly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
