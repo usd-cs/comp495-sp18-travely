@@ -10,9 +10,9 @@ import Foundation
 
 struct Settings: Codable{
     var budgetSet: Bool
-    var budgetAmount: Double
+    var budgetAmount: Double?
     
-    var hotelRaiting: Int
+    var hotelRaiting: Int?
     
     var amenitiesPrefferenceSelected: [String]
     var activitiesPrefferenceSelected: [String]
