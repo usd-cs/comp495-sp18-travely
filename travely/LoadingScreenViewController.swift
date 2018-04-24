@@ -19,7 +19,6 @@ class LoadingScreenViewController: UIViewController {
     var numTravellers = ""
     var numDays = 0
     var reportRunDate = ""
-    //DUMMY DATA WILL CHANGE LATER
     var preferredHotelRating: Int?
     
     //Used for Amadeus Flights and hotels API method: getFlightMinCost, global variables used for getting data out of completion handler
@@ -48,7 +47,8 @@ class LoadingScreenViewController: UIViewController {
     var newTrip: Trip?
     
     override func viewDidAppear(_ animated: Bool) {
-        //preferredHotelRating = 3
+        //This line is to test the hotel rating functionality
+        preferredHotelRating = 3
         
         //Perform this all on separate thread from main thread so loading screen functions properly
         DispatchQueue.global(qos: .utility).async {
