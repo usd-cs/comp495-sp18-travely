@@ -19,6 +19,7 @@ class LoadingScreenViewController: UIViewController {
     var numTravellers = ""
     var numDays = 0
     var reportRunDate = ""
+    var preferredHotelRating: Int?
     
     //Used for Amadeus Flights and hotels API method: getFlightMinCost, global variables used for getting data out of completion handler
     var flightcall_done = false
@@ -46,6 +47,9 @@ class LoadingScreenViewController: UIViewController {
     var newTrip: Trip?
     
     override func viewDidAppear(_ animated: Bool) {
+        //This line is to test the hotel rating functionality
+        preferredHotelRating = 3
+        
         //Perform this all on separate thread from main thread so loading screen functions properly
         DispatchQueue.global(qos: .utility).async {
             
@@ -284,6 +288,7 @@ class LoadingScreenViewController: UIViewController {
      */
     func calculateMinCostFromAmadeusFlightsResponse(amadeusResponse json: [String: AnyObject]?) -> Double{
         var currMin: Double = 999999
+        //print(json)
         // do nester retrieve-casting to get all the prices
         if let json = json{
             if let results = json["results"]{
@@ -403,25 +408,68 @@ class LoadingScreenViewController: UIViewController {
      */
     func calculateMinCostFromAmadeusHotelResponse(amadeusResponse json: [String: AnyObject]?) -> Double{
         var currMin: Double = 999999
-        
-        // do nester retrieve-casting to get all the prices
-        if let json = json{
-            if let results = json["results"]{
-                for result in results as! [AnyObject]{
-                    if let currPriceObject = result["total_price"] as? [String: Any]{
-                        if let currPrice = currPriceObject["amount"] as? String{
-                            if let currPriceInt = Double(currPrice){
-                                if currPriceInt < currMin{
-                                    currMin = currPriceInt
+        var ratingMatch = false
+        //If user entered a hotel rating, search for the lowest prices among hotels with matching ratings
+        if let hotelRating = preferredHotelRating {
+            if let json = json{
+                if let results = json["results"]{
+                    for result in results as! [AnyObject]{
+                        if let hotelAwards = result["awards"] {
+                            //Reset to false for every hotel
+                            ratingMatch = false
+                            //Go through the hotel's ratings to see if it matches the user input
+                            for award in hotelAwards as! [AnyObject] {
+                                if let hotelRating = award["rating"] as? String {
+                                    if let currentRating = Int(hotelRating) {
+                                        if currentRating == preferredHotelRating {
+                                            ratingMatch = true
+                                            print("CURRENT HOTEL'S RATING = ")
+                                            print(currentRating)
+                                        }
+                                    }
+                                }
+                            }
+                            //
+                            if ratingMatch {
+                                if let currPriceObject = result["total_price"] as? [String: Any] {
+                                    if let currPrice = currPriceObject["amount"] as? String{
+                                        if let currPriceInt = Double(currPrice) {
+                                            print("CURRENT PRICE")
+                                            print(currPriceInt)
+                                            if currPriceInt < currMin {
+                                                currMin = currPriceInt
+                                                print("NEW MINIMUM")
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
-                        
                     }
                 }
             }
         }
-        
+        //If user didn't enter a hotel rating, search for the lowest price among all hotels
+        else {
+            if let json = json{
+                if let results = json["results"]{
+                    for result in results as! [AnyObject]{
+                        if let currPriceObject = result["total_price"] as? [String: Any]{
+                            if let currPrice = currPriceObject["amount"] as? String{
+                                if let currPriceInt = Double(currPrice){
+                                    print("CURRENT PRICE")
+                                    print(currPriceInt)
+                                    if currPriceInt < currMin{
+                                        currMin = currPriceInt
+                                        print("^ NEW MINIMUM")
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
         //check for problem
         if currMin == 999999{
             return  -1
@@ -429,3 +477,5 @@ class LoadingScreenViewController: UIViewController {
         return currMin
     }
 }
+
+
