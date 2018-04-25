@@ -12,6 +12,22 @@ class SettingsTableViewController: UITableViewController {
     
     var mySettings: Settings?
     
+    @IBOutlet var ratingButtons: [UIButton]!
+    
+    @IBAction func ratingSelected(_ sender: UIButton) {
+        let tag = sender.tag
+        //iterate through each star button
+        for button in ratingButtons{
+            //fill the star if it is less than selected star
+            if button.tag <= tag{
+                button.setTitle("★", for: .normal)
+            }
+            else{
+                button.setTitle("☆", for: .normal)
+            }
+        }
+    }
+    
     /*
      * This function saves data from settings page to mySettings object
      */
