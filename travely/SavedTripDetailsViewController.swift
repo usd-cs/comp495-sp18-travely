@@ -52,6 +52,8 @@ class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControl
     @IBOutlet weak var foodCostLabel: UILabel!
     //Outlet for activities cost
     @IBOutlet weak var activitiesCostLabel: UILabel!
+    //Outlet for the hotel rating
+    @IBOutlet weak var hotelRatingLabel: UILabel!
     
     
     override func viewDidLoad() {

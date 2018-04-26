@@ -20,6 +20,7 @@ class CostViewController: UIViewController {
     @IBOutlet weak var publicTranportationLabel: UILabel!
     @IBOutlet weak var activitiesCostLabel: UILabel!
     @IBOutlet weak var foodCostLabel: UILabel!
+    @IBOutlet weak var hotelRatingLabel: UILabel!
     
     var minFlightCost: Double?
     var minHotelCost: Double?
