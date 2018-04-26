@@ -296,9 +296,10 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         }
     }
     
-    @IBAction func unwindToNewTripViewController(unwindSegue: UIStoryboardSegue) {
-        print("test")
-        
+    @IBAction func unwindToNewTripViewController(segue: UIStoryboardSegue) {
+        guard let source = segue.source as? SettingsTableViewController,
+            let mySettings = source.mySettings else { return }
+        //TODO: add mySettings to myTrip and implement its saving
     }
 }
 

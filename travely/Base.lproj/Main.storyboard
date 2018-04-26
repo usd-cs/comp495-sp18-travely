@@ -255,6 +255,10 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="budgetTextFieldValueChanged:" destination="PQZ-HX-sJ3" eventType="valueChanged" id="xmF-RO-bfP"/>
+                                                        <action selector="budgetTextPrimary:" destination="PQZ-HX-sJ3" eventType="primaryActionTriggered" id="6fs-xv-DmK"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -269,7 +273,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Activities Preference" id="kpG-Yp-UQ0">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="MKf-Li-jUc">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="MKf-Li-jUc">
                                         <rect key="frame" x="0.0" y="199.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MKf-Li-jUc" id="3eU-U6-Cxs">
@@ -693,11 +697,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="jTv-Ym-NYN">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="gYT-lx-qXq"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="gYT-lx-qXq">
+                            <connections>
+                                <segue destination="Md3-VB-MOg" kind="unwind" identifier="cancelSettingsSegue" unwindAction="unwindToNewTripViewControllerWithSegue:" id="Mvv-hW-NAW"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="QVk-TH-m0o">
                             <connections>
-                                <action selector="saveButtonPressed:" destination="PQZ-HX-sJ3" id="bvw-iP-V9o"/>
-                                <segue destination="Md3-VB-MOg" kind="unwind" identifier="saveInSettingsViewControllerSegue" unwindAction="unwindToNewTripViewControllerWithUnwindSegue:" id="sRa-B6-tLG"/>
+                                <action selector="saveButtonPressed:" destination="PQZ-HX-sJ3" id="vxB-1n-SOQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -705,6 +712,7 @@
                         <outlet property="budgetAmountCell" destination="Fpf-dp-DoY" id="pki-kq-7Dw"/>
                         <outlet property="budgetSwitch" destination="eVa-7t-lUI" id="45K-M7-Pqc"/>
                         <outlet property="budgetTextField" destination="Omp-Rr-GWP" id="6fD-zd-EpE"/>
+                        <segue destination="Md3-VB-MOg" kind="unwind" identifier="saveSettingsSegue" unwindAction="unwindToNewTripViewControllerWithSegue:" id="J5j-P8-B74"/>
                         <outletCollection property="ratingButtons" destination="bIj-np-oaq" collectionClass="NSMutableArray" id="h4g-B4-n6J"/>
                         <outletCollection property="ratingButtons" destination="Gnv-5t-gKn" collectionClass="NSMutableArray" id="3pF-Wy-rex"/>
                         <outletCollection property="ratingButtons" destination="Z8u-ZA-jHR" collectionClass="NSMutableArray" id="3sX-Iz-tCy"/>
