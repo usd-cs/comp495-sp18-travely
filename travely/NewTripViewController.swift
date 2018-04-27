@@ -197,12 +197,6 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
             let myCostTab = self.tabBarController?.viewControllers![2] as! CostViewController
             myCostTab.myTrip = myTrip
             
-            //Pass myTrip variable to MyTrips tab
-            let myTripsTab = self.tabBarController?.viewControllers![3].childViewControllers[0] as! MyTripsTableViewController
-            myTripsTab.trips += [myTrip!]
-            myTripsTab.saveTrips()
-
-            
             //Pass data to aboutTab
             /*
             let aboutTab = self.tabBarController?.viewControllers![3] as! AboutViewController

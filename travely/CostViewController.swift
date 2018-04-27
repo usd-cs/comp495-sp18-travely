@@ -30,6 +30,12 @@ class CostViewController: UIViewController {
     var numberOfTravellers: Double?
     var totalTransportationCost: Double?
     
+    @IBAction func saveButtonPressed(_ sender: UIButton) {
+        let myTripsTab = self.tabBarController?.viewControllers![3].childViewControllers[0] as! MyTripsTableViewController
+        myTripsTab.trips += [myTrip!]
+        myTripsTab.saveTrips()
+    }
+    
     //This function is called everytime the cost tab is visible
     override func viewWillAppear(_ animated: Bool) {
         if myTrip == nil {
