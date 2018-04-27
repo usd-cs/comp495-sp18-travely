@@ -21,6 +21,8 @@ class CostViewController: UIViewController {
     @IBOutlet weak var activitiesCostLabel: UILabel!
     @IBOutlet weak var foodCostLabel: UILabel!
     
+    @IBOutlet weak var saveButton: UIButton!
+    
     var minFlightCost: Double?
     var minHotelCost: Double?
     var totalCost: Double?
@@ -47,9 +49,10 @@ class CostViewController: UIViewController {
             publicTransportationCost = 0
             numberOfTravellers = 0
             totalTransportationCost = 0
-            
+            saveButton.isHidden = true
             zeroPrices()
         } else {
+            saveButton.isHidden = false
             minFlightCost = myTrip!.tripAirfareCost
             minHotelCost = myTrip!.tripHotelCost
             totalCost = myTrip!.tripTotalCost

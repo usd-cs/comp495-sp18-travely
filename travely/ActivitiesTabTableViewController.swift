@@ -40,14 +40,18 @@ class ActivitiesTabTableViewController: UITableViewController, ActivityCellDeleg
                 if let price = Double(dataSource["price"]!){
                     totalCost += price
                 }
+                activities.addActivity(name: dataSource["name"]!, price: dataSource["price"]!)
             } else {
                 if let price = Double(dataSource["price"]!){
                     totalCost -= price
                 }
+                activities.removeActivity(name: dataSource["name"]!)
             }
-            print("checkmarkTapped : \(totalCost)")
+            print("checkmarkTapped : \(totalCost) , \(activities.totalPrice)")
+            
             let myCostTab = self.tabBarController?.viewControllers![2] as! CostViewController
             myCostTab.activitiesCostAccepted = totalCost
+            
             tableView.reloadRows(at: [indexPath], with: .automatic)
         }
         

@@ -77,10 +77,32 @@ class Activities{
     var culturalActivities: [[String : String]]
     var outdoorsActivities: [[String : String]]
     var nightlifeActivities: [[String : String]]
+    var selectedActivities: [Activity]
+    var totalPrice: Double{
+        var total: Double = 0
+        for i in self.selectedActivities{
+            total += i.price
+        }
+        return total
+    }
     
     init(cityName: String) {
+        self.selectedActivities = []
         self.culturalActivities = Activities.activitiesData[cityName]!["cultural"]!
         self.outdoorsActivities = Activities.activitiesData[cityName]!["outdoors"]!
         self.nightlifeActivities = Activities.activitiesData[cityName]!["nightlife"]!
+    }
+    
+    func addActivity(name: String, price priceStr: String){
+        var price: Double = 0
+        if let doublePrice = Double(priceStr){
+            price += doublePrice
+        }
+        let currActivity = Activity(name: name, price: price, description: nil, imageName: nil)
+        self.selectedActivities.append(currActivity)
+    }
+    
+    func removeActivity(name: String){
+        self.selectedActivities = selectedActivities.filter { $0.name != name }
     }
 }

@@ -34,7 +34,6 @@ class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControl
     //Outlet for the view country information button
     @IBAction func viewCountryInformation(_ sender: Any) {
         
-        
     }
     //Outlet for the origin location
     @IBOutlet weak var originLocation: UILabel!
