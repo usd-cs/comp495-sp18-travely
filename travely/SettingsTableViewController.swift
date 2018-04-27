@@ -12,6 +12,18 @@ class SettingsTableViewController: UITableViewController {
     
     var mySettings: Settings?
     
+    //Amenity Connections
+    @IBOutlet weak var babySittingAmenity: UISwitch!
+    @IBOutlet weak var banquetAmenity: UISwitch!
+    @IBOutlet weak var coffeeShopAmenity: UISwitch!
+    @IBOutlet weak var conciergeAmenity: UISwitch!
+    @IBOutlet weak var freeInternetAmenity: UISwitch!
+    @IBOutlet weak var gymAmenity: UISwitch!
+    @IBOutlet weak var jacuzziAmenity: UISwitch!
+    @IBOutlet weak var laundryServiceAmenity: UISwitch!
+    @IBOutlet weak var poolAmenity: UISwitch!
+    @IBOutlet weak var restaurantAmenity: UISwitch!
+    
     @IBAction func budgetTextFieldValueChanged(_ sender: UITextField) {
         if let budget = Double(budgetTextField.text ?? "0"){
             budgetTextField.text = String(budget)
@@ -74,7 +86,22 @@ class SettingsTableViewController: UITableViewController {
                 mySettings!.budgetAmount = 0
             }
         }
+        
+        
+        //Create Amenities variable to store in Settings object
+        mySettings?.amenitiesPrefferenceSelected = generateAmenitiesData()
+    
         performSegue(withIdentifier: "saveSettingsSegue", sender: self)
+    }
+    
+    func generateAmenitiesData() -> [String] {
+        var my_amenities = [String]()
+        
+        if babySittingAmenity.isOn == true {
+            my_amenities.append("BABY_SITTING")
+        }
+        
+        return my_amenities
     }
     
     @IBOutlet weak var budgetSwitch: UISwitch!
@@ -86,6 +113,15 @@ class SettingsTableViewController: UITableViewController {
             budgetAmountCell.isHidden = false
         } else {
             budgetAmountCell.isHidden = true
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //If there is a settings variable then set values in page to previously selected values
+        if mySettings != nil {
+            if (mySettings?.amenitiesPrefferenceSelected.contains("BABY_SITTING"))! {
+                babySittingAmenity.setOn(true, animated: true)
+            }
         }
     }
     
