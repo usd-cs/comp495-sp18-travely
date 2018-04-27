@@ -712,8 +712,8 @@
                         <outlet property="coffeeShopAmenity" destination="Hak-SS-5xK" id="eGe-zL-t0B"/>
                         <outlet property="conciergeAmenity" destination="II4-Ki-fBO" id="dlI-5T-NfS"/>
                         <outlet property="freeInternetAmenity" destination="m6I-dv-MVB" id="BJf-4R-mrO"/>
-                        <outlet property="gymAmenity" destination="EJx-ZS-hke" id="nbX-rf-KE2"/>
-                        <outlet property="jacuzziAmenity" destination="EJx-ZS-hke" id="hlP-DJ-wpg"/>
+                        <outlet property="gymAmenity" destination="gMZ-yi-kKK" id="cFU-jx-S9s"/>
+                        <outlet property="jacuzziAmenity" destination="EJx-ZS-hke" id="Nak-GG-DUA"/>
                         <outlet property="laundryServiceAmenity" destination="Dzy-5r-xxi" id="bRe-6W-DL0"/>
                         <outlet property="poolAmenity" destination="kf7-AR-Wao" id="p5m-1x-N5l"/>
                         <outlet property="restaurantAmenity" destination="ZJb-CP-tE3" id="1ZQ-0T-rQa"/>

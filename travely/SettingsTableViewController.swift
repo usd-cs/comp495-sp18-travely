@@ -94,11 +94,48 @@ class SettingsTableViewController: UITableViewController {
         performSegue(withIdentifier: "saveSettingsSegue", sender: self)
     }
     
+    //This function retrieves amenities picked by user. Called when save button is pressed in Settings screen
     func generateAmenitiesData() -> [String] {
         var my_amenities = [String]()
         
         if babySittingAmenity.isOn == true {
             my_amenities.append("BABY_SITTING")
+        }
+        
+        if banquetAmenity.isOn == true {
+            my_amenities.append("BANQUET_FACILITIES")
+        }
+        
+        if coffeeShopAmenity.isOn == true {
+            my_amenities.append("COFFEE_SHOP")
+        }
+        
+        if conciergeAmenity.isOn == true {
+            my_amenities.append("CONCIERGE_DESK")
+        }
+        
+        if freeInternetAmenity.isOn == true {
+            my_amenities.append("FREE_HIGH_SPEED_INTERNET")
+        }
+        
+        if gymAmenity.isOn == true {
+            my_amenities.append("GYM")
+        }
+        
+        if jacuzziAmenity.isOn == true {
+            my_amenities.append("JACUZZI")
+        }
+        
+        if laundryServiceAmenity.isOn == true {
+            my_amenities.append("LAUNDRY_SERVICE")
+        }
+        
+        if poolAmenity.isOn == true {
+            my_amenities.append("POOL")
+        }
+        
+        if restaurantAmenity.isOn == true {
+            my_amenities.append("RESTAURANT")
         }
         
         return my_amenities
@@ -119,9 +156,51 @@ class SettingsTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         //If there is a settings variable then set values in page to previously selected values
         if mySettings != nil {
-            if (mySettings?.amenitiesPrefferenceSelected.contains("BABY_SITTING"))! {
-                babySittingAmenity.setOn(true, animated: true)
-            }
+            //Set values of amenities so they are displayed on screen
+            setAmenities()
+        }
+    }
+    
+    //This function sets amenities on screen
+    func setAmenities() {
+        if (mySettings?.amenitiesPrefferenceSelected.contains("BABY_SITTING"))! {
+            babySittingAmenity.setOn(true, animated: true)
+        }
+        
+        if (mySettings?.amenitiesPrefferenceSelected.contains("BANQUET_FACILITIES"))! {
+            banquetAmenity.setOn(true, animated: true)
+        }
+        
+        if (mySettings?.amenitiesPrefferenceSelected.contains("COFFEE_SHOP"))! {
+            coffeeShopAmenity.setOn(true, animated: true)
+        }
+        
+        if (mySettings?.amenitiesPrefferenceSelected.contains("CONCIERGE_DESK"))! {
+            conciergeAmenity.setOn(true, animated: true)
+        }
+        
+        if (mySettings?.amenitiesPrefferenceSelected.contains("FREE_HIGH_SPEED_INTERNET"))! {
+            freeInternetAmenity.setOn(true, animated: true)
+        }
+        
+        if (mySettings?.amenitiesPrefferenceSelected.contains("GYM"))! {
+            gymAmenity.setOn(true, animated: true)
+        }
+        
+        if (mySettings?.amenitiesPrefferenceSelected.contains("JACUZZI"))! {
+            jacuzziAmenity.setOn(true, animated: true)
+        }
+        
+        if (mySettings?.amenitiesPrefferenceSelected.contains("LAUNDRY_SERVICE"))! {
+            laundryServiceAmenity.setOn(true, animated: true)
+        }
+        
+        if (mySettings?.amenitiesPrefferenceSelected.contains("POOL"))! {
+            poolAmenity.setOn(true, animated: true)
+        }
+        
+        if (mySettings?.amenitiesPrefferenceSelected.contains("RESTAURANT"))! {
+            restaurantAmenity.setOn(true, animated: true)
         }
     }
     
