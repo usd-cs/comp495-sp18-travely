@@ -21,6 +21,8 @@ class CostViewController: UIViewController {
     @IBOutlet weak var activitiesCostLabel: UILabel!
     @IBOutlet weak var foodCostLabel: UILabel!
     
+    @IBOutlet weak var saveButton: UIButton!
+    
     var minFlightCost: Double?
     var minHotelCost: Double?
     var totalCost: Double?
@@ -29,6 +31,12 @@ class CostViewController: UIViewController {
     var publicTransportationCost: Double?
     var numberOfTravellers: Double?
     var totalTransportationCost: Double?
+    
+    @IBAction func saveButtonPressed(_ sender: UIButton) {
+        let myTripsTab = self.tabBarController?.viewControllers![3].childViewControllers[0] as! MyTripsTableViewController
+        myTripsTab.trips += [myTrip!]
+        myTripsTab.saveTrips()
+    }
     
     //This function is called everytime the cost tab is visible
     override func viewWillAppear(_ animated: Bool) {
@@ -41,9 +49,10 @@ class CostViewController: UIViewController {
             publicTransportationCost = 0
             numberOfTravellers = 0
             totalTransportationCost = 0
-            
+            saveButton.isHidden = true
             zeroPrices()
         } else {
+            saveButton.isHidden = false
             minFlightCost = myTrip!.tripAirfareCost
             minHotelCost = myTrip!.tripHotelCost
             totalCost = myTrip!.tripTotalCost

@@ -712,12 +712,12 @@
                         <outlet property="budgetAmountCell" destination="Fpf-dp-DoY" id="pki-kq-7Dw"/>
                         <outlet property="budgetSwitch" destination="eVa-7t-lUI" id="45K-M7-Pqc"/>
                         <outlet property="budgetTextField" destination="Omp-Rr-GWP" id="6fD-zd-EpE"/>
-                        <segue destination="Md3-VB-MOg" kind="unwind" identifier="saveSettingsSegue" unwindAction="unwindToNewTripViewControllerWithSegue:" id="J5j-P8-B74"/>
                         <outletCollection property="ratingButtons" destination="bIj-np-oaq" collectionClass="NSMutableArray" id="h4g-B4-n6J"/>
                         <outletCollection property="ratingButtons" destination="Gnv-5t-gKn" collectionClass="NSMutableArray" id="3pF-Wy-rex"/>
                         <outletCollection property="ratingButtons" destination="Z8u-ZA-jHR" collectionClass="NSMutableArray" id="3sX-Iz-tCy"/>
                         <outletCollection property="ratingButtons" destination="X8k-B6-Enz" collectionClass="NSMutableArray" id="dbS-wj-p9Y"/>
                         <outletCollection property="ratingButtons" destination="V50-U7-27d" collectionClass="NSMutableArray" id="Mkn-DY-lQt"/>
+                        <segue destination="Md3-VB-MOg" kind="unwind" identifier="saveSettingsSegue" unwindAction="unwindToNewTripViewControllerWithSegue:" id="J5j-P8-B74"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="67r-M6-Jga" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -936,13 +936,27 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRa-zM-8MM">
+                                <rect key="frame" x="159" y="423" width="57" height="40"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="23"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.29586714506149292" green="0.55742812156677246" blue="0.76086711883544922" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" red="1" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="Jah-G3-M7C" eventType="touchUpInside" id="adF-Nx-HXE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.69059324264526367" green="0.87349033355712891" blue="0.94513225555419922" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="TDg-mv-bL9" firstAttribute="top" secondItem="Ljt-Ex-kYR" secondAttribute="top" constant="20" id="5e3-O1-rQ2"/>
                             <constraint firstItem="wIO-i3-ijN" firstAttribute="leading" secondItem="Ljt-Ex-kYR" secondAttribute="leading" id="5nA-wE-PIA"/>
                             <constraint firstItem="TDg-mv-bL9" firstAttribute="leading" secondItem="swj-d3-eEv" secondAttribute="leading" id="ALO-Uz-zZk"/>
+                            <constraint firstItem="iRa-zM-8MM" firstAttribute="centerX" secondItem="swj-d3-eEv" secondAttribute="centerX" id="KGZ-4j-t8g"/>
                             <constraint firstItem="Ljt-Ex-kYR" firstAttribute="bottom" secondItem="wIO-i3-ijN" secondAttribute="bottom" id="RPg-Ac-fpW"/>
+                            <constraint firstItem="iRa-zM-8MM" firstAttribute="top" secondItem="TDg-mv-bL9" secondAttribute="bottom" constant="175" id="VRn-Tl-70F"/>
                             <constraint firstItem="wIO-i3-ijN" firstAttribute="top" secondItem="Ljt-Ex-kYR" secondAttribute="top" id="XNH-PA-I27"/>
                             <constraint firstItem="Ljt-Ex-kYR" firstAttribute="trailing" secondItem="TDg-mv-bL9" secondAttribute="trailing" id="qG7-zc-He5"/>
                             <constraint firstAttribute="trailing" secondItem="wIO-i3-ijN" secondAttribute="trailing" id="uOR-Uk-KyH"/>
@@ -957,6 +971,7 @@
                         <outlet property="hotelCostLabel" destination="1QU-if-roe" id="BhS-ap-Wrh"/>
                         <outlet property="pieChartView" destination="lhn-yi-UKP" id="VK1-cN-Vak"/>
                         <outlet property="publicTranportationLabel" destination="iz1-D7-YdT" id="fH4-cS-Kiy"/>
+                        <outlet property="saveButton" destination="iRa-zM-8MM" id="qcP-UC-AFH"/>
                         <outlet property="totalCostLabel" destination="nkP-Wk-WNH" id="M2j-0p-VWt"/>
                     </connections>
                 </viewController>
