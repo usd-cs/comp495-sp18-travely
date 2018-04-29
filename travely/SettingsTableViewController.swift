@@ -12,6 +12,52 @@ class SettingsTableViewController: UITableViewController {
     
     var mySettings: Settings?
     
+    //Amenity Connections
+    @IBOutlet weak var babySittingAmenity: UISwitch!
+    @IBOutlet weak var banquetAmenity: UISwitch!
+    @IBOutlet weak var coffeeShopAmenity: UISwitch!
+    @IBOutlet weak var conciergeAmenity: UISwitch!
+    @IBOutlet weak var freeInternetAmenity: UISwitch!
+    @IBOutlet weak var gymAmenity: UISwitch!
+    @IBOutlet weak var jacuzziAmenity: UISwitch!
+    @IBOutlet weak var laundryServiceAmenity: UISwitch!
+    @IBOutlet weak var poolAmenity: UISwitch!
+    @IBOutlet weak var restaurantAmenity: UISwitch!
+    
+    @IBAction func budgetTextFieldValueChanged(_ sender: UITextField) {
+        if let budget = Double(budgetTextField.text ?? "0"){
+            budgetTextField.text = String(budget)
+        } else {
+            //display alert to user
+            let alertController = UIAlertController(title: "Invalid Budget:", message: "Budget must be a number", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Ok.", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+            budgetTextField.text = "0"
+        }
+    }
+    @IBAction func budgetTextPrimary(_ sender: UITextField) {
+        if let budget = Double(budgetTextField.text ?? "0"){
+            budgetTextField.text = String(budget)
+        } else {
+            //display alert to user
+            let alertController = UIAlertController(title: "Invalid Budget:", message: "Budget must be a number", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Ok.", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+            budgetTextField.text = "0"
+        }
+    }
+    @IBAction func budgetTextldPrimaryAction(_ sender: UITextField) {
+        if let budget = Double(budgetTextField.text ?? "0"){
+            budgetTextField.text = String(budget)
+        } else {
+            //display alert to user
+            let alertController = UIAlertController(title: "Invalid Budget:", message: "Budget must be a number", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Ok.", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+            budgetTextField.text = "0"
+        }
+    }
+  
     @IBOutlet var ratingButtons: [UIButton]!
     
     @IBAction func ratingSelected(_ sender: UIButton) {
@@ -32,6 +78,67 @@ class SettingsTableViewController: UITableViewController {
      * This function saves data from settings page to mySettings object
      */
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        mySettings!.budgetSet = budgetSwitch.isOn
+        if mySettings!.budgetSet{
+            if let budget = Double(budgetTextField.text ?? "0"){
+                mySettings!.budgetAmount = budget
+            } else {
+                mySettings!.budgetAmount = 0
+            }
+        }
+        
+        
+        //Create Amenities variable to store in Settings object
+        mySettings?.amenitiesPrefferenceSelected = generateAmenitiesData()
+    
+        performSegue(withIdentifier: "saveSettingsSegue", sender: self)
+    }
+    
+    //This function retrieves amenities picked by user. Called when save button is pressed in Settings screen
+    func generateAmenitiesData() -> [String] {
+        var my_amenities = [String]()
+        
+        if babySittingAmenity.isOn == true {
+            my_amenities.append("BABY_SITTING")
+        }
+        
+        if banquetAmenity.isOn == true {
+            my_amenities.append("BANQUET_FACILITIES")
+        }
+        
+        if coffeeShopAmenity.isOn == true {
+            my_amenities.append("COFFEE_SHOP")
+        }
+        
+        if conciergeAmenity.isOn == true {
+            my_amenities.append("CONCIERGE_DESK")
+        }
+        
+        if freeInternetAmenity.isOn == true {
+            my_amenities.append("FREE_HIGH_SPEED_INTERNET")
+        }
+        
+        if gymAmenity.isOn == true {
+            my_amenities.append("GYM")
+        }
+        
+        if jacuzziAmenity.isOn == true {
+            my_amenities.append("JACUZZI")
+        }
+        
+        if laundryServiceAmenity.isOn == true {
+            my_amenities.append("LAUNDRY_SERVICE")
+        }
+        
+        if poolAmenity.isOn == true {
+            my_amenities.append("POOL")
+        }
+        
+        if restaurantAmenity.isOn == true {
+            my_amenities.append("RESTAURANT")
+        }
+        
+        return my_amenities
     }
     
     @IBOutlet weak var budgetSwitch: UISwitch!
@@ -46,9 +153,66 @@ class SettingsTableViewController: UITableViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        //If there is a settings variable then set values in page to previously selected values
+        if mySettings != nil {
+            //Set values of amenities so they are displayed on screen
+            setAmenities()
+        }
+    }
+    
+    //This function sets amenities on screen
+    func setAmenities() {
+        if (mySettings?.amenitiesPrefferenceSelected.contains("BABY_SITTING"))! {
+            babySittingAmenity.setOn(true, animated: true)
+        }
+        
+        if (mySettings?.amenitiesPrefferenceSelected.contains("BANQUET_FACILITIES"))! {
+            banquetAmenity.setOn(true, animated: true)
+        }
+        
+        if (mySettings?.amenitiesPrefferenceSelected.contains("COFFEE_SHOP"))! {
+            coffeeShopAmenity.setOn(true, animated: true)
+        }
+        
+        if (mySettings?.amenitiesPrefferenceSelected.contains("CONCIERGE_DESK"))! {
+            conciergeAmenity.setOn(true, animated: true)
+        }
+        
+        if (mySettings?.amenitiesPrefferenceSelected.contains("FREE_HIGH_SPEED_INTERNET"))! {
+            freeInternetAmenity.setOn(true, animated: true)
+        }
+        
+        if (mySettings?.amenitiesPrefferenceSelected.contains("GYM"))! {
+            gymAmenity.setOn(true, animated: true)
+        }
+        
+        if (mySettings?.amenitiesPrefferenceSelected.contains("JACUZZI"))! {
+            jacuzziAmenity.setOn(true, animated: true)
+        }
+        
+        if (mySettings?.amenitiesPrefferenceSelected.contains("LAUNDRY_SERVICE"))! {
+            laundryServiceAmenity.setOn(true, animated: true)
+        }
+        
+        if (mySettings?.amenitiesPrefferenceSelected.contains("POOL"))! {
+            poolAmenity.setOn(true, animated: true)
+        }
+        
+        if (mySettings?.amenitiesPrefferenceSelected.contains("RESTAURANT"))! {
+            restaurantAmenity.setOn(true, animated: true)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        guard mySettings != nil else{
+            fatalError("Didnt recieve mySettings object in SettingsTableViewController")
+        }
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(SettingsTableViewController.saveButtonPressed(_:)))
+        
         assignInitialValues()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -66,7 +230,22 @@ class SettingsTableViewController: UITableViewController {
      * This function sets up the initial setting view based on accepted Settings Object
      */
     func assignInitialValues(){
-    
+        //TODO: team, extract your values here\
+        
+        //budget section
+        budgetSwitch.isOn = mySettings!.budgetSet
+        let currBudget: String = String(describing: mySettings?.budgetAmount)
+        if currBudget != "nil" {
+            budgetTextField.text = currBudget
+        } else {
+            budgetTextField.text = "0"
+        }
+        
+        if budgetSwitch.isOn{
+            budgetAmountCell.isHidden = false
+        } else {
+            budgetAmountCell.isHidden = true
+        }
     }
     
     // MARK: - Table view data source

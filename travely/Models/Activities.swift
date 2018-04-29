@@ -71,16 +71,163 @@ class Activities{
                 ["name" : "Modern Tea House Lounge", "price" : "28", "description" : "Located at South Sanlitun, Long Jing Modern Tea House & Cocktail Lounge is the place to be. A teahouse by day and a cocktail bar by night, it is an excellent venue to drop in with your friends. If the brewed tea doesn’t get you going, gulp down one or two of their signature cocktails. Nicely decorated with a minimalistic approach, well-balanced sound system, and expert lighting makes it an ideal place to enjoy a cocktail. The staff employed is friendly and serve you with a smile. They have a simple concept – brew tea, mix booze, get drunk. The place has comfortable sofas and armchairs and low-lying tables. When here, the must-try cocktail is the Longjing. A blast of flavors evolve sip after sip. Another star on the drinks menu is a cocktail named ‘Rich’.", "image" : "modern_tea_house_lounge"],
                 ["name" : "Slow Boat Brewery Taproom", "price" : "12", "description" : "Well-hidden down under a residential street, Slow Boat Brewery Taproom is home the largest selection of beer in Beijing. An amazing place to catch up with old friends or meet new people, it is a cool little bar with a selection of fifteen fine beer brands on tap. The hutong atmosphere and the lively vibe add to the charm of the place. This place also serves refreshments, limited but lip-smacking. When here, tuck into their Fry Burger stuffed with fries and handmade sodas. Talking about beer, there is a long list of North-American and core beer here. The Monkeys First IPA and Captain’s Pale Ale are highly recommended. The staff employed is extremely courteous and prices are reasonable. Slow Boat Brewery Taproom is the ultimate destination for your beer cravings in Beijing.", "image" : "slow_boat_brewery_taproom"]
             ]
+        ],
+        "Barcelona" : [
+            "cultural" : [
+                ["name" : "La Sagrada Familia", "price" : "18", "description" : "The Basílica i Temple Expiatori de la Sagrada Família is a large unfinished Roman Catholic church in Barcelona, designed by Catalan architect Antoni Gaudí.", "image" : "lasagradafamilia"],
+                ["name" : "FC Barcelona museum & Camp Nou stadium", "price" : "28", "description" : "Home of Barcelona football team. If there are no games during your visit, then book the stadium and museum tour. TICKETS Camp Nou Experience The Camp Nou stadium and FCB museum are among the most popular attractions in Barcelona attracting millions of visitors a year. Camp Nou also has the one of the largest Nike stores in Europe packed with Barca merchandise. ", "image" : "FCBarcelonaMuseum"],
+                ["name" : "Picasso Museum", "price" : "13", "description" : "The Picasso Museum is Barcelona's most famous museum. Pablo Picasso was born in Malaga in the south of Spain, but the Picasso family moved to Barcelona in 1895 and Picasso lived here until 1904. Picasso's father was an art teacher and although as a child Pablo Picasso already studied art in Malaga, it was in Barcelona that he spent his formative years. The Picasso museum has free admission for everyone on first Sunday of month all day and free every Thursday after 6pm. ", "image" : "PicassoMuseum"]
+            ],
+            "outdoors" : [
+               ["name" : "The Magic Fountain of Montjuic", "price" : "0", "description" : "The Magic Fountain is a 'must see' Barcelona attraction. You have never seen a fountain like this. It really does feel magic to experience the beautiful show of water, light and music. The Magic fountain was built in 1929 as one of the main attractions for the Barcelona World Fair and the Font Magica is still one of the most famous spots in Barcelona with an estimated 2.5 million visitors annually. There are evening water and light shows in the winter on Friday and Saturdays only. In the summer the evening light and music show are from Thursday to Sunday. Admission is free all year.", "image" : "FountainofMontjuic"],
+                ["name" : "Las Ramblas street", "price" : "0", "description" : "Also called Las Ramblas because it consists of diffferent sections. The Spanish poet Federico García Lorca said 'It is the only street in the world which I wish would never end' and it almost doesn't because it now continues into Port Vell marina. La Rambla starts at central square Plaza Catalunya and ends at the Columbus monument at the Port Vell marina. La Rambla it is not a spectacular attraction in any way, but very pleasant to stroll down and feel the human heartbeat of Barcelona.", "image" : "Las-Ramblas-Barcelona"],
+                ["name" : "Barrio Gotico", "price" : "0", "description" : "The gothic quarter is the medieval city of Barcelona. It grew around the ancient Roman town of Barcino which is Barcelona's oldest area. The gothic part of the city has many beautiful churches, plazas, markets and museums and you can see parts of the old Roman walls. If you visit the Barcelona history musuem Museu d'Història de la Ciutat you can see remains of Roman Barcino houses and streets under the museum. ", "image" : "BarrioGotico"]
+            ],
+            "nightlife" : [
+                ["name" : "Sala Razzmatazz", "price" : "18", "description" : " Expect a social and non-pretentious atmosphere. Located in Barcelona’s industrial urban district of Poble Nou, don’t be surprised if you lose all your friends (and maybe your mind) within the labyrinth of rooms. On a weekend, access the entire complex made up of industrial factories on different levels, each with a separate DJ. Established in the year 2000, Sala Razzmatazz was the first club in Spain to schedule five different spaces every day of the week, and is consistently ranked by the  DJ mag list of top 100 clubs.", "image" : "SalaRazzmatazz"],
+                ["name" : "Pacha Barcelona", "price" : "24", "description" : "Ibiza style clubbing in the purest form. Visitors are greeted by a sleek white interior and a stunning view over the beach. Located near the Barceloneta Beach, the club attracts a crowd that is international with a both smart and casual atmosphere. This club has a bit more of an edge than its Port Olimpic neighbors, particularly on Sundays presented by FACT.", "image" : "PachaBarcelona"],
+                ["name" : "La Terrrazza", "price" : "18", "description" : "This place has a fresh, happy vibe, fitting of the title “Atmospherical Fun Club”.  Tell your friends back home you’re going to an open-air party at a night club in a castle and watch their jaws drop. The way inside is through the gates of Poble Espanyol, a mini-village atop Montjuic whose streets were modeled from the various styles of architecture in each region of Spain.", "image" : "LaTerrrazza"]
+            ]
+        ],
+        "Dubai" : [
+            "cultural" : [
+                ["name" : "Burj Khalifa", "price" : "27", "description" : "Standing tall at 828 metres in Downtown Dubai, the sky-piercing Burj Khalifa is the tallest man-made structure in the world. The glorious tower is one of the most prominent attractions in all of the Middle-East. It displays exceptional work of art and it is not without reason that it has been called the Jewel of Dubai. Climb up to the 124th floor on the observation deck, At The Top, for an uninterrupted view of the city’s skyline and beyond.", "image" : "BurjKhalifa"],
+                ["name" : "Al Bastakiya", "price" : "10", "description" : "Also known as the Al Fahidi Historic District of Dubai, Al Bastakiya is one of the oldest and traditional Emirati residential areas in Bur Dubai. Constructed in the 1690s, Al Bastakiya gives you interesting insights into the rich cultural heritage of Dubai. The historic site offers a good break from the modernism and technological advancement that Dubai stands for.", "image" : "AlBastakiya"]
+            ],
+            "outdoors" : [
+                ["name" : "Al Mamzar Park", "price" : "2", "description" : "A pretty and landscaped garden, Al Mamzar Park spreads over 106 hectares. It is situated on an inlet which lends it white sandy beaches and many more beautiful sights. There is also a swimming pool, BBQ sites, food kiosks and plenty of open spaces which the kids will especially love. ", "image" : "AlMamzarPark"],
+                ["name" : "Ras Al Khor ", "price" : "0", "description" : "Extremely popular for the large number of migratory birds that come here, Ras Al Khor is a beautiful nature reserve and wetland in Dubai. Pink flamingos are the highlight of any visit to this sanctuary in winters. Located at the mouth of Dubai Creek, Ras Al Khor is the place to be for bird watchers and nature lovers. Don’t miss the bird feeding sessions here which are held at 9:15 and 16:15 pm every day.", "image" : "RasAlKhor"],
+                ["name" : "Dubai Desert Conservation Centre", "price" : "0", "description" : "With its aim to protect the biodiversity of the Arabian deserts, the Dubai Desert Conservation Centre is a natural habitat for the flora and fauna of the region. In addition to this, it also has many exotic migratory birds visiting it during different times of the year. Get up close and personal with the falcons and enjoy camel treks, horse riding, archery and sandboarding among many other activities that the Conservation Centre offers.", "image" : "DubaiDesertConservationCentre"]
+            ],
+            "nightlife" : [
+                ["name" : "Copacabana", "price" : "13", "description" : "Named possibly after the 70’s Barry Manilow hit, the Copa Cabbana has become popular among the increasingly large young and trendy crowd in Dubai. Sandy floors and Bamboo Railings give it quite an interesting look unique from many rivalling establishments. The club is also renowned for having fantastic snacks. The entry fee is 50 Dhs (€10) and you must be over 25 to enter in order to keep out those who are too junior.", "image" : "Copacabana"]
+            ]
+        ],
+        "Honolulu" : [
+            "cultural" : [
+                ["name" : "Polynesian Cultural Center", "price" : "62", "description" : "The Polynesian Cultural Center features distinct exhibition areas covering the islands of Hawaii, Aotearoa (New Zealand), Fiji, Samoa, Tahiti, Tonga, and Rapa Nui (Easter island). Book full-day admission tickets for full access to the site, a dinner experience with a luau option, and the thrilling “Ha: Breath of Life” night show, or half-day afternoon tickets for access to one island village, dinner, and the night show", "image" : "PolynesianCulturalCenter"],
+                ["name" : "Hanauma Bay", "price" : "7.50", "description" : "Formed within a volcanic cone, today Hanauma Bay offers a pristine marine ecosystem after the City and County of Honolulu laid out a plan in 1990 to restore the “curved bay,” after years of use from the millions of visitors who visit and love to snorkel Hanauma Bay. Voted the Best Beach in the United States for 2016 our volunteers have a booth located on the beach level to help visitors learn about conservation of the reef and the types of fish that live there. ", "image" : "HanaumaBay"]
+            ],
+            "outdoors" : [
+                ["name" : "Pearl Harbor", "price" : "22", "description" : "Arguably one of the most significant World War II sites on the planet, Hawaii's Pearl Harbor—once a tranquil oyster farming bay—hurtled the United States into World War II combat on the Pacific Ocean. Today, the central Oahu port features several attractions that memorialize the 2,403 lives lost to Japan's devastating bombings of American ships and planes in 1941.", "image" : "PearlHarbor"],
+                ["name" : "North Shore", "price" : "0", "description" : "Surfing is king on Oahu’s North Shore, where summer’s placid snorkeling spots are transformed into pounding 40-foot (12-meter) waves come winter. On land you’ll find a peaceful respite from hectic Honolulu, with scenic waterfall hikes, sleepy farms selling tropical fruit, and food trucks doling out garlic shrimp.", "image" : "northshorre"],
+                ["name" : "Lanikai Beach", "price" : "0", "description" : "Nevertheless, Lanikai is the perfect place for a comfortable chair, a good book, and the view looking out at the Mokulua islands graces the cover of many Oahu postcards. The white sand of Lanikai is the perfect place to spend the morning, or, if you happen to time it right, watch the full moon rise over the eastern horizon and as illuminates the cliffs of the Ko’olau Mountains.", "image" : "lanikaiBeach"]
+            ],
+            "nightlife" : [
+                ["name" : "District Nightclub", "price" : "20", "description" : "The District Nightclub is Honolulu, Hawaii's Newest & Best Night Life Experience. Located several minutes from Waikiki and across of Ala Moana Shopping Center. The 3,400 square foot nightclub showcases a specially-designed 23-foot DJ booth, VIP lounge, 12 private tables and will take service to new heights . ", "image" : "DistrictNightClub"],
+                ["name" : "Ginza Nightclub", "price" : "10", "description" : "The Ginza Nightclub is Honolulu's Exclusive After Party Destination. Located one block from Ala Moana Shopping Center in the middle of Honolulu's most lively nightlife scene.", "image" : "ginza"]
+            ]
+        ],
+        "London" : [
+            "cultural" : [
+                ["name" : "Warner Bros Studio Tour", "price" : "100", "description" : "Have a magical day out with a behind-the-scenes tour of the Harry Potter films at Warner Bros. Studio Tour London  – The Making of Harry Potter. See first-hand the sets, costumes, and props used in all the Harry Potter films, and step inside some of the films' locations including the Great Hall, Dumbledore's office and Hagrid's hut. It's the ultimate Harry Potter experience!", "image" : "WarnerBrosStudio"],
+                ["name" : "Buckingham Palace", "price" : "33", "description" : "Visit the official London residence of the Queen during the Buckingham Palace summer opening. Explore the extravagant State Rooms and don't miss this year's special exhibition, celebrating the 70th birthday of the Prince of Wales. In 2018, Buckingham Palace is open to visitors from 21 July until 30 September.", "image" : "buckinghamPalace"],
+                ["name" : "Tower of London", "price" : "36", "description" : "Take a tour with one of the Yeoman Warders around the Tower of London, one of the world's most famous buildings. Discover its 900-year history as a royal palace, prison and place of execution, arsenal, jewel house and zoo! Gaze up at the White Tower, tiptoe through a medieval king's bedchamber and marvel at the Crown Jewels", "image" : "TowerofLondon"]
+            ],
+            "outdoors" : [
+                ["name" : "Kensington Palace", "price" : "23", "description" : "Kensington Palace offers a glimpse into the lives of its past royal residents. Discover stories from Queen Victoria's life in the Victoria Revealed exhibition; master courtly games in the King's State Apartments; glimpse a modern princess in an exhibition of Diana's dresses; and uncover the secrets of a fragile dynasty in the Queen's State Apartments.", "image" : "KensingtonPalace"],
+                ["name" : "The View from The Shard", "price" : "33", "description" : "Rise high above London and see the city's iconic skyline from a unique perspective, with views stretching up to 40 miles (64km). Spot the likes of the Coca-Cola London Eye, St Paul's Cathedral and Wembley Stadium from The View from The Shard's observation deck, which sits 800ft (244m) up western Europe's tallest building.", "image" : "theShard"]
+            ],
+            "nightlife" : [
+                ["name" : "Camden Rocks Club", "price" : "7", "description" : "Vibrant as always, guests to the Camden Rocks Club Night in North London night out can enjoy drinks for only £3 and special performances from the likes of Gallows and FVK. With entry costing only £5 and a frequent host of surprise musical appearances, Underworld has become a favourite amongst the city's rock lovers and continues to draw in crowds from all over come Saturday night.  ", "image" : "CamdenRocksClub"],
+                ["name" : "Sway", "price" : "0", "description" : "Sway by Covent Garden has three bars (Cream, Crystal and Milk), a nightclub and a restaurant under one roof. Come for late-night drinking and dancing and you won't be disappointed by their cool decor. The music varies in the different rooms but expect great party music, club classics and chart as well as some boogie-woogie in the Groovy Wonderland.", "image" : "sway"],
+                ["name" : "Tiger Tiger London", "price" : "0", "description" : "This is one of the most famous London night clubs for its every-night party spirit! Slap bang in the heart of London, Tiger Tiger attracts a mixed crowd who all come to party hard. Great happy hours and party tunes whip up a fun night out.", "image" : "TigerTigerLondon"]
+            ]
+        ],
+        "Moscow" : [
+            "cultural" : [
+                ["name" : "The Kremlin", "price" : "0", "description" : "The Moscow Kremlin is one of the most ancient parts of the city and symbolises the whole of Russia. It is both a cultural sight, as well as the centre of the Russian state, and the residence of the President of Russia. The Kremlin is steeped in history. In 1990, the Moscow Kremlin and the Red Square were included into the list of UNESCO worldwide heritage.", "image" : "kremlin"],
+                ["name" : "Bolshoi Theatre", "price" : "20", "description" : "The Bolshoi Theatre is the most famous theatre in Moscow. The theatre shows around 3-4 different operas and 2-3 ballets each year. The focus is on classical masterpieces from composers such as Mozart, Verdi, Wagner, and Tchaikovsky. Russian ballet is world famous and is an important part of the Russian culture.", "image" : ""],
+                ["name" : "", "price" : "", "description" : "", "image" : "BolshoiTheatre"]
+            ],
+            "outdoors" : [
+                ["name" : "GUM Department Store", "price" : "0", "description" : "The GUM is a huge shopping centre, one of the largest in Europe. It is the most famous place to shop in Moscow, but it is also known for its architecture. It is situated on Red Square and the first part of it was built in 1812, under Alexander I. The shop itself has a luxurious style, selling brands such as Louis Vuitton, Dior, Hugo Boss, Burberry etc. There are also many cafes and restaurants.", "image" : "GUMDepartmentStore"],
+                ["name" : "The Red Square", "price" : "0", "description" : "Red Square remains, as it has been for centuries, the heart and soul of Russia. Few places in the world bear the weight of history to the extent that Moscow's central square does. From the 16th Century St. Basil's Cathedral - one of the most famous pieces of architecture in the world - to the constructivist pyramid of Lenin's Mausoleum, Red Square is rich in symbols of Russia's turbulent and intriguing past.", "image" : "redSquare"]
+            ],
+            "nightlife" : [
+                ["name" : "Solyanka Club", "price" : "10", "description" : "The Solyanka Club  was opened back in 2007 and has become the Mecca of the City’s club scene. It’s a little pretentious in here and is predominately frequented by artistic types and fashionistas.  Their audience tends to be young and their best nights are on Friday’s and Saturday’s.  The queue can be quite long on weekends so try to be patient. Their live DJ’s play notorious Dance and House tracks.", "image" : "SolyankaClub"],
+                ["name" : "Krysha Mira Club", "price" : "24", "description" : "Krysha Mira is an opulent club which seems to draw in Moscow’s opulent club creatures. They play Techno and House music and Friday’s are by far their busiest nights. Drinks are remarkably costly with a shot of vodka costing you somewhere between 10 and 15 Euro’s. Unless you are wearing designer outfits and speaking English then you will struggle to enter this exclusive venue.", "image" : "KryshaMiraClub"]
+            ]
+        ],
+        "Munich" : [
+            "cultural" : [
+                ["name" : "The Deutsches Museum", "price" : "13", "description" : "The Deutsches Museum in Munich, Germany, is the world's largest museum of science and technology, with about 28,000 exhibited objects from 50 fields of science and technology. It receives about 1.5 million visitors per year.", "image" : "TheDeutschesMuseum"],
+                ["name" : "Old Picture Gallery", "price" : "5", "description" : "Alte Pinakothek is known as one of the most popular galleries around the world, as well as one of the richest treasuries with priceless paintings. This gallery exhibits works of the masters of the Middle Ages, dating from a period starting from the middle of the 18th century. There is a collection of 700 paintings, located in 19 halls and 49-year-offices.  ", "image" : "oldPictureGallery"],
+                ["name" : "BMW World", "price" : "12", "description" : "BMW Welt is a multi-use exhibition center located in Munich, Germany used for meetings and promotional events, and where buyers take delivery of BMW vehicles.", "image" : "bmwWorld"]
+            ],
+            "outdoors" : [
+                ["name" : "Nymphenburg Palace", "price" : "14", "description" : "The Nymphenburg Palace, Castle of the Nymph, is a Baroque palace in Munich, Bavaria, southern Germany. The palace was the main summer residence of the former rulers of Bavaria of the House of Wittelsbach.", "image" : "NymphenburgPalace"],
+                ["name" : "English Garden", "price" : "0", "description" : "Located in the centre of the city, the English Garden (der Englische Garten) is a large park (3.73 square kilometres), open throughout the year, that offers mostly hard-dirt paths for walking and running as well as lakes. Visitors can partake in horse riding, boating, and even surfing at the Eisbachwelle in front of the Haus der Kunst", "image" : "englishGarden"],
+                ["name" : "Olympiapark", "price" : "0", "description" : "The venue of the 1972 Olympics, the Olympiapark is now a hub for indoor and outdoor activities. As well as lakes with boat hire and excellent paths for running, nordic walking and cycling, the site offers indoor facilities for tennis, ice skating, inline skating, watersports, football and working out. The park also has a mini-golf course.", "image" : "olympiaPark"]
+            ],
+            "nightlife" : [
+                ["name" : "Feierwerk", "price" : "15", "description" : "In the Feierwerk complex you'll find some of the best venues for live music in the city - the Orangehouse, Sunny Red, Kranhalle and Hansa 39. Get your fill of local and international hip hop, punk, hardcore, metal, electronic, ska and indie bands. In the summer, the club expands events into on-site tents. Almost every night of the year there are events scheduled in at least two of the Feierwerk locations and usually two very different genres.", "image" : "Feierwerk"],
+                ["name" : "Substanz", "price" : "18", "description" : "Synonymous with creative expression, Substanz is in an artistic section of town. As well as a program of live music and DJ's, the club hosts the Munich Poetry Slam and the English Comedy Club. Easy to find, the bar is ten minutes from Marienplatz on the U3/U6 subway lines. Occasionally, the bar shows German sports, too.", "image" : "Substanz"],
+                ["name" : "Harpers and Queens", "price" : "0", "description" : "Chill in a comfortable lounge setting. On one of the main shopping streets, the bar is easy to reach by subway or walking from Marienplatz. Mondays feature all-night happy hour; choose from a large selection of cocktails while sitting on built-in red couches. Though elegant, the atmosphere is conducive to conversation.", "image" : "HarpersandQueens"]
+            ]
+        ],
+        "New York City" : [
+            "cultural" : [
+                ["name" : "Broadway", "price" : "100", "description" : "Attending a Broadway show is one of the highlights of a visit to New York City. Considered the pinnacle of American theater, this is the place to see the latest shows and the long-running classics. Broadway usually refers simply to Broadway theater, which encompasses a large number of theater venues in the Theater District and along the street of Broadway. For the most popular shows, tickets should be purchased well in advance.", "image" : "broadway"],
+                ["name" : "Metropolitan Museum of Art", "price" : "25", "description" : "The Metropolitan Museum of Art, or the Met, as it is commonly known, was founded in 1870, and is one of the most famous museums in the United States. The permanent collection of The Met contains more than two million works of art, spanning a period of 5,000 years. Although the museum has three sites, the centerpiece is The Met Fifth Avenue.", "image" : "MetropolitanMuseumofArt"],
+                ["name" : "Rockefeller Center", "price" : "0", "description" : "Rockefeller Center is a vast entertainment and shopping complex in the middle of Manhattan, and home to NBC-TV and radio, and other media. The centerpiece of the complex is the 70-storey 30 Rockefeller Plaza, an Art Deco skyscraper that offers awesome views over Manhattan from the famous Top of the Rock Observation Deck. ", "image" : "RockefellerCenter"]
+            ],
+            "outdoors" : [
+                ["name" : "Central Park", "price" : "0", "description" : "A walk, peddle, or carriage ride through the crisscrossing pathways of Central Park is a must-do on anyone's New York City itinerary. In winter, you can even lace up your skates and glide across Wollman Rink. This huge park in the city center, a half-mile wide and 2.5 miles long, is one of the things that makes New York such a beautiful and livable city. ", "image" : "centralPark"],
+                ["name" : "Statue of Liberty", "price" : "18", "description" : "The Statue of Liberty was France's gift to America. Built in 1886, it remains a famous world symbol of freedom and one of the greatest American icons. It is one of the world's largest statues, standing just under 152 feet tall from the base to the torch, and weighing approximately 450,000 pounds.", "image" : "statueOfLiberty"],
+                ["name" : "Empire State Building", "price" : "0", "description" : "The Empire State Building is one of New York's most famous landmark buildings. The 381-meter-tall, 102-storey building was the tallest in the world until the 1 World Trade Center tower rose higher, 41 years later. Topped with a mooring mast for airships, the Empire State Building immediately became a landmark and a symbol for NYC when it opened in 1931.", "image" : "empireStateBuilding"]
+            ],
+            "nightlife" : [
+                ["name" : "Arthur's Tavern", "price" : "0", "description" : "or more than 65 years, this legendary live-music venue has been home to performances ranging from Dixieland jazz to Chicago blues. There's no cover and the two-drink minimum is rarely enforced since it's impossible to keep track of who's who in the packed crowd.", "image" : "arthursTavern"],
+                ["name" : "Comedy Cellar", "price" : "20", "description" : "The Comedy Cellar is a comedy club in Manhattan where many top New York comedians perform. It was founded in 1982 by then standup comedian, and current television writer/producer Bill Grundfest.", "image" : "comedyCellar"]
+            ]
+        ],
+        "Seattle" : [
+            "cultural" : [
+                ["name" : "Space Needle and Chihuly Garden and Glass", "price" : "44", "description" : "Travel to the top of the Space Needle's 520 ft. observation deck for unparalleled views of downtown Seattle, Mt. Rainier, and the Puget Sound, plus hands-on digital experiences and FREE digital souvenir photos.  Right next to the Space Needle, immerse yourself in a world where curiosity, creativity and color come to life at Chihuly Garden and Glass. Throughout the Galleries, ever-changing Garden and signature Glasshouse, where you’ll be inspired by artist Dale Chihuly’s innovation and passion.", "image" : "spaceNeedle"],
+                ["name" : "Boeing Factory", "price" : "88", "description" : "Get a behind-the-scenes look at airplane design and manufacturing on a 4.5-hour Boeing factory tour that includes the Future of Flight Aviation Center, and round-trip transport from Seattle and SeaTac hotels. Watch the factory floor and flight line from above, get a virtual tour of a 787 flight deck, then use a simulator to design and test your own airplane.", "image" : "boeingFactory"],
+                ["name" : "Woodland Park Zoo", "price" : "15", "description" : "A short distance from downtown Seattle, Woodland Park Zoo is an urban oasis that sparks delight, discovery, and unforgettable memories in a botanical setting that connects visitors with nature to learn, care and act on behalf of wildlife.  Explore 92-acres teeming with tigers, penguins, gorillas and 300+ animal species living in spacious, naturalistic settings. Be inspired and discover what action you can take to help save wildlife.", "image" : "woodlandPark"]
+            ],
+            "outdoors" : [
+                ["name" : "Pike Place Market", "price" : "0", "description" : "With more than a century of history, Pike Place Market is the oldest continuously operating farmers market in the country and one of Seattle’s most popular draws. The market lures visitors and locals alike (we’re talking 10 million people per year) with its farm-fresh produce, butcher-paper clad bouquets, abundance of shops, restaurants, and bars—not to mention some of the best people-watching in the city", "image" : "pikePlaceMarket"],
+                ["name" : "Mount Rainier", "price" : "0", "description" : "Ascending to 14,410 feet above sea level, Mount Rainier stands as an icon in the Washington landscape. An active volcano, Mount Rainier is the most glaciated peak in the contiguous U.S.A., spawning six major rivers. Subalpine wildflower meadows ring the icy volcano while ancient forest cloaks Mount Rainier’s lower slopes. Wildlife abounds in the park’s ecosystems. A lifetime of discovery awaits.", "image" : "rainier"]
+            ],
+            "nightlife" : [
+                ["name" : "Chop Suey", "price" : "5", "description" : "Following an ownership changeover, Chop Suey has gone from oddly-Asian-themed bar and secret live-music powerhouse underdog to still confusingly decorated music venue that now has a side bar and second stage in its Den. It also has pinball machines, a mostly functioning (as opposed to previously never functioning) photo booth, and a kitchen window from which to buy chicken and other fried delights.", "image" : "chopSuey"],
+                ["name" : "Trinity Nightclub", "price" : "0", "description" : "Located at 107 Occidental Ave, Seattle WA 98104 in Seattle’s historic Pioneer Square Neighborhood. Trinity Nightclub is a uniquely original, two level space, housing three separate rooms and a large private VIP room, each with it’s own  distinctive theme and décor. Trinity features a full lounge, state of the art sound and lighting and two spacious dance floors. Trinity is 21+ at all times.", "image" : "trinity"]
+            ]
         ]
     ]
     
     var culturalActivities: [[String : String]]
     var outdoorsActivities: [[String : String]]
     var nightlifeActivities: [[String : String]]
+    var selectedActivities: [Activity]
+    var totalPrice: Double{
+        var total: Double = 0
+        for i in self.selectedActivities{
+            total += i.price
+        }
+        return total
+    }
     
     init(cityName: String) {
+        self.selectedActivities = []
         self.culturalActivities = Activities.activitiesData[cityName]!["cultural"]!
         self.outdoorsActivities = Activities.activitiesData[cityName]!["outdoors"]!
         self.nightlifeActivities = Activities.activitiesData[cityName]!["nightlife"]!
+    }
+    
+    func addActivity(name: String, price priceStr: String){
+        var price: Double = 0
+        if let doublePrice = Double(priceStr){
+            price += doublePrice
+        }
+        let currActivity = Activity(name: name, price: price)
+        self.selectedActivities.append(currActivity!)
+    }
+    
+    func removeActivity(name: String){
+        self.selectedActivities = selectedActivities.filter { $0.name != name }
     }
 }

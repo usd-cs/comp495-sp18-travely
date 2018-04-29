@@ -23,6 +23,7 @@ class CostViewController: UIViewController {
     
     @IBOutlet weak var hotelRating: UILabel!
     @IBOutlet weak var hotelRatingLabel: UILabel!
+    @IBOutlet weak var saveButton: UIButton!
     
     var minFlightCost: Double?
     var minHotelCost: Double?
@@ -35,6 +36,12 @@ class CostViewController: UIViewController {
     //This variable is to test the hotel rating labels
     var numHotelStars: Int?
     
+    
+    @IBAction func saveButtonPressed(_ sender: UIButton) {
+        let myTripsTab = self.tabBarController?.viewControllers![3].childViewControllers[0] as! MyTripsTableViewController
+        myTripsTab.trips += [myTrip!]
+        myTripsTab.saveTrips()
+    }
     
     //This function is called everytime the cost tab is visible
     override func viewWillAppear(_ animated: Bool) {
@@ -52,8 +59,10 @@ class CostViewController: UIViewController {
             totalTransportationCost = 0
             hotelRating.isHidden = true
             hotelRatingLabel.isHidden = true
+            saveButton.isHidden = true
             zeroPrices()
         } else {
+            saveButton.isHidden = false
             minFlightCost = myTrip!.tripAirfareCost
             minHotelCost = myTrip!.tripHotelCost
             totalCost = myTrip!.tripTotalCost

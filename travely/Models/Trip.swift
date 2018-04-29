@@ -9,23 +9,25 @@
 import UIKit
 import os.log
 
-struct PropertyKey{
-    static let tripName = "tripName"
-    static let tripTotalCost = "tripTotalCost"
-    static let tripAirfareCost = "tripAirfareCost"
-    static let tripHotelCost = "tripHotelCost"
-    static let foodCost = "foodCost"
-    static let activitiesCost = "activitiesCost"
-    static let originLocation = "originLocation"
-    static let destinationLocation = "destinationLocation"
-    static let departureDate = "departureDate"
-    static let returnDate = "returnDate"
-    static let tripPublicTransportationCost = "tripPublicTransportationCost"
-    static let numberOfTravellers = "numberOfTravellers"
-    static let reportRunDate = "reportRunDate"
-}
 
 class Trip : NSObject,NSCoding{
+    
+    struct PropertyKey{
+        static let tripName = "tripName"
+        static let tripTotalCost = "tripTotalCost"
+        static let tripAirfareCost = "tripAirfareCost"
+        static let tripHotelCost = "tripHotelCost"
+        static let foodCost = "foodCost"
+        static let activitiesCost = "activitiesCost"
+        static let originLocation = "originLocation"
+        static let destinationLocation = "destinationLocation"
+        static let departureDate = "departureDate"
+        static let returnDate = "returnDate"
+        static let tripPublicTransportationCost = "tripPublicTransportationCost"
+        static let numberOfTravellers = "numberOfTravellers"
+        static let reportRunDate = "reportRunDate"
+        static let activityList = "activityList"
+    }
     
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
     static let ArchiveURL = DocumentsDirectory.appendingPathComponent("trips")
@@ -43,8 +45,9 @@ class Trip : NSObject,NSCoding{
     var tripPublicTransportationCost: Double
     var numberOfTravellers: Double
     var reportRunDate: String
+    var activityList: [Activity]
     
-    init?(tripName: String, tripTotalCost: Double, tripAirfareCost: Double, tripHotelCost: Double, foodCost: Double, activitiesCost: Double, originLocation: String, destinationLocation: String, departureDate: String, returnDate: String, tripPublicTransportationCost: Double, numberOfTravellers: Double, reportRunDate: String){
+    init?(tripName: String, tripTotalCost: Double, tripAirfareCost: Double, tripHotelCost: Double, foodCost: Double, activitiesCost: Double, originLocation: String, destinationLocation: String, departureDate: String, returnDate: String, tripPublicTransportationCost: Double, numberOfTravellers: Double, reportRunDate: String, activityList: [Activity]){
         
         if tripName.isEmpty || originLocation.isEmpty || destinationLocation.isEmpty || departureDate.isEmpty || returnDate.isEmpty || reportRunDate.isEmpty {
             return nil
@@ -63,6 +66,7 @@ class Trip : NSObject,NSCoding{
         self.tripPublicTransportationCost = tripPublicTransportationCost
         self.numberOfTravellers = numberOfTravellers
         self.reportRunDate = reportRunDate
+        self.activityList = activityList
     }
     
     func encode(with aCoder: NSCoder) {
@@ -79,6 +83,8 @@ class Trip : NSObject,NSCoding{
         aCoder.encode(tripPublicTransportationCost, forKey: PropertyKey.tripPublicTransportationCost)
         aCoder.encode(numberOfTravellers, forKey: PropertyKey.numberOfTravellers)
         aCoder.encode(reportRunDate, forKey: PropertyKey.reportRunDate)
+        aCoder.encode(activityList, forKey: PropertyKey.activityList)
+
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
@@ -106,6 +112,10 @@ class Trip : NSObject,NSCoding{
             os_log("Unable to decode reportRunDate", log: OSLog.default, type: .debug)
             return nil
         }
+        guard let activityList = aDecoder.decodeObject(forKey: PropertyKey.activityList) as? [Activity] else {
+            os_log("Unable to decode activityList", log: OSLog.default, type: .debug)
+            return nil
+        }
         
         let tripPublicTransportationCost = aDecoder.decodeDouble(forKey: PropertyKey.tripPublicTransportationCost) as Double
         let numberOfTravellers = aDecoder.decodeDouble(forKey: PropertyKey.numberOfTravellers) as Double
@@ -115,7 +125,7 @@ class Trip : NSObject,NSCoding{
         let foodCost = aDecoder.decodeDouble(forKey: PropertyKey.foodCost) as Double
         let activitiesCost = aDecoder.decodeDouble(forKey: PropertyKey.activitiesCost) as Double
         
-        self.init(tripName: tripName, tripTotalCost: tripTotalCost, tripAirfareCost: tripAirfareCost, tripHotelCost: tripHotelCost, foodCost: foodCost, activitiesCost: activitiesCost, originLocation: originLocation, destinationLocation: destinationLocation, departureDate: departureDate, returnDate: returnDate, tripPublicTransportationCost: tripPublicTransportationCost, numberOfTravellers: numberOfTravellers, reportRunDate: reportRunDate)
+        self.init(tripName: tripName, tripTotalCost: tripTotalCost, tripAirfareCost: tripAirfareCost, tripHotelCost: tripHotelCost, foodCost: foodCost, activitiesCost: activitiesCost, originLocation: originLocation, destinationLocation: destinationLocation, departureDate: departureDate, returnDate: returnDate, tripPublicTransportationCost: tripPublicTransportationCost, numberOfTravellers: numberOfTravellers, reportRunDate: reportRunDate, activityList: activityList)
     }
 }
 

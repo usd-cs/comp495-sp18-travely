@@ -6,9 +6,7 @@
 //  Copyright © 2018 University of San Diego. All rights reserved.
 //
 
-import Foundation
-
-struct Settings: Codable{
+class Settings {
     var budgetSet: Bool
     var budgetAmount: Double?
     
@@ -16,4 +14,12 @@ struct Settings: Codable{
     
     var amenitiesPrefferenceSelected: [String]
     var activitiesPrefferenceSelected: [String]
+    
+    init(budgetSet: Bool, budgetAmount: Double?, hotelRaiting: Int?, amenitiesPrefferenceSelected: [String], activitiesPrefferenceSelected: [String]){
+        self.budgetSet = budgetSet
+        self.budgetAmount = budgetAmount
+        self.hotelRaiting = hotelRaiting
+        self.amenitiesPrefferenceSelected = amenitiesPrefferenceSelected
+        self.activitiesPrefferenceSelected = activitiesPrefferenceSelected
+    }
 }

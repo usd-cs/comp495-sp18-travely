@@ -70,7 +70,7 @@ class LoadingScreenViewController: UIViewController {
             }
             else {
                 //Create Trip data structure to store information
-                self.newTrip = Trip(tripName: self.originLocation + " to " + self.destinationLocation, tripTotalCost: self.totalCost!, tripAirfareCost: self.minFlightCost!, tripHotelCost: self.minHotelCost!, foodCost: self.foodCost!, activitiesCost: self.activitiesCost!, originLocation: self.originLocation, destinationLocation: self.destinationLocation, departureDate: self.departureDate, returnDate: self.returnDate, tripPublicTransportationCost: self.totalTransportationCost!, numberOfTravellers: self.numberOfTravellers!, reportRunDate: self.reportRunDate)
+                self.newTrip = Trip(tripName: self.originLocation + " to " + self.destinationLocation, tripTotalCost: self.totalCost!, tripAirfareCost: self.minFlightCost!, tripHotelCost: self.minHotelCost!, foodCost: self.foodCost!, activitiesCost: self.activitiesCost!, originLocation: self.originLocation, destinationLocation: self.destinationLocation, departureDate: self.departureDate, returnDate: self.returnDate, tripPublicTransportationCost: self.totalTransportationCost!, numberOfTravellers: self.numberOfTravellers!, reportRunDate: self.reportRunDate, activityList: [])
                 
                 //unwind to previous segue
                 SwiftSpinner.hide() //Hide loading screen before unwinding
@@ -125,6 +125,47 @@ class LoadingScreenViewController: UIViewController {
             activitiesCost = 39 * Double(numDays) * numberOfTravellers!
             publicTransportationCost = 20 * Double(numDays) * numberOfTravellers!
         }
+        else if destinationLocation == "Barcelona" {
+            foodCost = 28 * Double(numDays) * numberOfTravellers!
+            activitiesCost = 23 * Double(numDays) * numberOfTravellers!
+            publicTransportationCost = 18 * Double(numDays) * numberOfTravellers!
+        }
+        else if destinationLocation == "Dubai" {
+            foodCost = 42 * Double(numDays) * numberOfTravellers!
+            activitiesCost = 4.63 * Double(numDays) * numberOfTravellers!
+            publicTransportationCost = 10 * Double(numDays) * numberOfTravellers!
+        }
+        else if destinationLocation == "Honolulu" {
+            foodCost = 42 * Double(numDays) * numberOfTravellers!
+            activitiesCost = 32 * Double(numDays) * numberOfTravellers!
+            publicTransportationCost = 21 * Double(numDays) * numberOfTravellers!
+        }
+        else if destinationLocation == "London" {
+            foodCost = 39 * Double(numDays) * numberOfTravellers!
+            activitiesCost = 56 * Double(numDays) * numberOfTravellers!
+            publicTransportationCost = 29 * Double(numDays) * numberOfTravellers!
+        }
+        else if destinationLocation == "Moscow" {
+            foodCost = 15 * Double(numDays) * numberOfTravellers!
+            activitiesCost = 19 * Double(numDays) * numberOfTravellers!
+            publicTransportationCost = 4.74 * Double(numDays) * numberOfTravellers!
+        }
+        else if destinationLocation == "Munich" {
+            foodCost = 25 * Double(numDays) * numberOfTravellers!
+            activitiesCost = 15 * Double(numDays) * numberOfTravellers!
+            publicTransportationCost = 17 * Double(numDays) * numberOfTravellers!
+        }
+        else if destinationLocation == "New York City" {
+            foodCost = 37 * Double(numDays) * numberOfTravellers!
+            activitiesCost = 77 * Double(numDays) * numberOfTravellers!
+            publicTransportationCost = 40 * Double(numDays) * numberOfTravellers!
+        }
+        else if destinationLocation == "Seattle" {
+            foodCost = 37 * Double(numDays) * numberOfTravellers!
+            activitiesCost = 12 * Double(numDays) * numberOfTravellers!
+            publicTransportationCost = 17 * Double(numDays) * numberOfTravellers!
+        }
+        
         minHotelCost = getHotelMinCost()
         minFlightCost = getFlightMinCost()
         //-1 signifies an error in API call, call the API once more before displaying an error
@@ -275,7 +316,30 @@ class LoadingScreenViewController: UIViewController {
             return "SAN"
         } else if location == "Rome" {
             return "FCO"
-        } else {
+        } else if location == "Barcelona" {
+            return "BCN"
+        } else if location == "Dubai" {
+            return "DXB"
+        } else if location == "Honolulu" {
+            return "HNL"
+        } else if location == "London" {
+            return "LON"
+        } else if location == "Moscow" {
+            return "MOW"
+        } else if location == "Munich" {
+            return "MUC"
+        } else if location == "New York City" {
+            return "NYC"
+        } else if location == "Paris" {
+            return "PAR"
+        } else if location == "Prague" {
+            return "PRG"
+        } else if location == "Seattle" {
+            return "SEA"
+        } else if location == "Sydney" {
+            return "SYD"
+        }
+        else {
             print("Error determining IATA Code for flights API")
             return nil
         }

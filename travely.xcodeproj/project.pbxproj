@@ -26,6 +26,7 @@
 		BB2BD4D520754B3200B4F9F1 /* ActivitiesTabTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2BD4D420754B3200B4F9F1 /* ActivitiesTabTableViewController.swift */; };
 		BB2BD4D7207C5D5800B4F9F1 /* ActivityDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2BD4D6207C5D5800B4F9F1 /* ActivityDetailsViewController.swift */; };
 		BB46C84C208D6DF60041C85D /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB46C84B208D6DF60041C85D /* SettingsTableViewController.swift */; };
+		BB77C6332092A65300E3D9AF /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB77C6322092A65300E3D9AF /* Activity.swift */; };
 		BBAE6CEA20830DC20053E1DE /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAE6CE920830DC20053E1DE /* ActivityTableViewCell.swift */; };
 		BBC0486C208D765B002CB0E7 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC0486B208D765B002CB0E7 /* Settings.swift */; };
 		C965E500206095F0003EA5F1 /* countryEtiquette.txt in Resources */ = {isa = PBXBuildFile; fileRef = C965E4FF206095EF003EA5F1 /* countryEtiquette.txt */; };
@@ -56,6 +57,7 @@
 		BB2BD4D420754B3200B4F9F1 /* ActivitiesTabTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesTabTableViewController.swift; sourceTree = "<group>"; };
 		BB2BD4D6207C5D5800B4F9F1 /* ActivityDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailsViewController.swift; sourceTree = "<group>"; };
 		BB46C84B208D6DF60041C85D /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		BB77C6322092A65300E3D9AF /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		BBAE6CE920830DC20053E1DE /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		BBC0486B208D765B002CB0E7 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		C965E4FF206095EF003EA5F1 /* countryEtiquette.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = countryEtiquette.txt; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			children = (
 				2B27D941205F108300570716 /* Country.swift */,
 				C9FDC45C20754E3200D72720 /* Activities.swift */,
+				BB77C6322092A65300E3D9AF /* Activity.swift */,
 				6369F0B62073102400BD3A13 /* Trip.swift */,
 				BB2BD4A6207457F800B4F9F1 /* Hotels.swift */,
 				BB2BD4A82074580600B4F9F1 /* Airfairs.swift */,
@@ -293,6 +296,7 @@
 				C9FDC45D20754E3300D72720 /* Activities.swift in Sources */,
 				BB46C84C208D6DF60041C85D /* SettingsTableViewController.swift in Sources */,
 				BB2BD4D7207C5D5800B4F9F1 /* ActivityDetailsViewController.swift in Sources */,
+				BB77C6332092A65300E3D9AF /* Activity.swift in Sources */,
 				BB2BD4A92074580600B4F9F1 /* Airfairs.swift in Sources */,
 				636ECEEE2058E35C00F668F2 /* NewTripViewController.swift in Sources */,
 				BBAE6CEA20830DC20053E1DE /* ActivityTableViewCell.swift in Sources */,

@@ -10,7 +10,7 @@ import UIKit
 import Charts
 import MessageUI
 
-class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControllerDelegate{
+class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControllerDelegate, UITableViewDelegate, UITableViewDataSource{
     var my_trip: Trip?
     
     var countryName = ""
@@ -37,7 +37,6 @@ class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControl
     //Outlet for the view country information button
     @IBAction func viewCountryInformation(_ sender: Any) {
         
-        
     }
     //Outlet for the origin location
     @IBOutlet weak var originLocation: UILabel!
@@ -59,17 +58,56 @@ class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControl
     @IBOutlet weak var hotelRatingLabel: UILabel!
     @IBOutlet weak var hotelRating: UIStackView!
     
+    @IBOutlet weak var activityTabelView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //This line is to test the hotel ratings as data hasn't been saved yet
         numHotelStars = 3
         countryName = "Beijing"
         populateWithData()
+
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // table view related
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard my_trip != nil || my_trip!.activityList.count > 0 else{
+            return 1
+        }
+        var return_val = my_trip!.activityList.count
+        print(return_val)
+        return my_trip!.activityList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //let cell = tableView.dequeueReusableCell(withIdentifier: "activityCell", for: indexPath)
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "activityCell") else {
+            fatalError("Could not dequeue a cell")
+        }
+        guard let activityList = my_trip?.activityList else {
+            fatalError("Could not get activity list on Trip Details")
+        }
+        
+        if activityList.count == 0{
+            cell.textLabel?.text = "No Activities Selected"
+            cell.detailTextLabel?.text = ""
+        }
+        cell.textLabel?.text = activityList[indexPath.row].name
+        if activityList[indexPath.row].price > 0{
+            cell.detailTextLabel?.text = "$\(String(activityList[indexPath.row].price))"
+        } else {
+            cell.detailTextLabel?.text = "FREE"
+        }
+        
+        tableView.reloadRows(at: [indexPath], with: .automatic)
+        
+        return cell
     }
     
     //TODO: declare a func that takes in the data and preps the pie chart
@@ -122,8 +160,35 @@ class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControl
         let mailComposeVC = MFMailComposeViewController()
         //creates subject line in form of ORG to DEST
         let subject : String = originLocation.text!+" to "+destinationLocation.text!+" Trip Details"
-        let body : String =
-        "<div> <h3>Trip Details</h3> <div>Origin: \(originLocation.text!)</div><div>Destination: \(destinationLocation.text!)</div><div>Departure Date: \(departureDate.text!)</div><div>Return Date: \(returnDate.text!)</div><h3>Cost Breakdown</h3><div>Transportation:\(airfareCostLabel.text!)</div><div>Accommodation: \(hotelCostLabel.text!)</div><div>Food: \(foodCostLabel.text!)</div><div>Activities: \(activitiesCostLabel.text!)</div><div>Total Cost: \(totalPriceField.text!)</div><div>Hotel Rating: \(numHotelStars!)</div></div>"
+
+        var activitiesHTML = ""
+        if my_trip!.activityList.count > 0{
+            activitiesHTML += "<ul> "
+            for activity in (my_trip?.activityList)!
+            {
+                if activity.price > 0{
+                    activitiesHTML += "<li>\(activity.name) : $\(activity.price)</li> "
+                } else {
+                    activitiesHTML += "<li>\(activity.name) : FREE</li>"
+                }
+            }
+            activitiesHTML += " </ul>"
+        }
+        let body : String = """
+        <div style="background-color:lightcyan;">
+            <h3>Trip Details</h3>
+                <div>Origin: \(originLocation.text!)</div>
+                <div>Destination: \(destinationLocation.text!)</div>
+                <div>Departure Date: \(departureDate.text!)</div>
+                <div>Return Date: \(returnDate.text!)</div>
+            <h3>Cost Breakdown</h3>
+                <div>Transportation: \(airfareCostLabel.text!)</div>
+                <div>Accommodation: \(hotelCostLabel.text!)</div>
+                <div>Food: \(foodCostLabel.text!)</div>
+                <div>Activities: \(activitiesCostLabel.text!)</div>
+                    <div>\(activitiesHTML)</div>
+                <div>Total Cost: \(totalPriceField.text!)</div></div>
+        """
         mailComposeVC.mailComposeDelegate = self
         mailComposeVC.setSubject(subject)
         mailComposeVC.setMessageBody(body, isHTML: true)

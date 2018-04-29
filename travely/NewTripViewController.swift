@@ -22,8 +22,8 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     // Tag 1 is Origin Picker
     // Tag 2 is Destination Picker
     // Tag 3 is Num of Travellers Picker
-    let placesOrigin = ["-", "San Diego", "Beijing", "Rome"]
-    let placesDestination = ["-", "San Diego", "Beijing", "Rome"]
+    let placesOrigin = ["-", "Barcelona", "Beijing", "Dubai", "Honolulu", "London", "Moscow", "Munich", "New York City", "Rome", "San Diego", "Seattle"]
+    let placesDestination = ["-", "Barcelona", "Beijing", "Dubai", "Honolulu", "London", "Moscow", "Munich", "New York City", "Rome", "San Diego", "Seattle"]
     let numTravellersRange = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
     
     var originPlacePicked = ""
@@ -104,7 +104,7 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         
         //create empty settings if they are not created yet
         if mySettings == nil{
-            mySettings = Settings(budgetSet: false, budgetAmount: nil, hotelRaiting: nil, amenitiesPrefferenceSelected: [], activitiesPrefferenceSelected: [])
+            mySettings = Settings(budgetSet: false, budgetAmount: nil, hotelRaiting: nil, amenitiesPrefferenceSelected: [String](), activitiesPrefferenceSelected: [String]())
         }
         
         self.numTravellersPicker.dataSource = self;
@@ -197,12 +197,6 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
             let myCostTab = self.tabBarController?.viewControllers![2] as! CostViewController
             myCostTab.myTrip = myTrip
             
-            //Pass myTrip variable to MyTrips tab
-            let myTripsTab = self.tabBarController?.viewControllers![3].childViewControllers[0] as! MyTripsTableViewController
-            myTripsTab.trips += [myTrip!]
-            myTripsTab.saveTrips()
-
-            
             //Pass data to aboutTab
             /*
             let aboutTab = self.tabBarController?.viewControllers![3] as! AboutViewController
@@ -215,7 +209,7 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
             activitiesTab.city = destinationPlacePicked
             activitiesTab.selectedArray = [false, false, false, false, false, false, false, false, false]
             activitiesTab.totalCost = 0.0
-            
+            activitiesTab.myTrip = myTrip
             loadingScreenHappen = true
         }
         //Reset the variable to tell if there was timeout
@@ -296,9 +290,12 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         }
     }
     
-    @IBAction func unwindToNewTripViewController(unwindSegue: UIStoryboardSegue) {
-        print("test")
+    @IBAction func unwindToNewTripViewController(segue: UIStoryboardSegue) {
+        guard let source = segue.source as? SettingsTableViewController,
+            let mySettings = source.mySettings else { return }
+        //TODO: add mySettings to myTrip and implement its saving
         
+            
     }
 }
 
