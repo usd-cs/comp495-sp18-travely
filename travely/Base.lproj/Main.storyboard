@@ -962,6 +962,7 @@
                         <outlet property="airfareCostLabel" destination="4qh-Jy-ZrJ" id="cWW-j5-yk4"/>
                         <outlet property="foodCostLabel" destination="KQ5-aG-XFz" id="pf2-WN-Frp"/>
                         <outlet property="hotelCostLabel" destination="1QU-if-roe" id="BhS-ap-Wrh"/>
+                        <outlet property="hotelRating" destination="6hr-b4-Vyp" id="pOZ-1a-vMd"/>
                         <outlet property="hotelRatingLabel" destination="o5f-En-rAc" id="xAc-mN-xzj"/>
                         <outlet property="pieChartView" destination="lhn-yi-UKP" id="VK1-cN-Vak"/>
                         <outlet property="publicTranportationLabel" destination="iz1-D7-YdT" id="fH4-cS-Kiy"/>
@@ -1691,6 +1692,7 @@
                         <outlet property="destinationLocation" destination="UkF-fS-j0v" id="cKT-O2-3oW"/>
                         <outlet property="foodCostLabel" destination="dWj-O2-gCE" id="63t-U6-WiY"/>
                         <outlet property="hotelCostLabel" destination="ZU3-UC-bam" id="eJc-MU-yqz"/>
+                        <outlet property="hotelRating" destination="JDk-Xa-5F1" id="4fN-YH-4CP"/>
                         <outlet property="hotelRatingLabel" destination="F64-kc-Sqj" id="HUa-oJ-esP"/>
                         <outlet property="originLocation" destination="Rve-QL-3HE" id="bZL-F2-sgF"/>
                         <outlet property="pieChartView" destination="DN4-fG-NfW" id="aRj-AS-Mva"/>

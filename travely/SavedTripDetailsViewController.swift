@@ -15,6 +15,9 @@ class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControl
     
     var countryName = ""
     
+    //This variable is to test the hotel rating label
+    var numHotelStars: Int?
+    
     //Outlet for the chart
     @IBOutlet weak var pieChartView: PieChartView!
     //Outlet for the email trip button
@@ -52,12 +55,14 @@ class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControl
     @IBOutlet weak var foodCostLabel: UILabel!
     //Outlet for activities cost
     @IBOutlet weak var activitiesCostLabel: UILabel!
-    //Outlet for the hotel rating
+    //Outlets for the hotel rating
     @IBOutlet weak var hotelRatingLabel: UILabel!
-    
+    @IBOutlet weak var hotelRating: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //This line is to test the hotel ratings as data hasn't been saved yet
+        numHotelStars = 3
         countryName = "Beijing"
         populateWithData()
     }
@@ -98,6 +103,7 @@ class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControl
         foodCostLabel.text = "$" + String(describing: my_trip!.foodCost)
         activitiesCostLabel.text = "$" + String(describing: my_trip!.activitiesCost)
         totalPriceField.text = "$" + String(describing: my_trip!.tripTotalCost)
+        hotelRatingLabel.text = String(describing: numHotelStars!) + " stars"
     }
     
     //MARK:Navigation
@@ -117,7 +123,7 @@ class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControl
         //creates subject line in form of ORG to DEST
         let subject : String = originLocation.text!+" to "+destinationLocation.text!+" Trip Details"
         let body : String =
-        "<div> <h3>Trip Details</h3> <div>Origin: \(originLocation.text!)</div><div>Destination: \(destinationLocation.text!)</div><div>Departure Date: \(departureDate.text!)</div><div>Return Date: \(returnDate.text!)</div><h3>Cost Breakdown</h3><div>Transportation:\(airfareCostLabel.text!)</div><div>Accommodation: \(hotelCostLabel.text!)</div><div>Food: \(foodCostLabel.text!)</div><div>Activities: \(activitiesCostLabel.text!)</div><div>Total Cost: \(totalPriceField.text!)</div></div>"
+        "<div> <h3>Trip Details</h3> <div>Origin: \(originLocation.text!)</div><div>Destination: \(destinationLocation.text!)</div><div>Departure Date: \(departureDate.text!)</div><div>Return Date: \(returnDate.text!)</div><h3>Cost Breakdown</h3><div>Transportation:\(airfareCostLabel.text!)</div><div>Accommodation: \(hotelCostLabel.text!)</div><div>Food: \(foodCostLabel.text!)</div><div>Activities: \(activitiesCostLabel.text!)</div><div>Total Cost: \(totalPriceField.text!)</div><div>Hotel Rating: \(numHotelStars!)</div></div>"
         mailComposeVC.mailComposeDelegate = self
         mailComposeVC.setSubject(subject)
         mailComposeVC.setMessageBody(body, isHTML: true)

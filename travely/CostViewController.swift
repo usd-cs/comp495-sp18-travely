@@ -20,6 +20,8 @@ class CostViewController: UIViewController {
     @IBOutlet weak var publicTranportationLabel: UILabel!
     @IBOutlet weak var activitiesCostLabel: UILabel!
     @IBOutlet weak var foodCostLabel: UILabel!
+    
+    @IBOutlet weak var hotelRating: UILabel!
     @IBOutlet weak var hotelRatingLabel: UILabel!
     
     var minFlightCost: Double?
@@ -30,9 +32,15 @@ class CostViewController: UIViewController {
     var publicTransportationCost: Double?
     var numberOfTravellers: Double?
     var totalTransportationCost: Double?
+    //This variable is to test the hotel rating labels
+    var numHotelStars: Int?
+    
     
     //This function is called everytime the cost tab is visible
     override func viewWillAppear(_ animated: Bool) {
+        //This line is just to test the hotel rating labels
+        numHotelStars = 3
+        
         if myTrip == nil {
             minFlightCost = 0
             minHotelCost = 0
@@ -42,7 +50,8 @@ class CostViewController: UIViewController {
             publicTransportationCost = 0
             numberOfTravellers = 0
             totalTransportationCost = 0
-            
+            hotelRating.isHidden = true
+            hotelRatingLabel.isHidden = true
             zeroPrices()
         } else {
             minFlightCost = myTrip!.tripAirfareCost
@@ -59,6 +68,8 @@ class CostViewController: UIViewController {
                 activitiesCost = 0.0
             }
             totalTransportationCost = myTrip!.tripPublicTransportationCost + myTrip!.tripAirfareCost
+            hotelRating.isHidden = false
+            hotelRatingLabel.isHidden = false
             setLabelsWithData()
         }
     }
@@ -74,6 +85,7 @@ class CostViewController: UIViewController {
         publicTranportationLabel.text = "$" + String(describing: publicTransportationCost!)
         activitiesCostLabel.text = "$" + String(describing: activitiesCost!)
         foodCostLabel.text = "$" + String(describing: foodCost!)
+        hotelRatingLabel.text = String(describing: numHotelStars!) + " stars"
     }
     
     //This function sets the prices to the default $0
