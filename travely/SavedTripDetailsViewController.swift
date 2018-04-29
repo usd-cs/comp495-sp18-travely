@@ -15,6 +15,9 @@ class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControl
     
     var countryName = ""
     
+    //This variable is to test the hotel rating label
+    var numHotelStars: Int?
+    
     //Outlet for the chart
     @IBOutlet weak var pieChartView: PieChartView!
     //Outlet for the email trip button
@@ -51,14 +54,19 @@ class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControl
     @IBOutlet weak var foodCostLabel: UILabel!
     //Outlet for activities cost
     @IBOutlet weak var activitiesCostLabel: UILabel!
-    
+    //Outlets for the hotel rating
+    @IBOutlet weak var hotelRatingLabel: UILabel!
+    @IBOutlet weak var hotelRating: UIStackView!
     
     @IBOutlet weak var activityTabelView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //This line is to test the hotel ratings as data hasn't been saved yet
+        numHotelStars = 3
+        countryName = "Beijing"
+        populateWithData()
 
-         populateWithData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -133,6 +141,7 @@ class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControl
         foodCostLabel.text = "$" + String(describing: my_trip!.foodCost)
         activitiesCostLabel.text = "$" + String(describing: my_trip!.activitiesCost)
         totalPriceField.text = "$" + String(describing: my_trip!.tripTotalCost)
+        hotelRatingLabel.text = String(describing: numHotelStars!) + " stars"
     }
     
     //MARK:Navigation
@@ -151,6 +160,7 @@ class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControl
         let mailComposeVC = MFMailComposeViewController()
         //creates subject line in form of ORG to DEST
         let subject : String = originLocation.text!+" to "+destinationLocation.text!+" Trip Details"
+
         var activitiesHTML = ""
         if my_trip!.activityList.count > 0{
             activitiesHTML += "<ul> "
