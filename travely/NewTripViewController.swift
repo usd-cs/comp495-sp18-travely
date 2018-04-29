@@ -209,7 +209,7 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
             activitiesTab.city = destinationPlacePicked
             activitiesTab.selectedArray = [false, false, false, false, false, false, false, false, false]
             activitiesTab.totalCost = 0.0
-            
+            activitiesTab.myTrip = myTrip
             loadingScreenHappen = true
         }
         //Reset the variable to tell if there was timeout

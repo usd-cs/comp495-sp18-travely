@@ -14,6 +14,7 @@ class ActivitiesTabTableViewController: UITableViewController, ActivityCellDeleg
     var activities: Activities?
     var selectedArray = [false, false, false, false, false, false, false, false, false]
     var totalCost = 0.0
+    var myTrip: Trip?
     
     func checkmarkTapped(sender: ActivityTableViewCell) {
         if let indexPath = tableView.indexPath(for: sender){
@@ -37,21 +38,27 @@ class ActivitiesTabTableViewController: UITableViewController, ActivityCellDeleg
                 fatalError("Error configuring cell in Activities Tab")
             }
             if selectedArray[index]{
+                var currPrice: Double = 0
                 if let price = Double(dataSource["price"]!){
                     totalCost += price
+                    currPrice = price
                 }
+                myTrip?.activityList.append(Activity(name: dataSource["name"]!, price: currPrice)!)
+                
                 activities.addActivity(name: dataSource["name"]!, price: dataSource["price"]!)
             } else {
                 if let price = Double(dataSource["price"]!){
                     totalCost -= price
                 }
                 activities.removeActivity(name: dataSource["name"]!)
+                myTrip?.activityList = (myTrip?.activityList.filter { $0.name != dataSource["name"]! })!
+
             }
             print("checkmarkTapped : \(totalCost) , \(activities.totalPrice)")
             
             let myCostTab = self.tabBarController?.viewControllers![2] as! CostViewController
             myCostTab.activitiesCostAccepted = totalCost
-            
+            myCostTab.myTrip = myTrip
             tableView.reloadRows(at: [indexPath], with: .automatic)
         }
         
@@ -65,6 +72,8 @@ class ActivitiesTabTableViewController: UITableViewController, ActivityCellDeleg
         let backgroundImage = UIImage(named: "gradient_background.jpg")
         let imageView = UIImageView(image: backgroundImage)
         self.tableView.backgroundView = imageView
+        
+        //TODO my =Trip check
         
         if city.count < 1{
             activities = nil

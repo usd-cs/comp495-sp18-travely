@@ -223,8 +223,8 @@ class Activities{
         if let doublePrice = Double(priceStr){
             price += doublePrice
         }
-        let currActivity = Activity(name: name, price: price, description: nil, imageName: nil)
-        self.selectedActivities.append(currActivity)
+        let currActivity = Activity(name: name, price: price)
+        self.selectedActivities.append(currActivity!)
     }
     
     func removeActivity(name: String){
