@@ -64,12 +64,12 @@ class CostViewController: UIViewController {
         } else {
             saveButton.isHidden = false
             minFlightCost = myTrip!.tripAirfareCost
-            minHotelCost = myTrip!.tripHotelCost
+            numberOfTravellers = myTrip!.numberOfTravellers
+            minHotelCost = getHotelCost(myTrip: myTrip!, numOfTravellers: numberOfTravellers!)//myTrip!.tripHotelCost
             totalCost = myTrip!.tripTotalCost
             foodCost = myTrip!.foodCost
             //activitiesCost = myTrip!.activitiesCost
             publicTransportationCost = myTrip!.tripPublicTransportationCost
-            numberOfTravellers = myTrip!.numberOfTravellers
             if let activitiesCostAccepted = activitiesCostAccepted, let numberOfTravellers = numberOfTravellers{
                 activitiesCost = activitiesCostAccepted * numberOfTravellers
                 totalCost = totalCost! + activitiesCost!
@@ -80,6 +80,26 @@ class CostViewController: UIViewController {
             hotelRating.isHidden = false
             hotelRatingLabel.isHidden = false
             setLabelsWithData()
+        }
+    }
+    
+    //function that will return the minimum hotel cost
+    //will take in myTrip to get the data stored as well as numOfTravellers
+    //looked at some sites online and most you can fit in one room is typically 2 people and in some up to three
+    //so fnc is: 2people=1room, 4people=2rooms, 6people=3rooms etc etc
+    //3people = 1 room (three), 5people=2 rooms (three two), 7people = 3 rooms(two two three), 9people = 3rooms(three three three)
+    func getHotelCost(myTrip : Trip, numOfTravellers : Double) -> Double{
+        //will handle all even num of travellers and single room that fits 1,3 travellers
+        if(Int(numOfTravellers)%2 == 0 || numOfTravellers == 1 || numOfTravellers == 3){
+            return (numOfTravellers/2)*myTrip.tripHotelCost
+        }
+        //will handle 9 and 7 travellers
+        else if (numOfTravellers == 7 || numOfTravellers == 9){
+            return 3.0*myTrip.tripHotelCost
+        }
+        //will handle 5 travellers
+        else{
+            return 2.0*myTrip.tripHotelCost
         }
     }
     
