@@ -160,11 +160,6 @@ class LoadingScreenViewController: UIViewController {
             activitiesCost = 77 * Double(numDays) * numberOfTravellers!
             publicTransportationCost = 40 * Double(numDays) * numberOfTravellers!
         }
-        else if destinationLocation == "Paris" {
-            foodCost = 33 * Double(numDays) * numberOfTravellers!
-            activitiesCost = 66 * Double(numDays) * numberOfTravellers!
-            publicTransportationCost = 21 * Double(numDays) * numberOfTravellers!
-        }
         else if destinationLocation == "Seattle" {
             foodCost = 37 * Double(numDays) * numberOfTravellers!
             activitiesCost = 12 * Double(numDays) * numberOfTravellers!
