@@ -46,6 +46,9 @@ class LoadingScreenViewController: UIViewController {
     //Structure to keep track of entire trip
     var newTrip: Trip?
     
+    //Structure to store Settings object
+    var settingsObj: Settings?
+    
     override func viewDidAppear(_ animated: Bool) {
         //This line is to test the hotel rating functionality
         preferredHotelRating = 3
@@ -70,7 +73,7 @@ class LoadingScreenViewController: UIViewController {
             }
             else {
                 //Create Trip data structure to store information
-                self.newTrip = Trip(tripName: self.originLocation + " to " + self.destinationLocation, tripTotalCost: self.totalCost!, tripAirfareCost: self.minFlightCost!, tripHotelCost: self.minHotelCost!, foodCost: self.foodCost!, activitiesCost: self.activitiesCost!, originLocation: self.originLocation, destinationLocation: self.destinationLocation, departureDate: self.departureDate, returnDate: self.returnDate, tripPublicTransportationCost: self.totalTransportationCost!, numberOfTravellers: self.numberOfTravellers!, reportRunDate: self.reportRunDate, activityList: [])
+                self.newTrip = Trip(tripName: self.originLocation + " to " + self.destinationLocation, tripTotalCost: self.totalCost!, tripAirfareCost: self.minFlightCost!, tripHotelCost: self.minHotelCost!, foodCost: self.foodCost!, activitiesCost: self.activitiesCost!, originLocation: self.originLocation, destinationLocation: self.destinationLocation, departureDate: self.departureDate, returnDate: self.returnDate, tripPublicTransportationCost: self.totalTransportationCost!, numberOfTravellers: self.numberOfTravellers!, reportRunDate: self.reportRunDate, activityList: [], settingsObject: self.settingsObj!)
                 
                 //unwind to previous segue
                 SwiftSpinner.hide() //Hide loading screen before unwinding
