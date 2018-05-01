@@ -98,17 +98,16 @@ class CostViewController: UIViewController {
      *  This function will send an error message if the user is over budget
      */
     func costOverBudget() {
-        //Look further in the future
-        //Reduce days
-        //Add another traveller
-        //Remove travellers
-        //Remove activities/more free activities
-        //Create alert on error
-        let alertController = UIAlertController(title: "Overbudget", message: "The trip that you have calculated is overbudget. Here are some recommendations. one two three four five six seven eight nine ten one two three four five six seven eight nine ten", preferredStyle: UIAlertControllerStyle.alert)
-        alertController.addAction(UIAlertAction(title:"Ok", style: .default, handler:  nil))
-        alertController.addAction(UIAlertAction(title:"Recalculate Trip", style: .default, handler:  { action in self.performSegue(withIdentifier: "unwindToRootViewController", sender: self) }))
-        self.present(alertController, animated: true, completion: nil)
-        
+        if Int(numberOfTravellers!)%2 == 0 {
+             let alertController = UIAlertController(title: "Overbudget", message: "The trip that you have calculated is overbudget. Here are some recommendations:\nSet the start date further in the future,\nReduce the number of days,\nRemove a traveller,\nRemove costly activities,\nAdd more free activities", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title:"Ok", style: .default, handler:  nil))
+            self.present(alertController, animated: true, completion: nil)
+        }
+        else {
+             let alertController = UIAlertController(title: "Overbudget", message: "The trip that you have calculated is overbudget. Here are some recommendations:\nSet the start date further in the future,\nReduce the number of days,\nAdd another traveller and share hotel rooms,\nRemove costly activities,\nAdd more free activities", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title:"Ok", style: .default, handler:  nil))
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
     
     //function that will return the minimum hotel cost
