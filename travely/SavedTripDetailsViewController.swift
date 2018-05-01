@@ -54,18 +54,24 @@ class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControl
     @IBOutlet weak var foodCostLabel: UILabel!
     //Outlet for activities cost
     @IBOutlet weak var activitiesCostLabel: UILabel!
-    //Outlets for the hotel rating
+    //Outlet for the label of the hotel rating
+    @IBOutlet weak var hotelRating: UILabel!
+    //Outlets for the hotel rating (number of stars)
     @IBOutlet weak var hotelRatingLabel: UILabel!
+    
     
     @IBOutlet weak var activityTabelView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //This line is to test the hotel ratings as data hasn't been saved yet
-        numHotelStars = 3
+        //Get the hotel rating from the trip
+        numHotelStars = my_trip?.settingsObject.hotelRaiting
+        if numHotelStars == 0 {
+            hotelRating.isHidden = true
+            hotelRatingLabel.isHidden = true
+        }
         countryName = "Beijing"
         populateWithData()
-
     }
     
     override func didReceiveMemoryWarning() {

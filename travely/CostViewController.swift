@@ -47,10 +47,6 @@ class CostViewController: UIViewController {
     
     //This function is called everytime the cost tab is visible
     override func viewWillAppear(_ animated: Bool) {
-        //This line is just to test the hotel rating labels
-        numHotelStars = 3
-        //This line is just to test the budget functionality before the settings has been implemented
-        tripBudget = 100.0
         
         if myTrip == nil {
             minFlightCost = 0
@@ -81,16 +77,27 @@ class CostViewController: UIViewController {
                 activitiesCost = 0.0
             }
             totalTransportationCost = myTrip!.tripPublicTransportationCost + myTrip!.tripAirfareCost
-            hotelRating.isHidden = false
-            hotelRatingLabel.isHidden = false
-            setLabelsWithData()
             
-            let budget = Double(tripBudget!)
-            let cost = Double(totalCost!)
-            if budget < cost {
-                costOverBudget()
-                totalCostLabel.textColor = UIColor.red
+            //Get the budget from the trip object
+            if (myTrip?.settingsObject.budgetSet)! {
+                tripBudget = myTrip?.settingsObject.budgetAmount
+                let budget = Double(tripBudget!)
+                let cost = Double(totalCost!)
+                if budget < cost {
+                    costOverBudget()
+                    totalCostLabel.textColor = UIColor.red
+                }
             }
+            
+            //Gets the hotel rating from the trip object, 0 if no preference
+            numHotelStars = myTrip?.settingsObject.hotelRaiting
+            if numHotelStars != 0 {
+                hotelRating.isHidden = false
+                hotelRatingLabel.isHidden = false
+            }
+            
+            
+            setLabelsWithData()
         }
     }
     
