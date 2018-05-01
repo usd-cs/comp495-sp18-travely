@@ -35,6 +35,8 @@ class CostViewController: UIViewController {
     var totalTransportationCost: Double?
     //This variable is to test the hotel rating labels
     var numHotelStars: Int?
+    //This variable is to test the budget functionality
+    var tripBudget: Double?
     
     
     @IBAction func saveButtonPressed(_ sender: UIButton) {
@@ -47,6 +49,8 @@ class CostViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         //This line is just to test the hotel rating labels
         numHotelStars = 3
+        //This line is just to test the budget functionality before the settings has been implemented
+        tripBudget = 100.0
         
         if myTrip == nil {
             minFlightCost = 0
@@ -80,7 +84,31 @@ class CostViewController: UIViewController {
             hotelRating.isHidden = false
             hotelRatingLabel.isHidden = false
             setLabelsWithData()
+            
+            let budget = Double(tripBudget!)
+            let cost = Double(totalCost!)
+            if budget < cost {
+                costOverBudget()
+                totalCostLabel.textColor = UIColor.red
+            }
         }
+    }
+    
+    /*
+     *  This function will send an error message if the user is over budget
+     */
+    func costOverBudget() {
+        //Look further in the future
+        //Reduce days
+        //Add another traveller
+        //Remove travellers
+        //Remove activities/more free activities
+        //Create alert on error
+        let alertController = UIAlertController(title: "Overbudget", message: "The trip that you have calculated is overbudget. Here are some recommendations. one two three four five six seven eight nine ten one two three four five six seven eight nine ten", preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title:"Ok", style: .default, handler:  nil))
+        alertController.addAction(UIAlertAction(title:"Recalculate Trip", style: .default, handler:  { action in self.performSegue(withIdentifier: "unwindToRootViewController", sender: self) }))
+        self.present(alertController, animated: true, completion: nil)
+        
     }
     
     //function that will return the minimum hotel cost
