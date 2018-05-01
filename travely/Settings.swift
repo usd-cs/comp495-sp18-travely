@@ -10,9 +10,9 @@ import os.log
 
 class Settings : NSObject, NSCoding {
     var budgetSet: Bool
-    var budgetAmount: Double?
+    var budgetAmount: Double
     
-    var hotelRaiting: Int?
+    var hotelRaiting: Int
     
     var amenitiesPrefferenceSelected: [String]
     var activitiesPrefferenceSelected: [String]
@@ -25,7 +25,7 @@ class Settings : NSObject, NSCoding {
         static let activitiesPrefferenceSelected = "activitiesPrefferenceSelected"
     }
     
-    init(budgetSet: Bool, budgetAmount: Double?, hotelRaiting: Int?, amenitiesPrefferenceSelected: [String], activitiesPrefferenceSelected: [String]){
+    init(budgetSet: Bool, budgetAmount: Double, hotelRaiting: Int, amenitiesPrefferenceSelected: [String], activitiesPrefferenceSelected: [String]){
         self.budgetSet = budgetSet
         self.budgetAmount = budgetAmount
         self.hotelRaiting = hotelRaiting

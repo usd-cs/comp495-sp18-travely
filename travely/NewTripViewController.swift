@@ -104,7 +104,7 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         
         //create empty settings if they are not created yet
         if mySettings == nil{
-            mySettings = Settings(budgetSet: false, budgetAmount: nil, hotelRaiting: nil, amenitiesPrefferenceSelected: [String](), activitiesPrefferenceSelected: [String]())
+            mySettings = Settings(budgetSet: false, budgetAmount: 0.0, hotelRaiting: 0, amenitiesPrefferenceSelected: [String](), activitiesPrefferenceSelected: [String]())
         }
         
         self.numTravellersPicker.dataSource = self;
