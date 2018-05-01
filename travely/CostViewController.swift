@@ -35,6 +35,8 @@ class CostViewController: UIViewController {
     var totalTransportationCost: Double?
     //This variable is to test the hotel rating labels
     var numHotelStars: Int?
+    //This variable is to test the budget functionality
+    var tripBudget: Double?
     
     
     @IBAction func saveButtonPressed(_ sender: UIButton) {
@@ -47,6 +49,8 @@ class CostViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         //This line is just to test the hotel rating labels
         numHotelStars = 3
+        //This line is just to test the budget functionality before the settings has been implemented
+        tripBudget = 100.0
         
         if myTrip == nil {
             minFlightCost = 0
@@ -80,6 +84,29 @@ class CostViewController: UIViewController {
             hotelRating.isHidden = false
             hotelRatingLabel.isHidden = false
             setLabelsWithData()
+            
+            let budget = Double(tripBudget!)
+            let cost = Double(totalCost!)
+            if budget < cost {
+                costOverBudget()
+                totalCostLabel.textColor = UIColor.red
+            }
+        }
+    }
+    
+    /*
+     *  This function will send an error message if the user is over budget
+     */
+    func costOverBudget() {
+        if Int(numberOfTravellers!)%2 == 0 {
+             let alertController = UIAlertController(title: "Overbudget", message: "The trip that you have calculated is overbudget. Here are some recommendations:\nSet the start date further in the future,\nReduce the number of days,\nRemove a traveller,\nRemove costly activities,\nAdd more free activities", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title:"Ok", style: .default, handler:  nil))
+            self.present(alertController, animated: true, completion: nil)
+        }
+        else {
+             let alertController = UIAlertController(title: "Overbudget", message: "The trip that you have calculated is overbudget. Here are some recommendations:\nSet the start date further in the future,\nReduce the number of days,\nAdd another traveller and share hotel rooms,\nRemove costly activities,\nAdd more free activities", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title:"Ok", style: .default, handler:  nil))
+            self.present(alertController, animated: true, completion: nil)
         }
     }
     
