@@ -410,7 +410,16 @@ class LoadingScreenViewController: UIViewController {
             "Cache-Control": "no-cache",
             ]
         
-        let request = NSMutableURLRequest(url: NSURL(string: "https://api.sandbox.amadeus.com/v1.2/hotels/search-airport?apikey="+AMADEUSHOTELSAPIKEY+"&location="+destinationAirport+"&check_in="+departureDate+"&check_out="+returnDate+"&radius="+distanceFromAirport)! as URL,
+        //Form request string
+        var request_str = "https://api.sandbox.amadeus.com/v1.2/hotels/search-airport?apikey="+AMADEUSHOTELSAPIKEY+"&location="+destinationAirport+"&check_in="+departureDate+"&check_out="+returnDate+"&radius="+distanceFromAirport
+        
+        //Append amenities onto request_str
+        for amenity in settingsObj!.amenitiesPrefferenceSelected {
+            request_str += "&amenity=" + amenity
+        }
+
+        //Format request into actual URLRequest
+        let request = NSMutableURLRequest(url: NSURL(string: request_str)! as URL,
                                           cachePolicy: .useProtocolCachePolicy,
                                           timeoutInterval: 10.0)
         request.httpMethod = "GET"
