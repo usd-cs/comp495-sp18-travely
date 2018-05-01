@@ -56,7 +56,6 @@ class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControl
     @IBOutlet weak var activitiesCostLabel: UILabel!
     //Outlets for the hotel rating
     @IBOutlet weak var hotelRatingLabel: UILabel!
-    @IBOutlet weak var hotelRating: UIStackView!
     
     @IBOutlet weak var activityTabelView: UITableView!
     
@@ -184,6 +183,7 @@ class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControl
             <h3>Cost Breakdown</h3>
                 <div>Transportation: \(airfareCostLabel.text!)</div>
                 <div>Accommodation: \(hotelCostLabel.text!)</div>
+                <div>Hotel Rating: \(hotelRatingLabel.text!)</div>
                 <div>Food: \(foodCostLabel.text!)</div>
                 <div>Activities: \(activitiesCostLabel.text!)</div>
                     <div>\(activitiesHTML)</div>
