@@ -56,6 +56,8 @@ class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControl
     @IBOutlet weak var activitiesCostLabel: UILabel!
     //Outlets for the hotel rating
     @IBOutlet weak var hotelRatingLabel: UILabel!
+    //Outlet for the filtered ameninities
+    @IBOutlet weak var filteredAmenitiesLabel: UILabel!
     
     @IBOutlet weak var activityTabelView: UITableView!
     
@@ -141,6 +143,65 @@ class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControl
         activitiesCostLabel.text = "$" + String(describing: my_trip!.activitiesCost)
         totalPriceField.text = "$" + String(describing: my_trip!.tripTotalCost)
         hotelRatingLabel.text = String(describing: numHotelStars!) + " stars"
+        if my_trip != nil {
+            if (my_trip?.settingsObject.amenitiesPrefferenceSelected.isEmpty)! {
+                filteredAmenitiesLabel.text = "Amenities Filtered: None"
+            } else {
+                var amenities_str = "Amenities Filtered: "
+                for amenity in (my_trip?.settingsObject.amenitiesPrefferenceSelected)! {
+                    amenities_str += translateAmenityCode(code: amenity) + ", "
+                }
+                amenities_str.remove(at: amenities_str.index(before: amenities_str.endIndex))
+                amenities_str.remove(at: amenities_str.index(before: amenities_str.endIndex))
+                filteredAmenitiesLabel.text = amenities_str
+            }
+        }
+    }
+    
+    //Translates amenity code into human readible text and returns human readible text
+    func translateAmenityCode(code: String) -> String {
+        if code == "BABY_SITTING" {
+            return "Baby Sitting"
+        }
+        
+        if code == "BANQUET_FACILITIES" {
+            return "Banquet Facilities"
+        }
+        
+        if code == "COFFEE_SHOP" {
+            return "Coffee Shop"
+        }
+        
+        if code == "CONCIERGE_DESK" {
+            return "Concierge"
+        }
+        
+        if code == "FREE_HIGH_SPEED_INTERNET" {
+            return "Free Internet"
+        }
+        
+        if code == "GYM" {
+            return "Gym"
+        }
+        
+        if code == "JACUZZI" {
+            return "Jacuzzi"
+        }
+        
+        if code == "LAUNDRY_SERVICE" {
+            return "Laundry Service"
+        }
+        
+        if code == "POOL" {
+            return "Pool"
+        }
+        
+        if code == "RESTAURANT" {
+            return "Restaurant"
+        }
+        
+        //Should never happen
+        return "Error"
     }
     
     //MARK:Navigation

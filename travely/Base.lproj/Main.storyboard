@@ -1809,6 +1809,7 @@
                         <outlet property="airfareCostLabel" destination="5XU-5H-PxV" id="jvX-PZ-ZuL"/>
                         <outlet property="departureDate" destination="uVh-n7-sU9" id="vaG-kX-nTN"/>
                         <outlet property="destinationLocation" destination="UkF-fS-j0v" id="cKT-O2-3oW"/>
+                        <outlet property="filteredAmenitiesLabel" destination="IBD-bI-ybD" id="d6o-j6-qeG"/>
                         <outlet property="foodCostLabel" destination="dWj-O2-gCE" id="63t-U6-WiY"/>
                         <outlet property="hotelCostLabel" destination="ZU3-UC-bam" id="eJc-MU-yqz"/>
                         <outlet property="hotelRatingLabel" destination="F64-kc-Sqj" id="HUa-oJ-esP"/>
