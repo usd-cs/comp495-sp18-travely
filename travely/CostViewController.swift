@@ -125,6 +125,8 @@ class CostViewController: UIViewController {
                 for amenity in (myTrip?.settingsObject.amenitiesPrefferenceSelected)! {
                     amenities_str += translateAmenityCode(code: amenity) + ", "
                 }
+                amenities_str.remove(at: amenities_str.index(before: amenities_str.endIndex))
+                amenities_str.remove(at: amenities_str.index(before: amenities_str.endIndex))
                 amenitiesFilteredLabel.text = amenities_str
             }
         }
