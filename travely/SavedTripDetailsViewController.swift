@@ -213,9 +213,8 @@ class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControl
     func prepareAmenitiesStr() -> String {
         var amenities_str = ""
         if (my_trip?.settingsObject.amenitiesPrefferenceSelected.isEmpty)! {
-            amenities_str = "Amenities Filtered: None"
+            amenities_str = "None"
         } else {
-            amenities_str = "Amenities Filtered: "
             for amenity in (my_trip?.settingsObject.amenitiesPrefferenceSelected)! {
                 amenities_str += translateAmenityCode(code: amenity) + ", "
             }
