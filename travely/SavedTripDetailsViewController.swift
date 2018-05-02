@@ -150,17 +150,7 @@ class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControl
         totalPriceField.text = "$" + String(describing: my_trip!.tripTotalCost)
         hotelRatingLabel.text = String(describing: numHotelStars!) + " stars"
         if my_trip != nil {
-            if (my_trip?.settingsObject.amenitiesPrefferenceSelected.isEmpty)! {
-                filteredAmenitiesLabel.text = "Amenities Filtered: None"
-            } else {
-                var amenities_str = "Amenities Filtered: "
-                for amenity in (my_trip?.settingsObject.amenitiesPrefferenceSelected)! {
-                    amenities_str += translateAmenityCode(code: amenity) + ", "
-                }
-                amenities_str.remove(at: amenities_str.index(before: amenities_str.endIndex))
-                amenities_str.remove(at: amenities_str.index(before: amenities_str.endIndex))
-                filteredAmenitiesLabel.text = amenities_str
-            }
+            filteredAmenitiesLabel.text = prepareAmenitiesStr()
         }
     }
     
@@ -220,9 +210,26 @@ class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControl
         }
     }
     
+    func prepareAmenitiesStr() -> String {
+        var amenities_str = ""
+        if (my_trip?.settingsObject.amenitiesPrefferenceSelected.isEmpty)! {
+            amenities_str = "Amenities Filtered: None"
+        } else {
+            amenities_str = "Amenities Filtered: "
+            for amenity in (my_trip?.settingsObject.amenitiesPrefferenceSelected)! {
+                amenities_str += translateAmenityCode(code: amenity) + ", "
+            }
+            amenities_str.remove(at: amenities_str.index(before: amenities_str.endIndex))
+            amenities_str.remove(at: amenities_str.index(before: amenities_str.endIndex))
+        }
+        
+        return amenities_str
+    }
+    
     //This function will configure the Mail VC by setting this VC as its delegate
     //as well as providing who the recipient is and message body
     func configureMailController() -> MFMailComposeViewController{
+        
         let mailComposeVC = MFMailComposeViewController()
         //creates subject line in form of ORG to DEST
         let subject : String = originLocation.text!+" to "+destinationLocation.text!+" Trip Details"
@@ -251,6 +258,7 @@ class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControl
                 <div>Transportation: \(airfareCostLabel.text!)</div>
                 <div>Accommodation: \(hotelCostLabel.text!)</div>
                 <div>Hotel Rating: \(hotelRatingLabel.text!)</div>
+                <div>Filtered Amenities: \(filteredAmenitiesLabel.text!)</div>
                 <div>Food: \(foodCostLabel.text!)</div>
                 <div>Activities: \(activitiesCostLabel.text!)</div>
                     <div>\(activitiesHTML)</div>
