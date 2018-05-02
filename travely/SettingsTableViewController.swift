@@ -11,6 +11,7 @@ import UIKit
 class SettingsTableViewController: UITableViewController {
     
     var mySettings: Settings?
+    var currStarRating = 0
     
     //Amenity Connections
     @IBOutlet weak var babySittingAmenity: UISwitch!
@@ -62,6 +63,7 @@ class SettingsTableViewController: UITableViewController {
     
     @IBAction func ratingSelected(_ sender: UIButton) {
         let tag = sender.tag
+        currStarRating = tag
         //iterate through each star button
         for button in ratingButtons{
             //fill the star if it is less than selected star
@@ -90,6 +92,9 @@ class SettingsTableViewController: UITableViewController {
         
         //Create Amenities variable to store in Settings object
         mySettings?.amenitiesPrefferenceSelected = generateAmenitiesData()
+        
+        //Saves the hotel rating
+        mySettings?.hotelRaiting = currStarRating
     
         performSegue(withIdentifier: "saveSettingsSegue", sender: self)
     }

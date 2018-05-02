@@ -19,7 +19,6 @@ class LoadingScreenViewController: UIViewController {
     var numTravellers = ""
     var numDays = 0
     var reportRunDate = ""
-    var preferredHotelRating: Int?
     
     //Used for Amadeus Flights and hotels API method: getFlightMinCost, global variables used for getting data out of completion handler
     var flightcall_done = false
@@ -42,6 +41,8 @@ class LoadingScreenViewController: UIViewController {
     var publicTransportationCost: Double?
     var numberOfTravellers: Double?
     var totalTransportationCost: Double?
+    var preferredHotelRating: Int?
+
     
     //Structure to keep track of entire trip
     var newTrip: Trip?
@@ -50,8 +51,8 @@ class LoadingScreenViewController: UIViewController {
     var settingsObj: Settings?
     
     override func viewDidAppear(_ animated: Bool) {
-        //This line is to test the hotel rating functionality
-        preferredHotelRating = 3
+        //Retreive the preferred hotel rating
+        preferredHotelRating = self.settingsObj?.hotelRaiting
         
         //Perform this all on separate thread from main thread so loading screen functions properly
         DispatchQueue.global(qos: .utility).async {
@@ -486,7 +487,7 @@ class LoadingScreenViewController: UIViewController {
         var currMin: Double = 999999
         var ratingMatch = false
         //If user entered a hotel rating, search for the lowest prices among hotels with matching ratings
-        if let hotelRating = preferredHotelRating {
+        if preferredHotelRating != 0 {
             if let json = json{
                 if let results = json["results"]{
                     for result in results as! [AnyObject]{
