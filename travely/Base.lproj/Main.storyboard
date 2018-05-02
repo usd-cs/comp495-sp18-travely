@@ -761,7 +761,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="TDg-mv-bL9">
-                                <rect key="frame" x="0.0" y="40" width="375" height="208"/>
+                                <rect key="frame" x="0.0" y="40" width="375" height="258.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IVn-2n-GDL" userLabel="Trip Cost Stack">
                                         <rect key="frame" x="32.5" y="0.0" width="310" height="45.5"/>
@@ -947,6 +947,17 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Xjk-u2-P8Y">
+                                        <rect key="frame" x="94" y="238" width="187" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amenities Filtered: None" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aw-1l-9Oi">
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.69059324264526367" green="0.87349033355712891" blue="0.94513225555419922" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -962,7 +973,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRa-zM-8MM">
-                                <rect key="frame" x="159" y="423" width="57" height="40"/>
+                                <rect key="frame" x="159" y="473.5" width="57" height="40"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="23"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
                                 <state key="normal" title="Save">
@@ -992,6 +1003,7 @@
                     <connections>
                         <outlet property="activitiesCostLabel" destination="Hfj-0s-jOu" id="tqp-12-gEs"/>
                         <outlet property="airfareCostLabel" destination="4qh-Jy-ZrJ" id="cWW-j5-yk4"/>
+                        <outlet property="amenitiesFilteredLabel" destination="0aw-1l-9Oi" id="hhb-R0-ZT7"/>
                         <outlet property="foodCostLabel" destination="KQ5-aG-XFz" id="pf2-WN-Frp"/>
                         <outlet property="hotelCostLabel" destination="1QU-if-roe" id="BhS-ap-Wrh"/>
                         <outlet property="hotelRating" destination="6hr-b4-Vyp" id="pOZ-1a-vMd"/>
@@ -1688,11 +1700,11 @@
                                                         </constraints>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DN4-fG-NfW" customClass="PieChartView" customModule="Charts">
-                                                        <rect key="frame" x="0.0" y="548" width="375" height="356"/>
+                                                        <rect key="frame" x="0.0" y="548" width="375" height="320.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1HE-0s-GaR">
-                                                        <rect key="frame" x="114" y="919" width="147.5" height="41"/>
+                                                        <rect key="frame" x="114" y="883.5" width="147.5" height="41"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hotel Information " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2P-wO-iUv">
                                                                 <rect key="frame" x="0.0" y="0.0" width="147.5" height="20.5"/>
@@ -1720,6 +1732,17 @@
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Gbb-6l-DYX">
+                                                        <rect key="frame" x="94" y="939.5" width="187" height="20.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filtered Amenities: None" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBD-bI-ybD">
+                                                                <rect key="frame" x="0.0" y="0.0" width="187" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
                                                         </subviews>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cz7-pi-mzD">
@@ -1786,6 +1809,7 @@
                         <outlet property="airfareCostLabel" destination="5XU-5H-PxV" id="jvX-PZ-ZuL"/>
                         <outlet property="departureDate" destination="uVh-n7-sU9" id="vaG-kX-nTN"/>
                         <outlet property="destinationLocation" destination="UkF-fS-j0v" id="cKT-O2-3oW"/>
+                        <outlet property="filteredAmenitiesLabel" destination="IBD-bI-ybD" id="d6o-j6-qeG"/>
                         <outlet property="foodCostLabel" destination="dWj-O2-gCE" id="63t-U6-WiY"/>
                         <outlet property="hotelCostLabel" destination="ZU3-UC-bam" id="eJc-MU-yqz"/>
                         <outlet property="hotelRating" destination="s2v-0P-FSF" id="3GT-tR-VKc"/>
