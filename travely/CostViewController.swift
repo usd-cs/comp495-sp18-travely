@@ -42,6 +42,8 @@ class CostViewController: UIViewController {
     
     
     @IBAction func saveButtonPressed(_ sender: UIButton) {
+        myTrip?.tripTotalCost = totalCost!
+        
         let myTripsTab = self.tabBarController?.viewControllers![3].childViewControllers[0] as! MyTripsTableViewController
         myTripsTab.trips += [myTrip!]
         myTripsTab.saveTrips()
@@ -72,11 +74,15 @@ class CostViewController: UIViewController {
             foodCost = myTrip!.foodCost
             //activitiesCost = myTrip!.activitiesCost
             publicTransportationCost = myTrip!.tripPublicTransportationCost
+            
+            //upate total and activities costs if paid activities are selected
             if let activitiesCostAccepted = activitiesCostAccepted, let numberOfTravellers = numberOfTravellers{
                 activitiesCost = activitiesCostAccepted * numberOfTravellers
-                totalCost = totalCost! + activitiesCost!
+                totalCost = myTrip!.tripTotalCost + activitiesCost!
+                myTrip?.activitiesCost = activitiesCost!
             } else {
                 activitiesCost = 0.0
+                myTrip?.activitiesCost = activitiesCost!
             }
             totalTransportationCost = myTrip!.tripPublicTransportationCost + myTrip!.tripAirfareCost
             
@@ -126,16 +132,16 @@ class CostViewController: UIViewController {
     //3people = 1 room (three), 5people=2 rooms (three two), 7people = 3 rooms(two two three), 9people = 3rooms(three three three)
     func getHotelCost(myTrip : Trip, numOfTravellers : Double) -> Double{
         //will handle all even num of travellers and single room that fits 1,3 travellers
-        if(Int(numOfTravellers)%2 == 0 || numOfTravellers == 1 || numOfTravellers == 3){
-            return (numOfTravellers/2)*myTrip.tripHotelCost
+        if(Int(numOfTravellers) % 2 == 0 || numOfTravellers == 1 || numOfTravellers == 3){
+            return (numOfTravellers / 2) * myTrip.tripHotelCost
         }
         //will handle 9 and 7 travellers
         else if (numOfTravellers == 7 || numOfTravellers == 9){
-            return 3.0*myTrip.tripHotelCost
+            return 3.0 * myTrip.tripHotelCost
         }
         //will handle 5 travellers
         else{
-            return 2.0*myTrip.tripHotelCost
+            return 2.0 * myTrip.tripHotelCost
         }
     }
     

@@ -80,6 +80,7 @@ class SettingsTableViewController: UITableViewController {
      * This function saves data from settings page to mySettings object
      */
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        //save budget settings
         mySettings!.budgetSet = budgetSwitch.isOn
         if mySettings!.budgetSet{
             if let budget = Double(budgetTextField.text ?? "0"){
@@ -89,6 +90,13 @@ class SettingsTableViewController: UITableViewController {
             }
         }
         
+        //save flight settings
+        mySettings!.directFlightOnly = directFlightSwitch.isOn
+    
+        //save activities prefferences
+        mySettings!.culturalActivitiesPrefference = culturalActivitiesSegmentedControl.selectedSegmentIndex
+        mySettings!.outdoorsActivitiesPrefference = outdoorsActivitiesSegmentedControl.selectedSegmentIndex
+        mySettings!.nightlifeActivitiesPrefference = nightlifeActivitiesSegmentedControl.selectedSegmentIndex
         
         //Create Amenities variable to store in Settings object
         mySettings?.amenitiesPrefferenceSelected = generateAmenitiesData()
@@ -150,9 +158,16 @@ class SettingsTableViewController: UITableViewController {
     @IBOutlet weak var budgetTextField: UITextField!
     @IBOutlet weak var budgetAmountCell: UITableViewCell!
     
+    @IBOutlet weak var directFlightSwitch: UISwitch!
+    
+    @IBOutlet weak var culturalActivitiesSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var outdoorsActivitiesSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var nightlifeActivitiesSegmentedControl: UISegmentedControl!
+    
     @IBAction func budgetSwitchPressed(_ sender: UISwitch) {
         if budgetSwitch.isOn{
             budgetAmountCell.isHidden = false
+            budgetTextField.text = String(mySettings!.budgetAmount)
         } else {
             budgetAmountCell.isHidden = true
         }
@@ -163,6 +178,15 @@ class SettingsTableViewController: UITableViewController {
         if mySettings != nil {
             //Set values of amenities so they are displayed on screen
             setAmenities()
+            
+        
+            //set values of flight data
+            directFlightSwitch.isOn = mySettings!.directFlightOnly
+            
+            //set values of activities prefferences
+            culturalActivitiesSegmentedControl.selectedSegmentIndex = mySettings!.culturalActivitiesPrefference
+            outdoorsActivitiesSegmentedControl.selectedSegmentIndex = mySettings!.outdoorsActivitiesPrefference
+            nightlifeActivitiesSegmentedControl.selectedSegmentIndex = mySettings!.nightlifeActivitiesPrefference
         }
     }
     
@@ -239,7 +263,7 @@ class SettingsTableViewController: UITableViewController {
         
         //budget section
         budgetSwitch.isOn = mySettings!.budgetSet
-        let currBudget: String = String(describing: mySettings?.budgetAmount)
+        let currBudget: String = String(describing: mySettings!.budgetAmount)
         if currBudget != "nil" {
             budgetTextField.text = currBudget
         } else {
@@ -255,7 +279,7 @@ class SettingsTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return 5
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -263,10 +287,12 @@ class SettingsTableViewController: UITableViewController {
         case 0:
             return 2
         case 1:
-            return 3
+            return 1
         case 2:
-            return 2
+            return 3
         case 3:
+            return 2
+        case 4:
             return 10
         default:
             return 0
