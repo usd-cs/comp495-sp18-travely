@@ -52,18 +52,26 @@ class CostViewController: UIViewController {
     //this func will create an alert to get user's title to saved trip
     func setAlert(){
         let alert = UIAlertController(title: "Save Trip As", message: "Please enter a title for your trip.", preferredStyle: .alert)
+        let emptyAlert = UIAlertController(title: "Error", message: "The title was left empty. Try again by entering a title for the trip.", preferredStyle: .alert)
         alert.addTextField(configurationHandler: tripTitle)
         let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
-            if let tripTitle = self.tripTitle?.text{
-                self.myTrip?.tripName = tripTitle
+            if !(self.tripTitle?.text?.isEmpty)!{
+                let tripTitle = self.tripTitle?.text!
+                self.myTrip?.tripName = tripTitle!
                 self.myTrip?.tripTotalCost = self.totalCost!
                 let myTripsTab = self.tabBarController?.viewControllers![3].childViewControllers[0] as! MyTripsTableViewController
                 myTripsTab.trips += [self.myTrip!]
                 print(tripTitle)
                 myTripsTab.saveTrips()
             }
+            else{
+                print("Empty TxtField")
+                self.present(emptyAlert, animated: true, completion: nil)
+            }
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let emptyOkAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        emptyAlert.addAction(emptyOkAction)
         alert.addAction(okAction)
         alert.addAction(cancelAction)
         self.present(alert, animated: true, completion: nil)
