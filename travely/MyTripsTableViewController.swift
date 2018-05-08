@@ -12,7 +12,7 @@ import os.log
 class MyTripsTableViewController: UITableViewController {
     
     var trips = [Trip]()
-    
+    var titleToDisplay = ""
     override func viewWillAppear(_ animated: Bool) {
       
         //Load and reload trips when navigated to this page
@@ -57,7 +57,7 @@ class MyTripsTableViewController: UITableViewController {
         // Configure the cell...
         
         let trip = trips[indexPath.row]
-        cell.tripLabel.text = trip.originLocation+" to "+trip.destinationLocation
+        cell.tripLabel.text = trip.tripName
         return cell
     }
     

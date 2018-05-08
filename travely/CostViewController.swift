@@ -12,6 +12,7 @@ import Charts
 class CostViewController: UIViewController {
     var myTrip: Trip?
     var activitiesCostAccepted: Double?
+    var tripTitle : UITextField?
     
     @IBOutlet weak var pieChartView: PieChartView!
     @IBOutlet weak var totalCostLabel: UILabel!
@@ -25,6 +26,7 @@ class CostViewController: UIViewController {
     @IBOutlet weak var hotelRatingLabel: UILabel!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var amenitiesFilteredLabel: UILabel!
+    
     
     
     var minFlightCost: Double?
@@ -42,11 +44,34 @@ class CostViewController: UIViewController {
     
     
     @IBAction func saveButtonPressed(_ sender: UIButton) {
-        myTrip?.tripTotalCost = totalCost!
-        
-        let myTripsTab = self.tabBarController?.viewControllers![3].childViewControllers[0] as! MyTripsTableViewController
-        myTripsTab.trips += [myTrip!]
-        myTripsTab.saveTrips()
+        setAlert()
+//        print(tripTitle?.text!)
+//        myTrip?.tripName = (tripTitle?.text!)!
+    }
+    
+    //this func will create an alert to get user's title to saved trip
+    func setAlert(){
+        let alert = UIAlertController(title: "Save Trip As", message: "Please enter a title for your trip.", preferredStyle: .alert)
+        alert.addTextField(configurationHandler: tripTitle)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            if let tripTitle = self.tripTitle?.text{
+                self.myTrip?.tripName = tripTitle
+                self.myTrip?.tripTotalCost = self.totalCost!
+                let myTripsTab = self.tabBarController?.viewControllers![3].childViewControllers[0] as! MyTripsTableViewController
+                myTripsTab.trips += [self.myTrip!]
+                print(tripTitle)
+                myTripsTab.saveTrips()
+            }
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(okAction)
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func tripTitle(textField : UITextField){
+        tripTitle = textField
+        tripTitle?.placeholder = "Enter a Title"
     }
     
     //This function is called everytime the cost tab is visible
