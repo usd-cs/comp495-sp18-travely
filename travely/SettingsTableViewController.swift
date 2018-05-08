@@ -179,6 +179,17 @@ class SettingsTableViewController: UITableViewController {
             //Set values of amenities so they are displayed on screen
             setAmenities()
             
+            //Set star rating
+            var tag = mySettings?.hotelRaiting
+            for button in ratingButtons{
+                //fill the star if it is less than selected star
+                if button.tag <= tag!{
+                    button.setTitle("★", for: .normal)
+                }
+                else{
+                    button.setTitle("☆", for: .normal)
+                }
+            }
         
             //set values of flight data
             directFlightSwitch.isOn = mySettings!.directFlightOnly
