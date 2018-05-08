@@ -61,7 +61,6 @@ class CostViewController: UIViewController {
                 self.myTrip?.tripTotalCost = self.totalCost!
                 let myTripsTab = self.tabBarController?.viewControllers![3].childViewControllers[0] as! MyTripsTableViewController
                 myTripsTab.trips += [self.myTrip!]
-                print(tripTitle)
                 myTripsTab.saveTrips()
             }
             else{
