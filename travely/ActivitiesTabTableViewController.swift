@@ -15,12 +15,41 @@ class ActivitiesTabTableViewController: UITableViewController, ActivityCellDeleg
     var selectedArray = [false, false, false, false, false, false, false, false, false]
     var totalCost = 0.0
     var myTrip: Trip?
+    var settings : Settings?
+    var startupFlag = 0
+    
+    
+    /*
+     Need to create a fnc where:
+        if interest == 3, then select all
+        if interest == 2, then select one or two
+        if interest == 1, then select free one
+     */
+    func setInterestLevel(){
+        //these three if statements set all selected to true based on interest
+        if settings?.culturalActivitiesPrefference == 3{
+            for i in 0...2{
+                selectedArray[i] = true
+            }
+        } else if settings?.outdoorsActivitiesPrefference == 3{
+            for i in 3...5{
+                selectedArray[i] = true
+            }
+        } else if settings?.nightlifeActivitiesPrefference == 3{
+            for i in 6...8{
+                selectedArray[i] = true
+            }
+        }
+        //these will handle if there is only one lvl interest
+        
+    }
+    
     
     func checkmarkTapped(sender: ActivityTableViewCell) {
+        startupFlag = 1
         if let indexPath = tableView.indexPath(for: sender){
             let index = indexPath.section * 3 + indexPath.row
             selectedArray[index] = !selectedArray[index]
-            
             guard let activities = activities else {
                 tableView.reloadRows(at: [indexPath], with: .automatic)
                 return
@@ -63,6 +92,7 @@ class ActivitiesTabTableViewController: UITableViewController, ActivityCellDeleg
         }
         
     }
+    
 
     
     override func viewDidLoad() {
@@ -130,6 +160,10 @@ class ActivitiesTabTableViewController: UITableViewController, ActivityCellDeleg
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ActivityTableViewCell") as? ActivityTableViewCell
             else{
                 fatalError("Could not dequeue a cell")
+        }
+        
+        if(startupFlag == 0){
+            print("first time around")
         }
         
         cell.delegate = self
