@@ -266,11 +266,6 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
                 return
             }
             
-            guard let activitiesVC = segue.destination as? ActivitiesTabTableViewController else {
-                print("Error seguing to loading screen")
-                return
-            }
-            
             //Create and set date values
             let current_date = Date()
             let departure_date = departureDatePicker.date
@@ -293,7 +288,6 @@ class NewTripViewController: UIViewController, UIPickerViewDataSource, UIPickerV
             destinationVC.numDays = diffInDays!
             destinationVC.reportRunDate = current_date_str
             destinationVC.settingsObj = mySettings
-            activitiesVC.settings = mySettings
         }
     }
     
