@@ -42,7 +42,9 @@ class LoadingScreenViewController: UIViewController {
     var numberOfTravellers: Double?
     var totalTransportationCost: Double?
     var preferredHotelRating: Int?
-
+    var flightCode: String?
+    var hotelName: String?
+    
     
     //Structure to keep track of entire trip
     var newTrip: Trip?
@@ -74,7 +76,7 @@ class LoadingScreenViewController: UIViewController {
             }
             else {
                 //Create Trip data structure to store information
-                self.newTrip = Trip(tripName: self.originLocation + " to " + self.destinationLocation, tripTotalCost: self.totalCost!, tripAirfareCost: self.minFlightCost!, tripHotelCost: self.minHotelCost!, foodCost: self.foodCost!, activitiesCost: self.activitiesCost!, originLocation: self.originLocation, destinationLocation: self.destinationLocation, departureDate: self.departureDate, returnDate: self.returnDate, tripPublicTransportationCost: self.totalTransportationCost!, numberOfTravellers: self.numberOfTravellers!, reportRunDate: self.reportRunDate, activityList: [], settingsObject: self.settingsObj!)
+                self.newTrip = Trip(tripName: self.originLocation + " to " + self.destinationLocation, tripTotalCost: self.totalCost!, tripAirfareCost: self.minFlightCost!, tripHotelCost: self.minHotelCost!, foodCost: self.foodCost!, activitiesCost: self.activitiesCost!, originLocation: self.originLocation, destinationLocation: self.destinationLocation, departureDate: self.departureDate, returnDate: self.returnDate, tripPublicTransportationCost: self.totalTransportationCost!, numberOfTravellers: self.numberOfTravellers!, reportRunDate: self.reportRunDate, activityList: [], settingsObject: self.settingsObj!, hotelName: self.hotelName!, flightCode: self.flightCode!)
                 
                 //unwind to previous segue
                 SwiftSpinner.hide() //Hide loading screen before unwinding
@@ -356,17 +358,32 @@ class LoadingScreenViewController: UIViewController {
      */
     func calculateMinCostFromAmadeusFlightsResponse(amadeusResponse json: [String: AnyObject]?) -> Double{
         var currMin: Double = 999999
+        var tempFlightName: String?
         //print(json)
         // do nester retrieve-casting to get all the prices
         if let json = json{
             if let results = json["results"]{
-                for result in results as! [AnyObject]{
+                for result in results as! [AnyObject] {
+                    if let currItinerary = result["itineraries"] {
+                        for itinerary in currItinerary as! [AnyObject] {
+                            if let outboundFlight = itinerary["outbound"] as? [String: Any] {
+                                if let flights = outboundFlight["flights"] {
+                                    for flight in flights as! [AnyObject] {
+                                        if let airlineCode = flight["marketing_airline"] as? String {
+                                            tempFlightName = airlineCode
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                     if let currFare = result["fare"] as? [String: Any]{
                         if let currPriceObject = currFare["price_per_adult"] as? [String: Any]{
                             if let currPrice = currPriceObject["total_fare"] as? String{
                                 if let currPriceInt = Double(currPrice){
                                     if currPriceInt < currMin{
                                         currMin = currPriceInt
+                                        flightCode = tempFlightName
                                     }
                                 }
                             }
@@ -418,7 +435,7 @@ class LoadingScreenViewController: UIViewController {
         for amenity in settingsObj!.amenitiesPrefferenceSelected {
             request_str += "&amenity=" + amenity
         }
-
+        
         //Format request into actual URLRequest
         let request = NSMutableURLRequest(url: NSURL(string: request_str)! as URL,
                                           cachePolicy: .useProtocolCachePolicy,
@@ -486,36 +503,34 @@ class LoadingScreenViewController: UIViewController {
     func calculateMinCostFromAmadeusHotelResponse(amadeusResponse json: [String: AnyObject]?) -> Double{
         var currMin: Double = 999999
         var ratingMatch = false
+        
         //If user entered a hotel rating, search for the lowest prices among hotels with matching ratings
         if preferredHotelRating != 0 {
             if let json = json{
                 if let results = json["results"]{
                     for result in results as! [AnyObject]{
-                        if let hotelAwards = result["awards"] {
-                            //Reset to false for every hotel
-                            ratingMatch = false
-                            //Go through the hotel's ratings to see if it matches the user input
-                            for award in hotelAwards as! [AnyObject] {
-                                if let hotelRating = award["rating"] as? String {
-                                    if let currentRating = Int(hotelRating) {
-                                        if currentRating == preferredHotelRating {
-                                            ratingMatch = true
-                                            print("CURRENT HOTEL'S RATING = ")
-                                            print(currentRating)
+                        if let tempHotelName = result["property_name"] {
+                            if let hotelAwards = result["awards"] {
+                                //Reset to false for every hotel
+                                ratingMatch = false
+                                //Go through the hotel's ratings to see if it matches the user input
+                                for award in hotelAwards as! [AnyObject] {
+                                    if let hotelRating = award["rating"] as? String {
+                                        if let currentRating = Int(hotelRating) {
+                                            if currentRating == preferredHotelRating {
+                                                ratingMatch = true
+                                            }
                                         }
                                     }
                                 }
-                            }
-                            //
-                            if ratingMatch {
-                                if let currPriceObject = result["total_price"] as? [String: Any] {
-                                    if let currPrice = currPriceObject["amount"] as? String{
-                                        if let currPriceInt = Double(currPrice) {
-                                            print("CURRENT PRICE")
-                                            print(currPriceInt)
-                                            if currPriceInt < currMin {
-                                                currMin = currPriceInt
-                                                print("NEW MINIMUM")
+                                if ratingMatch {
+                                    if let currPriceObject = result["total_price"] as? [String: Any] {
+                                        if let currPrice = currPriceObject["amount"] as? String{
+                                            if let currPriceInt = Double(currPrice) {
+                                                if currPriceInt < currMin {
+                                                    hotelName = tempHotelName as! String
+                                                    currMin = currPriceInt
+                                                }
                                             }
                                         }
                                     }
@@ -526,19 +541,19 @@ class LoadingScreenViewController: UIViewController {
                 }
             }
         }
-        //If user didn't enter a hotel rating, search for the lowest price among all hotels
+            //If user didn't enter a hotel rating, search for the lowest price among all hotels
         else {
             if let json = json{
                 if let results = json["results"]{
                     for result in results as! [AnyObject]{
-                        if let currPriceObject = result["total_price"] as? [String: Any]{
-                            if let currPrice = currPriceObject["amount"] as? String{
-                                if let currPriceInt = Double(currPrice){
-                                    print("CURRENT PRICE")
-                                    print(currPriceInt)
-                                    if currPriceInt < currMin{
-                                        currMin = currPriceInt
-                                        print("^ NEW MINIMUM")
+                        if let tempHotelName = result["property_name"] {
+                            if let currPriceObject = result["total_price"] as? [String: Any]{
+                                if let currPrice = currPriceObject["amount"] as? String{
+                                    if let currPriceInt = Double(currPrice){
+                                        if currPriceInt < currMin{
+                                            hotelName = tempHotelName as! String
+                                            currMin = currPriceInt
+                                        }
                                     }
                                 }
                             }

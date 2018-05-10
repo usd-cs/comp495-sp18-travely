@@ -28,6 +28,8 @@ class Trip : NSObject,NSCoding{
         static let reportRunDate = "reportRunDate"
         static let activityList = "activityList"
         static let settingsObject = "settingsObject"
+        static let hotelName = "hotelName"
+        static let flightCode = "flightCode"
     }
     
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
@@ -48,8 +50,10 @@ class Trip : NSObject,NSCoding{
     var reportRunDate: String
     var activityList: [Activity]
     var settingsObject: Settings
+    var hotelName: String
+    var flightCode: String
     
-    init?(tripName: String, tripTotalCost: Double, tripAirfareCost: Double, tripHotelCost: Double, foodCost: Double, activitiesCost: Double, originLocation: String, destinationLocation: String, departureDate: String, returnDate: String, tripPublicTransportationCost: Double, numberOfTravellers: Double, reportRunDate: String, activityList: [Activity], settingsObject: Settings){
+    init?(tripName: String, tripTotalCost: Double, tripAirfareCost: Double, tripHotelCost: Double, foodCost: Double, activitiesCost: Double, originLocation: String, destinationLocation: String, departureDate: String, returnDate: String, tripPublicTransportationCost: Double, numberOfTravellers: Double, reportRunDate: String, activityList: [Activity], settingsObject: Settings, hotelName: String, flightCode: String){
         
         if tripName.isEmpty || originLocation.isEmpty || destinationLocation.isEmpty || departureDate.isEmpty || returnDate.isEmpty || reportRunDate.isEmpty {
             return nil
@@ -70,6 +74,8 @@ class Trip : NSObject,NSCoding{
         self.reportRunDate = reportRunDate
         self.activityList = activityList
         self.settingsObject = settingsObject
+        self.hotelName = hotelName
+        self.flightCode = flightCode
     }
     
     func encode(with aCoder: NSCoder) {
@@ -88,6 +94,8 @@ class Trip : NSObject,NSCoding{
         aCoder.encode(reportRunDate, forKey: PropertyKey.reportRunDate)
         aCoder.encode(activityList, forKey: PropertyKey.activityList)
         aCoder.encode(settingsObject, forKey: PropertyKey.settingsObject)
+        aCoder.encode(hotelName, forKey: PropertyKey.hotelName)
+        aCoder.encode(flightCode, forKey: PropertyKey.flightCode)
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
@@ -123,6 +131,14 @@ class Trip : NSObject,NSCoding{
             os_log("Unable to decode settingsObject", log: OSLog.default, type: .debug)
             return nil
         }
+        guard let hotelName = aDecoder.decodeObject(forKey: PropertyKey.hotelName) as? String else {
+            os_log("Unable to decode departureDate", log: OSLog.default, type: .debug)
+            return nil
+        }
+        guard let flightCode = aDecoder.decodeObject(forKey: PropertyKey.hotelName) as? String else {
+            os_log("Unable to decode departureDate", log: OSLog.default, type: .debug)
+            return nil
+        }
         
         let tripPublicTransportationCost = aDecoder.decodeDouble(forKey: PropertyKey.tripPublicTransportationCost) as Double
         let numberOfTravellers = aDecoder.decodeDouble(forKey: PropertyKey.numberOfTravellers) as Double
@@ -132,7 +148,8 @@ class Trip : NSObject,NSCoding{
         let foodCost = aDecoder.decodeDouble(forKey: PropertyKey.foodCost) as Double
         let activitiesCost = aDecoder.decodeDouble(forKey: PropertyKey.activitiesCost) as Double
         
-        self.init(tripName: tripName, tripTotalCost: tripTotalCost, tripAirfareCost: tripAirfareCost, tripHotelCost: tripHotelCost, foodCost: foodCost, activitiesCost: activitiesCost, originLocation: originLocation, destinationLocation: destinationLocation, departureDate: departureDate, returnDate: returnDate, tripPublicTransportationCost: tripPublicTransportationCost, numberOfTravellers: numberOfTravellers, reportRunDate: reportRunDate, activityList: activityList, settingsObject: settingsObject)
+        
+        self.init(tripName: tripName, tripTotalCost: tripTotalCost, tripAirfareCost: tripAirfareCost, tripHotelCost: tripHotelCost, foodCost: foodCost, activitiesCost: activitiesCost, originLocation: originLocation, destinationLocation: destinationLocation, departureDate: departureDate, returnDate: returnDate, tripPublicTransportationCost: tripPublicTransportationCost, numberOfTravellers: numberOfTravellers, reportRunDate: reportRunDate, activityList: activityList, settingsObject: settingsObject, hotelName: hotelName, flightCode: flightCode)
     }
 }
 
