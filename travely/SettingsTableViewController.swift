@@ -97,6 +97,7 @@ class SettingsTableViewController: UITableViewController {
         mySettings!.culturalActivitiesPrefference = culturalActivitiesSegmentedControl.selectedSegmentIndex
         mySettings!.outdoorsActivitiesPrefference = outdoorsActivitiesSegmentedControl.selectedSegmentIndex
         mySettings!.nightlifeActivitiesPrefference = nightlifeActivitiesSegmentedControl.selectedSegmentIndex
+        print("the activities is: ",mySettings!.culturalActivitiesPrefference)
         
         //Create Amenities variable to store in Settings object
         mySettings?.amenitiesPrefferenceSelected = generateAmenitiesData()

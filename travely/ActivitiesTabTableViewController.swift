@@ -15,12 +15,73 @@ class ActivitiesTabTableViewController: UITableViewController, ActivityCellDeleg
     var selectedArray = [false, false, false, false, false, false, false, false, false]
     var totalCost = 0.0
     var myTrip: Trip?
+    var settings : Settings?
+    var startupFlag = 0
+    
+    
+    /*
+     Need to create a fnc where:
+        if interest == 3, then select all
+        if interest == 2, then select one or two
+        if interest == 1, then select free one
+     */
+    func preselectCultural(price : Int, index : Int){
+        //these three if statements set all selected to true based on interest
+        print("price is: ",price)
+        print("Index is: ",index)
+        if settings?.culturalActivitiesPrefference == 3{
+            print("cultural is 3")
+            for i in 0...2{
+                selectedArray[i] = true
+            }
+        }
+        //these will handle if there is only one lvl interest
+        else if (settings?.culturalActivitiesPrefference == 1 || settings?.culturalActivitiesPrefference == 2) && price == 0{
+            print("cultural is 1 and free")
+            selectedArray[index] = true
+        }
+        //if the lvl interest is 2, then select just one (above will select the free ones)
+        else if settings?.culturalActivitiesPrefference == 2 && !selectedArray[0]{
+            print("cultural is 2")
+            selectedArray[0] = true
+        }
+    }
+    
+    func preselectOutdoor(price : Int, index : Int){
+        if settings?.outdoorsActivitiesPrefference == 3{
+            print("outdoors is 3")
+            for i in 3...5{
+                selectedArray[i] = true
+            }
+        } else if (settings?.outdoorsActivitiesPrefference == 1 || settings?.outdoorsActivitiesPrefference == 2) && price == 0{
+            print("outdoor is 1 and free")
+            selectedArray[index] = true
+        } else if settings?.outdoorsActivitiesPrefference == 2 && !selectedArray[3]{
+            print("outdoor is 2")
+            selectedArray[3] = true
+        }
+    }
+    
+    func preselectNightlife(price : Int, index : Int){
+        if settings?.nightlifeActivitiesPrefference == 3{
+            print("night is 3")
+            for i in 6...8{
+                selectedArray[i] = true
+            }
+        } else if (settings?.nightlifeActivitiesPrefference == 1 || settings?.nightlifeActivitiesPrefference == 2) && price == 0{
+            print("night is 1 and free")
+            selectedArray[index] = true
+        } else if settings?.nightlifeActivitiesPrefference == 2 && !selectedArray[6]{
+            print("night is 2")
+            selectedArray[6] = true
+        }
+    }
     
     func checkmarkTapped(sender: ActivityTableViewCell) {
+        startupFlag = 1
         if let indexPath = tableView.indexPath(for: sender){
             let index = indexPath.section * 3 + indexPath.row
             selectedArray[index] = !selectedArray[index]
-            
             guard let activities = activities else {
                 tableView.reloadRows(at: [indexPath], with: .automatic)
                 return
@@ -63,6 +124,7 @@ class ActivitiesTabTableViewController: UITableViewController, ActivityCellDeleg
         }
         
     }
+    
 
     
     override func viewDidLoad() {
@@ -81,6 +143,8 @@ class ActivitiesTabTableViewController: UITableViewController, ActivityCellDeleg
         } else {
             activities = Activities(cityName: city)
         }
+        
+        startupFlag = 0
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -131,6 +195,7 @@ class ActivitiesTabTableViewController: UITableViewController, ActivityCellDeleg
             else{
                 fatalError("Could not dequeue a cell")
         }
+        let index = indexPath.section * 3 + indexPath.row
         
         cell.delegate = self
         
@@ -154,6 +219,8 @@ class ActivitiesTabTableViewController: UITableViewController, ActivityCellDeleg
             fatalError("Error configuring cess in Activities Tab")
         }
         
+        
+        
         // Configure the cell
         cell.titleLabel?.text = dataSource["name"]
         if let price = Int(dataSource["price"]!){
@@ -166,7 +233,14 @@ class ActivitiesTabTableViewController: UITableViewController, ActivityCellDeleg
             cell.priceLabel?.text = "???"
         }
         
-        let index = indexPath.section * 3 + indexPath.row
+        if(startupFlag == 0){
+            print("first time around")
+            settings = myTrip?.settingsObject
+            preselectCultural(price : Int(dataSource["price"]!)!, index : index)
+            preselectOutdoor(price : Int(dataSource["price"]!)!, index : index)
+            preselectNightlife(price : Int(dataSource["price"]!)!, index : index)
+        }
+        
         if selectedArray[index]{
             let image = UIImage(named: "Checked")
             cell.checkedButton.setBackgroundImage(image, for: .normal)
