@@ -98,6 +98,11 @@ class CostViewController: UIViewController {
             saveButton.isHidden = true
             zeroPrices()
         } else {
+            print("COST HOTEL NAME")
+            print(myTrip!.hotelName)
+            print("COST FLIGHT CODE")
+            print(myTrip!.flightCode)
+            
             saveButton.isHidden = false
             minFlightCost = myTrip!.tripAirfareCost
             numberOfTravellers = myTrip!.numberOfTravellers
