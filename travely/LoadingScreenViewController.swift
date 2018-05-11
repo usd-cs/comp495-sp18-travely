@@ -31,6 +31,8 @@ class LoadingScreenViewController: UIViewController {
     //Used for timeout
     var apiTimeout = false
     var wasTimeout = false
+    var noDataFoundFlight = false
+    var noDataFoundHotel = false
     
     //Other Cost variables to be calculated
     var minFlightCost: Double?
@@ -63,16 +65,28 @@ class LoadingScreenViewController: UIViewController {
             self.calculateTripData()
             
             //Display error message if API error, go back to NewTripViewController
-            if self.apiTimeout == true {
-                self.apiTimeout = false
+            if self.apiTimeout == true  || self.noDataFoundFlight == true || self.noDataFoundHotel == true {
                 self.wasTimeout = true
                 
+                var alertController : UIAlertController
                 //Create alert on error
-                let alertController = UIAlertController(title: "Error", message: "An error occured calculating this trip, please recalculate trip", preferredStyle: UIAlertControllerStyle.alert)
-                alertController.addAction(UIAlertAction(title:"OK", style: .default, handler:  { action in self.performSegue(withIdentifier: "unwindToRootViewController", sender: self) }))
+                if self.noDataFoundHotel {
+                    alertController = UIAlertController(title: "Error", message: "Hotel could not be found. To resolve please remove amenities or lower star rating in settings page.", preferredStyle: UIAlertControllerStyle.alert)
+                    alertController.addAction(UIAlertAction(title:"OK", style: .default, handler:  { action in self.performSegue(withIdentifier: "unwindToRootViewController", sender: self) }))
+                } else if self.noDataFoundFlight {
+                    alertController = UIAlertController(title: "Error", message: "Flight could not be found. Please try different origin or destination.", preferredStyle: UIAlertControllerStyle.alert)
+                    alertController.addAction(UIAlertAction(title:"OK", style: .default, handler:  { action in self.performSegue(withIdentifier: "unwindToRootViewController", sender: self) }))
+                } else {
+                    alertController = UIAlertController(title: "Error", message: "An error occured calculating this trip, please recalculate trip", preferredStyle: UIAlertControllerStyle.alert)
+                    alertController.addAction(UIAlertAction(title:"OK", style: .default, handler:  { action in self.performSegue(withIdentifier: "unwindToRootViewController", sender: self) }))
+                }
                 
                 SwiftSpinner.hide() //hide loading screen before unwinding
                 self.present(alertController, animated: true, completion: nil)
+                
+                self.apiTimeout = false
+                self.noDataFoundHotel = false
+                self.noDataFoundFlight = false
             }
             else {
                 //Create Trip data structure to store information
@@ -227,7 +241,7 @@ class LoadingScreenViewController: UIViewController {
         ]
         
         //Create API Request for first leg of flight
-        let request = NSMutableURLRequest(url: NSURL(string: "https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?apikey=" + AMADEUSFLIGHTAPIKEY + "&origin=" + origin_IATA + "&destination=" + destination_IATA + "&departure_date=" + departureDate)! as URL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
+        let request = NSMutableURLRequest(url: NSURL(string: "https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?apikey=" + AMADEUSFLIGHTAPIKEY + "&origin=" + origin_IATA + "&destination=" + destination_IATA + "&departure_date=" + departureDate)! as URL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 20.0)
         
         request.httpMethod = "GET"
         request.allHTTPHeaderFields = headers
@@ -253,7 +267,7 @@ class LoadingScreenViewController: UIViewController {
         flightcall_done = false //Set value back to false for next calculation
         
         //Create API Request for return leg of flight
-        let second_request = NSMutableURLRequest(url: NSURL(string: "https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?apikey=" + AMADEUSFLIGHTAPIKEY + "&origin=" + destination_IATA + "&destination=" + origin_IATA + "&departure_date=" + returnDate)! as URL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
+        let second_request = NSMutableURLRequest(url: NSURL(string: "https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?apikey=" + AMADEUSFLIGHTAPIKEY + "&origin=" + destination_IATA + "&destination=" + origin_IATA + "&departure_date=" + returnDate)! as URL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 20.0)
         
         second_request.httpMethod = "GET"
         second_request.allHTTPHeaderFields = headers
@@ -297,6 +311,7 @@ class LoadingScreenViewController: UIViewController {
                 self.flightcall_done = true
             } else {
                 let httpResponse = response as? HTTPURLResponse
+                
                 //Set global variables so they can be accessed outside of the completion handler
                 self.flightcall_errors = (error != nil) || (httpResponse?.statusCode != 200)
                 self.flight_data = data
@@ -395,7 +410,8 @@ class LoadingScreenViewController: UIViewController {
         
         //check for problem
         if currMin == 999999{
-            return  -1
+            self.noDataFoundFlight = true
+            return  -2
         }
         return currMin
     }
@@ -464,6 +480,7 @@ class LoadingScreenViewController: UIViewController {
         //find the min cost using the JSON variable called json and pass it back to viewDidLoad
         let minCost = calculateMinCostFromAmadeusHotelResponse(amadeusResponse: json)
         hotelCallDone = false //Set back to false so that next call can be made to api
+        
         return minCost
     }
     
@@ -507,6 +524,7 @@ class LoadingScreenViewController: UIViewController {
         //If user entered a hotel rating, search for the lowest prices among hotels with matching ratings
         if preferredHotelRating != 0 {
             if let json = json{
+                print(json)
                 if let results = json["results"]{
                     for result in results as! [AnyObject]{
                         if let tempHotelName = result["property_name"] {
@@ -564,7 +582,8 @@ class LoadingScreenViewController: UIViewController {
         }
         //check for problem
         if currMin == 999999{
-            return  -1
+            self.noDataFoundHotel = true
+            return  -2
         }
         return currMin
     }
