@@ -60,6 +60,11 @@ class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControl
     @IBOutlet weak var hotelRatingLabel: UILabel!
     //Outlet for the filtered ameninities
     @IBOutlet weak var filteredAmenitiesLabel: UILabel!
+    //Outlet for the flight number
+    @IBOutlet weak var flightNumLabel: UILabel!
+    //Outlet for the hotel name
+    @IBOutlet weak var hotelNameLabel: UILabel!
+    
     
     
     @IBOutlet weak var activityTabelView: UITableView!
@@ -149,6 +154,9 @@ class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControl
         activitiesCostLabel.text = "$" + String(describing: my_trip!.activitiesCost)
         totalPriceField.text = "$" + String(describing: my_trip!.tripTotalCost)
         hotelRatingLabel.text = String(describing: numHotelStars!) + " stars"
+        hotelNameLabel.text = my_trip?.hotelName
+        flightNumLabel.text = my_trip?.flightCode
+        
         if my_trip != nil {
             filteredAmenitiesLabel.text = prepareAmenitiesStr()
         }
@@ -253,9 +261,11 @@ class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControl
                 <div>Destination: \(destinationLocation.text!)</div>
                 <div>Departure Date: \(departureDate.text!)</div>
                 <div>Return Date: \(returnDate.text!)</div>
+                <div>Flight: \(flightNumLabel.text!)</div>
             <h3>Cost Breakdown</h3>
                 <div>Transportation: \(airfareCostLabel.text!)</div>
                 <div>Accommodation: \(hotelCostLabel.text!)</div>
+                <div>Hotel Name: \(hotelNameLabel.text!)</div>
                 <div>Hotel Rating: \(hotelRatingLabel.text!)</div>
                 <div>Filtered Amenities: \(filteredAmenitiesLabel.text!)</div>
                 <div>Food: \(foodCostLabel.text!)</div>

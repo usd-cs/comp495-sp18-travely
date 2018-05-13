@@ -132,11 +132,11 @@ class Trip : NSObject,NSCoding{
             return nil
         }
         guard let hotelName = aDecoder.decodeObject(forKey: PropertyKey.hotelName) as? String else {
-            os_log("Unable to decode departureDate", log: OSLog.default, type: .debug)
+            os_log("Unable to decode hotel name", log: OSLog.default, type: .debug)
             return nil
         }
-        guard let flightCode = aDecoder.decodeObject(forKey: PropertyKey.hotelName) as? String else {
-            os_log("Unable to decode departureDate", log: OSLog.default, type: .debug)
+        guard let flightCode = aDecoder.decodeObject(forKey: PropertyKey.flightCode) as? String else {
+            os_log("Unable to decode flight code", log: OSLog.default, type: .debug)
             return nil
         }
         

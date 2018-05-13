@@ -374,6 +374,7 @@ class LoadingScreenViewController: UIViewController {
     func calculateMinCostFromAmadeusFlightsResponse(amadeusResponse json: [String: AnyObject]?) -> Double{
         var currMin: Double = 999999
         var tempFlightName: String?
+        var tempFlightNum: String?
         //print(json)
         // do nester retrieve-casting to get all the prices
         if let json = json{
@@ -387,6 +388,9 @@ class LoadingScreenViewController: UIViewController {
                                         if let airlineCode = flight["marketing_airline"] as? String {
                                             tempFlightName = airlineCode
                                         }
+                                        if let airlineNum = flight["flight_number"] as? String {
+                                            tempFlightNum = airlineNum
+                                        }
                                     }
                                 }
                             }
@@ -399,6 +403,7 @@ class LoadingScreenViewController: UIViewController {
                                     if currPriceInt < currMin{
                                         currMin = currPriceInt
                                         flightCode = tempFlightName
+                                        flightCode = flightCode! + " " + tempFlightNum!
                                     }
                                 }
                             }
