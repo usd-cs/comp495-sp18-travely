@@ -261,9 +261,11 @@ class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControl
                 <div>Destination: \(destinationLocation.text!)</div>
                 <div>Departure Date: \(departureDate.text!)</div>
                 <div>Return Date: \(returnDate.text!)</div>
+                <div>Flight: \(flightNumLabel.text!)</div>
             <h3>Cost Breakdown</h3>
                 <div>Transportation: \(airfareCostLabel.text!)</div>
                 <div>Accommodation: \(hotelCostLabel.text!)</div>
+                <div>Hotel Name: \(hotelNameLabel.text!)</div>
                 <div>Hotel Rating: \(hotelRatingLabel.text!)</div>
                 <div>Filtered Amenities: \(filteredAmenitiesLabel.text!)</div>
                 <div>Food: \(foodCostLabel.text!)</div>
