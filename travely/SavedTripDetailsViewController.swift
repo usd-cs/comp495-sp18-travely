@@ -60,6 +60,11 @@ class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControl
     @IBOutlet weak var hotelRatingLabel: UILabel!
     //Outlet for the filtered ameninities
     @IBOutlet weak var filteredAmenitiesLabel: UILabel!
+    //Outlet for the flight number
+    @IBOutlet weak var flightNumLabel: UILabel!
+    //Outlet for the hotel name
+    @IBOutlet weak var hotelNameLabel: UILabel!
+    
     
     
     @IBOutlet weak var activityTabelView: UITableView!
@@ -149,6 +154,9 @@ class SavedTripDetailsViewController: UIViewController, MFMailComposeViewControl
         activitiesCostLabel.text = "$" + String(describing: my_trip!.activitiesCost)
         totalPriceField.text = "$" + String(describing: my_trip!.tripTotalCost)
         hotelRatingLabel.text = String(describing: numHotelStars!) + " stars"
+        hotelNameLabel.text = my_trip?.hotelName
+        flightNumLabel.text = my_trip?.flightCode
+        
         if my_trip != nil {
             filteredAmenitiesLabel.text = prepareAmenitiesStr()
         }

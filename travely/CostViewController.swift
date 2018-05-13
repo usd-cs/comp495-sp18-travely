@@ -27,6 +27,11 @@ class CostViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var amenitiesFilteredLabel: UILabel!
     
+    @IBOutlet weak var flightLabel: UILabel!
+    @IBOutlet weak var flightNameLabel: UILabel!
+    @IBOutlet weak var hotelName: UILabel!
+    @IBOutlet weak var hotelNameLabel: UILabel!
+    
     
     
     var minFlightCost: Double?
@@ -96,12 +101,19 @@ class CostViewController: UIViewController {
             hotelRating.isHidden = true
             hotelRatingLabel.isHidden = true
             saveButton.isHidden = true
+            flightLabel.isHidden = true
+            flightNameLabel.isHidden = true
+            hotelName.isHidden = true
+            hotelNameLabel.isHidden = true
             zeroPrices()
         } else {
-            print("COST HOTEL NAME")
-            print(myTrip!.hotelName)
-            print("COST FLIGHT CODE")
-            print(myTrip!.flightCode)
+            
+            flightLabel.isHidden = false
+            flightNameLabel.isHidden = false
+            hotelName.isHidden = false
+            hotelNameLabel.isHidden = false
+            flightNameLabel.text = myTrip!.flightCode
+            hotelNameLabel.text = myTrip!.hotelName
             
             saveButton.isHidden = false
             minFlightCost = myTrip!.tripAirfareCost
@@ -139,6 +151,10 @@ class CostViewController: UIViewController {
             if numHotelStars != 0 {
                 hotelRating.isHidden = false
                 hotelRatingLabel.isHidden = false
+            }
+            else {
+                hotelRating.isHidden = true
+                hotelRatingLabel.isHidden = true
             }
             
             
