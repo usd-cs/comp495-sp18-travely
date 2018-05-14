@@ -525,6 +525,8 @@ class LoadingScreenViewController: UIViewController {
     func calculateMinCostFromAmadeusHotelResponse(amadeusResponse json: [String: AnyObject]?) -> Double{
         var currMin: Double = 999999
         var ratingMatch = false
+        var tempHotelRating: Int?
+        var chosenHotelRating: Int?
         
         //If user entered a hotel rating, search for the lowest prices among hotels with matching ratings
         if preferredHotelRating != 0 {
@@ -542,6 +544,7 @@ class LoadingScreenViewController: UIViewController {
                                         if let currentRating = Int(hotelRating) {
                                             if currentRating >= preferredHotelRating! {
                                                 ratingMatch = true
+                                                tempHotelRating = currentRating
                                             }
                                         }
                                     }
@@ -553,6 +556,7 @@ class LoadingScreenViewController: UIViewController {
                                                 if currPriceInt < currMin {
                                                     hotelName = tempHotelName as! String
                                                     currMin = currPriceInt
+                                                    chosenHotelRating = tempHotelRating
                                                 }
                                             }
                                         }
@@ -562,6 +566,10 @@ class LoadingScreenViewController: UIViewController {
                         }
                     }
                 }
+            }
+            if chosenHotelRating != nil {
+                print("UPDATING HOTEL RATING")
+                self.settingsObj?.hotelRaiting = chosenHotelRating!
             }
         }
             //If user didn't enter a hotel rating, search for the lowest price among all hotels
