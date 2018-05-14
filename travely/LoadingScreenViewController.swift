@@ -203,8 +203,8 @@ class LoadingScreenViewController: UIViewController {
         }
         //Multiply the flight cost by the number of travellers
         minFlightCost = minFlightCost! * numberOfTravellers!
-        totalTransportationCost = minFlightCost! + publicTransportationCost!
-        totalCost = totalTransportationCost! + minHotelCost! + foodCost! + activitiesCost!
+        totalTransportationCost = publicTransportationCost!
+        totalCost = totalTransportationCost! + minHotelCost! + foodCost! + activitiesCost! + minFlightCost!
     }
     
     /*
@@ -540,7 +540,7 @@ class LoadingScreenViewController: UIViewController {
                                 for award in hotelAwards as! [AnyObject] {
                                     if let hotelRating = award["rating"] as? String {
                                         if let currentRating = Int(hotelRating) {
-                                            if currentRating == preferredHotelRating {
+                                            if currentRating >= preferredHotelRating! {
                                                 ratingMatch = true
                                             }
                                         }

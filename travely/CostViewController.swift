@@ -133,7 +133,7 @@ class CostViewController: UIViewController {
                 activitiesCost = 0.0
                 myTrip?.activitiesCost = activitiesCost!
             }
-            totalTransportationCost = myTrip!.tripPublicTransportationCost + myTrip!.tripAirfareCost
+            totalTransportationCost = myTrip!.tripPublicTransportationCost
             
             //Get the budget from the trip object
             if (myTrip?.settingsObject.budgetSet)! {
