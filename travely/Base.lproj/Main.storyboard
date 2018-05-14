@@ -896,7 +896,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="TDg-mv-bL9">
-                                <rect key="frame" x="0.0" y="40" width="375" height="272"/>
+                                <rect key="frame" x="0.0" y="40" width="375" height="312"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IVn-2n-GDL" userLabel="Trip Cost Stack">
                                         <rect key="frame" x="32.5" y="0.0" width="310" height="45.5"/>
@@ -1120,7 +1120,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Xjk-u2-P8Y">
-                                        <rect key="frame" x="94" y="251.5" width="187" height="20.5"/>
+                                        <rect key="frame" x="94" y="251.5" width="187" height="60.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amenities Filtered: None" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aw-1l-9Oi">
                                                 <rect key="frame" x="0.0" y="0.0" width="187" height="20.5"/>
@@ -1128,6 +1128,18 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRa-zM-8MM">
+                                                <rect key="frame" x="0.0" y="20.5" width="187" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="23"/>
+                                                <size key="titleShadowOffset" width="2" height="2"/>
+                                                <state key="normal" title="Save">
+                                                    <color key="titleColor" red="0.29586714506149292" green="0.55742812156677246" blue="0.76086711883544922" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="titleShadowColor" red="1" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="saveButtonPressed:" destination="Jah-G3-M7C" eventType="touchUpInside" id="adF-Nx-HXE"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -1140,31 +1152,17 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lhn-yi-UKP" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="313" width="375" height="305"/>
+                                <rect key="frame" x="0.0" y="345" width="375" height="273"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRa-zM-8MM">
-                                <rect key="frame" x="159.5" y="487" width="57" height="40"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="23"/>
-                                <size key="titleShadowOffset" width="2" height="2"/>
-                                <state key="normal" title="Save">
-                                    <color key="titleColor" red="0.29586714506149292" green="0.55742812156677246" blue="0.76086711883544922" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <color key="titleShadowColor" red="1" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="saveButtonPressed:" destination="Jah-G3-M7C" eventType="touchUpInside" id="adF-Nx-HXE"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.69059324264526367" green="0.87349033355712891" blue="0.94513225555419922" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="TDg-mv-bL9" firstAttribute="top" secondItem="Ljt-Ex-kYR" secondAttribute="top" constant="20" id="5e3-O1-rQ2"/>
                             <constraint firstItem="wIO-i3-ijN" firstAttribute="leading" secondItem="Ljt-Ex-kYR" secondAttribute="leading" id="5nA-wE-PIA"/>
                             <constraint firstItem="TDg-mv-bL9" firstAttribute="leading" secondItem="swj-d3-eEv" secondAttribute="leading" id="ALO-Uz-zZk"/>
-                            <constraint firstItem="iRa-zM-8MM" firstAttribute="centerX" secondItem="swj-d3-eEv" secondAttribute="centerX" id="KGZ-4j-t8g"/>
                             <constraint firstItem="Ljt-Ex-kYR" firstAttribute="bottom" secondItem="wIO-i3-ijN" secondAttribute="bottom" id="RPg-Ac-fpW"/>
-                            <constraint firstItem="iRa-zM-8MM" firstAttribute="top" secondItem="TDg-mv-bL9" secondAttribute="bottom" constant="175" id="VRn-Tl-70F"/>
                             <constraint firstItem="wIO-i3-ijN" firstAttribute="top" secondItem="Ljt-Ex-kYR" secondAttribute="top" id="XNH-PA-I27"/>
                             <constraint firstItem="Ljt-Ex-kYR" firstAttribute="trailing" secondItem="TDg-mv-bL9" secondAttribute="trailing" id="qG7-zc-He5"/>
                             <constraint firstAttribute="trailing" secondItem="wIO-i3-ijN" secondAttribute="trailing" id="uOR-Uk-KyH"/>
