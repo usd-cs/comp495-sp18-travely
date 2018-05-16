@@ -185,6 +185,11 @@ class LoadingScreenViewController: UIViewController {
             activitiesCost = 12 * Double(numDays) * numberOfTravellers!
             publicTransportationCost = 17 * Double(numDays) * numberOfTravellers!
         }
+        else if destinationLocation == "Sydney" {
+            foodCost = 34 * Double(numDays) * numberOfTravellers!
+            activitiesCost = 24 * Double(numDays) * numberOfTravellers!
+            publicTransportationCost = 14 * Double(numDays) * numberOfTravellers!
+        }
         
         minHotelCost = getHotelMinCost()
         minFlightCost = getFlightMinCost()
